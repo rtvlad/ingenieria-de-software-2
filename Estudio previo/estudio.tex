@@ -9,41 +9,194 @@
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage{anysize}
+\usepackage{hyperref}
+\usepackage{tocbibind}
+\usepackage{colortbl}
+\setlength{\parskip}{1ex}
 %\pagestyle{empty}
-\marginsize{3cm}{2cm}{2cm}{2cm}
+\marginsize{3cm}{3cm}{3cm}{3cm}
 \author{Jesus Sánchez-Oro Calvo}
 \title{Estudio previo}
 \begin{document}
 
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[scale=1]{logoURJC.jpg} \\[1cm]
+\textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
+{\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
+{\Large Aplicaciones para la Web}\\[1.25cm]
+{\LARGE \textbf{Práctica 1}}\\[3.5cm]
+{\Large Radu Tom Vlad \\ David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila }\\[1cm]
+5º de Ingeniería Informática \\[1cm]
+\today
+
+\end{center}
+
+\newpage
+\tableofcontents
+
+\newpage
+
 \section{Introducción}
+Este documento informa acerca de la propuesta presentada por nuestra empresa para cumplir las necesidades expuestas por el contratante, acerca de la realización de un portal web que cumpla las necesidades que cubre el actual portal. 
 
-Este estudio informa acerca de la propuesta presentada por nuestra empresa para cumplir las necesidades expuestas por el contratante acerca de la realización de un portal web que cumpla unos determinados requisitos. El presente documento expone de manera clara y concisa la solución propuesta, así como las decisiones tomadas y sus motivos.
+El proyecto recoge los requerimientos funcionales que Correos ha expuesto en el pliego de condiciones generales entregado.
 
-Además, incluye instrucciones detalladas sobre la realización del proyecto completo, las estrategias a seguir y una planificación temporal para conocer el alcance del desarrollo.
+El ámbito de este proyecto será el estudio del actual portal web, así como la creación del nuevo portal y de un portal filatélico.
 
-\section{Proyecto a desarrollar}
+\newpage
 
-El proyecto a desarrollar se compone de los siguientes elementos:
-\begin{itemize}
-	\item 3 propuestas de diseño para el nuevo Portal de Correos, con los criterios de usabilidad, accesibilidad, multilenguaje y grado de implementación sobre el gestor de contenidos, basado en un estudio previo del portal actual de Correos. Esto se llevará a cabo siempre teniendo en cuenta que el usuario debe tener una experiencia satisfactoria y debe ser capaz de interactuar con el portal de forma eficiente, fácil y agradable.
-	\item 2 maquetas en HTML para el diseño elegido utilizables para realizar los tests de usabilidad.
-	\item Propuestas para la personalización del portal dependiendo de quién está accediendo, sus preferencias, sus hábitos de navegabilidad, etc.
-	\item Creación de una guía de Estilo de Contenidos que refleje el tono y estilo del nuevo Portal que deben usarse en el site.
-	\item Galería de imágenes para 5 contenidos del Nuevo Portal.
-	\item 3 propuestas de diseño de un Site Filatélico con los contenidos de criterios de usabilidad, accesibilidad y multilenguaje, basado en los resultados obtenidos al analizar el portal actual, donde el usuario debe tener una experiencia satisfactoria y debe ser capaz de interactuar con el portal de forma eficiente, fácil y agradable.
-\end{itemize}
+\section{Situación actual}
 
-\section{Productos finales}
+\subsection{Tecnología actual}
 
-Entregaremos toda la documentación técnica y de gestión del proyecto contemplada en la metodología de Correos, basada en estándares de mercado, así como cualquier documentación adicional que sea necesaria para alcanzar los objetivos del proyecto en cada momento. Como documentación mínima, se entregará lo siguiente:
-\begin{itemize}
-	\item \textbf{Documentación técnica:} Documentación asociada al análisis, diseño, construcción e implantación del sistema de información. Dentro de esta categoría se encuentran los documentos de:
+Correos dispone en la actualidad de un portal corporativo en Internet multiidioma (www.correos.es) que agrupa todos los servicios ofrecidos a los clientes que acceden a la organización a través de este portal, incluyendo la información filatélica.
+
+Según los informes presentados, el número de visitas mensual es de unas 400.000 y está compuesto de unas 150.000 páginas.
+
+El portal actual está basado en arquitecturas DNA y .Net de Microsoft con una estructura en tres capas:
+	\begin{itemize}
+	\item \textbf{Presentación:} Internet Information Server. Páginas ASP. Soluciones desatendidas masivas, Ajax y Web Services.
+	\item \textbf{Negocio:} Objetos COM+ desarrollados en Visual Basic, C++, y .Net. Interfaces con otros SI de Correos via broker Message Broker IBM y MQ Series.
+	\item \textbf{Base de datos:} SQL Server 2000.
+	\end{itemize}
+
+El sistema operativo que soporta la arquitectura actual es Windows NT/2000 Advanced Server.
+
+La plataforma tecnológica objetivo de estos portales será la corporativa de Correos:
+	\begin{itemize} 
+	\item \textbf{Sistema Operativo:} AIX 5.3 
+	\item \textbf{Servidor de Aplicaciones:} Websphere Aplication Server Network Deployment 5.1.1.3 
+	\item \textbf{Base de Datos:} Oracle RAC 9.2.07
+	\item \textbf{Otros:} J2EE 1.4, MQ/Broker 6.0 y Spazio
+	\end{itemize}
+	
+El objetivo final es la obtención de un nuevo portal web de Correos y un portal Filatélico, que incluya los actuales contenidos y servicios ofrecidos en la web de Correos, construido sobre una plataforma avanzada de construcción de portales (WebSphere Portal Enable V5.1 de IBM), donde se ofrezca un canal de información y de servicios al ciudadano y clientes de Correos basado en los mejores criterior de navegabilidad, accesibilidad y usabilidad.
+
+\subsection{Prestaciones actuales}
+	En la actualidad, el portal de Correos presenta la funcionalidad básica que pueda ofrecer cualquier oficina física, con el beneficio de poder realizar las gestiones sin tener que acudir a ninguna.
+	
+	Entre estas funcionalidades se encuentra la del envío de cartas y paquetes, así como la posibilidad de realizar un seguimiento de los pedidos realizados. Además de cartas y paquetes se permite el envío de dinero, por medio de las diferentes posibilidades que nos ofrecería una oficina física.
+	
+	Para el envío de documentos y cartas primero se nos ofrece la opción de comprobar las características y las tarifas de cada tipo de carta/documento. En cuanto a paquetería los servicios ofrecidos son similares, a excepción de la forma de envío, que puede ser por Postal Exprés o por EMS Postal Exprés. El envío de dinero se realiza de forma muy similar al envío de cartas y documentos
+	
+	También cuenta con un apartado postal electrónico por el cual se asocia a cada cliente una dirección de correo electrónico que le permite enviar y recibir e-mails, asegurando su confidencialidad mediante el cifrado en los servidores de correos y el uso de certificados. Esta cuenta de correo electrónico sera gratuita y se mantendrá activa hasta que el titular no la dé de baja voluntariamente.
+	
+	Además incluye un enlace a BanCorreos, que contiene información sobre el funcionamiento de las gestiones realizadas con la Banca de Correos. Este enlace tan sólo aporta información acerca de BanCorreos, y un link externo a la web de BanCorreos.
+	
+	Entre las otras opciones se encuentra la posibilidad de realizar un cambio de domicilio online para comodidad del cliente. También es posible personalizar un sello con las imágenes que desee el cliente (como el logotipo de la empresa). Se ofrece también un servicio de prepagados y embalajes, donde el cliente puede comprar el tipo de sobre que necesite de entre los que se dispone en la web de correos, y un servicio de creamailing, para el envío publicitario automático.
+	
+	También es posible la gestión del apartado postal, un cajetín de recepción para recibir cualquier tipo de objeto postal en la localidad que se elija, y la posibilidad de un reenvío postal, para reenviar toda la correspondencia a la dirección indicada.
+	
+	Como otras gestiones podemos contemplar la gestión del pago de recibos y recargas de móviles a través del portal, además de localizar oficinas de correos con cabinas telefónicas para llamar a cualquier destino nacional o internacional, o de tiendas Telecor.
+	
+	Por último es posible comprar un dominio de Internet con la colaboración de Nominalia.
+	
+	Esta es la principal funcionalidad que ofrece en la actualidad el portal de Correos, y la que integrará el nuevo portal. Hay que tener en cuenta que se diferencian dos grandes tipos de cliente. El cliente particular y el cliente profesional. Las opciones mostradas a cada uno de ellos será diferente, dependiendo de las gestiones que Correos permita hacer a cada uno de ellos.
+\section{Especificaciones del sistema propuesto}
+\subsection{Especificación de requisitos}
+\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
+\hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
+\hline  1. & Alta & Informatización de las funciones básicas de una oficina de correos (envío y recepción de cartas, paquetes, documentos y dinero) & Utilizaremos formularios para que el cliente incluya los datos del envío o recepción. \\
+\hline  2. & Alta & Conexión con el Apartado Postal Electrónico & Enlace al portal del Apartado Postal Electronico(cep.correos.es). \\
+\hline  3. & Alta & Conexión con BanCorreos & Enlace al portal de BanCorreos(www.bancorreos.es). \\
+\hline  4. & Media & Capacidad de realizar un cambio de domicilio & Redirección a la oficina virtual para realizar el cambio a través de la misma \\
+\hline  5. & Media & Servicio de prepagos y embalajes & Posibilidad de realizar compra online de los diferentes sobres y cajas disponibles mediante los diferentes servicios de pago que ofrece Correos. \\
+\hline
+\end{tabular} \\
+\begin{center}
+\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
+\hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
+\hline  6. & Baja & Servicio de personalización de sellos. & Capacidad de subida de las imágenes que van a situarse en los sellos. \\
+\hline  7. & Baja & Servicio de creamailing & Posibilidad de compra online de servicios estándares de creamailing, además de información de tarifas para servicios personalizados. \\
+\hline  8. & Baja & Reserva de apartado postal & Verificación y posibilidad de reserva (incluido el pago) de un apartado postal. \\
+
+\hline  9. & Baja & Reenvío postal & Posibilidad de que el cliente modifique sus datos mediante formularios para el reenvío de toda su correspondencia a otra dirección. \\
+\hline 10. & Baja & Dirección electrónica única & Concesión de una dirección electrónica personal donde se enviarán las notificaciones telemáticas seguras. \\
+\hline 11. & Baja & Pago de Recibos & Se mostrará al usuario una lista de las empresas con las cuales Correos tiene un acuerdo del pago de recibos. \\
+\hline
+\end{tabular} \\
+\end{center}
+\begin{center}
+\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
+\hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
+
+\hline 12. & Baja & Locutorios telefónicos & Se mostrará al usuario una lista de las oficinas que disponen de locutorios telefónicos. \\
+\hline 13. & Baja & Venta de dominios & Se ofrecerá un buscador que comprobará la disponibilidad del dominio solicitado y se permitirá la compra de dicho dominio en caso de estar disponible. \\
+\hline 14. & Alta & Portal Filatélico & Se incluirán servicios específicos de la filatelia, de manera interactiva con el usuario.\\
+\hline 15. & Baja & Museo & Se mostrará toda la información relacionada con el Museo de Correos dividida en las secciones correspondientes.\\
+\hline 16. & Media & Atención al Cliente & Se ofrecerán al cliente todos los servicios necesarios para comunicarse con la empresa.\\
+\hline 17. & Media & Información Corporativa & Se ofrecerá al cliente toda la información relacionada con la empresa de Correos. \\
+\hline
+\end{tabular} 
+\end{center}
+
+\subsection{Descripción del sistema propuesto}
+Se propone un portal web que disponga de la funcionalidad descrita a través del cual los clientes puedan realizar las gestiones básicas que harían en cualquier oficina, de una manera rápida y sencilla. El sistema automatiza tareas cotidianas como el envío y recepción de paquetes, agilizando las transacciones que se realizan en la oficina, debido a la menor afluencia de clientes. A este sistema accederán principalmente dos tipos de clientes:
+	\begin{itemize}
+	\item \textbf{Particulares:} Son aquellos clientes que quieren realizar cualquier tipo de transacción personal, como el envío de cartas, paquetes, dinero... Aquí se incluyen aquellos interesados en la filatelia.
+	\item \textbf{Empresas:} Son los clientes que necesitan realizar transacciones con correos por motivos profesionales.
+	\end{itemize}
+A continuación se describen los hitos y objetivos fundamentales de la aplicación:
+	\begin{enumerate}
+	\item Gestión del envío y recepción de documentos, paquetes y dinero. Los usuarios del portal podrán desarrollar las siguientes funcionalidades:
 		\begin{itemize}
-			\item \textit{Análisis funcional:} Requisitos funcionales y descripción de modelos del sistema.
-			\item \textit{Entorno tecnológico:} Requisitos técnicos, descripción de la arquitectura lógica y física, descripción de la seguridad y descripción de los requerimientos de capacidad de los distintos componentes y entornos del sistema.
-			\item \textit{Diseño técnico:} Diseño de las diferentes capas y componentes del sistema a construir, y de los aspectos de seguridad de los mismos.
+		\item Enviar cartas, documentos y paquetes a una dirección postal.
+		\item Seguimiento de los envíos realizados, pudiendo comprobar su estado.
 		\end{itemize}
-\end{itemize}
+	\item Gestión del envío y recepción de dinero. 
+		\begin{itemize}
+		\item Los clientes podrán enviar dinero a través de diferentes canales: Giro postal, Western Union y reembolso
+		\end{itemize}
+	\item Servicio de apartado postal electrónico:
+		\begin{itemize}
+		\item Servicio de envío y recepción de e-mails.
+		\item Asegurar la confidencialidad y la seguridad de los e-mails.
+		\end{itemize}
+	\item Servicio de BanCorreos:
+		\begin{itemize}
+		\item Se mostrará un enlace al portal de BanCorreos (independiente del portal actual)
+		\end{itemize}
+	\item Otros servicios:
+		\begin{itemize}
+		\item Cambio de domicilio del cliente.
+		\item Personalización de sellos.
+		\item Compra de sobres y embalajes.
+		\item Servicio de gestión publicitaria (creamailing).
+		\item Reserva de un apartado postal.
+		\item Reenvío postal a otra dirección.
+		\item Información sobre el pago de recibos, recarga de móviles, locutorios telefónicos y tiendas Telecor.
+		\item Comprobación y compra de dominios a través de Nominalia.
+		\end{itemize}
+	\item Filatelia:
+		\begin{itemize}
+		\item Creación de un portal filatélico donde se podrán comprar todo tipo de elementos filatélicos.
+		\item Información acerca de asociaciones filatélicas y temas relacionados.
+		\end{itemize}
+	\item Museo:
+		\begin{itemize}
+		\item Información completa acerca del Museo de Correos de Madrid, incluyendo localización, sugerencias, servicios...
+		\end{itemize}
+	\item Atención al cliente:
+		\begin{itemize}
+		\item Envío de quejas y reclamaciones.
+		\item Contacto electrónico con clientes.
+		\item Documentación de ayuda y normativa.
+		\end{itemize}
+	\item Información corporativa:
+		\begin{itemize}
+		\item Información acerca de la empresa de Correos
+		\end{itemize}
+	\end{enumerate}
+	
+	\subsection{Perfiles de la aplicación}
+	Para la utilización de la aplicación desde el entorno de Internet se crearán 3 perfiles
+	\begin{itemize}
+	\item \textbf{Administrador:} Se le permitirá llevar a cabo una actualización de los contenidos disponibles en el portal.
+	\item \textbf{Consulta:} Sólo podrá consultar la información disponible en la web.
+	\item \textbf{Tramitador:} Con capacidad para realizar gestiones y pedidos en la aplicación.
+	\end{itemize}
+
 
 \end{document}
 
