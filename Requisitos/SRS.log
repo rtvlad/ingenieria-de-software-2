@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.3)  3 DEC 2009 16:57
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 DEC 2009 18:02
 entering extended mode
 **SRS.tex
-(E:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
+(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\base\article.cls"
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -22,27 +22,27 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\base\latin1.def"
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-("C:\Archivos de programa\MiKTeX 2.8\tex\generic\babel\babel.sty"
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.sty"
 Package: babel 2008/07/06 v3.8l The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\generic\babel\spanish.ldf"
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\spanish.ldf"
 Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\generic\babel\babel.def"
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.def"
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
@@ -60,7 +60,7 @@ Package babel Info: Making " an active character on input line 492.
 Package babel Info: Making . an active character on input line 585.
 Package babel Info: Making < an active character on input line 630.
 Package babel Info: Making > an active character on input line 630.
-)) ("C:\Archivos de programa\MiKTeX 2.8\tex\latex\tools\multicol.sty"
+)) ("C:\Program Files\MiKTeX 2.8\tex\latex\tools\multicol.sty"
 Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \c@tracingmulticols=\count90
 \mult@box=\box26
@@ -107,24 +107,24 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ams\math\amsmath.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ams\math\amstext.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen112
 ))
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ams\math\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ams\math\amsopn.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count98
@@ -165,50 +165,50 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2009/06/22 v3.00
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\tools\enumerate.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks22
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\eurosym\eurosym.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box54
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks23
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
 \Gread@gobject=\count110
 ))
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-("C:\Archivos de programa\MiKTeX 2.8\tex\latex\ltxmisc\anysize.sty"
+("C:\Program Files\MiKTeX 2.8\tex\latex\ltxmisc\anysize.sty"
 Package: anysize 1994/08/13 1.0 Contributed LaTeX2e package
 
 Package: `anysize' 1.0 <1994/08/13>
@@ -217,7 +217,7 @@ Package: `anysize' 1.0 <1994/08/13>
 \@Topmargin=\dimen125
 \@Bottommargin=\dimen126
 )
-(E:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
+(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
@@ -230,7 +230,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-("C:\Archivos de programa\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
+("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen127
@@ -242,27 +242,85 @@ LaTeX Font Info:    ... okay on input line 17.
 \MPscratchDim=\dimen128
 \MPnumerator=\count115
 \everyMPtoPDFconversion=\toks25
-) [1
+)
+(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
-{C:/Documents and Settings/All Users/Datos de programa/MiKTeX/2.8/pdftex/config
-/pdftex.map}] [2] [3]
-(E:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+\tf@toc=\write3
+ [1
+
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+[5]
+Overfull \hbox (3.80663pt too wide) in paragraph at lines 121--122
+[]\OT1/cmr/m/it/12 Conexion con Ban-Corre-os: \OT1/cmr/m/n/12 en-lace al por-t
+al de Ban-Corre-os(www.bancorreos.es). 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+[7]
+(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
  ) 
 Here is how much of TeX's memory you used:
- 2583 strings out of 495285
- 32284 string characters out of 3179735
- 91876 words of memory out of 3000000
- 5784 multiletter control sequences out of 15000+200000
- 5504 words of font info for 20 fonts, out of 3000000 for 9000
+ 2634 strings out of 495285
+ 32692 string characters out of 3180388
+ 92888 words of memory out of 3000000
+ 5812 multiletter control sequences out of 15000+200000
+ 10509 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,4n,27p,506b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Archivos de programa/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-><C:/Archivos de programa/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Archivos de programa/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
-:/Archivos de programa/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on SRS.pdf (3 pages, 70375 bytes).
+ 27i,4n,27p,547b,284s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
+Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
+TeX 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SRS.pdf (7 pages, 76612 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

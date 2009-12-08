@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{multicol}
@@ -10,23 +10,29 @@
 \usepackage{graphicx}
 \usepackage{anysize}
 %\pagestyle{empty}
-\marginsize{3cm}{2cm}{2cm}{2cm}
-\author{Jesus Sánchez-Oro Calvo}
+\marginsize{3cm}{3cm}{3cm}{3cm}
+\author{David Rufo}
 \title{SRS}
-\setlength{\parskip}{1em}
+\setlength{\parskip}{1ex}
 \begin{document}
+
+\tableofcontents
+\newpage
 
 \section{Introducción}
 
 \subsection{Propósito}
-	El proyecto tiene como propósito el desarrollo de un nuevo portal de Correos y de un portal filatélico. Este documento está dirigido a los responsables técnicos de Correos, para el consenso de los requisitos entre la empresa solicitante y Correos.
+	El proyecto tiene como propósito el desarrollo de un nuevo Portal de Correos y de un Portal filatélico. Este documento está dirigido a los responsables técnicos de Correos, para el consenso de los requisitos entre la empresa solicitante y Correos.
 	
 \subsection{Alcance}
-	El portal web se denominará Correos. Este portal permitirá a los usuarios realizar las operaciones relacionadas con la gestión postal que podría realizar en una oficina física. Además, permite la localización de envío y dispone de un sistema de atención al cliente encargado de solucionar aquellos problemas que se le pudieran presentar.
+	El portal web se denominará \textit{\textbf{Correos}}. Éste permitirá a los usuarios realizar las operaciones relacionadas con la gestión postal que podría realizar en una oficina física. Además, permite la localización de envío y dispone de un sistema de atención al cliente encargado de solucionar aquellos problemas que se le pudieran presentar.\\
 	
-	La empresa de Correos se beneficiará de dicho portal agilizando la mayoría de los trámites que no requieran de un empleado para realizarse, permitiendo al personal dedicarse a aquellas transacciones que necesiten de una persona para su correcto funcionamiento. El cliente podrá, gracias al portal, realizar aquellas transacciones que le permitan de manera automática y sin necesidad de acudir a la oficina. 
+	La empresa de Correos se beneficiará de dicho portal agilizando la mayoría de los trámites que no requieran de un empleado para realizarse, permitiendo al personal dedicarse a aquellas transacciones que necesiten de una persona para su correcto funcionamiento. El cliente podrá, gracias al portal, realizar aquellas transacciones que le permitan de manera automática y sin necesidad de acudir a la oficina, lo cual le resultará muy cómodo y su manejo será muy sencillo, aunque se dispondrá de una ayuda ó manual de usuario. \\
 	
-	El objetivo principal es el desarrollo del portal con un funcionamiento estable y capaz de atender las peticiones de todos los clientes que accedan a él. El beneficio principal que obtendrán los clientes será la realización de todos los trámites sin necesidad de acudir de forma presencial a la oficina. Por otro lado los beneficios que obtendrá la empresa de Correos están relacionados con la menor contratación de personal y de desarrollar de manera más ágil los trámites pertinentes.
+	El objetivo principal es el desarrollo del portal con un funcionamiento estable y capaz de atender las peticiones de todos los clientes que accedan a él, ya que el número de estos puede ser elevado en ciertos momentos.\\
+	
+	El beneficio principal que obtendrán los clientes será la realización de la gran mayoría de los trámites sin necesidad de acudir de forma presencial a la oficina. Por otro lado las ganancias que obtendrá la empresa de Correos están relacionados con la menor contratación de personal y de desarrollar de manera más ágil y fácil los trámites pertinentes.
+ 
 	
 \subsection{Definiciones, siglas y abreviaciones}
 
@@ -40,10 +46,11 @@
 	\end{itemize}
 	
 \subsection{Apreciación Global}
-	El documento de especificación de requisitos contiene la descripción del producto que se va a diseñar, las funcionalidades que debe cumplir, las características de los usuarios que interaccionarán con él, las restricciones y dependencias que se pueden producir con respecto a otros productos que estén integrados o con los que podrá colaborar.
+	El documento de especificación de requisitos contiene la descripción del producto que se va a diseñar, las funcionalidades que debe cumplir, las características de los usuarios que interaccionarán con él, las restricciones y dependencias que se pueden producir con respecto a otros productos que estén integrados o con los que podrá colaborar.\\
 	
-	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE 830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos.
+	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE 830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos. Además al comienzo del documento se muestra un índice con el que se puede observar la estructura del documento.
 	
+	POSIBILIDAD DE AMPLICACIÓN	
 
 \section{Descripción Global}
 	
@@ -52,57 +59,98 @@
 	\begin{enumerate}
 		\item Envíos y recepción de dinero a través de Giro Postal, Western Union y Reembolso.
 		\item Posibilidad de la obtención de una dirección electrónica única mediante el \emph{Portal del Ciudadano del Gobierno de España}.
-		\item Enlace al portal de \emph{BanCorreos}
-		\item Obtención de un dominio a través de la empresa \emph{Nominalia}
+		\item Enlace al portal de \emph{BanCorreos}.
+		\item Obtención de un dominio a través de la empresa \emph{Nominalia}.
 	\end{enumerate}
 	
 	FALTA EL DIBUJO DE LOS BLOQUES
 	
+	
 \subsubsection{Interfaces del Sistema}
-	Las interfaces que va a componer el sistema son:
+	Las interfaces que van a componer el sistema son las siguiente:
 		\begin{itemize}
-			\item Vista del portal para los Particulares,
-			\item Vista del portal para las Empresas,
+			\item Vista del Portal de Correos para los Particulares,
+			\item Vista del Portal de Correos para las Empresas,
 			\item Vista para la Oficina Virtual.
 		\end{itemize}
+		
 	
 \subsubsection{Interfaces de Usuario}
-
+	El Portal de Correos está pensado para dos tipos de usuarios: Particulares y Empresas. Por lo que cada usuario deberá ir a la interfaz correspondiente para realizar la gestión que desea. Luego cada interfaz tendrá las operaciones correspondientes dependiendo del usuario. \\
+	
+	En caso de que el usuario necesite ayuda debido a que no conozca bien la aplicación o desee realizar una consulta el Portal tiene dos mecanismos de ayuda:
+	\begin{enumerate}
+		\item En la misma aplicación se incluirá una ayuda rápida, que es muy fácil de manejar y será capaz de resolver las pequeñas dudas o problemas que se le presenten al usuario.
+		\item Se pondrá a disposición un número de teléfono al cual el usuario podrá llamar para realizar la consulta a un empleado de Correos que tendrá los conocimientos suficientes como para solucionarle el problema. Por supuesto, este número de teléfono tendrá un horario de atención.
+	\end{enumerate}
+	
 	
 \subsubsection{Interfaces de Hardware}
-
+	Toda computadora desde la cual se desee utilizar este producto deberá disponer bien de una tarjeta de red (RJ45), bien de una tarjeta de red inalámbrica (WIFI) o bien de un módem. A través de alguno de ellos debe tener la posibilidad de conectarse con el servidor en el que se encuentra localizado el Portal de Correos vía web (Internet) y así poder realizar sus gestiones. \\
+	
+	También se podrán realizar las gestiones a través de teléfonos móviles, PDA's,... es decir, cualquier dispositivo que cumplan con los requisitos mínimos antes mencionados. Por ejemplo: se podrá realizar una operación desde un ordenador y luego ir consultando su estado a través de una PDA.
+	
 
 \subsubsection{Interfaces de Software}
-
+	Los requisitos mínimos Software de la computadora del cliente deberían ser los siguientes:
+		\begin{itemize}
+			\item Sistema Operativo: Windows 98 o superiores, Linux, Mac,...
+			\item Navegador Web: Mozilla Firefox, Internet Explorer, Chrome,...
+		\end{itemize}
+		
 
 \subsubsection{Interfaces de Comunicaciones}
-
+	Para realizar cualquier gestión se deberá disponer de conexión a Internet ya que el portal de Correos y el portal filatélico estarán alojados en la web. Luego las comunicaciones entre Correos y el Cliente serán a través de TCP/UDP. Cuando el cliente esté elaborando una transacción y ésta requiera cierta seguridad se utilizará el protocolo HTTPS, con el fin de que los datos introducidos viajen de forma segura (cifrada) por la web.
+	
 
 \subsubsection{Memoria}
-
-
-\subsubsection{Funcionamientos}
+	El mínimo de memoria requerido, en las computadoras del cliente, es aquel capaz de arrancar el sistema y realizar las transacciones oportunas con este producto, éstas serán guardadas en el servidor después de su elaboración. Aunque el cliente tendrá la posibilidad de descargar esta información, en cuyo caso necesitará más memoria secundaria.
 
 
 \subsubsection{Requisitos de Adaptación del Site}
-
+	El cliente deberá disponer de un navegador a través del cual se puedan realizar conexiones seguras con el fin de que los datos de las transacciones se envíen de forma cifrada para cumplir con el requisito de fiabilidad.	
+	
 
 \subsection{Funciones del Producto}
-
+	La principal funcionalidad del Portal de Correos es la realización de transacciones por parte de los clientes desde su casa u oficina. Con lo cual ambos ganarán calidad ya que el cliente se ahorrará el tiempo de tener que ir a una oficina de Correos a hacer esa operación y de esperar esas largas colas de espera. Por otro lado la empresa de Correos conseguirá que esas gestiones puedan ser llevadas a cabo de forma más rápida. \\
+	
+	Las diferentes funciones principales que va a incluir el producto son:
+	\begin{itemize}
+		\item \textit{Informatización de las funciones básicas de una oficina de correos:} envío y recepción de cartas, paquetes, documentos y dinero.
+		\item \textit{Conexión con el Apartado Postal Electrónico:} enlace al portal del Apartado Postal Electrónico(cep.correos.es).
+		\item \textit{Conexión con BanCorreos:} enlace al portal de BanCorreos(www.bancorreos.es).
+		\item \textit{Capacidad de realizar un cambio de domicilio:} redirección a la oficina virtual para realizar el cambio a través de la misma.
+		\item \textit{Servicio de prepagos y embalajes:} posibilidad de realizar compra online de los diferentes sobres y cajas disponibles mediante los diferentes servicios de pago que ofrece Correos.
+		\item \textit{Servicio de personalización de sellos:} capacidad de subida de las imágenes que van a situarse en los sellos.
+		\item \textit{Servicio de creamailing:} posibilidad de compra online de servicios estándares de creamailing, además de información de tarifas para servicios personalizados.
+		\item \textit{Reserva de apartado postal:} verificación y posibilidad de reserva (incluido el pago) de un apartado postal.
+		\item \textit{Reenvío postal:} posibilidad de que el cliente modifique sus datos mediante formularios para el reenvío de toda su correspondencia a otra dirección.
+		\item \textit{Dirección electrónica única:} concesión de una dirección electrónica personal donde se enviarán las notificaciones telemáticas seguras.
+		\item \textit{Pago de Recibos:} se mostrará al usuario una lista de las empresas con las cuales Correos tiene un acuerdo del pago de recibos.
+		\item \textit{Locutorios telefónicos:} se mostrará al usuario una lista de las oficinas que disponen de locutorios telefónicos.
+		\item \textit{Venta de dominios:} se ofrecerá un buscador que comprobará la disponibilidad del dominio solicitado y se permitirá la compra de dicho dominio en caso de estar disponible. La comprobación y la venta de un domino se realizará a través de Nominalia.
+		\item \textit{Portal Filatélico:} se incluirán servicios específicos de la filatelia, de manera interactiva con el usuario.
+		\item \textit{Museo:} se mostrará toda la información relacionada con el Museo de Correos dividida en las secciones correspondientes.
+		\item \textit{Atención al Cliente:} se ofrecerán al cliente todos los servicios necesarios para comunicarse con la empresa.
+		\item \textit{Información Corporativa:} se ofrecerá al cliente toda la información relacionada con la empresa de Correos.
+	\end{itemize}		
+	
 
 \subsection{Características del Usuario}
-
+	La aplicación va a ser desarrollada para todo tipo de usuarios (incluso aquellos que tengan alguna discapacidad) que apenas tengan conocimientos de la web. El principal conocimiento que es requerido por el producto es el sencillo manejo de un ordenador. Luego el cliente debe tener algo de experiencia con la navegación en Internet, aunque no demasiada, ya que sino le podrá resultar complejo el uso de este Portal Web. \\
+	
+	En el caso de que los usuarios no se vean capaces de poder realizar, a través de este producto, la gestión que desean llevar a cabo tendrán la posibilidad de acercarse a la oficina más cercana que tenga o la opción de una llamada telefónica para que le resuelvan las dudas o problemas que le vayan surgiendo mientras realiza dicha transacción.
 
 \subsection{Restricciones}
-
+	Hay que tener en cuenta los siguientes detalles:
+	\begin{itemize}
+		\item La aplicación va a ser utilizada en ciertos momentos por miles o millones de usuarios.
+		\item El lenguaje que va a contener la aplicación será sencillo y de fácil compresión.
+		\item Se utilizarán las medidas de seguridad oportunas con el fin de que el cliente siempre confíe en la aplicación, es decir, los datos personales, las contraseñas, el número de cuenta que proporcionará para los pagos,... serán transmitidos de forma cifrada. Luego para el cumplimiento de este requisito de fiabilidad se utilizará HTTPS.
+	\end{itemize}
 
 \subsection{Atención y Dependencias}
-
-
-
-
-
-
+	mmmmmmmmmmmmm.......
 
 
 \end{document}
