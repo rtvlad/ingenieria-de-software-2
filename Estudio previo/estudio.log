@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.11.6)  3 DEC 2009 15:34
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  9 DEC 2009 15:45
 entering extended mode
 **estudio.tex
 
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.tex"
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -361,8 +361,8 @@ Package color Info: Driver file: pdftex.def on input line 130.
 \everycr=\toks26
 \minrowclearance=\skip50
 )
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.aux")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
@@ -402,10 +402,10 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.out")
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.out")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.out")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box56
  <logoURJC.jpg, id=39, 85.82062pt x 90.3375pt>
@@ -422,10 +422,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <C:/Users/Jesus/Documents/
-Universidad/ISII/Práctica/Ficheros/Estudio previo/logoURJC.jpg>]
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.toc")
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <C:/Users/koveras/Document
+s/Universidad/ISII/Práctica/Ficheros/Estudio previo/logoURJC.jpg>]
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.toc")
 \tf@toc=\write4
  [2] [3] [4] [5]
 Underfull \hbox (badness 2096) in paragraph at lines 100--100
@@ -629,21 +629,21 @@ es, lo-cu-to-rios telefonicos
  []
 
 [9] [10]
-("C:\Users\Jesus\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\es
-tudio.aux") ) 
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
+estudio.aux") ) 
 Here is how much of TeX's memory you used:
  6067 strings out of 495285
- 85051 string characters out of 3180394
+ 85077 string characters out of 3180388
  172204 words of memory out of 3000000
  9126 multiletter control sequences out of 15000+200000
  10716 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,10n,36p,497b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
-iles/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on estudio.pdf (10 pages, 85632 bytes).
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
+ Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on estudio.pdf (10 pages, 85634 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  30 named destinations out of 1000 (max. 500000)
