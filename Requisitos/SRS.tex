@@ -9,12 +9,16 @@
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage{anysize}
+\usepackage{hyperref}
 %\pagestyle{empty}
 \marginsize{3cm}{3cm}{3cm}{3cm}
-\author{David Rufo}
-\title{SRS}
+\author{Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ David Rufo Valero \\ Radu Tom Vlad}
+\title{Documento de Especificación de Requisitos}
 \setlength{\parskip}{1ex}
 \begin{document}
+
+\maketitle
+\newpage
 
 \tableofcontents
 \newpage
@@ -22,7 +26,7 @@
 \section{Introducción}
 
 \subsection{Propósito}
-	El proyecto tiene como propósito el desarrollo de un nuevo Portal de Correos y de un Portal filatélico. Este documento está dirigido a los responsables técnicos de Correos, para el consenso de los requisitos entre la empresa solicitante y Correos.
+	A partir de este documento se va a recuperar el número de requisitos suficientes y necesarios para la construcción de un nuevo Portal de Correos y de un Portal Filatélico. Este documento está dirigido a los responsables técnicos de Correos, para el consenso de los requisitos entre la empresa solicitante y Correos.
 	
 \subsection{Alcance}
 	El portal web se denominará \textit{\textbf{Correos}}. Éste permitirá a los usuarios realizar las operaciones relacionadas con la gestión postal que podría realizar en una oficina física. Además, permite la localización de envío y dispone de un sistema de atención al cliente encargado de solucionar aquellos problemas que se le pudieran presentar.\\
@@ -33,25 +37,43 @@
 	
 	El beneficio principal que obtendrán los clientes será la realización de la gran mayoría de los trámites sin necesidad de acudir de forma presencial a la oficina. Por otro lado las ganancias que obtendrá la empresa de Correos están relacionados con la menor contratación de personal y de desarrollar de manera más ágil y fácil los trámites pertinentes.
  
-	
+\newpage
 \subsection{Definiciones, siglas y abreviaciones}
-
-	PENDIENTE
-	
-\subsection{Referencias}
 	\begin{itemize}
-	
-	\item PENDIENTE
-	
+		\item \textbf{Arquitectura DNA:} Distributed InterNet Applications Architecture de Microsoft. Se trata de una arquitectura de 3 capas: presentación, lógica de negocio y datos.
+		\begin{itemize}
+			\item Capa de Presentación:
+				\begin{itemize}
+					\item \textbf{IIS:} Internet Information Server. Serie de servicios para los ordenadores que funcionan bajo Windows.
+					\item \textbf{ASP:} Active Server Pages. Tecnología de Microsoft del tipo "lado del servidor" para páginas web generadas dinámicamente.
+					\item \textbf{AJAX:} Asynchronous JavaScript And XML. Técnica de desarrollo web para crear aplicaciones interactivas.
+					\item \textbf{WAI:} Web Accessibility Initiative. Rama de World Wide Web Consortium que vela por la accesibilidad de la Web.
+					\item \textbf{W3C:} World Wide Web Consortium. Consorcio internacional que produce recomendaciones para la World Wide Web (WWW).
+				\end{itemize}
+
+			\item Capa de Lógica de Negocio:
+				\begin{itemize}		
+					\item \textbf{COM+:} Component Object Model. Plataforma de Microsoft para componentes de software
+					\item \textbf{SI:} Sistemas de Información. Conjunto de datos organizados y preparados para su posterior uso.
+					\item \textbf{J2EE:} Java 2 Platform, Enterprise Edition. Desarrollar y ejecutar software de aplicaciones en el lenguaje de programación Java.
+				\end{itemize}
+		
+			\item Capa de Datos:
+				\begin{itemize}		
+					\item \textbf{SQL:} Structured Query Language. Lenguaje declarativo de acceso a bases de datos relacionales que permite especificar diversos tipos de operaciones en éstas.
+				\end{itemize}
+		\end{itemize}
 	\end{itemize}
 	
+\subsection{Referencias}
+	Para la realización del proyecto se va a tomar como referencia la web de Correos \textit{www.correos.es}
+
+\newpage
 \subsection{Apreciación Global}
 	El documento de especificación de requisitos contiene la descripción del producto que se va a diseñar, las funcionalidades que debe cumplir, las características de los usuarios que interaccionarán con él, las restricciones y dependencias que se pueden producir con respecto a otros productos que estén integrados o con los que podrá colaborar.\\
 	
-	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE 830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos. Además al comienzo del documento se muestra un índice con el que se puede observar la estructura del documento.
+	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE-STD-830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos. Además al comienzo del documento se muestra un índice con el que se puede observar la estructura del documento.
 	
-	POSIBILIDAD DE AMPLICACIÓN	
-
 \section{Descripción Global}
 	
 \subsection{Perspectiva del Producto}
@@ -72,8 +94,7 @@
 			\item Vista del Portal de Correos para los Particulares,
 			\item Vista del Portal de Correos para las Empresas,
 			\item Vista para la Oficina Virtual.
-		\end{itemize}
-		
+		\end{itemize}		
 	
 \subsubsection{Interfaces de Usuario}
 	El Portal de Correos está pensado para dos tipos de usuarios: Particulares y Empresas. Por lo que cada usuario deberá ir a la interfaz correspondiente para realizar la gestión que desea. Luego cada interfaz tendrá las operaciones correspondientes dependiendo del usuario. \\
@@ -82,25 +103,22 @@
 	\begin{enumerate}
 		\item En la misma aplicación se incluirá una ayuda rápida, que es muy fácil de manejar y será capaz de resolver las pequeñas dudas o problemas que se le presenten al usuario.
 		\item Se pondrá a disposición un número de teléfono al cual el usuario podrá llamar para realizar la consulta a un empleado de Correos que tendrá los conocimientos suficientes como para solucionarle el problema. Por supuesto, este número de teléfono tendrá un horario de atención.
-	\end{enumerate}
-	
+	\end{enumerate}	
 	
 \subsubsection{Interfaces de Hardware}
 	Toda computadora desde la cual se desee utilizar este producto deberá disponer bien de una tarjeta de red (RJ45), bien de una tarjeta de red inalámbrica (WIFI) o bien de un módem. A través de alguno de ellos debe tener la posibilidad de conectarse con el servidor en el que se encuentra localizado el Portal de Correos vía web (Internet) y así poder realizar sus gestiones. \\
 	
-	También se podrán realizar las gestiones a través de teléfonos móviles, PDA's,... es decir, cualquier dispositivo que cumplan con los requisitos mínimos antes mencionados. Por ejemplo: se podrá realizar una operación desde un ordenador y luego ir consultando su estado a través de una PDA.
-	
+	También se podrán realizar las gestiones a través de teléfonos móviles, PDA's,... es decir, cualquier dispositivo que cumplan con los requisitos mínimos antes mencionados. Por ejemplo: se podrá realizar una operación desde un ordenador y luego ir consultando su estado a través de una PDA.	
 
 \subsubsection{Interfaces de Software}
 	Los requisitos mínimos Software de la computadora del cliente deberían ser los siguientes:
 		\begin{itemize}
-			\item Sistema Operativo: Windows 98 o superiores, Linux, Mac,...
+			\item Sistema Operativo: Windows 98 o superiores, Linux, Macintosh,...
 			\item Navegador Web: Mozilla Firefox, Internet Explorer, Chrome,...
-		\end{itemize}
-		
+		\end{itemize}		
 
 \subsubsection{Interfaces de Comunicaciones}
-	Para realizar cualquier gestión se deberá disponer de conexión a Internet ya que el portal de Correos y el portal filatélico estarán alojados en la web. Luego las comunicaciones entre Correos y el Cliente serán a través de TCP/UDP. Cuando el cliente esté elaborando una transacción y ésta requiera cierta seguridad se utilizará el protocolo HTTPS, con el fin de que los datos introducidos viajen de forma segura (cifrada) por la web.
+	Para realizar cualquier gestión se deberá disponer de conexión a Internet ya que el portal de Correos y el portal filatélico estarán alojados en la web. Luego las comunicaciones entre Correos y el Cliente serán a través de TCP/UDP. Cuando el cliente esté elaborando una transacción y ésta requiera cierta seguridad se utilizará el protocolo HTTPS, con el fin de que los datos introducidos, en los diferentes formularios, viajen de forma segura (cifrada) por la web.
 	
 
 \subsubsection{Memoria}
@@ -108,8 +126,7 @@
 
 
 \subsubsection{Requisitos de Adaptación del Site}
-	El cliente deberá disponer de un navegador a través del cual se puedan realizar conexiones seguras con el fin de que los datos de las transacciones se envíen de forma cifrada para cumplir con el requisito de fiabilidad.	
-	
+	El cliente deberá disponer de un navegador a través del cual se puedan realizar conexiones seguras con el fin de que los datos de las transacciones se envíen de forma cifrada para cumplir con el requisito de fiabilidad.		
 
 \subsection{Funciones del Producto}
 	La principal funcionalidad del Portal de Correos es la realización de transacciones por parte de los clientes desde su casa u oficina. Con lo cual ambos ganarán calidad ya que el cliente se ahorrará el tiempo de tener que ir a una oficina de Correos a hacer esa operación y de esperar esas largas colas de espera. Por otro lado la empresa de Correos conseguirá que esas gestiones puedan ser llevadas a cabo de forma más rápida. \\
@@ -133,13 +150,21 @@
 		\item \textit{Museo:} se mostrará toda la información relacionada con el Museo de Correos dividida en las secciones correspondientes.
 		\item \textit{Atención al Cliente:} se ofrecerán al cliente todos los servicios necesarios para comunicarse con la empresa.
 		\item \textit{Información Corporativa:} se ofrecerá al cliente toda la información relacionada con la empresa de Correos.
-	\end{itemize}		
+	\end{itemize}
+
+	Luego la funcionalidad general del producto será la siguiente:
+	\begin{itemize}
+		\item El cliente realizará consultas sobre la aplicación, como por ejemplo: localización del producto que ha enviado un cliente.
+		\item La aplicación pedirá datos al cliente para las distintas funciones que ésta realiza. Una vez obtenidos esos datos y comprobando que sean todos correctos, la aplicación devolverá el mensaje correspondiente en cada caso. Por ejemplo: el inicio de sesión de un cliente, previamente registrado e introdujo sus datos correctamente, se le mostrará en el navegador un mensaje de bienvenida o algo similar.
+	\end{itemize}
 	
 
 \subsection{Características del Usuario}
 	La aplicación va a ser desarrollada para todo tipo de usuarios (incluso aquellos que tengan alguna discapacidad) que apenas tengan conocimientos de la web. El principal conocimiento que es requerido por el producto es el sencillo manejo de un ordenador. Luego el cliente debe tener algo de experiencia con la navegación en Internet, aunque no demasiada, ya que sino le podrá resultar complejo el uso de este Portal Web. \\
 	
-	En el caso de que los usuarios no se vean capaces de poder realizar, a través de este producto, la gestión que desean llevar a cabo tendrán la posibilidad de acercarse a la oficina más cercana que tenga o la opción de una llamada telefónica para que le resuelvan las dudas o problemas que le vayan surgiendo mientras realiza dicha transacción.
+	En el caso de que los usuarios no se vean capaces de poder realizar, a través de este producto, la gestión que desean llevar a cabo tendrán la posibilidad de acercarse a la oficina más cercana que tenga o la opción de una llamada telefónica para que le resuelvan las dudas o problemas que le vayan surgiendo mientras realiza dicha transacción. \\
+	
+	Como conclusión, el usuario debe tener los conocimientos básicos para acceder a Internet mediante un navegador web. No es necesaria ninguna experiencia previa con otras aplicaciones similares ya que el sistema le guiará de manera sencilla e intuitiva a través de los menús. Es aconsejable tener conocimientos elementales del uso de algún sistema operativo (como Linux, Macintosh o Windows).
 
 \subsection{Restricciones}
 	Hay que tener en cuenta los siguientes detalles:
@@ -150,7 +175,22 @@
 	\end{itemize}
 
 \subsection{Atención y Dependencias}
-	mmmmmmmmmmmmm.......
+	Será necesaria la disponibilidad de algún sistema operativo como Windows, Linux, Macintosh o similares en el que se haya instalado un navegador web totalmente actualizado, mediante el cual se accederá a la aplicación. Puede ser necesaria la instalación de plugins, así como la actualización del navegador para la correcta visualización de la aplicación.
+
+
+\section{Requisitos Específicos}
+
+\subsection{Interfaces Externas}
+
+\subsection{Funciones}
+
+\subsection{Requisitos del desarrollo}
+
+\subsection{Requisitos del banco de datos lógicos}
+
+\subsection{Restricciones del diseño}
+
+\subsection{Atributos del software del sistema}
 
 
 \end{document}
