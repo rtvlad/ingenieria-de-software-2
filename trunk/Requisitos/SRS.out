@@ -12,9 +12,15 @@
 \BOOKMARK [3][-]{subsubsection.2.1.4}{Interfaces de Software}{subsection.2.1}
 \BOOKMARK [3][-]{subsubsection.2.1.5}{Interfaces de Comunicaciones}{subsection.2.1}
 \BOOKMARK [3][-]{subsubsection.2.1.6}{Memoria}{subsection.2.1}
-\BOOKMARK [3][-]{subsubsection.2.1.7}{Funcionamientos}{subsection.2.1}
-\BOOKMARK [3][-]{subsubsection.2.1.8}{Requisitos de Adaptaci\363n del Site}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.7}{Requisitos de Adaptaci\363n del Site}{subsection.2.1}
 \BOOKMARK [2][-]{subsection.2.2}{Funciones del Producto}{section.2}
 \BOOKMARK [2][-]{subsection.2.3}{Caracter\355sticas del Usuario}{section.2}
 \BOOKMARK [2][-]{subsection.2.4}{Restricciones}{section.2}
 \BOOKMARK [2][-]{subsection.2.5}{Atenci\363n y Dependencias}{section.2}
+\BOOKMARK [1][-]{section.3}{Requisitos Espec\355ficos}{}
+\BOOKMARK [2][-]{subsection.3.1}{Interfaces Externas}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Funciones}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Requisitos del desarrollo}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{Requisitos del banco de datos l\363gicos}{section.3}
+\BOOKMARK [2][-]{subsection.3.5}{Restricciones del dise\361o}{section.3}
+\BOOKMARK [2][-]{subsection.3.6}{Atributos del software del sistema}{section.3}

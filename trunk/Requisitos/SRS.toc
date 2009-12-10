@@ -1,20 +1,27 @@
 \select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\'on}{2}
-\contentsline {subsection}{\numberline {1.1}Prop\'osito}{2}
-\contentsline {subsection}{\numberline {1.2}Alcance}{2}
-\contentsline {subsection}{\numberline {1.3}Definiciones, siglas y abreviaciones}{2}
-\contentsline {subsection}{\numberline {1.4}Referencias}{3}
-\contentsline {subsection}{\numberline {1.5}Apreciaci\'on Global}{3}
-\contentsline {section}{\numberline {2}Descripci\'on Global}{3}
-\contentsline {subsection}{\numberline {2.1}Perspectiva del Producto}{3}
-\contentsline {subsubsection}{\numberline {2.1.1}Interfaces del Sistema}{4}
-\contentsline {subsubsection}{\numberline {2.1.2}Interfaces de Usuario}{4}
-\contentsline {subsubsection}{\numberline {2.1.3}Interfaces de Hardware}{4}
-\contentsline {subsubsection}{\numberline {2.1.4}Interfaces de Software}{5}
-\contentsline {subsubsection}{\numberline {2.1.5}Interfaces de Comunicaciones}{5}
-\contentsline {subsubsection}{\numberline {2.1.6}Memoria}{5}
-\contentsline {subsubsection}{\numberline {2.1.7}Requisitos de Adaptaci\'on del Site}{5}
-\contentsline {subsection}{\numberline {2.2}Funciones del Producto}{5}
-\contentsline {subsection}{\numberline {2.3}Caracter\IeC {\'\i }sticas del Usuario}{7}
-\contentsline {subsection}{\numberline {2.4}Restricciones}{7}
-\contentsline {subsection}{\numberline {2.5}Atenci\'on y Dependencias}{7}
+\contentsline {section}{\numberline {1}Introducci\'on}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Prop\'osito}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Alcance}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Definiciones, siglas y abreviaciones}{4}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Referencias}{4}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Apreciaci\'on Global}{5}{subsection.1.5}
+\contentsline {section}{\numberline {2}Descripci\'on Global}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Perspectiva del Producto}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Interfaces del Sistema}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Interfaces de Usuario}{6}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Interfaces de Hardware}{6}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Interfaces de Software}{6}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Interfaces de Comunicaciones}{7}{subsubsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.6}Memoria}{7}{subsubsection.2.1.6}
+\contentsline {subsubsection}{\numberline {2.1.7}Requisitos de Adaptaci\'on del Site}{7}{subsubsection.2.1.7}
+\contentsline {subsection}{\numberline {2.2}Funciones del Producto}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Caracter\IeC {\'\i }sticas del Usuario}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Restricciones}{9}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Atenci\'on y Dependencias}{10}{subsection.2.5}
+\contentsline {section}{\numberline {3}Requisitos Espec\IeC {\'\i }ficos}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Interfaces Externas}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Funciones}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Requisitos del desarrollo}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Requisitos del banco de datos l\'ogicos}{10}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Restricciones del dise\~no}{10}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Atributos del software del sistema}{10}{subsection.3.6}
