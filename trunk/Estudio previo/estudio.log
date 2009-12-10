@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  9 DEC 2009 15:45
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  10 DEC 2009 16:02
 entering extended mode
 **estudio.tex
 
@@ -408,7 +408,7 @@ estudio.out")
 estudio.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box56
- <logoURJC.jpg, id=39, 85.82062pt x 90.3375pt>
+ <logoURJC.jpg, id=43, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
  <use logoURJC.jpg>
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
@@ -427,225 +427,140 @@ s/Universidad/ISII/Práctica/Ficheros/Estudio previo/logoURJC.jpg>]
 ("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
 estudio.toc")
 \tf@toc=\write4
- [2] [3] [4] [5]
-Underfull \hbox (badness 2096) in paragraph at lines 100--100
-\OT1/cmr/m/n/12 fun-ciones basicas de
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+[]|\OT1/cmr/m/n/12 Creacion del doc-u-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\OT1/cmr/m/n/12 Conexion con el
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-\OT1/cmr/m/n/12 Aparta-do Postal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-[]|\OT1/cmr/m/n/12 Enlace al por-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-\OT1/cmr/m/n/12 tal del Aparta-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-\OT1/cmr/m/n/12 Postal Elec-tron-i-
- []
-
-
-Underfull \hbox (badness 6477) in paragraph at lines 102--102
-[]|\OT1/cmr/m/n/12 Conexion con Ban-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-[]|\OT1/cmr/m/n/12 Enlace al por-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-\OT1/cmr/m/n/12 tal de Ban-Corre-
- []
-
-
-Overfull \hbox (5.8419pt too wide) in paragraph at lines 102--103
-\OT1/cmr/m/n/12 os(www.bancorreos.es).| 
- []
-
-
-Underfull \hbox (badness 1859) in paragraph at lines 103--104
-\OT1/cmr/m/n/12 i-na vir-tu-al para re-
- []
-
-
-Underfull \hbox (badness 6316) in paragraph at lines 103--104
-\OT1/cmr/m/n/12 alizar el cam-bio a
- []
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 104--105
-\OT1/cmr/m/n/12 vi-cios de pa-go que
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--107
-
+[3] [4] [5] [6]
+Underfull \hbox (badness 2293) in paragraph at lines 111--111
+\OT1/cmr/m/n/12 ges-tiones propias de
  []
 
 
 Underfull \hbox (badness 3428) in paragraph at lines 111--112
-[]|\OT1/cmr/m/n/12 Posibilidad de com-
+\OT1/cmr/m/n/12 tal web con dichas
  []
 
 
-Underfull \hbox (badness 6510) in paragraph at lines 111--112
-\OT1/cmr/m/n/12 estandares de crea-
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\OT1/cmr/m/n/12 glob-al y unica.
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 111--112
-\OT1/cmr/m/n/12 for-ma-cion de tar-i-fas
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\OT1/cmr/m/n/12 Uti-lizacion de los
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 112--112
-[]|\OT1/cmr/m/n/12 Reserva de aparta-do
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+\OT1/cmr/m/n/12 va apli-cacion para
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 112--113
-\OT1/cmr/m/n/12 i-dad de reser-va (in-
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 114--115
-\OT1/cmr/m/n/12 den-cia a otra di-rec-
- []
-
-
-Underfull \hbox (badness 4403) in paragraph at lines 115--115
-[]|\OT1/cmr/m/n/12 Direccion elec-tronica
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]|\OT1/cmr/m/n/12 Acceso lim-i-ta-do a
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-[]|\OT1/cmr/m/n/12 Concesion de una
+[]|\OT1/cmr/m/n/12 Se dispon-dra de
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/cmr/m/n/12 di-rec-cion elec-tronica
+\OT1/cmr/m/n/12 una op-cion para
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/cmr/m/n/12 per-son-al donde se
+\OT1/cmr/m/n/12 ad-min-is-trar usuar-ios
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/cmr/m/n/12 en-viaran las no-ti-fi-
+\OT1/cmr/m/n/12 y otor-gar-les per-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\OT1/cmr/m/n/12 ca-ciones telematicas
+\OT1/cmr/m/n/12 misos. Ademas, de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-\OT1/cmr/m/n/12 Corre-os tiene un
- []
-
-[6]
-Underfull \hbox (badness 1831) in paragraph at lines 125--126
-[]|\OT1/cmr/m/n/12 Se ofre-cera un bus-
+Underfull \hbox (badness 2443) in paragraph at lines 115--116
+\OT1/cmr/m/n/12 clientes que se reg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-\OT1/cmr/m/n/12 cador que com-pro-
+Underfull \hbox (badness 10000) in paragraph at lines 109--118
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]|\OT1/cmr/m/n/12 El sis-tema per-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-\OT1/cmr/m/n/12 y se per-mi-tira la
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+\OT1/cmr/m/n/12 ha re-al-iza-do una
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-[]|\OT1/cmr/m/n/12 Se in-cluiran ser-vi-
+Underfull \hbox (badness 2538) in paragraph at lines 121--121
+\OT1/cmr/m/n/12 seguiran los pro-ced-
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 126--127
-\OT1/cmr/m/n/12 filatelia, de man-era
+Underfull \hbox (badness 6268) in paragraph at lines 121--122
+[]|\OT1/cmr/m/n/12 Se im-ple-men-tara el
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-\OT1/cmr/m/n/12 in-ter-ac-ti-va con el
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+\OT1/cmr/m/n/12 pro-ced-imien-to de
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 127--128
-\OT1/cmr/m/n/12 Corre-os di-vi-di-da en
+Underfull \hbox (badness 5008) in paragraph at lines 121--122
+\OT1/cmr/m/n/12 re-al-izadas, segun la
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 127--128
-\OT1/cmr/m/n/12 las sec-ciones cor-re-
+Underfull \hbox (badness 4673) in paragraph at lines 121--122
+\OT1/cmr/m/n/12 Agen-cia de Gestion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-\OT1/cmr/m/n/12 to-dos los ser-vi-cios
+Underfull \hbox (badness 1365) in paragraph at lines 122--123
+\OT1/cmr/m/n/12 que per-mi-ta obten-er
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-\OT1/cmr/m/n/12 nece-sar-ios para co-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-\OT1/cmr/m/n/12 mu-ni-carse con la
- []
-
-
-Underfull \hbox (badness 3895) in paragraph at lines 129--130
-\OT1/cmr/m/n/12 to-da la in-for-ma-cion
- []
-
-[7] [8]
-Overfull \hbox (19.7677pt too wide) in paragraph at lines 168--169
+[8] [9]
+Overfull \hbox (19.7677pt too wide) in paragraph at lines 161--162
 []\OT1/cmr/m/n/12 Informacion so-bre el pa-go de reci-bos, re-car-ga de movil
 es, lo-cu-to-rios telefonicos
  []
 
-[9] [10]
+[10] [11]
 ("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
 estudio.aux") ) 
 Here is how much of TeX's memory you used:
- 6067 strings out of 495285
- 85077 string characters out of 3180388
- 172204 words of memory out of 3000000
- 9126 multiletter control sequences out of 15000+200000
+ 6070 strings out of 495285
+ 85104 string characters out of 3180388
+ 170204 words of memory out of 3000000
+ 9127 multiletter control sequences out of 15000+200000
  10716 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,10n,36p,497b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,36p,497b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
 :/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
  Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on estudio.pdf (10 pages, 85634 bytes).
+Output written on estudio.pdf (11 pages, 86673 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

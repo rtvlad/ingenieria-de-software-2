@@ -24,7 +24,7 @@
 \includegraphics[scale=1]{logoURJC.jpg} \\[1cm]
 \textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
 {\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
-{\Large Aplicaciones para la Web}\\[1.25cm]
+{\Large Ingeniería del Software II}\\[1.25cm]
 {\LARGE \textbf{Práctica 1}}\\[3.5cm]
 {\Large Radu Tom Vlad \\ David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila }\\[1cm]
 5º de Ingeniería Informática \\[1cm]
@@ -34,6 +34,17 @@
 
 \newpage
 \tableofcontents
+
+\newpage
+
+\section{Hoja de control}
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{4cm}|}
+\hline \textbf{Versión} & \textbf{Revisión} & \textbf{Fecha} & \textbf{Autor} & \textbf{Descripción} \\ 
+\hline 1 & 1 & 20/11/09 & Grupo & Creación del documento con el estudio previo inicial \\ 
+\hline  &  &  &  &  \\ 
+\hline  &  &  &  &  \\ 
+\hline 
+\end{tabular} 
 
 \newpage
 
@@ -97,36 +108,18 @@ El objetivo final es la obtención de un nuevo portal web de Correos y un portal 
 \subsection{Especificación de requisitos}
 \begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
 \hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
-\hline  1. & Alta & Informatización de las funciones básicas de una oficina de correos (envío y recepción de cartas, paquetes, documentos y dinero) & Utilizaremos formularios para que el cliente incluya los datos del envío o recepción. \\
-\hline  2. & Alta & Conexión con el Apartado Postal Electrónico & Enlace al portal del Apartado Postal Electronico(cep.correos.es). \\
-\hline  3. & Alta & Conexión con BanCorreos & Enlace al portal de BanCorreos(www.bancorreos.es). \\
-\hline  4. & Media & Capacidad de realizar un cambio de domicilio & Redirección a la oficina virtual para realizar el cambio a través de la misma \\
-\hline  5. & Media & Servicio de prepagos y embalajes & Posibilidad de realizar compra online de los diferentes sobres y cajas disponibles mediante los diferentes servicios de pago que ofrece Correos. \\
+\hline  1. & Alta & Informatización de las gestiones propias de una oficina de correos (envío y recepción de cartas, paquetes, documentos y dinero) & Utilización de un portal web con dichas funciones \\
+\hline  2. & Alta & Seguridad de los procesos y confidencialidad de la información & Base de datos común, global y única. Utilización de los mecanismos de seguridad disponibles en el cliente \\
+\hline  3. & Alta & Integración de la herramienta con el resto de portales de correos (BanCorreos, Portal filatélico...) & Desarrollo de la nueva aplicación para intercambiar información con el resto de portales \\
+\hline  4. & Alta & Utilización de la información interna del sistema, así como actualización de dicha información & Se dispondrá de opciones para consultar la información, así como la posibilidad de actualizar dicha información en los servidores por personal autorizado. \\
+\hline  5. & Alta & Acceso limitado a usuarios dependiendo de su perfil & Se dispondrá de una opción para administrar usuarios y otorgarles permisos. Además, de forma automática los clientes que se registren dispondrán de permisos para cliente \\
 \hline
 \end{tabular} \\
 \begin{center}
 \begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
 \hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
-\hline  6. & Baja & Servicio de personalización de sellos. & Capacidad de subida de las imágenes que van a situarse en los sellos. \\
-\hline  7. & Baja & Servicio de creamailing & Posibilidad de compra online de servicios estándares de creamailing, además de información de tarifas para servicios personalizados. \\
-\hline  8. & Baja & Reserva de apartado postal & Verificación y posibilidad de reserva (incluido el pago) de un apartado postal. \\
-
-\hline  9. & Baja & Reenvío postal & Posibilidad de que el cliente modifique sus datos mediante formularios para el reenvío de toda su correspondencia a otra dirección. \\
-\hline 10. & Baja & Dirección electrónica única & Concesión de una dirección electrónica personal donde se enviarán las notificaciones telemáticas seguras. \\
-\hline 11. & Baja & Pago de Recibos & Se mostrará al usuario una lista de las empresas con las cuales Correos tiene un acuerdo del pago de recibos. \\
-\hline
-\end{tabular} \\
-\end{center}
-\begin{center}
-\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|p{4cm}|}
-\hline \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Referencia} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{2cm}|}{Prioridad} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Descripción} & \multicolumn{1}{|>{\columncolor[rgb]{0,0,1.0}}p{4cm}|}{Solución} \\ 
-
-\hline 12. & Baja & Locutorios telefónicos & Se mostrará al usuario una lista de las oficinas que disponen de locutorios telefónicos. \\
-\hline 13. & Baja & Venta de dominios & Se ofrecerá un buscador que comprobará la disponibilidad del dominio solicitado y se permitirá la compra de dicho dominio en caso de estar disponible. \\
-\hline 14. & Alta & Portal Filatélico & Se incluirán servicios específicos de la filatelia, de manera interactiva con el usuario.\\
-\hline 15. & Baja & Museo & Se mostrará toda la información relacionada con el Museo de Correos dividida en las secciones correspondientes.\\
-\hline 16. & Media & Atención al Cliente & Se ofrecerán al cliente todos los servicios necesarios para comunicarse con la empresa.\\
-\hline 17. & Media & Información Corporativa & Se ofrecerá al cliente toda la información relacionada con la empresa de Correos. \\
+\hline  6. & Alta & El sistema permitirá conocer en todo momento qué usuario ha realizado una determinada acción y en qué momento. Se seguirán los procedimientos descritos en la Ley de Protección de Datos & Se implementará el procedimiento de gestión de las acciones realizadas, según la Agencia de Gestión de Datos \\
+\hline  7. & Altas & Obtención de Consultas y Listados & Se ofrecerá una opción que permita obtener un listado de la información solicitada por el cliente \\
 \hline
 \end{tabular} 
 \end{center}
