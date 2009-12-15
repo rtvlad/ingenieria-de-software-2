@@ -68,7 +68,6 @@
 \subsection{Referencias}
 	Para la realización del proyecto se va a tomar como referencia la web de Correos \textit{www.correos.es}
 
-\newpage
 \subsection{Apreciación Global}
 	El documento de especificación de requisitos contiene la descripción del producto que se va a diseñar, las funcionalidades que debe cumplir, las características de los usuarios que interaccionarán con él, las restricciones y dependencias que se pueden producir con respecto a otros productos que estén integrados o con los que podrá colaborar.\\
 	
@@ -85,7 +84,10 @@
 		\item Obtención de un dominio a través de la empresa \emph{Nominalia}.
 	\end{enumerate}
 	
-	FALTA EL DIBUJO DE LOS BLOQUES
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=250pt]{dibujoBloque.jpg}
+	\end{figure}
 	
 	
 \subsubsection{Interfaces del Sistema}
@@ -115,7 +117,20 @@
 		\begin{itemize}
 			\item Sistema Operativo: Windows 98 o superiores, Linux, Macintosh,...
 			\item Navegador Web: Mozilla Firefox, Internet Explorer, Chrome,...
-		\end{itemize}		
+		\end{itemize}
+
+	En cuanto a la parte del servidor, deberá cumplir con los siguientes requisitos:
+		\begin{itemize}
+			\item Sistema Operativo AIX 5.3,
+			\item Servidor de Aplicaciones Websphere Aplication Server Network Deployment 5.1.1.3,
+			\item Oracle RAC 9.2.07,
+			\item J2EE 1.4, 
+			\item MQ/Broker 6.0,
+			\item Spazio,
+			\item Herramienta de Creación de Portales: Websphere Portal Enable V5.01.
+		\end{itemize}
+
+	La memoria principal y secundaria de estos servidores serán la conveniente como para un funcionamiento holgado de estos.
 
 \subsubsection{Interfaces de Comunicaciones}
 	Para realizar cualquier gestión se deberá disponer de conexión a Internet ya que el portal de Correos y el portal filatélico estarán alojados en la web. Luego las comunicaciones entre Correos y el Cliente serán a través de TCP/UDP. Cuando el cliente esté elaborando una transacción y ésta requiera cierta seguridad se utilizará el protocolo HTTPS, con el fin de que los datos introducidos, en los diferentes formularios, viajen de forma segura (cifrada) por la web.
@@ -131,7 +146,7 @@
 \subsection{Funciones del Producto}
 	La principal funcionalidad del Portal de Correos es la realización de transacciones por parte de los clientes desde su casa u oficina. Con lo cual ambos ganarán calidad ya que el cliente se ahorrará el tiempo de tener que ir a una oficina de Correos a hacer esa operación y de esperar esas largas colas de espera. Por otro lado la empresa de Correos conseguirá que esas gestiones puedan ser llevadas a cabo de forma más rápida. \\
 	
-	Las diferentes funciones principales que va a incluir el producto son:
+	Las diferentes funciones principales que de la aplicación serán:
 	\begin{itemize}
 		\item \textit{Informatización de las funciones básicas de una oficina de correos:} envío y recepción de cartas, paquetes, documentos y dinero.
 		\item \textit{Conexión con el Apartado Postal Electrónico:} enlace al portal del Apartado Postal Electrónico(cep.correos.es).
@@ -152,10 +167,10 @@
 		\item \textit{Información Corporativa:} se ofrecerá al cliente toda la información relacionada con la empresa de Correos.
 	\end{itemize}
 
-	Luego la funcionalidad general del producto será la siguiente:
+	La funcionalidad general del producto será la que se muestra a continuación:
 	\begin{itemize}
-		\item El cliente realizará consultas sobre la aplicación, como por ejemplo: localización del producto que ha enviado un cliente.
-		\item La aplicación pedirá datos al cliente para las distintas funciones que ésta realiza. Una vez obtenidos esos datos y comprobando que sean todos correctos, la aplicación devolverá el mensaje correspondiente en cada caso. Por ejemplo: el inicio de sesión de un cliente, previamente registrado e introdujo sus datos correctamente, se le mostrará en el navegador un mensaje de bienvenida o algo similar.
+		\item El cliente realizará consultas sobre la aplicación, como por ejemplo: localización del producto que ha enviado un cliente; otra posible consulta sería el acceso a la web de correos para ver los costes de envío de paquetes,...
+		\item La aplicación pedirá datos al cliente, una vez obtenidos éstos y comprobado que son correctos la aplicación procesará esos datos y devolverá el mensaje correspondiente. Por ejemplo: el inicio de sesión de un cliente, previamente registrado e introducidos sus datos correctamente, se le mostrará en el navegador un mensaje de bienvenida o algo similar.
 	\end{itemize}
 	
 
@@ -181,16 +196,85 @@
 \section{Requisitos Específicos}
 
 \subsection{Interfaces Externas}
+	Las interfaces externas del sistema serán por un lado el navegador web y por otro, la base de datos relacional. 
+	\begin{itemize}
+		\item Respecto al navegador web, el sistema enviará información al mismo en lenguaje HTML, para que el navegador se la muestre de manera correcta al usuario.
+		\item Con la base de datos las transacciones serán en forma de consultas Oracle, donde se le solicitarán diversos datos que el usuario necesite.
+	\end{itemize}	
 
 \subsection{Funciones}
-
+	El sistema debe:
+	\begin{itemize}
+		\item Gestión de los datos introducidos por un cliente.
+		\item Gestión de envíos de documentos o paquetes realizados por un cliente: datos del envío, localización del envío una vez que fue confirmado.
+		\item Gestión del envío de dinero a través de un Giro, Western Union o Reembolso.
+		\item Gestión del Portal Filatélico.
+		\item Gestión de la Oficina Virtual.
+	\end{itemize}
+	
 \subsection{Requisitos del desarrollo}
+	\begin{itemize}
+		\item \textit{Requisitos estáticos:} El sistema funciona al funcionar a través de la Web no será necesario instalarlo en ningún terminal, éste simplemente deberá tener un navegador web compatible con nuestra aplicación. El número de usuarios simultáneos dependerá de la capacidad de respuesta del servidor, tendremos previsto que esa cantidad este entorno a los miles de usuarios simultáneos. \\
+		La información manejada por la aplicación será texto plano debido a los formularios y datos en HTML, y puede que en algún momento sea necesario tratar con ficheros PDF en el caso de las facturas, vista de información de los productos tanto en HTML como en PDF y la observación de fotografías. La idea aproximada en cuanto a la cantidad de información tratada por los servidores, basándonos en la actualidad, estará girando entorno a los 14GB debido a que la web estará formada por unas 150.00 páginas web con un tamaño aproximado de 100KB. A esto debe añadirse la información propia de los clientes, que estará en torno a 5GB por mes ya que la página recibirá unas 400.000 visitas/mes, con una media de 5 accesos por cliente en un mes y pensando que el tamaño de ésta será unos 100KB. Los datos referentes podrían surgir variaciones a mayor o menor cantidad.
+		
+		\item \textit{Requisitos dinámicos:} En condiciones normales de trabajo, el sistema responderá en menos de 3 segundos a cualquier consulta que se realice, y la información transmitida no ralentizará el sistema. En condiciones en las que el servidor se vea sobrecargado por el tráfico, el tiempo de respuesta dependerá del servidor, así como la cantidad de información que se puede transmitir. Por ello, en el caso de este sistema, el tiempo de respuesta y la cantidad de información no dependerá de la aplicación, sino del servidor en el que esté alojada. Aunque probablemente habrá varios servidores trabajando con el propósito de prevenir la caída de uno y que deje de funcionar la aplicación, y además de esto ayudará a no saturar uno de ellos y repartir la carga de trabajo entre ellos.
+	\end{itemize}	
 
 \subsection{Requisitos del banco de datos lógicos}
+	La información será almacenada en bases de datos Oracle, con sus correspondientes copias de seguridad cada cierto periodo. En ésta se mantendrá información actualizada de los datos de clientes, localizaciones de los envíos de los distintos productos y todo lo relacionado con la empresa de Correos. La frecuencia de uso será alta, debido a que la aplicación se basa en la transferencia de estos datos entre el usuario y la aplicación.
 
 \subsection{Restricciones del diseño}
+	El diseño de la aplicación se verá limitado por el cumplimiento de los diferentes certificados que se pretende alcanzar, como por ejemplo: la accesibilidad debería ser de Nivel-A, debe tener los protocolos necesarios para la información cifrada de los datos privados de los clientes. 
 
 \subsection{Atributos del software del sistema}
-
+	\begin{itemize}
+		\item \textbf{Fiabilidad:} El sistema será totalmente fiable debido a la eficiencia del programa. Por ello, el sistema garantiza el éxito de todas las transacciones realizadas.
+		\item \textbf{Disponibilidad:} La disponibilidad del sistema dependerá por completo del servidor o servidores web en los que esté alojado, por lo que el sistema sólo puede garantizar la disponibilidad en el caso de que estos servidores lo garanticen.
+		\item \textbf{Seguridad:} El sistema requerirá de una autentificación para acceder a los datos personales y sólo el administrador estará capacitado para modificar datos del sistema. Aunque el cliente tendrá su propio lugar para modificar los datos personales que crea convenientes como por ejemplo el cambio de la dirección postal, teléfono de contacto, etc.
+		\item \textbf{Mantenimiento:} El mantenimiento podrá ser realizado por el administrador de forma totalmente intuitiva sin necesidad de conocer ningún lenguaje de programación, mediante interfaces gráficas.
+		\item \textbf{Portabilidad:} Para garantizar la portabilidad de la aplicación a otro servidor deberá cumplir con los siguiente requisitos:
+			\begin{itemize}
+				\item Sistema Operativo AIX 5.3,
+				\item Servidor de Aplicaciones Websphere Aplication Server Network Deployment 5.1.1.3,
+				\item Oracle RAC 9.2.07,
+				\item J2EE 1.4, 
+				\item MQ/Broker 6.0,
+				\item Spazio,
+				\item Herramienta de Creación de Portales: Websphere Portal Enable V5.01.
+			\end{itemize}
+		La memoria principal y secundaria de estos servidores serán la conveniente como para un funcionamiento holgado de estos.
+	\end{itemize}
+	
+\subsection{Organizar los requisitos específicos}
+	\begin{itemize}
+	\item \textbf{Modo del sistema:} El sistema tendrá tres modos diferentes.
+		\begin{itemize}
+			\item \underline{Administrador:} El administrador tiene todos los permisos para añadir, modificar o eliminar los datos de la aplicación.
+			\item \underline{Cliente:} será o bien un Particular o bien una Empresa, cada uno tendrá su vista correspondiente y por lo tanto las tareas que le corresponden.
+			\item \underline{Visitante:} El visitante sólo podrá obtener información sobre de los productos ofrecidos por la aplicación y podrá registrarse para tener accesos como cliente.
+		\end{itemize}
+	
+	\item \textbf{Clases de usuario:} Habrá tres tipos de usuario, y cada uno de ellos se corresponderá con un modo de funcionamiento del sistema. Los tres usuarios serán administrador, cliente (Particular y Empresa) y visitante.
+	
+	\item \textbf{Objetos:} Los objetos que aparecen en el sistema y tienen contraparte en el mundo real son:
+		\begin{itemize}
+			\item Cartas,
+			\item Documentos,
+			\item Paquetes,
+			\item Dinero,
+			\item Sellos.
+		\end{itemize}
+	
+	\item \textbf{Rasgo:}
+		\begin{itemize}
+			\item Envíos: el cliente registrado rellenará un formulario para el envío de uno o varios productos.
+			\item Consulta para localizar un envío: el cliente introducirá un código en un formulario para ver la situación de su paquete o documento.
+			\item Cambio de Domicilio: el cliente deberá insertar su nueva dirección en el formulario correspondiente.
+			\item Personalización de sellos: el cliente deberá subir la imagen que desea plasmar en su sello personalizado.
+			\item Reenvío postal: el cliente modificará su correspondencia mediante un formulario.
+		\end{itemize}
+		
+	\item \textbf{Estímulo:} Cualquier error o confirmación provocado al rellenar un formulario se mostrará al usuario su correspondiente mensaje. Luego una transacción correcta se le mostrará la confirmación, y en el caso de algún error el mensaje llevará los motivos por los cuales se produjo dicho error. 
+	\end{itemize}
 
 \end{document}
