@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{anysize}
 \usepackage{colortbl}
+\usepackage{hyperref}
 \pagestyle{empty}
 \marginsize{3cm}{2cm}{2cm}{2cm}
 \author{Jesus Sánchez-Oro Calvo}
@@ -18,55 +19,50 @@
 
 \section{Definición del sistema}
 \subsection{Determinación del alcance del sistema}
-Según el Pliego de Condiciones Técnicas y el análisis del sistema, se han identificado los siguientes casos de uso:
-\subsubsection{Envío}
-	\begin{enumerate}
-	\item \textbf{Envío de documentos:} En este caso de uso se van a incluir todas las posibles acciones relacionadas con el envío de documentos por parte de un cliente, por lo que este caso de uso se subdivide en tres casos diferentes. Las diferencias entre los tres casos de uso están sólo en las acciones internas realizadas para cada tipo de documento.
-		\begin{enumerate}
-		\item \textit{Envío de cartas:} Este caso de uso representa la funcionalidad del envío de cartas a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
-		\item \textit{Envío de telegramas:} Este caso de uso representa la funcionalidad del envío de telegramas a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
-		\item \textit{Envío de fax:} Este caso de uso representa la funcionalidad del envío de fax a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
-		\end{enumerate}
+	Para conocer el alcance del sistema es necesario identificar qué procesos van a pertenecer al sistema de información. En el caso del actual proyecto, los procesos asociados al portal web se pueden agrupar en tres grandes apartados:
+		\begin{itemize}
+		\item \textbf{Procesos asociados al usuario:} En este apartado se encuentran aquellos procesos que gestionan la información relacionada con todos aquellos usuarios que puedan interactuar con el sistema. Entre estos procesos se encuentran los procesos de registro, validación, etc.
+		\item \textbf{Procesos asociados a la obtención de información:} Son aquellos procesos cuya única finalidad es obtener datos de una o varias bases de datos y procesarlos para mostrarlos al usuario en forma de información útil, en relación a la petición realizada.
+		\item \textbf{Procesos asociados a transacciones de Correos:} Son los procesos cuya finalidad es llevar a cabo aquellas tareas que de manera tradicional se gestionaban en las oficinas de correos, como el envío de documentos y paquetes, la gestión de un apartado postal, etc.
+		\end{itemize}
+		
+	Como entidades externas que se relacionan con el portal se han tenido en cuenta todo tipo de elementos, sean humanos o no que obtienen o envían información al portal. Entre ellas encontramos:
+		\begin{itemize}
+		\item \textbf{Usuarios no registrados:} Son aquellos usuarios que o bien han entrado a registrarse para realizar más operaciones, o bien sólo buscan información sobre la empresa o sus productos. Este tipo de usuario no realizará ninguna compra ni transacción que requiera de datos personales.
+		\item \textbf{Usuarios registrados:} Son aquellos usuarios que se encuentran registrados en la base de datos, y entran al portal en busca de información o para realizar algún tipo de transacción como clientes de la empresa.
+		\item \textbf{Administradores:} Son empleados de Correos que entran al sistema a actualizar la información disponible, ya sea en cuanto a precios, nuevas ofertas, noticias, etc.
+		\item \textbf{Portal web BanCorreos:}  Portal web externo a la aplicación que gestiona todos los datos bancarios de los clientes de Correos. La información transferida será aquella referida a los datos personales del cliente.
+		\item \textbf{Portal filatélico:} Portal web externo al portal de Correos en desarrollo, encargado de realizar todas las gestiones relacionadas con el apartado filatélico de Correos.
+		\end{itemize}
+		
+	\subsubsection{Glosario de términos}
+	\begin{itemize}
+	\item \textbf{Envíos:} Siempre que se hable de envíos, se tendrán en cuenta aquellos envíos que se pueden realizar a través del portal, es decir, los de documentos y paquetes.
+	\item \textbf{Páginas informativas:} Se consideran páginas informativas a aquellas que tan sólo aportan información al cliente, pero no realizan ninguna transacción económica o similar.
+	\end{itemize}
 	
-	\item \textbf{Envío de paquetes:} Incluye todas las posibles acciones relacionadas con el envío de paquetes por parte de un cliente. Su clasificación es la siguiente:
-		\begin{enumerate}
-		\item \textit{Envío de paquete urgente:} Representa la funcionalidad del envío de paquetes urgentes.
-		\item \textit{Envío de paquete nacional:} Representa la funcionalidad del envío de paquetes dentro del territorio nacional.
-		\item \textit{Representa la funcionalidad del envío de paquetes fuera del área nacional}
-		\end{enumerate}
-	\end{enumerate}
+	\subsubsection{Modelo de Negocio}
+	El diagrama de casos de uso que representa de manera abstracta el funcionamiento que debe tener el sistema es el siguiente:
+	\begin{center}
+	\includegraphics[scale=0.5]{modNegocio.jpg}
+	\end{center}
+	Como podemos ver, el sistema se basará en la interacción de los usuarios con el portal. En caso de ser un usuario sin registrar, sus posibles acciones serán sólamente aquellas que le lleven a obtener información y consultar catálogos de productos. Al registrarse en el sistema, el usuario podrá además realizar transacciones como el envío de documentos y paquetes o la compra de productos filatélicos. En el caso de ser un administrador, su función será la de la actualización de la información del portal.
 	
-\subsubsection{Filatelia}
-	\begin{enumerate}
-	\item \textbf{Bienvenida:} Caso de uso que se realiza cuando el usuario entra al sistema de filatelia.
-	\item \textbf{Registro:} Cuando un usuario no es registrado debe completar este caso de uso para continuar en el portal filatélico.
-	\item \textbf{Apadrinamiento:} Funcionalidad de poder apadrinar a un nuevo usuario del portal filatélico.
-	\item \textbf{Colecciones:} Funcionalidad de gestión y visualización de colecciones filatélicas(sellos, rodillos, matasellos...).
-	\item \textbf{Gestión online:} Funcionalidad de compra online de productos filatélicos.
-	\item \textbf{At. Cliente:} Funcionalidad de atención al cliente del portal filatélico.
-	\item \textbf{Asociaciones:} Funcionalidad de gestión de asociaciones filatélicas.
-	\item \textbf{Puntos de venta:} Funcionalidad de gestión de puntos de venta de productos filatélicos.
-	\end{enumerate}
+	El diagrama de clases que representa de manera abstracta el dominio del sistema es el siguiente:
+	\begin{center}
+	\includegraphics[scale=0.5]{modDominio.jpg}
+	\end{center}
+	Este diagrama incluye las grandes entidades que van a participar en el sistema, excluyendo los sitemas de control. En este caso, vemos que el sistema de dividirá en 4 grandes apartados. El primero de ellos, la lista de clientes, donde se almacenarán todos los clientes del sistema. También es necesario mantener un inventario de productos actualizados, de donde se extraerá la información necesaria. Además se mantendrán en el sistema todos los pedidos realizados, para facilitar su seguimiento.
 	
-\subsubsection{Información}
-	\begin{enumerate}
-	\item \textbf{At. Cliente:} Posee la funcionalidad de atención genérica al cliente.
-	\item \textbf{Información corporativa:} Funcionalidad de información corporativa de la empresa.
-	\end{enumerate}
+	Hay que tener en cuenta que son representaciones abstractas del sistema. Más adelante sera necesario diferenciar entre clientes de Correos y clientes del portal Filatélico, productos para clientes y productos filatélicos, etc.
 	
-\subsubsection{Gestión de usuario}
-	\begin{enumerate}
-	\item \textbf{Login:} Funcionalidad de inicio de sesión de usuario
-	\item \textbf{Logout:} Funcionalidad de final de sesión de usuario
-	\item \textbf{Registro:} Funcionalidad de registro de un nuevo usuario
-	\end{enumerate}
+\subsection{Identificación del entorno tecnológico}
+	La aplicación estará construida sobre una plataforma avanzada de construcción de Portales, WebSphere Portal Enable V5.1 de IBM. Esta plataforma nos permitirá mejorar el portal actual, que está basado en una arquitectura en tres capas integrando tecnologías como C++, .NET, SQL Server 2000, IIS, ASP, etc.
+	Utilizando la herramienta de IBM el sistema tendremos un mayor grado de integración donde será más sencillo corregir los errores que puedan surgir.
 	
-\subsubsection{Otras gestiones}
-	\begin{enumerate}
-	\item \textbf{Cambio de domicilio:} Funcionalidad de cambio de domicilio del usuario.
-	\item \textbf{Personalizar sello:} Funcionalidad de personalización de sellos online.
-	\item \textbf{Sobres y embalajes:} Funcionalidad de compra y visualización de sobres y embalajes.
-	\item \textbf{Creamailing:} 
-	\end{enumerate}
+\subsection{Especificación de Estándares y Normas}
+	Comenzando por los estándares, como se desea que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, es fundamental que cumpla con el estándar W3C. De esta manera, la aplicación debe ser capaz de pasar el test del validador de la W3C (\url{http://validator.w3.org}). Con esto, no aseguramos de que cualquier usuario que utilice cualquier navegador que siga dicho estándar sea capaz de visualizar la aplicación de una manera correcta sin errores.
+	En cuanto a legislazión, la principal ley que se debe tener en cuenta es la Ley Orgánica de Protección de Datos de Carácter Personal, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
+
 
 \end{document}

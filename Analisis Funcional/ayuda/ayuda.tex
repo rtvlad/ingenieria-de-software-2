@@ -1,0 +1,75 @@
+\subsubsection{Casos de uso}
+Según el Pliego de Condiciones Técnicas y el análisis del sistema, se han identificado los siguientes casos de uso:
+
+\begin{itemize}
+\item \textbf{Envío}
+	\begin{itemize}
+	\item \textbf{Envío de documentos:} En este caso de uso se van a incluir todas las posibles acciones relacionadas con el envío de documentos por parte de un cliente, por lo que este caso de uso se subdivide en tres casos diferentes. Las diferencias entre los tres casos de uso están sólo en las acciones internas realizadas para cada tipo de documento.
+		\begin{itemize}
+		\item \textit{Envío de cartas:} Este caso de uso representa la funcionalidad del envío de cartas a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
+		\item \textit{Envío de telegramas:} Este caso de uso representa la funcionalidad del envío de telegramas a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
+		\item \textit{Envío de fax:} Este caso de uso representa la funcionalidad del envío de fax a través del portal. Comprende la acción desde que el usuario inicia un nuevo envío hasta que recibe la confirmación del mismo.
+		\end{itemize}
+	
+	\item \textbf{Envío de paquetes:} Incluye todas las posibles acciones relacionadas con el envío de paquetes por parte de un cliente. Su clasificación es la siguiente:
+		\begin{itemize}
+		\item \textit{Envío de paquete urgente:} Representa la funcionalidad del envío de paquetes urgentes.
+		\item \textit{Envío de paquete nacional:} Representa la funcionalidad del envío de paquetes dentro del territorio nacional.
+		\item \textit{Representa la funcionalidad del envío de paquetes fuera del área nacional}
+		\end{itemize}
+	\end{itemize}
+	
+\item \textbf{Filatelia}
+	\begin{itemize}
+	\item \textbf{Bienvenida:} Caso de uso que se realiza cuando el usuario entra al sistema de filatelia.
+	\item \textbf{Registro:} Cuando un usuario no es registrado debe completar este caso de uso para continuar en el portal filatélico.
+	\item \textbf{Apadrinamiento:} Funcionalidad de poder apadrinar a un nuevo usuario del portal filatélico.
+	\item \textbf{Colecciones:} Funcionalidad de gestión y visualización de colecciones filatélicas(sellos, rodillos, matasellos...).
+	\item \textbf{Gestión online:} Funcionalidad de compra online de productos filatélicos.
+	\item \textbf{At. Cliente:} Funcionalidad de atención al cliente del portal filatélico.
+	\item \textbf{Asociaciones:} Funcionalidad de gestión de asociaciones filatélicas.
+	\item \textbf{Puntos de venta:} Funcionalidad de gestión de puntos de venta de productos filatélicos.
+	\end{itemize}
+	
+\item \textbf{Información}
+	\begin{itemize}
+	\item \textbf{At. Cliente:} Posee la funcionalidad de atención genérica al cliente.
+	\item \textbf{Información corporativa:} Funcionalidad de información corporativa de la empresa.
+	\end{itemize}
+	
+\item \textbf{Gestion de usuario}
+	\begin{itemize}
+	\item \textbf{Login:} Funcionalidad de inicio de sesión de usuario
+	\item \textbf{Logout:} Funcionalidad de final de sesión de usuario
+	\item \textbf{Registro:} Funcionalidad de registro de un nuevo usuario
+	\end{itemize}
+	
+\item \textbf{Otras gestiones}
+	\begin{itemize}
+	\item \textbf{Cambio de domicilio:} Funcionalidad de cambio de domicilio del usuario.
+	\item \textbf{Personalizar sello:} Funcionalidad de personalización de sellos online.
+	\item \textbf{Sobres y embalajes:} Funcionalidad de compra y visualización de sobres y embalajes.
+	\item \textbf{Creamailing:} Funcionalidad de servicio de buzoneo
+	\item \textbf{Apartado postal:} Funcionalidad de apartado postal de correos.
+	\item \textbf{Gestión e-mail:} Funcionalidad de gestión de cuenta de e-mail del usuario.
+	\item \textbf{Información:} Funcionalidad de obtención de información de correos.
+		\begin{itemize}
+		\item \textit{Museo:} Obtención de información del museo.
+		\item \textit{Recibos:} Obtención de información de los recibos.
+		\item \textit{Recarga de móviles:} Obtención de información de recarga de móviles.
+		\item \textit{Locutorios:} Obtención de información de los locutorios.
+		\item \textit{Tiendas Telecor:} Obtención de información de las tiendas Telecor.
+		\end{itemize}
+	\item \textbf{Dominios:} Funcionalidad de búsqueda de dominios disponibles
+	\end{itemize}
+\end{itemize}
+
+Los diagramas de casos de uso son los siguientes:
+
+\huge{METER DIAGRAMAS DE CASO DE USO}
+
+\subsubsection{Clases}
+
+Las clases identificadas en la fase de análisis son las siguientes:
+	\textbf{Envío:} Clase abstracta que almacena la información de los envíos. De esta clase deben heredar las que representan los dos tipos posibles de envíos (paquetes y documentos).
+	\textbf{}
