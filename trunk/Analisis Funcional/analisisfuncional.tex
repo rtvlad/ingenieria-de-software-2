@@ -11,6 +11,8 @@
 \usepackage{anysize}
 \usepackage{colortbl}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{longtable}
 \pagestyle{empty}
 \marginsize{3cm}{2cm}{2cm}{2cm}
 \author{Jesus Sánchez-Oro Calvo}
@@ -43,15 +45,22 @@
 	
 	\subsubsection{Modelo de Negocio}
 	El diagrama de casos de uso que representa de manera abstracta el funcionamiento que debe tener el sistema es el siguiente:
-	\begin{center}
-	\includegraphics[scale=0.5]{modNegocio.jpg}
-	\end{center}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{modNegocio.jpg}
+		\caption{Modelo de Negocio del sistema}
+		\end{center}
+		\end{figure}
 	Como podemos ver, el sistema se basará en la interacción de los usuarios con el portal. En caso de ser un usuario sin registrar, sus posibles acciones serán sólamente aquellas que le lleven a obtener información y consultar catálogos de productos. Al registrarse en el sistema, el usuario podrá además realizar transacciones como el envío de documentos y paquetes o la compra de productos filatélicos. En el caso de ser un administrador, su función será la de la actualización de la información del portal.
 	
 	El diagrama de clases que representa de manera abstracta el dominio del sistema es el siguiente:
-	\begin{center}
-	\includegraphics[scale=0.5]{modDominio.jpg}
-	\end{center}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{modDominio.jpg}
+		\caption{Modelo de dominio del sistema}
+		\end{center}
+		\end{figure}
+
 	Este diagrama incluye las grandes entidades que van a participar en el sistema, excluyendo los sitemas de control. En este caso, vemos que el sistema de dividirá en 4 grandes apartados. El primero de ellos, la lista de clientes, donde se almacenarán todos los clientes del sistema. También es necesario mantener un inventario de productos actualizados, de donde se extraerá la información necesaria. Además se mantendrán en el sistema todos los pedidos realizados, para facilitar su seguimiento.
 	
 	Hay que tener en cuenta que son representaciones abstractas del sistema. Más adelante sera necesario diferenciar entre clientes de Correos y clientes del portal Filatélico, productos para clientes y productos filatélicos, etc.
@@ -62,7 +71,1386 @@
 	
 \subsection{Especificación de Estándares y Normas}
 	Comenzando por los estándares, como se desea que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, es fundamental que cumpla con el estándar W3C. De esta manera, la aplicación debe ser capaz de pasar el test del validador de la W3C (\url{http://validator.w3.org}). Con esto, no aseguramos de que cualquier usuario que utilice cualquier navegador que siga dicho estándar sea capaz de visualizar la aplicación de una manera correcta sin errores.
-	En cuanto a legislazión, la principal ley que se debe tener en cuenta es la Ley Orgánica de Protección de Datos de Carácter Personal, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
+	En cuanto a legislación, la principal ley que se debe tener en cuenta es la Ley Orgánica de Protección de Datos de Carácter Personal, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
+	
+\subsection{Identificación de los usuarios participantes y finales}
+	Los usuarios participantes en el sistema que han sido identificados son los siguientes:
+	\begin{itemize}
+	\item \textbf{Usuario no registrado:} Se trata de todos aquellos usuarios que no están registrados en el portal web de Correos y que, por tanto, no son clientes, tan sólo buscan información. Las acciones permitidas a este tipo de usuarios son:
+		\begin{itemize}
+		\item \textit{Registro:} Es la acción que permite que un usuario no registrado pase a ser un usuario registrado. El usuario pasa a formar parte de la base de datos de usuarios del sistema.
+		\item \textit{Búsqueda de información:} El usuario podrá buscar todo tipo de información referente a la empresa y a sus productos pero sin tener capacidad de realizar transacciones económicas (compras, envíos...)
+		\end{itemize}
+	\item \textbf{Usuario registrado:} También denominados \textbf{clientes}. Son los usuarios que se han registrado y validado en la aplicación. Este tipo de usuarios podrán realizar las siguientes acciones:
+		\begin{itemize}
+		\item \textit{Logout:} Mediante esta acción los usuarios salen del sistema.
+		\item \textit{Búsqueda de información:} El usuario podrá buscar todo tipo de información referente a la empresa y a sus productos, pudiendo realizar transacciones económicas con los resultados obtenidos.
+		\item \textit{Compra:} El usuario podrá comprar todo tipo de productos ofertados en el portal, así como realizar todos los envíos permitidos por la empresa.
+		\end{itemize}
+		Este grupo de usuarios puede dividirse en dos subgrupos, si atendemos a la gestión de las transacciones por parte de la empresa:
+			\begin{itemize}
+			\item \textit{Clientes particulares:} Son aquellos clientes que no pertenecen a ninguna compañía y entran al portal a realizar transacciones personales.
+			\item \textit{Clientes profesionales:} Son aquellos clientes que pertenecen a alguna compañía y entran al portal a realizar transacciones profesionales, relacionadas con la compañía a la que pertenecen.
+			\end{itemize}
+	\end{itemize}
+	
+\section{Establecimiento de requisitos}
+	\subsection{Obtención de requisitos}
+	A partir de las condiciones dadas, el catálogo de requisitos obtenido es el siguiente:
+	\begin{longtable}[H]{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Verificabilidad} \\
+	\hline
+	Registro & El sistema debe permitir a los visitantes el registro en el portal y la Oficina Virtual & & Sí \\
+	\hline
+	Validación & El sistema debe permitir a los visitantes validarse en el mismo como clientes registrados & & Sí \\
+	\hline
+	Logout & El sistema debe permitir a los visitantes salir del mismo & & Sí \\
+	\hline
+	Envío de cartas & El sistema debe permitir el envío de cartas a través del portal & & Sí \\
+	\hline
+	Envío de telegramas & El sistema debe permitir el envío de telegramas a través del portal & & Sí \\
+	\hline
+	Envío de fax & El sistema debe permitir el envío de fax a través del portal & & Sí \\
+	\hline
+	Envío de paquetes & El sistema debe permitir el envío de paquetes a través del portal, permitiendo decidir su urgencia, tanto dentro como fuera del territorio nacional & & Sí \\
+	\hline
+	Envío de dinero por Giro & El sistema debe permitir que el cliente obtenga información acerca del envío de dinero a través de un giro inmediato & & Sí \\
+	\hline
+	Envío de dinero por Western Union & El sistema debe permitir que el cliente obtenga información acerca del envío de dinero a través de Western Union & & Sí \\
+	\hline
+	Envío de dinero por Reembolso & El sistema debe permitir que el cliente obtenga información acerca del envío de dinero a través de un reembolso & & Sí \\
+	\hline
+	Correo Electrónico & El sistema debe permitir al cliente el acceso a su cuenta de correo electrónico de Correos & & Sí \\
+	\hline
+	BanCorreos & El sistema debe permitir al cliente el acceso a BanCorreos & & Sí \\
+	\hline
+	Cambio de Domicilio & El sistema debe permitir al cliente realizar un cambio de domicilio postal & & Sí \\
+	\hline
+	Personalización de sellos & El sistema debe permitir la personalización de sellos a través del portal, así como subir imágenes para dichos sellos & & Sí \\
+	\hline
+	Sobres y embalajes & El sistema debe permitir la obtención de información y compra de todos los tipos de sobres y embalajes disponibles & & Sí \\
+	\hline
+	Creamailing & El sistema debe permitir al cliente iniciar un servicio de buzoneo, así como la obtención de información de precios y tarifas & & Sí \\
+	\hline
+	Apartado Postal & El sistema debe permitir obtener información acerca de un apartado postal, incluyendo las tarifas & & Sí \\
+	\hline
+	Reenvío Postal & El sistema debe permitir obtener información acerca del reenvío de su correspondencia a otra dirección & & Sí \\
+	\hline
+	Notificaciones Telemáticas Seguras & El sistema debe permitir al cliente la configuración de una cuenta de correo electrónico donde recibirá las comunicaciones que realice la Administración de Correos & & Sí \\
+	\hline
+	Pago de Recibos & El sistema debe permitir obtener información acerca del servicio de pago de recibos que ofrece Correos & & Sí \\
+	\hline
+	Recarga de móviles & El sistema debe permitir obtener información acerca del servicio de recarga de móviles disponible en las oficinas de Correos & & Sí \\
+	\hline 
+	Locutorios & El sistema debe permitir obtener información acerca de la localización de locutorios en las oficinas de Correos & & Sí \\
+	\hline
+	Tiendas Telecor & El sistema debe permitir obtener información acerca de la localización de las tiendas Telecor & & Sí \\
+	\hline
+	Dominios & El sistema debe permitir al cliente la búsqueda y posterior adquisición de dominios web & & Sí \\
+	\hline
+	Bienvenida (Filatelia) & El sistema debe informar al cliente de la campaña de bienvenida filatélica & & Sí \\
+	\hline
+	Apadrinamiento (Filatelia) & El sistema debe permitir al cliente registrar a otro usuario para proceder con el apadrinamiento & & Sí \\
+	\hline
+	Productos filatélicos & El sistema debe permitir al cliente obtener información acerca de todos los productos filatélicos disponibles & & Sí \\
+	\hline
+	Compra online & El sistema debe permitir al cliente la compra a través del portal de productos filatélicos & & Sí \\
+	\hline
+	At. Cliente (Filatelia) & El sistema debe permitir al cliente obtener atención personalizada a través del portal & & Sí \\
+	\hline
+	Asociaciones & El sistema debe permitir al cliente obtener un listado de las asociaciones de una determinada comunidad autónoma & & Sí \\
+	\hline
+	Puntos de Venta (Filatelia) & El sistema debe permitir al cliente obtener un listado de los puntos de venta de productos filatélicos & & Sí \\
+	\hline
+	Museo & El sistema debe permitir al cliente obtener toda la información disponible acerca del Museo Postal Telegráfico & & Sí \\
+	\hline
+	At. Cliente & El sistema debe permitir al cliente solicitar información de todo tipo relacionada con el portal o sus productos & & Sí \\
+	\hline
+	Información corporativa & El sistema debe permitir al cliente obtener toda la información referida a la empresa de Correos & & Sí \\
+	\hline
+	Tareas pendientes & El sistema debe permitir al cliente obtener un listado de tareas pendientes en la oficina virtual & & Sí \\
+	\hline
+	Seguimiento & El sistema debe permitir al cliente realizar un seguimiento a los envíos realizados & & Sí \\
+	\hline
+	Histórico & El sistema debe permitir al cliente obtener información acerca de las últimas transacciones realizadas & & Sí \\
+	\hline
+	Justificantes & El sistema debe permitir al cliente obtener justificantes de las facturas asociadas a los pagos a través del portal & & Sí \\
+	\hline
+	\end{longtable}
+	Siguiendo este catálogo de requisitos, el modelo de casos de uso obtenido para el sistema a desarrollar es el siguiente:
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusoenvios.jpg}
+		\caption{Caso de uso referidos a los envíos disponibles desde el portal}
+		\end{center}
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusofilatelia.jpg}
+		\caption{Caso de uso referidos a la gestión filatélica del portal}
+		\end{center}
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusoinfo.jpg}
+		\caption{Caso de uso referidos a la búsqueda de información en el portal}
+		\end{center}
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusologin.jpg}
+		\caption{Caso de uso referidos al registro y validación de usuarios en el portal}
+		\end{center}
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusogestion.jpg}
+		\caption{Caso de uso referidos a otras gestiones que se pueden realizar en el portal}
+		\end{center}
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.3]{casodeusoofivirtual.jpg}
+		\caption{Caso de uso referidos a las gestiones disponibles sólo en la oficina virtual}
+		\end{center}
+		\end{figure}
+
+	
+	Los actores identificados que van a interactuar con el sistema se corresponden directamente con los usuarios del mismo, y son los siguientes:
+		\begin{itemize}
+		\item \textbf{Usuario sin registrar:} Es el usuario que no está registrado en la aplicación y tan sólo busca información
+		\item \textbf{Usuario registrado:} Es el usuario registrado y validado en la aplicación y además de información puede buscar realizar transacciones económicas. Este tipo de usuario incluye tanto a los usuarios particulares como a los profesionales, ya que los casos de uso a realizar son los mismos, tan sólo difieren en la manera en que el sistema trata internamente la información.
+		\end{itemize}
+		
+	La descripción de los casos de uso es la siguiente:
+		\begin{itemize}
+		\item \textbf{Envíos:} Son los referidos a aquellos casos de uso relacionados con todos los tipos de envíos permitidos desde el portal de correos.
+			\begin{itemize}
+			\item \textit{Enviar documento:} El usuario para enviar un documento iniciará este caso de uso, que después se especificará en el tipo de documento.
+				\begin{itemize}
+				\item \textit{Enviar carta:} Cuando el usuario quiera enviar una carta iniciará este caso de uso.
+				\item \textit{Enviar telegrama:} Cuando el usuario quiera enviar un telegrama iniciará este caso de uso.
+				\item \textit{Enviar fax:} Cuando el usuario quiera enviar un fax iniciará este caso de uso.
+				\end{itemize}
+			\item \textit{Enviar paquete:} El usuario para enviar un documento iniciará este caso de uso, que después se especificará en el tipo de paquete.
+				\begin{itemize}
+				\item \textit{Enviar paquete urgente:} Cuando el usuario quiera enviar un paquete con urgencia iniciará este caso de uso.
+				\item \textit{Enviar paquete nacional:} Cuando el usuario quiera enviar un paquete dentro del territorio nacional iniciará este caso de uso.
+				\item \textit{Enviar paquete internacional:} Cuando el usuario quiera enviar un paquete fuera del territorio nacional iniciará este caso de uso.
+				\end{itemize}
+			\end{itemize}
+			
+		\item \textbf{Filatelia:} Este apartado engloba todos los casos de uso referidos a la gestión del apartado filatélico.
+			\begin{itemize}
+			\item \textit{Bienvenida:} Este caso de uso comienza cada vez que el usuario no registrado entre al portal filatélico, y su acción será mostrar una página de bienvenida y las opciones disponibles
+			\item \textit{Registro:} Este caso de uso comienza cuando un usuario no registrado se registra en el portal filatélico y pasa a ser un usuario registrado. 
+			\item \textit{Login:} Este caso de uso comienza cuando un usuario no registrado se valida en el portal filatélico y pasa a ser un usuario registrado. 
+			\item \textit{Apadrinamiento:} Este caso de uso se realiza cuando un usuario registrado registra a un usuario no registrado.
+			\item \textit{Colecciones:} Este caso de uso se realiza cuando un usuario registrado desea inspeccionar las colecciones filatélicas disponibles.
+			\item \textit{Gestión Online:} Este caso de uso se realiza cuando un usuario registrado quiere comprar algún producto filatélico a través del portal.
+			\item \textit{At. Cliente:} Este caso de uso se realiza cuando un usuario registrado quiere solicitar atención al cliente del portal filatélico.
+			\item \textit{Asociaciones:} Este caso de uso se realiza cuando un usuario registrado quiere consultar las asociaciones de una determinada comunidad autónoma.
+			\item \textit{Puntos de venta:} Este caso de uso se realiza cuando un usuario registrado quiere consultar los puntos de venta disponibles.
+			\end{itemize}
+		
+		\item \textbf{Información:} Este apartado engloba aquellos casos de uso referidos a la obtención de información general de la empresa de Correos.
+			\begin{itemize}
+			\item \textit{At. Cliente:} Este caso de uso se realiza cuando un usuario (registrado o no) quiere solicitar atención al cliente.
+			\item \textit{Información corporativa:} Este caso de uso se realiza cuando un usuario (registrado o no), quiere solicitar información corporativa de la empresa de Correos.
+			\end{itemize}
+			
+		\item \textbf{Login:} Este apartado engloba aquellos casos de uso referidos al registro y validación de usuarios en el portal de Correos y la Oficina Virtual
+			\begin{itemize}
+			\item \textit{Registro:} Este caso de uso se realiza cuando un usuario sin registrar en el sistema se registra en el mismo.
+			\item \textit{Login:} Este caso de uso se realiza cuando un usuario sin validar en el sistema introduce sus credenciales de un registro anterior para convertirse en usuario registrado. Esto le valida tanto para el portal de Correos como para la Oficina Virtual
+			\item \textit{Logout:} Este caso de uso se realiza cuando un usuario registrado en el sistema desea salir del mismo.
+			\end{itemize}
+			
+		\item \textbf{Otras gestiones:} Este apartado engloba aquellos casos de uso referidos a gestiones que no se pueden incluir en ninguno de los casos anteriores.
+			\begin{itemize}
+			\item \textit{Cambio de domicilio:} Este caso de uso se realiza cuando un usuario registrado quiere cambiar su domicilio postal a través del portal.
+			\item \textit{Personalizar sello:} Este caso de uso se realiza cuando un usuario registrado desea personalizar un sello a través del portal.
+			\item \textit{Sobres y embalajes:} Este caso de uso se realiza cuando un usuario registrado quiere consultar y/o comprar los sobres y embalajes disponibles a través del portal.
+			\item \textit{Creamaling:} Este caso de uso se realiza cuando un usuario registrado quiere iniciar una campaña de buzoneo (creamailing) a través del portal.
+			\item \textit{Apartado postal:} Este caso de uso se realiza cuando un usuario registrado quiere realizar alguna gestión relacionada con su apartado postal.
+			\item \textit{Gestión e-mail:} Este caso de uso se realiza cuando un usuario registrado quiere realizar alguna gestión con su cuenta personal de e-mail.
+			\item \textit{Información:} Este caso de uso se realiza cuando un usuario (registrado o no) quiere solicitar información de algún tipo al portal. Según la información solicitada, se realizarán los siguientes casos de uso:
+				\begin{itemize}
+				\item \textit{Museo:} Este caso de uso se realiza cuando el usuario solicita información relacionada con el Museo de Correos de Madrid.
+				\item \textit{Recibos:} Este caso de uso se realiza cuando el usuario solicita información relacionada con recibos y facturas
+				\item \textit{Recarga de móviles:} Este caso de uso se realiza cuando el usuario solicita información relacionada con la recarga de teléfonos móviles en las oficinas.
+				\item \textit{Locutorios:} Este caso de uso se realiza cuando el usuario solicita información relacionada con la localización y precios de los locutorios de las oficinas.
+				\item \textit{Tiendas Telecor:} Este caso de uso se realiza cuando el usuario solicita información relacionada con la localización de las tiendas Telecor.
+				\end{itemize}
+				
+			\item \textit{Dominios:} Este caso de uso se realiza cuando un usuario (registrado o no) quiere solicitar la disponibilidad de un dominio web.
+			\end{itemize}
+			
+		\item \textbf{Oficina Virtual:} Este apartado engloba a todas las acciones que se encuentran disponibles sólo a través de la oficina virtual. No aparecerán acciones que se puedan realizar desde el portal principal como el envío de documentos y paquetes.
+			\begin{itemize}
+			\item \textit{Tareas pendientes:} Este caso de uso se realiza cuando un usuario registrado desea consultar un listado de tareas pendientes por realizar en la oficina virtual.
+			\item \textit{Seguimiento de envíos:} Este caso de uso se realiza cuando un usuario registrado desea realizar un seguimiento a un envío realizado con anterioridad
+			\item \textit{Histórico:} Este caso de uso se realiza cuando un usuario registrado quiere obtener un listado con las últimas gestiones realizadas a través de la oficina virtual.
+			\item \textit{Justificantes:} Este caso de uso se realiza cuando un usuario registrado quiere obtener un justificante relacionado con alguna factura cuyo pago esté asociado a través del portal.
+			\end{itemize}
+		\end{itemize}
+		
+	\subsection{Especificación de Casos de Uso}
+	En todos los casos de uso, se consideran los flujos alternativos de que el usuario cierra el navegador o cancela la transacción. No aparecen en cada especificación para facilitar su entendimiento.
+	\subsubsection*{Enviar Carta}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario registrado hace click en \textit{Enviar Documento}.
+				\item El sistema le redirecciona a la oficina virtual.
+				\item El usuario hace click en \textit{Enviar Carta}.
+				\item El sistema pide los datos relacionados con el envío (remitente, destinatario, texto...)
+				\item El usuario introduce los datos y pulsa siguiente.
+				\item El sistema confirma los datos y solicita el tipo de envío.
+				\item El usuario elige el tipo de envío y pulsa siguiente.
+				\item El sistema pide una confirmación al usuario.
+				\item El usuario confirma el envío y pulsa siguiente.
+				\item El sistema informa del precio y solicita el tipo de pago.
+				\item El cliente elige el tipo de pago y pulsa enviar.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta un error en los datos y vuelve a solicitarlos al usuario.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está dado de alta en el sistema.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El envío queda registrado en la base de datos.
+				\item El usuario recibe una confirmación del envío.
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Enviar Telegrama}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario registrado hace click en \textit{Enviar Documento}.
+				\item El sistema le redirecciona a la oficina virtual.
+				\item El usuario hace click en \textit{Enviar Telegrama}.
+				\item El sistema pide los datos relacionados con el envío (remitente, destinatario, texto...)
+				\item El usuario introduce los datos y pulsa siguiente.
+				\item El sistema confirma los datos y solicita el tipo de envío.
+				\item El usuario elige el tipo de aviso y pulsa siguiente.
+				\item El sistema pide una confirmación al usuario.
+				\item El usuario confirma el envío y pulsa siguiente.
+				\item El sistema informa del precio y solicita el tipo de pago.
+				\item El cliente elige el tipo de pago y pulsa enviar.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta un error en los datos y vuelve a solicitarlos al usuario.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está dado de alta en el sistema.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El envío queda registrado en la base de datos.
+				\item El usuario recibe una confirmación del envío.
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Enviar Fax}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario registrado hace click en \textit{Enviar Documento}.
+				\item El sistema le redirecciona a la oficina virtual.
+				\item El usuario hace click en \textit{Enviar Fax}.
+				\item El sistema pide los datos relacionados con el envío (remitente, destinatario, texto...)
+				\item El usuario introduce los datos y pulsa siguiente.
+				\item El sistema confirma los datos y solicita el tipo de envío.
+				\item El usuario elige el tipo de envío y pulsa siguiente.
+				\item El sistema pide una confirmación al usuario.
+				\item El usuario confirma el envío y pulsa siguiente.
+				\item El sistema informa del precio y solicita el tipo de pago.
+				\item El cliente elige el tipo de pago y pulsa enviar.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta un error en los datos y vuelve a solicitarlos al usuario.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está dado de alta en el sistema.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El envío queda registrado en la base de datos.
+				\item El usuario recibe una confirmación del envío.
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsection*{Enviar Paquete}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario registrado hace click en \textit{Enviar Paquete}.
+				\item El sistema le redirecciona a la oficina virtual.
+				\item El usuario hace click en \textit{Enviar Paquete Urgente}.
+				\item El sistema pide los datos relacionados con el envío (remitente, destinatario, texto...), así como la urgencia del mismo.
+				\item El usuario introduce los datos y pulsa siguiente.
+				\item El sistema confirma los datos y solicita el tipo de envío.
+				\item El usuario elige el tipo de envío y pulsa siguiente.
+				\item El sistema pide una confirmación al usuario.
+				\item El usuario confirma el envío y pulsa siguiente.
+				\item El sistema informa del precio y solicita el tipo de pago.
+				\item El cliente elige el tipo de pago y pulsa enviar.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta un error en los datos y vuelve a solicitarlos al usuario.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está dado de alta en el sistema.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El envío queda registrado en la base de datos.
+				\item El usuario recibe una confirmación del envío.
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Bienvenida (Filatelia)}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario sin registrar hace click en la pestaña \textit{Filatelia}
+				\item El sistema le muestra todas las opciones disponibles del apartado filatélico.
+				\item El usuario hace click en \textit{Campaña de bienvenida}
+				\item El sistema muestra la información del apartado filatélico, así como la posibilidad de abonarse al sistema, en cuyo caso comenzaría el caso de uso \textbf{Registro}
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario no está validado en el sistema.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha obtenido información de la campaña de bienvenida
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsection*{Registro}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema le muestra todas las opciones disponibles del apartado filatélico.
+				\item El usuario hace click en \textit{Abonarse}
+				\item El sistema solicita información necesaria para el abono.
+				\item El usuario completa dicha información y hace click en \textit{Confirmar}
+				\item El sistema le identifica como usuario registrado y almacena la información en la base de datos de usuarios.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta errores en la información y se le solicita de nuevo al usuario
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario no estaba abonado al servicio filatélico
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario queda abonado al servicio filatélico
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Login}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}.
+				\item El sistema le muestra todas las opciones disponibles.
+				\item El usuario hace click en \textit{Validar}
+				\item El sistema solicita el nombre de usuario y contraseña
+				\item El usuario rellena el nombre de usuario y contraseña y pulsa \textit{Aceptar}
+				\item El sistema valida al usuario, que pasa a ser usuario registrado
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta errores en el nombre de usuario y/o contraseña, y la solicita de nuevo al usuario.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario no estaba validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario queda validado en el sistema
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Apadrinamiento}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema muestra todas las opciones disponibles
+				\item El usuario hace click en \textit{Campaña de apadrinamiento}
+				\item El sistema muestra información de la campaña, y da la posibilidad de abonar a otro usuario
+				\item El usuario hace click en \textit{Abonar}, y comienza el caso de uso \textbf{Registro}.
+				\item Al finalizar el caso de uso \textbf{Registro}, el sistema almacena en la base de datos el ``padrino'' del nuevo usuario y le otorga los beneficios correspondientes
+				\item El usuario recibe una confirmación del apadrinamiento
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 5, se produce un error al registrar al nuevo usuario, y se vuelve al paso 4.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está registrado y validado en el sistema
+				\item El usuario que se va a apadrinar no está registrado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario obtiene los beneficios del apadrinamiento.
+				\item El nuevo usuario queda registrado en el sistema.
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Colecciones}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema muestra todas las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Colecciones}
+				\item El sistema muestra información de todas las colecciones disponibles, y ofrece la posibilidad de comprar los elementos de las colecciones, en cuyo caso comienza el caso de uso \textbf{Gestión Online}.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay ninguna precondición
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha recibido información acerca de las colecciones filatélicas disponibles.
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Gestión Online}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en el botón \textit{Comprar} de algún elemento de las colecciones
+				\item El sistema muestra información del elemento, así como su precio.
+				\item El usuario hace click en \textit{Aceptar}
+				\item El sistema muestra los tipos de pago disponibles
+				\item El usuario selecciona un tipo de pago y pulsa \textit{Aceptar}
+				\item El sistema solicita una confirmación de la compra
+				\item El usuario confirma la compra y pulsa \textit{Comprar}
+				\item El sistema almacena el pedido en la base de datos y se lo confirma al usuario
+				\item El usuario recibe confirmación del pedido
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 7, el usuario cancela la compra y finaliza el caso de uso
+				\item En el paso 8, el sistema detecta algún fallo en los datos y los solicita de nuevo
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está registrado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El pedido queda almacenado en la base de datos
+				\item Se realiza el envío del producto al usuario
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{At. Cliente}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en atención al cliente
+				\item El sistema muestra las opciones de información disponibles
+				\item El usuario elige un documento para descargarlo.
+				\item El sistema muestra el documento de información seleccionado
+				\item El usuario lo guarda
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 5, el usuario elige contacto por e-mail de entre las opciones. En ese caso, rellena un formulario que se le envía al sistema y finaliza el caso de uso.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha obtenido información de la atención al cliente filatélica.
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsection*{Asociaciones}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema muestra todas las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Asociaciones}
+				\item El sistema muestra un mapa de España donde el usuario debe elegir una comunidad autónoma
+				\item El usuario elige una comunidad autónoma en el mapa
+				\item El sistema muetra un listado con las asociaciones exitentes en la comunidad seleccionada
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha obtenido un listado de las asociaciones buscadas
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsection*{Puntos de Venta}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Filatelia}
+				\item El sistema muestra todas las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Puntos de Venta}
+				\item El sistema muestra un formulario donde el usuario debe insertar una dirección
+				\item El usuario inserta su dirección en el formulario y pulsa \textit{Buscar}
+				\item El sistema muestra un listado de los puntos de venta más cercanos a esa dirección.
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema no encuentra la dirección y se la solicita de nuevo al usuario
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha obtenido un listado de los puntos de venta cercanos.
+				\end{itemize}
+		\end{itemize}	
+		
+	\subsubsection*{At. Cliente}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña de \textit{Atención al cliente}
+				\item El sistema muestra todas las opciones de atención al cliente disponibles
+				\item El usuario escoge una de esas opciones.
+				\item El sistema muestra información de contacto para la opción elegida
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 3, el usuario elige la opción ``e-mail''. En este caso, el sistema muestra un formulario para enviar a atención al cliente, el usuario lo rellena, y se envía
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario obtiene información de contacto con Correos
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Información Corporativa}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Información Corporativa}
+				\item El sistema muestra todas la información corporativa disponible
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario obtiene un documento de información corporativa de la empresa.
+				\end{itemize}
+		\end{itemize}
+	
+	\subsubsection*{Logout}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario registrado hace click en el botón \textit{Salir}
+				\item El sistema saca al usuario del sistema y le envía una confirmación
+				\item El usuario recibe la confirmación de salida
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 2 el sistema detecta que el usuario no estaba validado y muestra un mensaje de aviso.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario deja de estar validado en el sistema
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Cambio de domicilio}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en \textit{Cambio de domicilio}
+				\item El sistema muestra un formulario con la dirección actual del usuario
+				\item El usuario modifica la dirección del formulario y pulsa \textit{Continuar}
+				\item El sistema solicita una confirmación de la nueva dirección
+				\item El usuario hace click en \textit{Confirmar}
+				\item El sistema modifica la dirección del usuario en la base de datos de usuarios y se lo confirma al usuario
+				\item El usuario recibe la confirmación
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema detecta un error en la nueva dirección e informa al usuario del mismo
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado.
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha modificado su dirección en la base de datos de usuarios
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Personalizar sello}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña de \textit{Otras gestiones}
+				\item El sistema le muestra todas las opciones disponibles
+				\item El usuario hace click en \textit{Personalizar sello}
+				\item El sistema solicita al usuario la imagen que se va a utilizar en el sello
+				\item El usuario selecciona la imagen en su sistema y pulsa \textit{Enviar}
+				\item El sistema recibe la imagen y genera un sello con la misma
+				\item El usuario modifica los detalles necesarios del sello.
+				\item El sistema muestra una vista previa del sello y solicita confirmación
+				\item El usuario pulsa \textit{Continuar}
+				\item El sistema solicita información de la cantidad del pedido
+				\item El usuario introduce la información y pulsa \textit{Continuar}
+				\item El sistema muestra la vista previa y la información del pedido y solicita confirmación
+				\item El usuario pulsa confirmar
+				\item El sistema registra el pedido en la base de datos y lo confirma al usuario
+				\item El usuario recibe la confirmación
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 5, el usuario no dispone de la imagen y finaliza el caso de uso
+				\item En el paso 12, el sistema detecta errores en la información del pedido y la vuelve a solicitar
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item Se añade un nuevo diseño de sello a la colección.
+				\item Se registra el pedido en la base de datos
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Sobres y embalajes}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema le muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Sobres y embalajes}
+				\item El sistema muestra todos los sobres y embalajes disponibles
+				\item El usuario elige uno de esos sobres
+				\item El sistema muestra información completa del sobre/embalaje seleccionado
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario obtiene información de sobres y embalajes
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Creamailing}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Creamailing}
+				\item El sistema muestra las opciones de cada campaña de buzoneo
+				\item El usuario escoge el tipo de campaña.
+				\item El sistema muestra los precios de la misma
+				\item El usuario hace click en solicitar
+				\item El sistema solicita la información que se va a incluir en la campaña
+				\item El usuario introduce dicha información
+				\item El sistema lo confirma y muestra el resultado generado
+				\item El usuario confirma el resultado
+				\item El sistema almacena el pedido en la base de datos
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 8 el sistema detecta errores en la información y la solicita de nuevo
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario está validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha iniciado una campaña de buzoneo
+				\end{itemize}
+		\end{itemize}		
+		
+		\subsubsection*{Apartado Postal}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Apartado Postal}
+				\item El sistema muestra la información del apartado postal del usuario.
+				\item El usuario modifica la información de su apartado postal
+				\item El sistema guarda la nueva información en la base de datos y la confirma al usuario
+				\item El usuario recibe la confirmación
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 4, el usuario no tiene apartado postal. En este caso, el sistema muestra el formulario igual que en el paso 4, pero vacío, e informa de las tarifas al usuario
+				\item En el paso 6, el sistema detecta errores en la nueva información, por lo que la solicita de nuevo.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha modificado la información de su apartado postal
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Gestión E-mail}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Gestión e-mail}
+				\item El sistema le redirecciona al portal de correo electrónico de Correos
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 4, si la conexión con el portal de correo electrónico no es posible, se informa al usuario y se termina el caso de uso
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario procede a la gestión de su e-mail.
+				\end{itemize}
+		\end{itemize}
+		
+	\subsubsection*{Información}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Otras gestiones}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario selecciona el elemento del que desea obtener información
+				\item El sistema muestra la información asociada a dicho elemento
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 4, si la información puede ser ampliada, se muestra un enlace \textit{Ver más...} a la nueva información
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item No hay precondiciones
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha obtenido toda la información buscada
+				\end{itemize}
+		\end{itemize}
+		
+		
+		\subsubsection*{Tareas pendientes}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Oficina Virtual}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado tareas pendientes
+				\item El sistema muestra un listado con las tareas pendientes del usuario
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 4, si el usuario hace click en alguna tarea, el sistema muestra información ampliada de la misma y la posibilidad de completarla
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario ha gestionado sus tareas pendientes
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Seguimiento de Envíos}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Oficina Virtual}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Seguimiento de envíos}
+				\item El sistema muestra un formulario para que el usuario introduzca el id de envío.
+				\item El usuario introduce el identificador del envio
+				\item El sistema busca el envío y muestra la información del mismo.
+				\item El usuario descarga la información a sus sistema
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, el sistema no encuentra el envío e informa al usuario de ello.
+				\item En el paso 7, el usuario decido no descargar la información y finaliza el caso de uso.
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario recibe información del envío buscado
+				\end{itemize}
+		\end{itemize}
+		
+		\subsubsection*{Histórico}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Oficina Virtual}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado de \textit{Histórico}
+				\item El sistema muestra un listado con las últimas transacciones realizadas por el usuario
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario recibe información de sus últimas transacciones
+				\end{itemize}	
+		\end{itemize}
+		
+		
+	\subsubsection*{Justificantes}
+		\begin{itemize}
+		\item \textbf{Flujo de eventos}
+			\begin{itemize}
+			\item \textbf{Flujo Básico}
+				\begin{enumerate}
+				\item El usuario hace click en la pestaña \textit{Oficina Virtual}
+				\item El sistema muestra las opciones disponibles
+				\item El usuario hace click en el apartado \textit{Justificantes}
+				\item El sistema muestra un formulario para que el usuario introduzca el número de factura
+				\item El usuario introduce el número de factura
+				\item El sistema comprueba el número de factura y muestra el justificante
+				\item El usuario imprime el justificante
+				\end{enumerate}
+			\item \textbf{Flujos Alternativos}
+				\begin{enumerate}
+				\item En el paso 6, si no existe el número de factura, se muestra un aviso al usuario
+				\end{enumerate}
+			\end{itemize}
+			\item \textbf{Precondiciones}
+				\begin{itemize}
+				\item El usuario debe estar validado en el sistema
+				\end{itemize}
+			\item \textbf{Postcondiciones}
+				\begin{itemize}
+				\item El usuario obtiene el justificante buscado
+				\end{itemize}
+		\end{itemize}		
+		
+	
+	\subsection{Análisis de requisitos}
+	Los requisitos seleccionados se relacionan siguiendo el criterio del entorno en el que van a estar presentes. Los requisitos relacionados entre sí son los siguientes:
+	
+	\begin{itemize}
+	\item \textit{Registro, Validación, Logout}
+	\item \textit{Envío de cartas, Envío de telegramas, Envío de fax, Envío de paquetes, Envío de dinero por Giro, Envío de dinero por Western Union, Envío de dinero por Reembolso:} Se ejecutan en el entorno de los envíos
+	\item \textit{Correo electrónico, BanCorreos, Cambio de domicilio, Personalización de sellos, Sobres y embalajes, Creamailing, Apartado Postal, Reenvío Postal, Notificaciones Telemáticas Seguras, Pago de Recibos, Recarga de móviles, Locutorios, Tiendas Telecor, Dominios:} Se ejecutan en el entorno de otras gestiones
+	\item \textit{Bienvenida, Apadrinamiento, Productos Filatélicos, Compra Online, At. Cliente, Asociaciones, Puntos de Venta, Museo:} Se ejecutan en el entorno de filatelia
+	\item \textit{At. Cliente, Información Corporativa:} Se ejecutan en el entorno de información
+	\item \textit{Tareas Pendientes, Seguimientos, Histórico, Justificantes:} Se ejecutan en el entorno de Oficina Virtual
+	\end{itemize}
+	
+	\subsection{Validación de requisitos}
+	Los casos de uso y requisitos identificados anteriormente son válidos, completos y consistentes y realizan las funciones especificadas por el cliente en el pliego de condidiciones.
+	
+\section{Identificación de subsistemas de análisis}
+	\subsection{Determinación de Subsistemas de Análisis}
+	En el actual sistema podemos encontrar cuatro grandes subsistemas de análisis claramente diferenciados. Los subsistemas identificados son los siguientes:
+		\begin{itemize}
+		\item \textbf{Gestor de correos:} Es el encargado de la gestión de usuarios, y lleva a cabo acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
+		\item \textbf{Gestor de envíos:} Es el encargado de la realización, cancelación y seguimiento de los envíos realizados por los clientes. Interactuará con la base de datos de envíos y de usuarios del sistema.
+		\item \textbf{Gestor de Filatelia:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes al apartado filatélico. Interactuará con las bases de datos de productos, colecciones y pedidos.
+		\item \textbf{Gestor de Oficina Virtual:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes a la Oficina Virtual de correos. Interactuará con las bases de datos de usuarios y pedidos.
+		\end{itemize}
+		
+	El diagrama de componentes que muestra las relaciones entre los diferentes subsistemas es el siguiente:
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{paquetes.jpg}
+	\caption{Diagrama de paquetes}
+	\end{center}	
+	\end{figure}
+		
+	\subsection{Integración de Subsistemas de Análisis}
+	En cuanto a la integración de los diferentes subsistemas, hay que tener en cuenta lo siguiente:
+		\begin{itemize}
+		\item Los tres subsistemas acceden concurrentemente a la base de datos de usuarios, por lo que es necesario llevar un control para que no se produzca un acceso que modifique un elemento de esa base de datos que necesite otro subsistema.
+		\item Los subsistemas de Correos y Filatelia acceden simultáneamente a la base de datos de productos, por lo que es necesario llevar un control para que la información obtenida por ambos sistemas no sea diferente y sea coherente con los productos reales.
+		\item Los subsistemas de Correos y de Envíos acceden concurrentemente a la base de datos de envíos, por lo que es necesario controlar dichos accesos para mostrar información correcta respecto a los envíos. 
+		\end{itemize}
+	Respecto al resto de accesos, no hay más posibilidades de acceso concurrente o simultáneo que pueda llevar a problemas de sincronización entre subsistemas, por lo que no es necesario llevar a cabo más control que el expuesto.
+	
+\section{Análisis de los casos de uso}
+	\subsection{Identificación de Clases Asociadas a un Caso de Uso}
+	Las clases de entidad, interfaz y control identificadas se pueden ver en los siguientes diagramas:
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{analisislogin.jpg}
+	\caption{Diagrama de clases de análisis relacionadas con registro y validación}
+	\end{center}	
+	\end{figure}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{analisisenvios.jpg}
+	\caption{Diagrama de clases de análisis relacionadas con envío de documentos y paquetes}
+	\end{center}	
+	\end{figure}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{analisisfilatelia.jpg}
+	\caption{Diagrama de clases de análisis relacionadas con el portal filatélico}
+	\end{center}	
+	\end{figure}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{analisisinfo.jpg}
+	\caption{Diagrama de clases de análisis relacionadas con la obtención de información de la empresa}
+	\end{center}	
+	\end{figure}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{analisisofivirtual.jpg}
+	\caption{Diagrama de clases de análisis relacionadas con la oficina virtual}
+	\end{center}	
+	\end{figure}
+	
+	La descripción de cada clase es la siguientes:
+	\begin{itemize}
+	\item \textbf{Clases de Interfaz:}
+		\begin{itemize}
+		\item \textit{IUEnvíos:} Es la encargada de mostrar las pantallas necesarias para que el usuario realice envíos de documentos y paquetes.
+		\item \textit{IUFilatelia:} Es la encargada de mostrar las pantallas necesarias para que el usuario realice todas las gestiones relacionadas con el portal filatélico
+		\item \textit{IUPrincipal:} Es la encargada de mostrar la pantalla inicial del portal así como de las diferentes pantallas necesarias para la obtención de información
+		\item \textit{IULogin:} Es la encargada de mostrar las pantallas necesarias para el registro y validación de usuarios
+		\item \textit{IUOficinaVirtual:} Es la encargada de mostrar las pantallas necesarias para la realización de gestiones en la oficina virtual del portal.
+		\end{itemize}
+	\item \textbf{Clases de Control:} 
+		\begin{itemize}
+		\item \textit{GestorEnvíos:} Es el encargado de realizar todas las operaciones necesarias para el envío de documentos y paquetes
+		\item \textit{GestorFilatelia:} Es el encargado de realizar todas las operaciones necesarias para la gestión del portal filatélico
+		\item \textit{GestorCorreos:} Es el encargado de realizar todas las operaciones necesarias para realizar las gestiones que no se enmarcan en ninguno de los casos anteriores (cambio de domicilio, apartado postal, etc.), así como de la obtención de información de la empresa.
+		\item \textit{GestorLogin:} Es el encargado de realizar todas las operaciones de registro y validación disponibles.
+		\item \textit{GestorOficinaVirtual:} Es el encargado de realizar todas las operaciones relacionadas con la Oficina Virtual de Correos.
+		\end{itemize}
+	\item \textbf{Clases de Entidad:}
+		\begin{itemize}
+		\item \textit{Envios:} Es la encargada de almacenar todos los envíos que se produzcan
+		\item \textit{Usuarios:} Es la encargada de almacenar todos los usuarios que se registren en el portal
+		\item \textit{Asociaciones:} Es la encargada de almacenar todas las asociaciones de filatelia existentes
+		\item \textit{Productos:} Es la encargada de almacenar todos los productos filatélicos disponibles
+		\item \textit{Colecciones:} Es la encarga de almacenar la información relacionada con todas las colecciones filatélicas disponibles
+		\item \textit{Pedidos:} Es la encargada de almacenar todos los pedidos de productos que se reciban
+		\item \textit{Información:} Es la encargada de almacenar toda la información estática que va a estar disponible en la página (información corporativa, etc.)
+		\end{itemize} 
+	\end{itemize}
+	
+	\subsection{Descripción de la Interacción de Objetos}
+	Los diagramas de secuencia que nos informan de la interacción entre los diferentes objetos del sistema son los siguientes:
+	\begin{itemize}
+	\item \textbf{Relacionados con Login}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seclogincorrecto.jpg}
+		\caption{Diagrama de secuencia de login (correcto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secloginincorrecto.jpg}
+		\caption{Diagrama de secuencia de login (incorrecto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seclogoutcorrecto.jpg}
+		\caption{Diagrama de secuencia de logout (correcto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seclogoutincorrecto.jpg}
+		\caption{Diagrama de secuencia de logout (incorrecto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secregistrocorrecto.jpg}
+		\caption{Diagrama de secuencia de registro (correcto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secregistroincorrecto.jpg}
+		\caption{Diagrama de secuencia de registro (incorrecto)}
+		\end{center}	
+		\end{figure}
+	
+	\item \textbf{Relacionados con Información}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secatclienteinfo.jpg}
+		\caption{Diagrama de secuencia de atención al cliente genérica}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secinfocorporativa.jpg}
+		\caption{Diagrama de secuencia información corporativa}
+		\end{center}	
+		\end{figure}
+	
+	\item \textbf{Relacionados con Oficina Virtual}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{sectareas.jpg}
+		\caption{Diagrama de secuencia de tareas pendientes}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secseguimiento.jpg}
+		\caption{Diagrama de secuencia de seguimiento de envíos}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{sechistorico.jpg}
+		\caption{Diagrama de secuencia de historico de envíos}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secjustificante.jpg}
+		\caption{Diagrama de secuencia de obtención de justificantes}
+		\end{center}	
+		\end{figure}
+	
+	\item \textbf{Relacionados con Filatelia}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secapadrinamiento.jpg}
+		\caption{Diagrama de secuencia de apadrinamiento}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secasociaciones.jpg}
+		\caption{Diagrama de secuencia de asociaciones}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secatcliente.jpg}
+		\caption{Diagrama de secuencia de atención al cliente}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seccoleccion.jpg}
+		\caption{Diagrama de secuencia de colecciones filatélicas}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seconlinecorrecto.jpg}
+		\caption{Diagrama de secuencia de gestión online (correcto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{seconlineincorrecto.jpg}
+		\caption{Diagrama de secuencia de gestión online (incorrecto)}
+		\end{center}	
+		\end{figure}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secsucursal.jpg}
+		\caption{Diagrama de secuencia de búsqueda de sucursales}
+		\end{center}	
+		\end{figure}
+	
+	\item \textbf{Relacionados con Envíos}
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secenviocorrecto.jpg}
+		\caption{Diagrama de secuencia de envío (correcto)}
+		\end{center}	
+		\end{figure}		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[scale=0.5]{secenvioincorrecto.jpg}
+		\caption{Diagrama de secuencia de envío (incorrecto)}
+		\end{center}	
+		\end{figure}
+		
+	\end{itemize}
+	
+\section{Análisis de clases}
+	\subsection{Identificación de responsabilidades y atributos}
+	En la descripción de las clases y los correspondientes diagramas no aparecen los métodos \texttt{set} y \texttt{get}, al igual que los métodos referentes a las interfaces, ya que se trata de métodos no relacionados con el sistema propiamente. Las clases identificadas con sus responsabilidades son las siguientes:
+	\begin{itemize}
+	\item \textbf{Envio:} La clase envío es la superclase de los diferentes envíos que se pueden realizar, y contiene la información relevante que debe contener cualquier envío, como el origen o el destinatario. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{idEnvio:} Identifica unívocamente a cada envío.
+		\item \textit{remitente:} Contiene información del remitente del envío.
+		\item \textit{destinatario:} Contiene información del destinatario del envio.
+		\item \textit{fechaEnvio:} La fecha en la que se realizó el envío.
+		\item \textit{precio:} El coste del envío.
+		\end{itemize}
+	\item \textbf{EnvioCarta:} Hereda de la clase \textit{Envio}. Representa un envío de un documento. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{tipoCarta:} Identifica el tipo de documento (carta, fax, telegrama)
+		\end{itemize}
+	\item \textbf{EnvioPaquete:} Hereda de la clase \textit{Envio}. Representa un envío de un paquete. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{tipoPaquete:} Identifica el tipo de paquete.
+		\item \textit{urgencia:} Indica si el envío del paquete se realiza con urgencia o no.
+		\end{itemize}
+	\item \textbf{IUPrincipal:} Es la encargada de mostrar por pantalla todo lo referente a la interfaz principal del portal.
+	\item \textbf{IUEnvios:} Es la encargada de mostrar por pantalla todo lo referente a la interfaz de envíos de documentos y paquetes del portal.
+	\item \textbf{IUFilatelia:} Es la encargada de mostrar por pantalla todo lo referente al portal filatélico.
+	\item \textbf{IUUsuario:} Es la encargada de mostrar por pantalla todo lo referente a la validación y registro de usuarios.
+	\item \textbf{IUOficinaVirtual:} Es la encargada de mostrar por pantalla todo lo referente a la oficina virtual.
+	\item \textbf{Usuario:} Es la encargada de almacenar toda la información referente a un usuario. Sus atributos son:
+		\begin{itemize}
+		\item \textit{idUsuario:} Identifica unívocamente a cada usuario en el sistema.
+		\item \textit{nombre:} Nombre real del usuario
+		\item \textit{apellidos:} Apellidos del usuario
+		\item \textit{dni:} Dni del usuario
+		\item \textit{tipoUsuario:} Identifica si el usuario es un usuario particular o profesional, para identificar el procedimiento a seguir para sus transacciones.
+		\end{itemize}
+	\item \textbf{Informacion:} Es la encargada de almacenar cada información buscada que vaya a ser mostrada al usuario. Sus atributos son:
+		\begin{itemize}
+		\item \textit{tipoInformacion:} Identifica que tipo de información almacena cada instancia de la clase.
+		\item \textit{contenido:} Se trata de la información obtenida de la base de datos
+		\end{itemize}
+	\item \textbf{Asociacion:} Almacena información referente a una asociación filatélica. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{nombre:} El nombre público de la asociación
+		\item \textit{localización:} La dirección donde se encuentra la asociación.
+		\item \textit{infoAdicional:} Información adicional de la asociación, una breve descripción.
+		\end{itemize}
+	\item \textbf{Sucursal:} Almacena información referente a una sucursal concreta. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{nombre:} El nombre de la sucursal
+		\item \textit{localización:} La dirección donde se encuentra la sucursal
+		\end{itemize}
+	\item \textbf{CentrosCorreos:} Se encarga de obtener información general de la base de datos, como sucursales o asociaciones. Sus atributos son los siguientes:
+		\begin{itemize}
+		\item \textit{asociaciones:} Listado completo de todas las asociaciones filatélicas.
+		\item \textit{sucursales:} Listado completo de todas las sucursales de Correos.
+		\end{itemize}
+		Se compone de los siguientes métodos:
+		\begin{itemize}
+		\item \textit{buscaAsociacion:} Obtiene de la lista de asociaciones la asociación cuyo nombre coincida con el recibido como parámetro.
+		\item \textit{buscaSucursal:} Obtiene de la lista de sucursales la sucursal cuyo nombre coincida con el recibido como parámetro.
+		\end{itemize}
+	\item \textbf{GestorUsuarios:} Se encarga de gestionar todas las operaciones relacionadas con los usuarios del sistema. Se compone de los siguientes métodos:
+		\begin{itemize}
+		\item \textit{login:} Valida a un usuario en el sistema si el nombre de usuario y contraseña recibidos son correctos. En caso contrario devuelve un código de error
+		\item \textit{logout:} Si el nombre de usuario recibido ha sido validado, lo saca del sistema, y devuelve error en caso contrario.
+		\end{itemize}
+	\item \textbf{GestorEnvios:} Se encarga de gestionar todas las operaciones relacionadas con los envíos de documentos y paquetes. Se compone de los siguientes métodos:
+		\begin{itemize}
+		\item \textit{enviarDocumento:} Se encarga de registrar el envío del documento identificado con el id recibido como parámetro en la base de datos.
+		\item \textit{enviarPaquete:} Se encarga de registrar el envío del paquete identificado con el id recibido como parámetro en la base de datos.
+		\item \textit{seguirEnvio:} Se encarga de obtener información del estado del envío indentificado con el id recibido como parámetro de la base de datos.
+		\end{itemize}
+	\item \textbf{GestorFilatelia:} Se encarga de gestionar todas las operaciones relacionadas con el portal filatélico. Se compone de los siguientes métodos:
+		\begin{itemize}
+		\item \textit{registrar:} Registra a un nuevo usuario en la base de datos.
+		\item \textit{buscaAsociacion:} Obtiene la asociación identificada con el nombre recibido como parámetro
+		\item \textit{buscaInfo:} Obtiene la información correspondiente a los datos recibidos como parámetro
+		\item \textit{realizaPedido:} Registra un nuevo pedido en la base de datos
+		\item \textit{buscaSucursal:} Obtiene la sucursal identificada con el nombre recibido como parámetro.
+		\end{itemize}
+	\item \textbf{GestorOficinaVirtual:} Se encarga de gestionar todas las operaciones relacionadas con la oficina virtual. Se compone de los siguientes métodos:
+		\begin{itemize}
+		\item \textit{doSeguimiento:} Obtiene información del estado del envío identificado con el id recibido como parámetro
+		\item \textit{ultimosEnvios:} Obtiene información de los últimos envíos realizados por el usuario identificado por el id recibido como parámetro
+		\item \textit{justificante:} Obtiene los datos de un justificante de la factura recibida como parámetro
+		\item \textit{tareasPendientes:} Obtiene un listado con los envíos pendientes del usuario recibido como parámetro.
+		\end{itemize}
+	\end{itemize}
+	El diagrama de clases asociado a las clases descritas es el siguiente:
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.3]{clasesdiag.jpg}
+	\caption{Diagrama de clases del sistema}
+	\end{center}
+	\end{figure}
+	
+		
+	\subsection{Identificación de agregaciones y asociaciones}
+	
+	Siguiendo el diagrama de clases anterior, podemos identificar las siguientes relaciones entre clases:
+	\begin{itemize}
+	\item \textbf{Agregación:}
+		\begin{itemize}
+		\item \textit{Asociacion, Sucursal, CentrosCorreos:} En este caso hay una relación de agregación ya que la clase \textit{CentrosCorreos} se compone de dos listas diferentes de asociaciones y sucursales. No es una relación de composición debido a que la clase \textit{CentrosCorreos} sigue existiendo con funciones propias en caso de que no existieran asociaciones ni sucursales
+		\end{itemize}
+	\item \textit{Otras relaciones:}
+		\begin{itemize}
+		\item \textit{Gestor - Interfaz:} Las clases del paquete \textit{Interfaz} tan sólo se relacionan con las del paquete \textit{Gestor} debido a que son estas últimas las encargadas de gestionar la información que va a mostrar la interfaz. Por lo tanto, la interfaz se va a relacionar con los gestores para obtener la información que deben mostrar.
+		\item \textit{Gestor - Envios:} Las clases del paquete \textit{Gestor} se relacionan con las del paquete \textit{Envios} para obtener y procesar información de los envíos registrados, así como para registrar nuevos envíos. Por esto es una relación unidireccional, ya que tan sólo los gestores accederán a la información de los envíos.
+		\item \textit{Gestor - Usuario:} Los gestores se relacionan con la clase de usuario para obtener información de cualquier usuario así como para crear y/o eliminar usuarios. Es una relación unidireccional.
+		\item \textit{Gestor - Informacion:} Los gestores se relacionan con la clase \textit{Informacion} para obtener información de forma que las interfaces puedan entenderla. Es una relación unidireccional.
+		\item \textit{Gestor - CentrosCorreos:} Los gestores se relacionan con la clase \textit{CentrosCorreos} ya que esta última es la encargada de buscar sucursales y asociaciones, así como información de las mismas. Se trata de una información unidireccional, ya que \textit{CentroCorreos} no necesita acceder para nada a los gestores.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsection{Identificación de generalizaciones}
+	En el sistema tan sólo existe una relación de herencia, y es aquella establecida entre la clase \textit{Envio} y las clases que representan los diferentes tipos de envios, \textit{EnvioCarta} y \textit{EnvioPaquete}. Esta relación simplifica todo lo posible la agregación de nuevos tipos de envíos, ya que tan sólo sería necesario añadir las clases de los nuevos envíos de manera que hereden de la clase \textit{Envio}.
+	
+	Además, esto consigue que los gestores pueda acceder a la información común a todos los envíos de manera uniforme, aunque se modifiquen los tipos de envíos o se añadan nuevos.
+	
+\section{Elaboración del Modelo de Datos}
+
 
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+

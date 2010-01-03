@@ -4,3 +4,20 @@
 \BOOKMARK [3][-]{subsubsection.1.1.2}{Modelo de Negocio}{subsection.1.1}
 \BOOKMARK [2][-]{subsection.1.2}{Identificaci\363n del entorno tecnol\363gico}{section.1}
 \BOOKMARK [2][-]{subsection.1.3}{Especificaci\363n de Est\341ndares y Normas}{section.1}
+\BOOKMARK [2][-]{subsection.1.4}{Identificaci\363n de los usuarios participantes y finales}{section.1}
+\BOOKMARK [1][-]{section.2}{Establecimiento de requisitos}{}
+\BOOKMARK [2][-]{subsection.2.1}{Obtenci\363n de requisitos}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Especificaci\363n de Casos de Uso}{section.2}
+\BOOKMARK [2][-]{subsection.2.3}{An\341lisis de requisitos}{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Validaci\363n de requisitos}{section.2}
+\BOOKMARK [1][-]{section.3}{Identificaci\363n de subsistemas de an\341lisis}{}
+\BOOKMARK [2][-]{subsection.3.1}{Determinaci\363n de Subsistemas de An\341lisis}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Integraci\363n de Subsistemas de An\341lisis}{section.3}
+\BOOKMARK [1][-]{section.4}{An\341lisis de los casos de uso}{}
+\BOOKMARK [2][-]{subsection.4.1}{Identificaci\363n de Clases Asociadas a un Caso de Uso}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Descripci\363n de la Interacci\363n de Objetos}{section.4}
+\BOOKMARK [1][-]{section.5}{An\341lisis de clases}{}
+\BOOKMARK [2][-]{subsection.5.1}{Identificaci\363n de responsabilidades y atributos}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Identificaci\363n de agregaciones y asociaciones}{section.5}
+\BOOKMARK [2][-]{subsection.5.3}{Identificaci\363n de generalizaciones}{section.5}
+\BOOKMARK [1][-]{section.6}{Elaboraci\363n del Modelo de Datos}{}
