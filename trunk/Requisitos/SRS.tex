@@ -204,7 +204,7 @@
 	\end{itemize}	
 
 \subsection{Funciones}
-	El sistema debe:
+	El sistema debe, a grandes rasgos, realizar las siguientes acciones:
 	\begin{itemize}
 		\item Gestión de los datos introducidos por un cliente.
 		\item Gestión de envíos de documentos o paquetes realizados por un cliente: datos del envío, localización del envío una vez que fue confirmado.
@@ -212,6 +212,65 @@
 		\item Gestión del Portal Filatélico.
 		\item Gestión de la Oficina Virtual.
 	\end{itemize}
+	
+	A continuación se detallan las operaciones antes indicadas:
+	\begin{itemize}
+		\item \textit{\textbf{Registro}}: el sistema debe permitir a los usuarios visitantes su registro en el Portal y en la Oficina Virtual.
+		\item \textit{\textbf{Validación}}: el sistema debe permitir a los usuarios visitantes validarse (iniciar sesión) en éste para identificarse como usuarios registrados.
+		\item \textit{\textbf{Logout}}: el sistema debe permitir a los usuarios registrados y validados poder cerrar su sesión de forma correcta, con el objetivo de evitar dejar sesiones abiertas que puedan provocar problemas de seguridad a estos usuarios.
+		\item \textit{\textbf{Envío de Cartas}}: el sistema debe permitir el envío de cartas mediante el portal en el caso de usuarios registrados.
+		\item \textit{\textbf{Envío de Telegramas}}: el sistema, al igual que antes, permitirá el envío de telegramas a través del portal en el caso de usuarios registrados.
+		\item \textit{\textbf{Envío de Fax}}: el sistema debe permitir a los usuarios registrado el envío de un fax a través del portal.
+		\item \textit{\textbf{Envío de Paquetes}}: el sistema debe permitir a los usuarios registrados en envío de paquetes a través del portal. Además los usuarios podrán elegir la urgencia de su envío tanto dentro como fuera del territorio nacional.
+		\item \textit{\textbf{Envío de Dinero por Giro}}: el sistema debe permitir obtener información acerca del envío de dinero a través de un Giro.
+		\item \textit{\textbf{Envío de Dinero por Western Union}}: el sistema debe permitir al cliente obtener información para el envío de dinero mediante Western Union.
+		\item \textit{\textbf{Envío de Dinero por Reembolso}}: el sistema debe permitir al cliente obtener información del envío de dinero a través de un reembolso.
+		\item \textit{\textbf{Correo Electrónico}}: el sistema debe permitir al cliente el acceso a su cuenta de correo electrónico de Correos.
+		\item \textit{\textbf{BanCorreos}}: el sistema debe permitir al cliente el acceso a BanCorreos.
+		\item \textit{\textbf{Cambios de Domicilio}}: el sistema debe permitir al cliente realizar un cambio de domicilo portal.
+		\item \textit{\textbf{Personalización de sellos}}: el sistema debe permitir al cliente la personalización de los sellos que desee a través del portal, así como subir imágenes para la personalización de estos.
+		\item \textit{\textbf{Sobres y Embalajes}}: el sistema debe permitir la obtención de información y compra de todos los tipos de sobres y embalajes disponibles.
+		\item \textit{\textbf{Creamailing}}: el sistema debe permitir al cliente iniciar un servicio de buzoneo, además de obtener información de precios y tarifas.
+		\item \textit{\textbf{Apartado Portal}}: el sistema debe permitir obtener información acerca de un apartado postal, incluyendo las tarifas de este.
+		\item \textit{\textbf{Reenvío Postal}}: el sistema debe permitir obtener información acerca del reenvío de su correspondencia a otra dirección que indique el cliente.
+		\item \textit{\textbf{Notificaciones Telemáticas Seguras}}: el sistema debe permitir que el cliente pueda configurar una cuenta de correo electrónico, con el fin de recibir en éste las comunicaciones que realice la Administración de Correos.
+		\item \textit{\textbf{Pago de Recibos}}: el sistema debe permitir obtener información acerca del pago de recibos que ofrece Correos.
+		\item \textit{\textbf{Recarga de Móviles}}: el sistema debe permitir obtener información acerca del servicio proporcionado de recarga de móviles disponible en las oficinas de Correos.
+		\item \textit{\textbf{Locutorios}}: el sistema debe permitir obtener información acerca de la localización de locutorios en las oficinas de Correos.
+		\item \textit{\textbf{Tiendas Telecor}}: el sistema debe permitir obtener información acerca de la localización de las tiendas Telecor.
+		\item \textit{\textbf{Dominios}}: el sistema debe permitir al cliente la búsqueda y posterior adquisición del dominio web que desee, siempre y cuando el dominio que desea el cliente esté disponible.
+		\item \textit{\textbf{Bienvenida (Filatelia)}}: el sistema informará al cliente de la campaña de bienvenida filatélica.
+		\item \textit{\textbf{Apadrinamiento (Filatelia)}}: el sistema debe permitir al cliente registrar a otro usuario para proceder con el apadrinamiento.
+		\item \textit{\textbf{Productos filatélicos}}: el sistema debe proporcionar información acerca de los productos filatélicos disponibles en la fecha correspondiente. Es decir, esos productos irán variando a lo largo del tiempo, por lo que puede que desaparezcan algunos y se ofrezcan otros nuevos.
+		\item \textit{\textbf{Compra Online}}: el sistema debe permitir al cliente realizar compras online a través del portal de productos filatélicos.
+		\item \textit{\textbf{Atención al Cliente (Filatelia)}}: el sistema debe ofrecer al cliente una atención personalizada a través del portal.
+		\item \textit{\textbf{Asociaciones}}: el sistema debe ofrecer  un listado de las asociaciones de una determinada comunidad autónoma.
+		\item \textit{\textbf{Puntos de Venta (Filatelia)}}: el sistema debe permitir obtener una lista de puntos de venta de los productos filatélicos disponibles.
+		\item \textit{\textbf{Museo}}: el sistema debe permitir al cliente obtener información acerca del Museo Postal Telegráfico.
+		\item \textit{\textbf{Atención al Cliente}}: el sistema debe permitir al cliente solicitar información de todo tipo relacionada con el portal o sus productos.
+		\item \textit{\textbf{Información Corporativa}}: el sistema debe ofrecer la posibilidad al cliente de obtener toda la información referida a la empresa de Correos.
+		\item \textit{\textbf{Tareas Pendientes}}: el sistema debe permitir al cliente obtener un listado de las tareas pendientes en la oficina virtual.
+		\item \textit{\textbf{Seguimiento}}: el sistema debe ofrecer al cliente realizar un seguimiento de los envíos que ya ha realizado.
+		\item \textit{\textbf{Histórico}}: el sistema debe permitir al cliente obtener información acerca de las últimas transacciones realizadas.
+		\item \textit{\textbf{Justificantes}}: el sistema debe permitir al cliente obtener justificantes de las facturas asociadas a los pagos realizados a través del portal.
+	\end{itemize}
+	
+	Los requisitos antes tratados son funcionales y ahora vamos a ver los no funcionales:
+	\begin{itemize}	
+		\item La verificación de los datos introducidos por el usuario se realizará de forma rápida y efectiva, aprovechando en la mayor parte los recursos disponibles. Por lo que el sistema deberá responder a esta validación de datos en un tiempo menor a los 5 segundos, en el peor de los casos.
+		\item Las interfaces del sistema serán lo más semejantes posibles con el fin de ser una aplicación fácil de utilizar por cualquier usuario.
+		\item La seguridad proporcionada para un cliente ya registrado será muy alta, para eliminar los problemas de datos confidenciales como podría ser el DNI del cliente, su dirección postal, etc.
+		\item La estabilidad de la aplicación será proporcionada a partir de los servidores.
+		\item Los servidores deberán cumplir con las características antes mencionadas.
+		\item El lenguaje de programación a utilizar será J2EE 1.4, usando Oracle para el almacenamiento persistente de los datos. En la base de datos se guardará información de todo tipo: datos de los usuarios, información de los productos ofertados por Correos.
+		\item Se definirá un libro de estilo y una hoja de estilo para la interfaz, basada fundamentalmente en páginas HTML.
+		\item Se usará Flash para algunos anuncios. Como por ejemplo el anuncio de aquellos productos novedosos, que serán mostrados en la página principal de Correos.
+		\item La accesibilidad de la web será la apropiada para aquellas personas que sufran de alguna discapacidad.
+		\item Se realizarán copias de seguridad de la información almacenada en periodos cortos con el fin de no perder la información guardada en los servidores.
+		\item En el caso de que una transacción fuera interrumpida por la caída del servidor, el cliente debe estar seguro que no se le cobrará el importe de esa transacción debido a que ésta no será realizada.
+		\item La portabilidad de la información se podrá llevar a cabo siempre y cuando los servidores dispongan de los requisitos mencionados.
+	\end{itemize}
+	
 	
 \subsection{Requisitos del desarrollo}
 	\begin{itemize}
@@ -260,12 +319,14 @@
 	\item \textbf{Objetos:} Los objetos que aparecen en el sistema y tienen contraparte en el mundo real son:
 		\begin{itemize}
 			\item Cartas,
+			\item Fax,
+			\item Telegramas,
 			\item Documentos,
 			\item Paquetes,
 			\item Dinero,
 			\item Sellos.
 		\end{itemize}
-	
+
 	\item \textbf{Rasgo:}
 		\begin{itemize}
 			\item Envíos: el cliente registrado rellenará un formulario para el envío de uno o varios productos.
@@ -273,6 +334,10 @@
 			\item Cambio de Domicilio: el cliente deberá insertar su nueva dirección en el formulario correspondiente.
 			\item Personalización de sellos: el cliente deberá subir la imagen que desea plasmar en su sello personalizado.
 			\item Reenvío postal: el cliente modificará su correspondencia mediante un formulario.
+			\item Creamailing: el cliente podrá iniciar el servicio de buzoneo, si antes no lo tenia activado.
+			\item Notificaciones telemáticas seguras: el cliente podrá recibir en el correo electrónico que especificó las comunicaciones que realiza la Administración de Correos.
+			\item Dominios: el cliente podrá consultar y obtener un dominio web.
+			\item Compar Online: el cliente tendrá la posibilidad de realizar compras online sobre los productos filatélicos disponibles.
 		\end{itemize}
 		
 	\item \textbf{Estímulo:} Cualquier error o confirmación provocado al rellenar un formulario se mostrará al usuario su correspondiente mensaje. Luego una transacción correcta se le mostrará la confirmación, y en el caso de algún error el mensaje llevará los motivos por los cuales se produjo dicho error. 
