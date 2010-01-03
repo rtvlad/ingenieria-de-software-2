@@ -1,0 +1,37 @@
+\select@language {spanish}
+\contentsline {figure}{\numberline {1}{\ignorespaces Modelo de Negocio del sistema}}{5}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Modelo de dominio del sistema}}{5}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Caso de uso referidos a los env\IeC {\'\i }os disponibles desde el portal}}{10}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Caso de uso referidos a la gesti\'on filat\'elica del portal}}{10}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Caso de uso referidos a la b\'usqueda de informaci\'on en el portal}}{11}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Caso de uso referidos al registro y validaci\'on de usuarios en el portal}}{11}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Caso de uso referidos a otras gestiones que se pueden realizar en el portal}}{11}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Caso de uso referidos a las gestiones disponibles s\'olo en la oficina virtual}}{12}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de paquetes}}{27}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de clases de an\'alisis relacionadas con registro y validaci\'on}}{29}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de clases de an\'alisis relacionadas con env\IeC {\'\i }o de documentos y paquetes}}{30}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de clases de an\'alisis relacionadas con el portal filat\'elico}}{30}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de clases de an\'alisis relacionadas con la obtenci\'on de informaci\'on de la empresa}}{31}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de clases de an\'alisis relacionadas con la oficina virtual}}{31}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de secuencia de login (correcto)}}{33}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de secuencia de login (incorrecto)}}{33}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de secuencia de logout (correcto)}}{34}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de secuencia de logout (incorrecto)}}{34}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de secuencia de registro (correcto)}}{35}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de secuencia de registro (incorrecto)}}{35}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente gen\'erica}}{36}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Diagrama de secuencia informaci\'on corporativa}}{36}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de secuencia de tareas pendientes}}{37}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de secuencia de seguimiento de env\IeC {\'\i }os}}{37}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de secuencia de historico de env\IeC {\'\i }os}}{38}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de secuencia de obtenci\'on de justificantes}}{38}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de secuencia de apadrinamiento}}{39}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de secuencia de asociaciones}}{39}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente}}{40}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Diagrama de secuencia de colecciones filat\'elicas}}{40}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama de secuencia de gesti\'on online (correcto)}}{41}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Diagrama de secuencia de gesti\'on online (incorrecto)}}{41}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Diagrama de secuencia de b\'usqueda de sucursales}}{42}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (correcto)}}{42}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (incorrecto)}}{43}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Diagrama de clases del sistema}}{46}{figure.36}
