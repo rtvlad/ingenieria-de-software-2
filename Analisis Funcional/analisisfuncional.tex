@@ -13,14 +13,41 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{longtable}
-\pagestyle{empty}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \marginsize{3cm}{2cm}{2cm}{2cm}
 \author{Jesus Sánchez-Oro Calvo}
 \title{Complejos}
 \begin{document}
 
-\section{Definición del sistema}
-\subsection{Determinación del alcance del sistema}
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[scale=1]{logoURJC.jpg} \\[1cm]
+\textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
+{\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
+{\Large Ingeniería del Software II}\\[1.25cm]
+{\LARGE \textbf{Práctica Obligatoria}}\\[3.5cm]
+{\Large David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ Radu Tom Vlad}\\[1cm]
+{\Large asantalla@siliconkernel.com}\\[2cm]
+5º de Ingeniería Informática \\[1cm]
+\today
+
+\end{center}
+
+\newpage
+\fancyhead[LO,LE]{Ingeniería del Software II}
+\fancyhead[RO,RE]{Análisis Funcional}
+%\fancyfoot[LO,LE]{\thepage}
+\tableofcontents
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+\section{ASI 1:Definición del sistema}
+\subsection{ASI 1.1: Determinación del alcance del sistema}
 	Para conocer el alcance del sistema es necesario identificar qué procesos van a pertenecer al sistema de información. En el caso del actual proyecto, los procesos asociados al portal web se pueden agrupar en tres grandes apartados:
 		\begin{itemize}
 		\item \textbf{Procesos asociados al usuario:} En este apartado se encuentran aquellos procesos que gestionan la información relacionada con todos aquellos usuarios que puedan interactuar con el sistema. Entre estos procesos se encuentran los procesos de registro, validación, etc.
@@ -65,15 +92,15 @@
 	
 	Hay que tener en cuenta que son representaciones abstractas del sistema. Más adelante sera necesario diferenciar entre clientes de Correos y clientes del portal Filatélico, productos para clientes y productos filatélicos, etc.
 	
-\subsection{Identificación del entorno tecnológico}
+\subsection{ASI 1.2: Identificación del entorno tecnológico}
 	La aplicación estará construida sobre una plataforma avanzada de construcción de Portales, WebSphere Portal Enable V5.1 de IBM. Esta plataforma nos permitirá mejorar el portal actual, que está basado en una arquitectura en tres capas integrando tecnologías como C++, .NET, SQL Server 2000, IIS, ASP, etc.
 	Utilizando la herramienta de IBM el sistema tendremos un mayor grado de integración donde será más sencillo corregir los errores que puedan surgir.
 	
-\subsection{Especificación de Estándares y Normas}
+\subsection{ASI 1.3: Especificación de Estándares y Normas}
 	Comenzando por los estándares, como se desea que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, es fundamental que cumpla con el estándar W3C. De esta manera, la aplicación debe ser capaz de pasar el test del validador de la W3C (\url{http://validator.w3.org}). Con esto, no aseguramos de que cualquier usuario que utilice cualquier navegador que siga dicho estándar sea capaz de visualizar la aplicación de una manera correcta sin errores.
 	En cuanto a legislación, la principal ley que se debe tener en cuenta es la Ley Orgánica de Protección de Datos de Carácter Personal, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
 	
-\subsection{Identificación de los usuarios participantes y finales}
+\subsection{ASI 1.4: Identificación de los usuarios participantes y finales}
 	Los usuarios participantes en el sistema que han sido identificados son los siguientes:
 	\begin{itemize}
 	\item \textbf{Usuario no registrado:} Se trata de todos aquellos usuarios que no están registrados en el portal web de Correos y que, por tanto, no son clientes, tan sólo buscan información. Las acciones permitidas a este tipo de usuarios son:
@@ -94,8 +121,10 @@
 			\end{itemize}
 	\end{itemize}
 	
-\section{Establecimiento de requisitos}
-	\subsection{Obtención de requisitos}
+\newpage
+	
+\section{ASI 2: Establecimiento de requisitos}
+	\subsection{ASI 2.1: Obtención de requisitos}
 	A partir de las condiciones dadas, el catálogo de requisitos obtenido es el siguiente:
 	\begin{longtable}[H]{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
 	\hline
@@ -297,7 +326,7 @@
 			\end{itemize}
 		\end{itemize}
 		
-	\subsection{Especificación de Casos de Uso}
+	\subsection{ASI 2.2: Especificación de Casos de Uso}
 	En todos los casos de uso, se consideran los flujos alternativos de que el usuario cierra el navegador o cancela la transacción. No aparecen en cada especificación para facilitar su entendimiento.
 	\subsubsection*{Enviar Carta}
 		\begin{itemize}
@@ -1071,7 +1100,7 @@
 		\end{itemize}		
 		
 	
-	\subsection{Análisis de requisitos}
+	\subsection{ASI 2.3: Análisis de requisitos}
 	Los requisitos seleccionados se relacionan siguiendo el criterio del entorno en el que van a estar presentes. Los requisitos relacionados entre sí son los siguientes:
 	
 	\begin{itemize}
@@ -1083,11 +1112,13 @@
 	\item \textit{Tareas Pendientes, Seguimientos, Histórico, Justificantes:} Se ejecutan en el entorno de Oficina Virtual
 	\end{itemize}
 	
-	\subsection{Validación de requisitos}
+	\subsection{ASI 2.4: Validación de requisitos}
 	Los casos de uso y requisitos identificados anteriormente son válidos, completos y consistentes y realizan las funciones especificadas por el cliente en el pliego de condidiciones.
+
+\newpage
 	
-\section{Identificación de subsistemas de análisis}
-	\subsection{Determinación de Subsistemas de Análisis}
+\section{ASI 3: Identificación de subsistemas de análisis}
+	\subsection{ASI 3.1: Determinación de Subsistemas de Análisis}
 	En el actual sistema podemos encontrar cuatro grandes subsistemas de análisis claramente diferenciados. Los subsistemas identificados son los siguientes:
 		\begin{itemize}
 		\item \textbf{Gestor de correos:} Es el encargado de la gestión de usuarios, y lleva a cabo acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
@@ -1104,7 +1135,7 @@
 	\end{center}	
 	\end{figure}
 		
-	\subsection{Integración de Subsistemas de Análisis}
+	\subsection{ASI 3.2: Integración de Subsistemas de Análisis}
 	En cuanto a la integración de los diferentes subsistemas, hay que tener en cuenta lo siguiente:
 		\begin{itemize}
 		\item Los tres subsistemas acceden concurrentemente a la base de datos de usuarios, por lo que es necesario llevar un control para que no se produzca un acceso que modifique un elemento de esa base de datos que necesite otro subsistema.
@@ -1113,8 +1144,10 @@
 		\end{itemize}
 	Respecto al resto de accesos, no hay más posibilidades de acceso concurrente o simultáneo que pueda llevar a problemas de sincronización entre subsistemas, por lo que no es necesario llevar a cabo más control que el expuesto.
 	
-\section{Análisis de los casos de uso}
-	\subsection{Identificación de Clases Asociadas a un Caso de Uso}
+\newpage
+	
+\section{ASI 4: Análisis de los casos de uso}
+	\subsection{ASI 4.1: Identificación de Clases Asociadas a un Caso de Uso}
 	Las clases de entidad, interfaz y control identificadas se pueden ver en los siguientes diagramas:
 	\begin{figure}[H]
 	\begin{center}
@@ -1177,7 +1210,7 @@
 		\end{itemize} 
 	\end{itemize}
 	
-	\subsection{Descripción de la Interacción de Objetos}
+	\subsection{ASI 4.2: Descripción de la Interacción de Objetos}
 	Los diagramas de secuencia que nos informan de la interacción entre los diferentes objetos del sistema son los siguientes:
 	\begin{itemize}
 	\item \textbf{Relacionados con Login}
@@ -1318,8 +1351,10 @@
 		
 	\end{itemize}
 	
-\section{Análisis de clases}
-	\subsection{Identificación de responsabilidades y atributos}
+	\newpage
+
+\section{ASI 5: Análisis de clases}
+	\subsection{ASI 5.1: Identificación de responsabilidades y atributos}
 	En la descripción de las clases y los correspondientes diagramas no aparecen los métodos \texttt{set} y \texttt{get}, al igual que los métodos referentes a las interfaces, ya que se trata de métodos no relacionados con el sistema propiamente. Las clases identificadas con sus responsabilidades son las siguientes:
 	\begin{itemize}
 	\item \textbf{Envio:} La clase envío es la superclase de los diferentes envíos que se pueden realizar, y contiene la información relevante que debe contener cualquier envío, como el origen o el destinatario. Sus atributos son los siguientes:
@@ -1414,7 +1449,7 @@
 	\end{figure}
 	
 		
-	\subsection{Identificación de agregaciones y asociaciones}
+	\subsection{ASI 5.2: Identificación de agregaciones y asociaciones}
 	
 	Siguiendo el diagrama de clases anterior, podemos identificar las siguientes relaciones entre clases:
 	\begin{itemize}
@@ -1432,12 +1467,102 @@
 		\end{itemize}
 	\end{itemize}
 	
-	\subsection{Identificación de generalizaciones}
+	\subsection{ASI 5.3: Identificación de generalizaciones}
 	En el sistema tan sólo existe una relación de herencia, y es aquella establecida entre la clase \textit{Envio} y las clases que representan los diferentes tipos de envios, \textit{EnvioCarta} y \textit{EnvioPaquete}. Esta relación simplifica todo lo posible la agregación de nuevos tipos de envíos, ya que tan sólo sería necesario añadir las clases de los nuevos envíos de manera que hereden de la clase \textit{Envio}.
 	
 	Además, esto consigue que los gestores pueda acceder a la información común a todos los envíos de manera uniforme, aunque se modifiquen los tipos de envíos o se añadan nuevos.
 	
-\section{Elaboración del Modelo de Datos}
+\newpage
+
+\section{ASI 6: Elaboración del Modelo de Datos}
+
+FALTA TODO ESTE APARTADO
+
+\newpage
+
+\section{ASI 7: Elaboración del Modelo de Procesos}
+
+NO SE SI PONERLO O NO
+
+\newpage
+
+\section{ASI 8: Definición de interfaces de usuario}
+
+\subsection{ASI 8.1: Especificación de Principios Generales de la Interfaz}
+La interfaz del sistema será totalmente gráfica de manera que el usuario tenga acceso a la información de la manera más sencilla e intuitiva posible, debido al gran abanico de usuario que accederán al portal. La estructura general de la interfaz será común en todas las posibles combinaciones, de manera que el usuario no detecte ningún cambio gráfico muy llamativo a la hora de navegar por el portal. 
+
+Habrá tres estructuras gráficas bien diferenciadas en el portal. La primera de ellas será la referida al portal principal. Estará compuesta de un menú principal a la izquierda de la pantalla donde el usuario podrá acceder de manera directa a todas las opciones disponibles. El color característico será el amarillo, distintivo de la empresa. El contenido al que se está accediendo aparecerá en el centro de la pantalla, y la parte derecha aparecerán los menús secundarios, en caso de que existan.
+
+La segunda será la referida a la oficina virtual. La estructura será similar a la anterior pero con una diferencia: el color predominante será el azul. Mantiene el menú principal a la izquierda de la misma y los menús secundarios a la derecha. El contenido estará en el centro sobre un fondo blanco, para que lo más llamativo sea el contenido, no el diseño en sí mismo.
+
+Por último, se encuentra la referida al portal filatélico. Se mantiene la estructuras de menús y contenidos, pero el color predominante será el rojo. Además, en el contenido los productos mostrados aparecerán sobre una galería de manera que el usuario pueda desplazarse por ella, así como ampliar y reducir las imágenes de los productos.
+
+Para la navegación entre los tres apartados se utilizarán pestañas que aparecerán en la parte superior, de manera que sea muy sencillo añadir nuevos elementos al portal.
+
+Los mensajes de error y aviso del sistema se mostrarán en forma de \textit{pop-ups} que no permitan continuar la navegación por el portal hasta que el usuario los cancele, de forma que nos aseguremos que el usuario tenga constancia de los mismos.
+
+Para mostrar las ayudas, el usuario hará click en un botón de ayuda disponible en todas las secciones. Al hacer click se activa la ayuda de forma que cuando el usuario pasa el botón sobre la sección que necesita ayuda, se despliega un menú con la ayuda disponible en el sistema. Para cancelar la ayuda, basta con volver a hacer click en el botón para desactivarlo.
+
+Los impresos que se realicen tendrán siempre el mismo formato, para facilitar su identificación. En la parte superior izquierda aparecerá el logo de la empresa junto con el nombre. En la parte central superior, el título del documento en mayúsculas, y en la superior derecha, el número de página. A partir de ahí, el resto de la página dependerá del documento en cuestión.
+
+\subsection{ASI 8.2: Identificación de Perfiles y Diálogos}
+Los perfiles de usuario identificados son los siguientes:
+	\begin{itemize}
+	\item \textbf{Usuario de mediana edad con conocimientos técnicos:} Se trata de un usuario sin problemas de ningún tipo y con experiencia en el manejo de ordenadores y aplicaciones web. Este tipo de usuarios no tendrá ningún tipo de problema para acceder al portal y navegar por el mismo, por lo que no es necesaria ninguna adaptación
+	\item \textbf{Usuario de mediana edad sin conocimientos técnicos:} Se trata de un usuario sin problemas pero sin experiencia en el manejo de ordenadores y aplicaciones web. Los problemas que el portal pueda causar a este tipo de usuarios quedarán solventados con los menús de ayuda disponibles, que le guiarán a lo largo de toda la navegación
+	\item \textbf{Usuario de avanzada edad con conocimientos técnicos:} Se trata de un usuario con posibles problemas de visión, con experiencia en el manejo de ordenadores y aplicaciones web. Para solucionar los posibles problemas relacionados con la dificultad de visión se dispone de dos botones para aumentar o disminuir la tipografía, facilitando la lectura.
+	\item \textbf{Usuario de avanzada edad sin conocimientos técnicos:} Se trata de un usuario con posibles problemas de visión, sin experiencia en el manejo de ordenadores y aplicaciones web. Para solucionar los problemas de visión, se utilizan los botones de ampliación y reducción de tipografías, así como los menús de ayuda para guiarle a lo largo de la navegación por el portal.
+	\end{itemize}
+	
+\subsection{ASI 8.3: Especificación de Formatos Individuales de la Interfaz de Pantalla}
+Todas las interfaces de pantalla necesitarán los mismos aspectos a tener en cuenta:
+\begin{itemize}
+\item El tamaño de las pantallas se adaptará según el tamaño del navegador, de manera que siempre aparezca en la pantalla el menú principal y el contenido, al menos.
+\item Los dispositivos de entrada necesarios serán el teclado y el ratón, o una interfaz humana en caso de disponer de pantallas táctiles.
+\end{itemize}
+
+\subsection{ASI 8.4: Especificación del Comportamiento Dinámico de la Interfaz}
+
+\subsection{ASI 8.5: Especificación de Formatos de Impresión}
+La interfaz de impresión será la misma para todos los documentos, con el logo de la empresa en la parte superior, junto con el título del documento y el número de página. Los documentos disponibles para la impresión son los siguientes:
+	\begin{itemize}
+	\item \textbf{Justificantes:} Los justificantes de las facturas pagadas incluirán al comienzo el número y fecha de facturación, y tras esto, la información referente a la factura.
+	\item \textbf{Seguimiento de envíos:} Los seguimientos de envíos figurarán en forma de tabla, dividida por las siguientes columnas: fecha, estado. De esta forma el usuario identifica de forma clara los estados por lo que ha ido pasando el envío.
+	\item \textbf{Producto filatélico:} La impresión de información de un producto filatélico se dispondrá con una imagen del mismo que ocupará el cuarto superior izquierdo del documento, junto con la información del documento debajo del mismo, ocupando el resto del mismo.
+	\item \textbf{Facturas:} Las facturas serán todas similares en el aspecto. Contendrán el número de factura a la izquierda y a la derecha el nombre del titular de la factura. A continuación aparecerá una tabla dividida por las columnas de \textit{descripción} y \textit{precio}. El contenido de esa tabla será la descripción de cada compra y el precio asociado a la misma, a razón de una por línea.
+	\end{itemize}
+	
+\newpage
+
+\section{ASI 10: Especificación de un Plan de Pruebas}
+
+\subsection*{ASI 10.1: Definición del Alcance de las Pruebas}
+Los perfiles implicados en los diferentes niveles de prueba se corresponden con aquellos identificados anteriormente, para comprobar que todos los usuarios que creemos van a acceder al portal realicen pruebas sobre el mismo. Además, entre los usuarios escogidos para las pruebas habrá personas que hayan utilizado con anterioridad el portal, para indicar la mejoría, y personas que no conocían el portal, para comprobar su utilidad.
+
+Las pruebas tendrán una duración de tres meses, durante los cuales se realizarán pruebas rotativas entre los diferentes sujetos durante jornadas de 8 horas, de forma que cada usuario realizará pruebas durante el período de una hora, se cambiará la hora siguiente, volverá en la siguiente, así hasta completar la jornada. Además, cada hora de trabajo realizará las pruebas sobre un elemento diferente, entre el portal principal, el filatélico y la oficina virtual.
+
+Los criterios de verificación y aceptación de cada prueba vendrán determinados por unos test que los sujetos de pruebas deberán rellenar los cuales tendrán en cuenta los aspectos básicos del elemento probado, diferenciado en dos grandes apartados: interfaz gráfica y usabilidad. De esta manera podremos obtener resultados diferenciados para conocer el alcance de los cambios necesarios.
+
+A cada semana de pruebas la seguirá otra semana de cambios y verificaciones a fin de mejorar paulatinamente el sistema y adaptarlo a las necesidades que vayan surgiendo. De esta manera, los usuario además de probar el sistema, comprobarán las mejoras añadidas sugeridas por otros usuarios.
+
+Los resultados de las pruebas serán las estadísticas de los test completados de manera que se pueda ver de manera clara en gráficas la mejora del sistema y la satisfacción del usuario frente al mismo.
+
+\subsection*{ASI 10.2: Definición de Requisitos del entorno de Pruebas}
+Los requisitos básicos para el desarrollo de las pruebas son los siguientes:
+\begin{itemize}
+\item Se dispondrá de una sala con 50 ordenadores individuales, donde no haya comunicación entre usuarios.
+\item Los ordenadores tendrán instalados los tres sistemas operativos dominantes entre los usuarios: Ubuntu, Windows XP/7, y Mac OS X
+\item Los navegadores web instalados serán los más utilizados: Internet Explorer, Mozilla Firefox y Safari en las versiones más recientes.
+\item No será necesaria la instalación de ningún software adicional, para asegurar la total independencia del sistema
+\item Se dispondrá de herramientas capaces de calcular el tráfico web, para asegurar que el tráfico en una operación en el portal conlleva una carga capaz de llevarse a cabo con todo tipo de conexiones.
+\end{itemize}
+
+\subsection*{ASI 10.3: Definición de las Pruebas de Aceptación del Sistema}
+El principal criterio de aceptación de las pruebas se resume en que el nuevo sistema realice las mismas operaciones que el sistema anterior, pero reduciendo la carga en las transacciones además del tiempo de realización de las mismas.
+
+Para ello se compararan los resultados obtenidos con el sistema anterior con los resultados obtenidos por las herramientas utilizadas para el cálculo de tiempo y transferencias.
+
+Tras ello, se presentará al cliente un informe comparativo de los dos sistemas para que se compruebe la utilidad del nuevo portal, incluyendo como anexos comentarios personales de los sujetos de pruebas.
 
 
 
