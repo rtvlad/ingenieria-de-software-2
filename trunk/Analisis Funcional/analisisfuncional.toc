@@ -22,11 +22,16 @@
 \contentsline {subsection}{\numberline {5.2}ASI 5.2: Identificaci\'on de agregaciones y asociaciones}{46}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}ASI 5.3: Identificaci\'on de generalizaciones}{47}{subsection.5.3}
 \contentsline {section}{\numberline {6}ASI 6: Elaboraci\'on del Modelo de Datos}{48}{section.6}
-\contentsline {section}{\numberline {7}ASI 7: Elaboraci\'on del Modelo de Procesos}{49}{section.7}
-\contentsline {section}{\numberline {8}ASI 8: Definici\'on de interfaces de usuario}{50}{section.8}
-\contentsline {subsection}{\numberline {8.1}ASI 8.1: Especificaci\'on de Principios Generales de la Interfaz}{50}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}ASI 8.2: Identificaci\'on de Perfiles y Di\'alogos}{50}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}ASI 8.3: Especificaci\'on de Formatos Individuales de la Interfaz de Pantalla}{51}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}ASI 8.4: Especificaci\'on del Comportamiento Din\'amico de la Interfaz}{51}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}ASI 8.5: Especificaci\'on de Formatos de Impresi\'on}{51}{subsection.8.5}
-\contentsline {section}{\numberline {9}ASI 10: Especificaci\'on de un Plan de Pruebas}{52}{section.9}
+\contentsline {subsection}{\numberline {6.1}ASI 6.1: Elaboraci\'on del Modelo Conceptual de Datos}{48}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}ASI 6.2: Elaboraci\'on del Modelo L\'ogico de Datos}{50}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}ASI 6.4: Especificaci\'on de Necesidades de Migraci\'on de Datos y Carga Inicial}{50}{subsection.6.3}
+\contentsline {section}{\numberline {7}ASI 7: Elaboraci\'on del Modelo de Procesos}{51}{section.7}
+\contentsline {subsection}{\numberline {7.1}ASI 7.1: Obtenci\'on del Modelo de Procesos del Sistema}{51}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Especificaci\'on de Interfaces con otros Sistemas}{52}{subsection.7.2}
+\contentsline {section}{\numberline {8}ASI 8: Definici\'on de interfaces de usuario}{53}{section.8}
+\contentsline {subsection}{\numberline {8.1}ASI 8.1: Especificaci\'on de Principios Generales de la Interfaz}{53}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}ASI 8.2: Identificaci\'on de Perfiles y Di\'alogos}{53}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}ASI 8.3: Especificaci\'on de Formatos Individuales de la Interfaz de Pantalla}{54}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}ASI 8.4: Especificaci\'on del Comportamiento Din\'amico de la Interfaz}{54}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}ASI 8.5: Especificaci\'on de Formatos de Impresi\'on}{56}{subsection.8.5}
+\contentsline {section}{\numberline {9}ASI 10: Especificaci\'on de un Plan de Pruebas}{57}{section.9}

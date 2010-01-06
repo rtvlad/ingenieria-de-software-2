@@ -11,6 +11,7 @@
 \usepackage{anysize}
 \usepackage{colortbl}
 \usepackage{hyperref}
+\usepackage{lscape}
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{fancyhdr}
@@ -1476,13 +1477,105 @@
 
 \section{ASI 6: Elaboración del Modelo de Datos}
 
-FALTA TODO ESTE APARTADO
+\subsection{ASI 6.1: Elaboración del Modelo Conceptual de Datos} 
+El Modelo de Datos del sistema va a estar basado en tres entidades principales que a su vez se subdividen en varias entidades diferentes. Estas tres entidades principales son \textit{Servicio}, \textit{Objeto Postal} y \textit{Usuario}:
+	\begin{itemize}
+	\item \textbf{Servicio:} Abarca todos los posibles servicios que se pueden ofrecer en la Oficina Virtual. Se subdivide en las siguientes entidades:
+		\begin{itemize}
+		\item \textbf{TareasUsuario:} Se trata la identidad que representa las tareas pendientes de un usuario de la Oficina Virtual. Contiene la lista de tareas del usuario.
+		\item \textbf{Fichero:} Se trata de un enlace a un fichero \textit{pdf} que almacena el contenido de algún documento como un fax, burofax, etc. que además almacena una descripción.
+		\item \textbf{Histórico:} Se trata de la representación del histórico de actividades del usuario en la Oficina Virtual.
+		\item \textbf{ServiciosUsuario:} Es la representación de los servicios que ha realizado un usuario concreto
+		\item \textbf{Remensas:} Se trata de la representación de las remensas para consultar en el seguimiento de envíos
+		\item \textbf{Factura:} Es la representación de los justificantes de las facturas que el usuario ha asociado al portal
+		\end{itemize} 
+	\item \textbf{Usuario:} Representa a un usuario del portal, y almacena todos los datos personales del mismo.
+	\item \textbf{ObjetoPostal:} Agrupa a todos los posibles objetos que se utilizan en el portal. Estos objetos pueden ser:
+		\begin{itemize}
+		\item \textbf{Asociación:} Representa una asociación filatélica, almacenando el nombre, la provincia y la dirección de la misma.
+		\item \textbf{Entidad:} Representa a la entidad destinataria o remitente de un envío.
+		\item \textbf{Filatelia:} Representa los datos referentes al portal filatélico en un momento determinado. Además, contiene una lista de productos filatélicos de los cuales almacena su nombre y precio.
+		\item \textbf{TusSellos:} Representa los sellos personalizados por un usuario subidos al portal.
+		\item \textbf{Documento:} Representa los posibles documentos que pueden enviarse a través del portal. Se compone de los siguientes elementos:
+			\begin{itemize}
+			\item \textbf{Carta:} Representa un documento del tipo carta
+			\item \textbf{Burofax:} Representa un documento del tipo burofax
+			\item \textbf{Telegrama:} Representa un documento del tipo telegrama
+			\item \textbf{Postal:} Representa un documento del tipo postal
+			\item \textbf{Certificado:} Representa un documento del tipo certificado
+			\end{itemize}
+		\item \textbf{Paquete:} Representa los posibles paquetes que pueden enviarse a través del portal. Se compone de los siguientes elementos:
+			\begin{itemize}
+			\item \textbf{PaqAzul:} Representa un paquete del tipo Paquete Azul
+			\item \textbf{PaqPosExpres:} Representa un paquete del tipo Paquete Postal Exprés
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+El modelo entidad-relación que se va a utilizar para el Modelo de Datos del sistema es el siguiente:
+	\begin{landscape}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.28]{modelo_ent_rel.jpg}
+	\caption{Modelo Entidad Relación del Sistema}
+	\end{center}
+	\end{figure}
+	\end{landscape}
+
+\subsection{ASI 6.2: Elaboración del Modelo Lógico de Datos}
+El modelo lógico obtenido a partir del modelo relacional anterior es el que sigue:
+
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.4]{modelo_relacional.pdf}
+	\caption{Modelo Relacional del Sistema}
+	\end{center}
+	\end{figure}
+
+\subsection{ASI 6.4: Especificación de Necesidades de Migración de Datos y Carga Inicial}
+Será necesaria una migración de los datos del actual portal de Correos hacia el nuevo portal, por lo que será necesaria la planificación de la misma. La prioridad de las cargas de información sera la siguiente:
+	\begin{enumerate}
+	\item Información de la empresa
+	\item Productos Filatélicos
+	\item Productos de Venta (tipos de documentos, paquetes, etc.)
+	\item Usuarios del Sistema
+	\item Tareas e historiales de cada usuario
+	\end{enumerate}
+	
+De esta manera nos aseguramos de que no se produzcan conflictos con las relaciones entre los diferentes elementos. Tras la migración completa de los datos, pasaremos a añadir los elementos nuevos que no pertenecían al portal anterior, ya que entre estos no se producirán conflictos. Para la migración no será necesario disponer de ningún hardware específico.
 
 \newpage
 
 \section{ASI 7: Elaboración del Modelo de Procesos}
 
-NO SE SI PONERLO O NO
+\subsection{ASI 7.1: Obtención del Modelo de Procesos del Sistema}
+El Diagrama de Flujo de Datos obtenido a partir de la especificación de subsistemas de análisis es el siguiente:
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{dfd_general.jpg}
+	\caption{Diagrama de Flujo de Datos del Sistema}
+	\end{center}
+	\end{figure}
+	
+La estructura de los flujos de datos es la siguiente:
+	\begin{itemize}
+	\item \textbf{Usuario - (Gestor de Correos, Gestor de Envíos, Gestor de Filatelia, Gestor de Oficina Virtual):} Este flujo de datos comienza cualquiera de los procesos, y se produce cuando el usuario realiza una acción que active cualquiera de dichos procesos. Muy frecuente
+	\item \textbf{Gestor de Correos - Usuarios:} Este flujo de datos se activa cuando el usuario desea registrarse, validarse o salir del sistema. Muy frecuente
+	\item \textbf{Gestor de Correos - Información:} Este flujo de datos se activa cuando el usuario desea obtener información genérica de la empresa. Poco frecuente
+	\item \textbf{Gestor de Envíos - Usuarios:} Este flujo de datos se activa cuando el usuario desea realizar un envío, para asociar el envío al usuario. Muy frecuente
+	\item \textbf{Gestor de Envíos - Envíos:} Este flujo de datos se activa cuando el usuario desea realizar un envío, para registrar dicho envío, o para consultar envíos realizados. Muy frecuente
+	\item \textbf{Gestor de Filatelia - Colecciones:} Este flujo de datos se activa cuando el usuario desea realizar una consulta de las colecciones filatélicas disponibles. Poco frecuente
+	\item \textbf{Gestor de Filatelia - Productos:} Este flujo de datos se activa cuando el usuario desea realizar una compra o consulta de productos filatélicos. Poco frecuente
+	\item \textbf{Gestor de Filatelia - Asociaciones:} Este flujo de datos se activa cuando el usuario desea realizar una búsqueda de asociaciones filatélicas. Poco frecuente
+	\item \textbf{Gestor de Filatelia - Pedidos:} Este flujo de datos se activa cuando el usuario desea realizar un pedido de productos filatélicos. Frecuente
+	\item \textbf{Gestor de Oficina Virtual - Envíos:} Este flujo de datos se activa cuando el usuario desea realizar una consulta acerca de los envíos pendientes o del histórico de envíos. Frecuente
+	\item \textbf{Gestor de Oficina Virtual - Usuarios:} Este flujo de datos se activa cuando el usuario desea realizar consultas en la oficina virtual sobre sus datos personales. Poco Frecuente
+	\item \textbf{Gestor de Oficina Virtual - Pedidos:} Este flujo de datos se activa cuando el usuario desea realizar una consulta del histórico de pedidos o de los pedidos pendientes. Frecuente
+	\end{itemize}
+	
+\subsection{Especificación de Interfaces con otros Sistemas}
+
+Como el sistema se basa en una aplicación web, la única interfaz del mismo con el exterior será la que ofrezca el navegador, de la forma en la que se describe en la actividad \textit{ASI 8}, por lo que no es necesario especificar ninguna interfaz añadida para la comunicación con el exterior.
 
 \newpage
 
@@ -1491,11 +1584,11 @@ NO SE SI PONERLO O NO
 \subsection{ASI 8.1: Especificación de Principios Generales de la Interfaz}
 La interfaz del sistema será totalmente gráfica de manera que el usuario tenga acceso a la información de la manera más sencilla e intuitiva posible, debido al gran abanico de usuario que accederán al portal. La estructura general de la interfaz será común en todas las posibles combinaciones, de manera que el usuario no detecte ningún cambio gráfico muy llamativo a la hora de navegar por el portal. 
 
-Habrá tres estructuras gráficas bien diferenciadas en el portal. La primera de ellas será la referida al portal principal. Estará compuesta de un menú principal a la izquierda de la pantalla donde el usuario podrá acceder de manera directa a todas las opciones disponibles. El color característico será el amarillo, distintivo de la empresa. El contenido al que se está accediendo aparecerá en el centro de la pantalla, y la parte derecha aparecerán los menús secundarios, en caso de que existan.
+Habrá tres estructuras gráficas bien diferenciadas en el portal. La primera de ellas será la referida al portal principal para particulares. Estará compuesta de un menú principal a la izquierda de la pantalla donde el usuario podrá acceder de manera directa a todas las opciones disponibles. El color característico será el amarillo, distintivo de la empresa. El contenido al que se está accediendo aparecerá en el centro de la pantalla, y la parte derecha aparecerán los menús secundarios, en caso de que existan.
 
-La segunda será la referida a la oficina virtual. La estructura será similar a la anterior pero con una diferencia: el color predominante será el azul. Mantiene el menú principal a la izquierda de la misma y los menús secundarios a la derecha. El contenido estará en el centro sobre un fondo blanco, para que lo más llamativo sea el contenido, no el diseño en sí mismo.
+La segunda será la referida al portal principal para empresas. La estructura será similar a la anterior pero con una diferencia: el color predominante será el azul. Mantiene el menú principal a la izquierda de la misma y los menús secundarios a la derecha. El contenido estará en el centro sobre un fondo blanco, para que lo más llamativo sea el contenido, no el diseño en sí mismo.
 
-Por último, se encuentra la referida al portal filatélico. Se mantiene la estructuras de menús y contenidos, pero el color predominante será el rojo. Además, en el contenido los productos mostrados aparecerán sobre una galería de manera que el usuario pueda desplazarse por ella, así como ampliar y reducir las imágenes de los productos.
+Por último, se encuentra la referida a la oficina virtual. Se mantiene la estructuras de menús y contenidos, pero el color predominante será el rojo.
 
 Para la navegación entre los tres apartados se utilizarán pestañas que aparecerán en la parte superior, de manera que sea muy sencillo añadir nuevos elementos al portal.
 
@@ -1521,7 +1614,38 @@ Todas las interfaces de pantalla necesitarán los mismos aspectos a tener en cuen
 \item Los dispositivos de entrada necesarios serán el teclado y el ratón, o una interfaz humana en caso de disponer de pantallas táctiles.
 \end{itemize}
 
+
 \subsection{ASI 8.4: Especificación del Comportamiento Dinámico de la Interfaz}
+Las interfaces principales de las que disponemos en el portal son las siguientes:
+	\subsubsection*{Interfaz Particulares}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{particulares_principal.pdf}
+	\caption{Captura de la interfaz principal de particulares}
+	\end{center}
+	\end{figure}
+
+	Como podemos ver en la captura anterior, la estructura de la interfaz para particulares sigue el esquema descrito. El menú a la izquierda permite al usuario acceder a todas las opciones disponibles con un sólo click, y se encuentra ordenado por la frecuencia de uso de cada una de las opciones. Cada evento vendrá representado por un click con el ratón en el menú elegido, que llevará a la modificación del contenido de la interfaz. Este contenido dependerá de la opción elegida, por lo que no se puede tratar de manera estática.	
+	
+	\subsubsection*{Interfaz Empresas}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{empresas_principal.pdf}
+	\caption{Captura de la interfaz principal de empresas}
+	\end{center}
+	\end{figure}
+	
+	En este caso, las opciones disponibles son las de empresas, pero la estructura global de la pantalla es la misma. Los eventos se gestionan de la misma forma, al recibir clicks de ratón.
+	
+	\subsubsection*{Interfaz Oficina Virtual}
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.5]{oficina_virtual_principal.pdf}
+	\caption{Captura de la interfaz principal de oficina virtual}
+	\end{center}
+	\end{figure}
+	
+	Para la oficina particular la estructura es la misma pero con las opciones propias de la oficina. Gracias a esto, el portal mantiene un aspecto homogéneo que no intimida al usuario ni lo desconcierta.
 
 \subsection{ASI 8.5: Especificación de Formatos de Impresión}
 La interfaz de impresión será la misma para todos los documentos, con el logo de la empresa en la parte superior, junto con el título del documento y el número de página. Los documentos disponibles para la impresión son los siguientes:
