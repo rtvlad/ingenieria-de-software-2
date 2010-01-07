@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{multicol}
@@ -9,20 +9,43 @@
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage{anysize}
+\usepackage{colortbl}
 \usepackage{hyperref}
-%\pagestyle{empty}
-\marginsize{3cm}{3cm}{3cm}{3cm}
-\author{Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ David Rufo Valero \\ Radu Tom Vlad}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\marginsize{3cm}{2cm}{2cm}{2cm}
+\author{David Rufo Valero}
 \title{Documento de Especificación de Requisitos}
-\setlength{\parskip}{1ex}
 \begin{document}
 
-\maketitle
-\newpage
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[scale=1]{logoURJC.jpg} \\[1cm]
+\textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
+{\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
+{\Large Ingeniería del Software II}\\[1.25cm]
+{\LARGE \textbf{Práctica Obligatoria}}\\[3.5cm]
+{\Large David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ Radu Tom Vlad}\\[1cm]
+{\Large asantalla@siliconkernel.com}\\[2cm]
+5º de Ingeniería Informática \\[1cm]
+\today
 
+\end{center}
+
+\newpage
+\fancyhead[LO,LE]{Ingeniería del Software II}
+\fancyhead[RO,RE]{Especificación de Requisitos}
+%\fancyfoot[LO,LE]{\thepage}
 \tableofcontents
+
 \newpage
 
+\listoffigures
+
+\newpage
 \section{Introducción}
 
 \subsection{Propósito}
