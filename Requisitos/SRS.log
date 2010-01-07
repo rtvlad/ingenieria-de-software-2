@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 17:54
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 22:22
 entering extended mode
 **SRS.tex
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
@@ -478,57 +478,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
- ("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-[5] <dibujoBloque.jpg, id=175, 530.73282pt x 362.10281pt>
+<dibujoBloque.jpg, id=168, 530.73282pt x 362.10281pt>
 File: dibujoBloque.jpg Graphic file (type jpg)
-
-<use dibujoBloque.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+ <use dibujoBloque.jpg>
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.142 			\item S
-                istema Operativo: Windows 98 o superiores, Linux, Macintosh,...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Requisitos/dibujoB
-loque.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+l.121 			\item V
+                ista para la Oficina Virtual. <G:/Universidad/1Cuatrimestre/ISI
+I/Practica/RepositorioISII/Requisitos/dibujoBloque.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Overfull \hbox (41.06259pt too wide) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+
+Overfull \hbox (41.06259pt too wide) in paragraph at lines 175--176
 []\OT1/cmr/m/it/10 Conexion con el Aparta-do Postal Elec-tronico: \OT1/cmr/m/
 n/10 en-lace al por-tal del Aparta-do Postal Elec-tronico(cep.correos.es). 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
@@ -538,11 +536,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 Here is how much of TeX's memory you used:
  6317 strings out of 495285
  88091 string characters out of 3180388
- 176426 words of memory out of 3000000
+ 175426 words of memory out of 3000000
  9341 multiletter control sequences out of 15000+200000
  8475 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,12n,43p,880b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,12n,43p,880b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
@@ -552,7 +550,7 @@ e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public
 /amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb>
-Output written on SRS.pdf (14 pages, 224693 bytes).
+Output written on SRS.pdf (14 pages, 224919 bytes).
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
