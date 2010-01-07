@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 17:54
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 17:55
 entering extended mode
-**SRS.tex
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
+**disenoTecnico.tex
+
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -390,7 +392,8 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \f@ncyO@olf=\skip62
 \f@ncyO@orf=\skip63
 )
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
@@ -405,7 +408,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
-("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
+ ("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen133
@@ -430,16 +433,18 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 22.
 LaTeX Info: Redefining \pageref on input line 22.
 
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.out)
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.out)
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.out")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box62
-<logoURJC.jpg, id=111, 85.82062pt x 90.3375pt>
+ <logoURJC.jpg, id=7, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
- <use logoURJC.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
-("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
+<use logoURJC.jpg>
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+ ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 33.
@@ -449,7 +454,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <G:/Universidad/1Cuatrimes
-tre/ISII/Practica/RepositorioISII/Requisitos/logoURJC.jpg>]
+tre/ISII/Practica/RepositorioISII/Diseño Tecnico/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 39.
@@ -458,103 +463,34 @@ less on input line 39.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 40.
 
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.toc)
+
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.toc")
 \tf@toc=\write4
-[2]
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.lof)
+ [2]
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.lof")
 \tf@lof=\write5
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-[4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
- ("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-[5] <dibujoBloque.jpg, id=175, 530.73282pt x 362.10281pt>
-File: dibujoBloque.jpg Graphic file (type jpg)
-
-<use dibujoBloque.jpg>
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.142 			\item S
-                istema Operativo: Windows 98 o superiores, Linux, Macintosh,...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Requisitos/dibujoB
-loque.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-
-Overfull \hbox (41.06259pt too wide) in paragraph at lines 176--177
-[]\OT1/cmr/m/it/10 Conexion con el Aparta-do Postal Elec-tronico: \OT1/cmr/m/
-n/10 en-lace al por-tal del Aparta-do Postal Elec-tronico(cep.correos.es). 
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-[8] [9] [10] [11] [12] [13] [14]
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
- ) 
+ [3] [4]
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
+enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6317 strings out of 495285
- 88091 string characters out of 3180388
- 176426 words of memory out of 3000000
- 9341 multiletter control sequences out of 15000+200000
- 8475 words of font info for 32 fonts, out of 3000000 for 9000
+ 6211 strings out of 495285
+ 86826 string characters out of 3180388
+ 160399 words of memory out of 3000000
+ 9284 multiletter control sequences out of 15000+200000
+ 7165 words of font info for 28 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,12n,43p,880b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
-KTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.8/
-fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.8/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on SRS.pdf (14 pages, 224693 bytes).
+ 38i,12n,43p,277b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
+s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 
+2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on disenoTecnico.pdf (4 pages, 82858 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 14 words of extra memory for PDF output out of 10000 (max. 10000000)
 
