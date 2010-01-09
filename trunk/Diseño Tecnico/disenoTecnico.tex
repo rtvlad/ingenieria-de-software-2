@@ -63,11 +63,12 @@
 	\begin{itemize}	
 		\item \textit{Tabla Usuarios}: se guardará datos de los clientes registrados, como por ejemplo su Nombre Personal, Apellidos, DNI, Nombre de Usuario, Contraseña, Dirección Particular, Teléfonos de contactos, etc. El campo de la contraseña no será una cadena simple de texto sino que se almacenará con una cierta codificación para la seguridad del usuario.
 		\item \textit{Tabla Pedidos}: cualquier cliente previamente registrado puede realizar un pedido a través del portal, una vez hecha tal acción se guardarán los datos necesarios, como pueden ser la información del Usuario que está realizando el pedido, el nombre del producto junto con una referencia asociada a dicho producto (esta referencia será la misma que tenga ese producto en la tabla correspondiente a los productos), etc.
-		\item \textit{Tabla Colecciones}: ....
+		\item \textit{Tabla Colecciones}: se almacenan las colecciones filatélicas. Los datos a guardar son el nombre de la colección, una descripción de ésta, código,...
 		\item \textit{Tabla Productos}: en esta tabla se almacenarán todo tipo de información que describa un producto, es decir, su nombre, código o referencia, descripción, precio, etc. 
 		\item \textit{Tabla Envíos}: en ella se guardarán los datos de los envíos, como pueden ser la información del Usuario registrado que realizó el envío, la localización del envío, el código o referencia, descripción o información referente al envío, dirección, etc.
 		\item \textit{Tabla Asociaciones}: almacenamiento de asociaciones referentes a las asociaciones filatélicas. Luego se guardarán teléfonos de esas asociaciones, direcciones, etc. En la aplicación se mostrará un mapa para que el usuario registrado o no puede ver las asociaciones filatélicas más cercanas a su situación, aunque también podrá ver todas las demás.
 	\end{itemize}
+	Ya en la implementación se decidirá que campos son los realmente básicos en cada una de las tablas.
 	
 	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.\\
 
@@ -212,9 +213,23 @@
 \section{DSI 2: Diseño de la Arquitectura de Soporte}
 
 \subsection{DSI 2.1: Diseño de Subsistemas de Soporte}
+	Los subsistemas de soporte serán exactamente los mismos que los mencionados en el punto 1.5 de éste documento.	
 	
-
 \subsection{DSI 2.2: Identificación de Mecanismos Genéricos de Diseño}
+	Algunos de los mecanismos genéricos de diseño que podemos encontrar en la aplicación son:
+	\begin{itemize}
+		\item La \textit{recogida de datos} insertados en formularios por un usuario registrado con el fin de realizar alguna transacción. Por ejemplo: realizar un pedido, el envío de un documento,... En el caso de observar algún error en los datos introducidos se avisará al usuario con la correspondiente información de cómo rellenar el campo o los campos que han fallado.
+		\item La \textit{inserción, borrado o actualización} de información en la \textit{BD} será de la misma forma a diferencia de la tabla en cuestión a utilizar. 
+			\begin{itemize}
+				\item \textit{Inserción}: primero se establece la conexión con el servidor de la BD, se mira que no exista ya esa información en ella, se inserta y se cierra la conexión.
+				\item \textit{Borrado}: establecimiento de la conexión con el servidor de la BD, ver si existe, borrado y cierre de conexión.
+				\item \textit{Actualización}: establecer la conexión con el servidor de la BD, ver si existe, actualizar y cerrar la conexión.
+			\end{itemize}
+		\item Se establecerán los \textit{mecanismos de concurrencia} necesarios para el acceso a recursos comunes y críticos.
+		\item La \textit{visualización de la información} por al usuario será realizado de la misma manera siempre y el tipo de letra a utilizar será la misma (ya en la implentación deberá especificarse con mayor detalle este punto).
+		\item El inicio de sesión para los usuario registrados será comprobado de la misma forma: conexión con el servidor de BD, en la tabla usuarios buscar el nombre de usuario insertado y comprobar que los datos coincidan, redireccionar a la pagina principal si sus datos son correctos y cierre de la conexión. En el caso de datos incorrectos se mostrará un mensaje de error correspondiente.
+		\item La muestra de información de error tanto en el inicio de sesión como en la inserción de datos en formularios se realizará de la misma manera.
+	\end{itemize}
 
 
 \newpage
