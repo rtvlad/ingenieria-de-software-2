@@ -69,23 +69,23 @@
 		\item \textit{Tabla Asociaciones}: almacenamiento de asociaciones referentes a las asociaciones filatélicas. Luego se guardarán teléfonos de esas asociaciones, direcciones, etc. En la aplicación se mostrará un mapa para que el usuario registrado o no puede ver las asociaciones filatélicas más cercanas a su situación, aunque también podrá ver todas las demás.
 	\end{itemize}
 	
-	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.
+	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.\\
 
-	En el servidor es donde se encuentra la lógica de negocio. En él se encontrarán los distintos gestores (de Correos, de Envíos, de Filatelia y de la Oficina Virtual) a través de los cuales se accederá a la base de datos en el caso de ser necesario.
+	En el servidor es donde se encuentra la lógica de negocio. En él se encontrarán los distintos gestores (de Correos, de Envíos, de Filatelia y de la Oficina Virtual) a través de los cuales se accederá a la base de datos en el caso de ser necesario.\\
 	
-	El usuario realizará las operaciones que él desee dependiendo de si es un usuario Anónimo, Registrado o un usuario referente a una empresa. Y todas estas acciones establecerán una comunicación con el servidor para que éste le responda con la información adecuada a la consulta realizada por el usuario.
+	El usuario realizará las operaciones que él desee dependiendo de si es un usuario Anónimo, Registrado o un usuario referente a una empresa. Y todas estas acciones establecerán una comunicación con el servidor para que éste le responda con la información adecuada a la consulta realizada por el usuario.\\
 	
 	Por lo tanto las comunicaciones entre los distintos nodos son:
 	\begin{itemize}
-		\item El Servidor realizará consultas al Servidor de Base de Datos y éste le responderá con la información adecuada a la consulta realizada. La comunicación entre estos dos será mediante una conexión de red local (LAN).
+		\item El Servidor realizará consultas al Servidor de Base de Datos y éste le responderá con la información adecuada a la consulta realizada. La comunicación entre Servidor y ServidorBBDD, será mediante una conexión de red local (LAN).
 		\item El Usuario a través de las distintas opciones de la página web principal de Correos (www.correos.es) irá realizando las consultas a la información que desea o llevar a cabo los operaciones o transacciones que considere oportunas en el caso de ser un usuario registrado. Esta comunicación, entre Usuario y Servidor, será realizada a través de Internet (TCP/IP) por lo que un requisito fundamental en la parte del cliente será la conexión a Internet para el uso de esta aplicación y el requisito fundamental del Servidor es estar en un dominio con una accesibilidad pública para su localización y uso.
 	\end{itemize}
 	
-	Para evitar la saturación del servidor se utilizarán varios de éstos, ya que la media de acceso al portal es de 400.000 (cuatrocientas mil) visitas al mes. Así se evita que los usuarios no vean un cierto retraso a la hora de responder el servidor sobre una determinada acción pedida por el cliente.
+	Para evitar la saturación del servidor se utilizarán varios de éstos, ya que la media de acceso al portal es de 400.000 (cuatrocientas mil) visitas al mes. Así se evita que los usuarios no vean un cierto retraso a la hora de responder el servidor sobre una determinada acción pedida por el cliente.\\
 	
-	Los problemas de concurrencia que podrían surgir cuando se dispone de varios servidores y cada uno tenga accesos al servidor de bases de datos serán solucionados con las técnicas de programación adecuadas para la consistencia de los datos. Por ejemplo, una solución a este problema podría ser el evitar que más de un servidor acceda a un registro de una tabla, con esto se evitaría la inconsistencia de los datos entre servidores a la hora de responder con datos al cliente.
+	Los problemas de concurrencia que podrían surgir cuando se dispone de varios servidores y cada uno tenga accesos al servidor de bases de datos serán solucionados con las técnicas de programación adecuadas para la consistencia de los datos. Por ejemplo, una solución a este problema podría ser el evitar que más de un servidor acceda a un registro de una tabla, con esto se evitaría la inconsistencia de los datos entre servidores a la hora de responder con datos al cliente.\\
 	
-	Respecto a la seguridad, las comunicaciones una vez el usuario ha sido registrado y ha entrado correctamente en la aplicación, se usarán conexiones seguras con el fin de no tener problemas con otros usuarios o con usuarios cuyas acciones son mal intencionadas.
+	Respecto a la seguridad, las comunicaciones una vez el usuario ha sido registrado y ha entrado correctamente en la aplicación, se usarán conexiones seguras con el fin de no tener problemas con otros usuarios o con usuarios cuyas acciones son mal intencionadas.\\
 	
 	En el caso de usuarios con discapacidades también tendrán la posibilidad de utilizar esta aplicación web debido a que se incluirán los métodos apropiados para el uso adecuado para estas personas.
 	
@@ -94,20 +94,55 @@
 	\begin{itemize}
 		\item El \textit{lenguaje} utilizado en la web será un lenguaje común para que cualquier usuario pueda ser capaz de leer y entender correctamente la información que desea este usuario, tanto los anónimos como los registrados. Por lo que éstos no deberán tener un nivel educativo y cultural demasiado amplio para su uso.
 		\item Las operaciones o transacciones que pueda realizar un cliente registrado serán bastante accesibles y con la suficiente información para su realización correcta. Aunque durante el horario establecido de atención al cliente siempre podrá llamar el usuario para resolver cualquier duda.
-		\item 
+		\item El \textit{rendimiento} ofrecido por los \textit{servidores} será el máximo posible de cada uno de ellos para evitar el colapso de éstos y que la aplicación no funcione debido a éstos problemas. El rendimiento máximo de estos servidores dependerá del uso actual de la web, es decir, según el número de usuarios que en cada momento estén utilizando la aplicación. Estos servidores guardarán la lógica de negocio de la aplicación.
+		\item Además el \textit{rendimiento} ofrecido por el \textit{servidor de base de datos} será también máximo dependiendo de su interacción con los otros servidores. En este servidor se guardarán todos los datos de la aplicación de forma permanente y con sus correspondientes copias de seguridad cada un cierto período, el cual todavía no se ha establecido, ya que dependerá de su volumen.
+		\item Los servidores y el servidor de base de datos estarán ubicados en el mismo lugar ya que su comunicación se realizará a través de una conexión de red local (LAN).
+		\item La conexión entre Usuario y Servidor será a través de Internet.
 	\end{itemize}
 
 \subsection{DSI 1.3: Especificación de Excepciones}
+	Los comportamientos no habituales de la aplicación, que puede darse en algún momento, son:
+	\begin{itemize}
+		\item \textit{Caída de los servidores}: los usuarios no podrán utilizar la aplicación. Los elementos afectados serán los propios a la lógica de negocio. El motivo de esta situación puede surgir por una caída de luz en las instalaciones o una renovación de los equipos, aunque esto último será realizado poco a poco para poder evitar dicha situación.
+		\item \textit{Caída del Servidor de Base de Datos}: los usuarios podrán utilizar la aplicación pero no podrán realizar acciones que requieran de información de la base de datos. Por ejemplo, usuarios registrados no podrán entrar en la aplicación, las consultas de tarifas de los productos no podrán ser vistas por los usuarios,... El elemento afectado será la base de datos. Su motivo puede ser, al igual que antes, una caída de la luz o la actualización de la base de datos.
+		\item \textit{Comunicación entre Servidores y Servidor de BBDD}: puede ocurrir la situación de que la conexión de red local entre ellos caiga debido bien a la ruptura de un cable o bien por desenchufar el servidor de BBDD o algún otro servidor del switch con el que tienen comunicación estos nodos. El elemento afectado es la conexión de red local.
+		\item Puede suceder que el usuario en un campo donde sólo deberían introducirse números inserte algún carácter no válido y la aplicación produzca la excepción de caracteres no válidos. Por lo tanto este tipo de excepciones serán tratadas para que la aplicación avise al usuario del tipo de información a rellenar en cada campo para evitar estas situaciones.
+		\item El usuario también deberá tener especial cuidado cuando introduzca fechas ya que no estará permitido por la aplicación la inclusión de fechas anteriores al día actual. Por ejemplo, si el usuario pretende realizar un envío no podrá proporcionar la fecha inicial anterior al día actual. Además se indicará el orden de la fecha, por ejemplo Día/Mes/Año.
+	\end{itemize} 
 
 \subsection{DSI 1.4: Especificación de Estándares y Norma de Diseño y Construcción}
+	La aplicación será construida siguiendo estos estándares:
+	\begin{itemize}
+		\item \textbf{W3C}: mediante este estándar se consigue que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, ya que una vez que la aplicación pasa el test del validador de la W3C (http://validator.w3.org), ésta puede usarse en cualquier navegador que siga dicho estándar.
+		\item \textbf{Nivel A de Conformidad con las Directrices de Accesibilidad para el Contenido Web 1.0 (WCAG 1.0)}: las Directrices de Accesibilidad para el Contenido Web 1.0 explican cómo hacer el contenido Web accesible para las personas con discapacidad. Ajustándose a estas Directrices ayudará a hacer la Web más accesible a los usuarios con discapacidades y beneficiará a todos los usuarios.
+	\end{itemize}
+	
+	Referente a la legislación, la principal ley que se debe tener en cuenta es la \textbf{Ley Orgánica de Protección de Datos de Carácter Personal}, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
 
 \subsection{DSI 1.5: Identificación de Subsistemas de Diseño}
+	En el sistema podemos encontrar cuatro grandes subsistemas de diseño, los cuales son los siguientes:
+	\begin{itemize}
+		\item \textbf{Gestor de correos:} Es el encargado de la gestión de usuarios, y realiza acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Por lo que interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
+		\item \textbf{Gestor de envíos:} Es el encargado de la realización, cancelación y seguimiento de los envíos realizados por los clientes. Por lo que interactuará con la base de datos de envíos y de usuarios del sistema.
+		\item \textbf{Gestor de Filatelia:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes al apartado filatélico. Por lo que interactuará con las bases de datos de productos, colecciones y pedidos.
+		\item \textbf{Gestor de Oficina Virtual:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes a la Oficina Virtual de correos. Por lo que interactuará con las bases de datos de usuarios y pedidos.
+	\end{itemize}
+		
+	El diagrama de componentes que muestra las relaciones entre los diferentes subsistemas es el siguiente:
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.5]{paquetes.jpg}
+			\caption{Diagrama de paquetes.}
+		\end{center}	
+	\end{figure}
 
 \subsection{DSI 1.6: Especificación del Entorno Tecnológico}
+	
 
 \subsection{DSI 1.7: Especificación de Requisitos de Operación y Seguridad}
 
 
+\newpage
 
 
 \section{DSI 2: Diseño de la Arquitectura de Soporte}
@@ -117,6 +152,7 @@
 \subsection{DSI 2.2: Identificación de Mecanismos Genéricos de Diseño}
 
 
+\newpage
 
 
 \section{DSI 3: Diseño de Casos de Uso Reales}
@@ -129,6 +165,8 @@
 
 \subsection{DSI 3.4: Revisión de Subsistemas de Diseño e Interfaces}
 
+
+\newpage
 
 
 \section{DSI 4: Diseño de Clases}
@@ -148,6 +186,9 @@
 \subsection{DSI 4.7: Especificación de Necesidades de Migración y Carga Inicial de Datos}
 
 
+\newpage
+
+
 \section{DSI 5: Diseño de la Arquitectura de Módulos del Sistema}
 
 \subsection{DSI 5.1: Diseño de Módulos del Sistema}
@@ -156,6 +197,8 @@
 
 \subsection{DSI 5.3: Revisión de la Interfaz de Usuario}
 
+
+\newpage
 
 
 \section{DSI 6: Diseño Físico de Datos}
@@ -169,6 +212,8 @@
 \subsection{DSI 6.4: Especificación de la Distribución de Datos}
 
 
+\newpage
+
 
 \section{DSI 7: Verificación y Aceptación de la Arquitectura del Sistema}
 
@@ -177,6 +222,9 @@
 \subsection{DSI 7.2: Análisis de Consistencia de las Especificaciones de Diseño}
 
 \subsection{DSI 7.3: Aceptación de la Arquitectura del Sistema}
+
+
+\newpage
 
 
 \section{DSI 8: Generación de Especificaciones de Construcción}
@@ -190,6 +238,9 @@
 \subsection{DSI 8.4: Elaboración de Especificaciones del Modelo Físico de Datos}
 
 
+\newpage
+
+
 \section{DSI 9: Diseño de la Migración y Carga Inicial de Datos}
 
 \subsection{DSI 9.1: Especificación del Entorno de Migración}
@@ -201,6 +252,7 @@
 \subsection{DSI 9.4: Revisión de la Planificación de la Migración}
 
 
+\newpage
 
 
 \section{DSI 10: Especificación Técnica del Plan de Pruebas}
@@ -212,6 +264,8 @@
 \subsection{DSI 10.3: Revisión de la Planificación de Pruebas}
 
 
+\newpage
+
 
 \section{DSI 11: Establecimiento de Requisitos de Implantación}
 
@@ -219,6 +273,8 @@
 
 \subsection{DSI 11.2: Especificación de Requisitos de Implantación}
 
+
+\newpage
 
 
 \section{DSI 12: Aprobación del Diseño del Sistema de Información}
