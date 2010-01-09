@@ -155,6 +155,7 @@
 					\item Software para la realización de las copias de seguridad.
 					\item En caso de que sea necesario: software para la comunicación con los demás servidores. 
 				\end{itemize}
+		\item No deberá permitir la conexión de otros servidores. Y tampoco debería permitir que los servidores, apropiados para la conexión, puedan situarse en el mismo registro de una misma tabla con el fin de evitar inconsistencia en la información.
 	\end{itemize}
 	
 	Las características de los \textit{Servidores} son:
@@ -177,7 +178,7 @@
 		\item Los usuarios accederán a éstos a través de Internet (TCP/IP) por lo que la aplicación deberá alojarse en un dominio para su posible utilización.
 	\end{itemize}
 	
-	Las características que deben tener las computadores de los usuarios son:
+	Las características que deben tener las computadores de los \textit{Usuarios} son:
 	\begin{itemize}
 		\item \textbf{Hardware}:
 				\begin{itemize}
@@ -189,9 +190,20 @@
 					\item Sistema Operativo: Windows, Linux o Macintosh.
 					\item Navegador Web: para el acceso a la aplicación. (Internet Explorer, Mozilla Firefox,...) Estos navegadores web deben tener activado el permiso de ejecución de JavaScript.
 				\end{itemize}
+		\item Requisito fundamental en estas computadoras es su conexión a Internet para tener comunicación con los servidores.
 	\end{itemize}
 
 \subsection{DSI 1.7: Especificación de Requisitos de Operación y Seguridad}
+	La aplicación cuenta con los siguiente mecanismos de seguridad:
+	\begin{itemize}
+		\item Los servidores de base de datos realizarán copias de seguridad (Backup) de forma periódica (este tiempo esta por decidir según la cantidad de información almacenada). Además para la concurrencia este servidor utilizará un mecanismo que no permitirá a más de un servidor acceder al mismo registro de una tabla.
+		\item El accesos al servidor de base de datos será sólo desde la red local, por lo tanto no estará conectada a Internet. Además sólo los servidores autorizados tendrán acceso a la información almacenada en éste. Para ésto se utilizara una nombre de usuario y una contraseña (cifrada) para entrar en servidor de BBDD. 
+		\item Los demás servidores tendrán un grupo de usuarios con sus correspondientes contraseñas (cifradas) que permitirán la entrada a estas computadoras. Éstas estarán conectadas a Internet pero no se permitirá la conexión remota a menos que alguno de los administradores de estos servidores lo permite en un momento determinado.
+		\item Los servidores que contendrán la lógica de negocio, a parte de disponer un usuario y clave para entrar en ellos, también se necesitará permisos de administrador para la modificación de aspectos relacionados con la aplicación.
+		\item Los datos de los usuarios registrados estarán protegidos debido a la Ley Orgánica de Protección de Datos de Carácter Personal.
+		\item En el caso de producirse una pérdida total de los datos se recuperarán estos a partir de última copia de seguridad hecha.
+		\item Durante la franja horaria de mayor número de usuarios se tendrá especial cuidado con las transacciones realizada por cada uno de ellos para evitar problemas en los datos y la inclusión de usuarios mal intencionados. Por lo que en este período de tiempo los servidores estarán funcionando a pleno rendimiento.
+	\end{itemize}
 
 
 \newpage
@@ -200,6 +212,7 @@
 \section{DSI 2: Diseño de la Arquitectura de Soporte}
 
 \subsection{DSI 2.1: Diseño de Subsistemas de Soporte}
+	
 
 \subsection{DSI 2.2: Identificación de Mecanismos Genéricos de Diseño}
 
