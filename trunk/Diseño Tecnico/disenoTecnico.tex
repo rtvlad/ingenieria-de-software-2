@@ -97,7 +97,7 @@
 		\item El \textit{rendimiento} ofrecido por los \textit{servidores} será el máximo posible de cada uno de ellos para evitar el colapso de éstos y que la aplicación no funcione debido a éstos problemas. El rendimiento máximo de estos servidores dependerá del uso actual de la web, es decir, según el número de usuarios que en cada momento estén utilizando la aplicación. Estos servidores guardarán la lógica de negocio de la aplicación.
 		\item Además el \textit{rendimiento} ofrecido por el \textit{servidor de base de datos} será también máximo dependiendo de su interacción con los otros servidores. En este servidor se guardarán todos los datos de la aplicación de forma permanente y con sus correspondientes copias de seguridad cada un cierto período, el cual todavía no se ha establecido, ya que dependerá de su volumen.
 		\item Los servidores y el servidor de base de datos estarán ubicados en el mismo lugar ya que su comunicación se realizará a través de una conexión de red local (LAN).
-		\item La conexión entre Usuario y Servidor será a través de Internet.
+		\item La conexión entre Usuario y Servidor será a través de Internet (TCP/IP).
 	\end{itemize}
 
 \subsection{DSI 1.3: Especificación de Excepciones}
@@ -137,7 +137,24 @@
 	\end{figure}
 
 \subsection{DSI 1.6: Especificación del Entorno Tecnológico}
-	
+	Las características que debe tener el Servidor de Base de Datos son:
+	\begin{itemize}
+		\item \textbf{Hardware}:
+				\begin{itemize}
+					\item Sitema de Almacenamiento: disco duro con una capacidad inicial de dos terabytes (2 TB).
+					\item Memoria RAM: inicialmente sería suficiente con dos gigabytes (2 GB).
+					\item Tarjeta de Red: estándar RJ45 para la comunicación con los demás servidores.
+					\item Unidad DVD de grabación o puerto USB: para copias de seguridad periódicas.
+					\item Procesadores: inicialmente con un procesador debería ser suficiente (estos inicialmente serán de la marca Intel).
+					\item Teclado, ratón y demás componentes necesarios para el correcto encendido de esta computadora.
+				\end{itemize}
+		\item \textbf{Software}:
+				\begin{itemize}
+					\item Sistema Operativo: Windows NT/200 Advanced Server.
+					\item Base de Datos: Oracle (Lenguaje de consulta estructurado SQL).
+					\item 
+				\end{itemize}
+	\end{itemize}
 
 \subsection{DSI 1.7: Especificación de Requisitos de Operación y Seguridad}
 
