@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  9 JAN 2010 13:23
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  9 JAN 2010 16:36
 entering extended mode
 **disenoTecnico.tex
 
@@ -532,14 +532,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
  [9] [10] [11] [12]
-[13] [14] [15] [16] [17] [18] [19] [20]
+[13] [14] [15] [16] [17] [18] [19] [20] [21]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6376 strings out of 495285
- 89113 string characters out of 3180388
+ 6378 strings out of 495285
+ 89128 string characters out of 3180388
  179399 words of memory out of 3000000
- 9369 multiletter control sequences out of 15000+200000
+ 9370 multiletter control sequences out of 15000+200000
  8463 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,12n,43p,639b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -552,9 +552,9 @@ s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on disenoTecnico.pdf (20 pages, 307079 bytes).
+Output written on disenoTecnico.pdf (21 pages, 310126 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
  464 words of extra memory for PDF output out of 10000 (max. 10000000)
 
