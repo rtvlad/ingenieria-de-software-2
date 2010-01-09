@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 22:23
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  9 JAN 2010 10:27
 entering extended mode
 **disenoTecnico.tex
 
@@ -439,15 +439,15 @@ enoTecnico.out")
 enoTecnico.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box62
- <logoURJC.jpg, id=7, 85.82062pt x 90.3375pt>
+ <logoURJC.jpg, id=227, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
 
 <use logoURJC.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -457,40 +457,57 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 tre/ISII/Practica/RepositorioISII/Diseño Tecnico/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 39.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 40.
 
 
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 41.
+
+
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.toc")
+enoTecnico.toc" [2])
 \tf@toc=\write4
- [2]
+ [3]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.lof")
 \tf@lof=\write5
- [3] [4]
+ [4]
+<despliegueSistema.jpg, id=312, 1101.11375pt x 597.23125pt>
+File: despliegueSistema.jpg Graphic file (type jpg)
+
+<use despliegueSistema.jpg> [5pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.77 
+      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnic
+o/despliegueSistema.jpg>] [6] [7]
+Overfull \vbox (543.94362pt too high) has occurred while \output is active []
+
+
+[8]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6214 strings out of 495285
- 86869 string characters out of 3180388
- 160399 words of memory out of 3000000
- 9286 multiletter control sequences out of 15000+200000
- 7770 words of font info for 30 fonts, out of 3000000 for 9000
+ 6340 strings out of 495285
+ 88645 string characters out of 3180388
+ 190208 words of memory out of 3000000
+ 9350 multiletter control sequences out of 15000+200000
+ 8463 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,12n,43p,277b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,12n,43p,636b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
 gram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
 s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 
-2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on disenoTecnico.pdf (4 pages, 83469 bytes).
+2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb>
+Output written on disenoTecnico.pdf (8 pages, 224984 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 

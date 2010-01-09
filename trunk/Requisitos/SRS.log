@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  7 JAN 2010 22:22
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  9 JAN 2010 10:29
 entering extended mode
 **SRS.tex
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
@@ -437,12 +437,12 @@ LaTeX Info: Redefining \pageref on input line 22.
 <logoURJC.jpg, id=111, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
  <use logoURJC.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -452,18 +452,20 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 tre/ISII/Practica/RepositorioISII/Requisitos/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 39.
+less on input line 40.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 40.
+less on input line 41.
 
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.toc)
 \tf@toc=\write4
 [2]
-(G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.lof)
-\tf@lof=\write5
-[3]
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
@@ -473,72 +475,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 65.
 ("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-<dibujoBloque.jpg, id=168, 530.73282pt x 362.10281pt>
+<dibujoBloque.jpg, id=162, 530.73282pt x 362.10281pt>
 File: dibujoBloque.jpg Graphic file (type jpg)
  <use dibujoBloque.jpg>
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.121 			\item V
+l.119 			\item V
                 ista para la Oficina Virtual. <G:/Universidad/1Cuatrimestre/ISI
 I/Practica/RepositorioISII/Requisitos/dibujoBloque.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Overfull \hbox (41.06259pt too wide) in paragraph at lines 175--176
+Overfull \hbox (41.06259pt too wide) in paragraph at lines 173--174
 []\OT1/cmr/m/it/10 Conexion con el Aparta-do Postal Elec-tronico: \OT1/cmr/m/
 n/10 en-lace al por-tal del Aparta-do Postal Elec-tronico(cep.correos.es). 
  []
 
-[7]
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-[8] [9] [10] [11] [12] [13] [14]
+[7] [8] [9] [10] [11] [12] [13]
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
  ) 
 Here is how much of TeX's memory you used:
- 6317 strings out of 495285
- 88091 string characters out of 3180388
+ 6314 strings out of 495285
+ 87940 string characters out of 3180388
  175426 words of memory out of 3000000
- 9341 multiletter control sequences out of 15000+200000
- 8475 words of font info for 32 fonts, out of 3000000 for 9000
+ 9342 multiletter control sequences out of 15000+200000
+ 8822 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,12n,43p,880b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
@@ -549,10 +546,10 @@ fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.8/fonts/typ
 e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public
 /amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on SRS.pdf (14 pages, 224919 bytes).
+0.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SRS.pdf (13 pages, 235585 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,7 +27,8 @@
 \textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
 {\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
 {\Large Ingeniería del Software II}\\[1.25cm]
-{\LARGE \textbf{Práctica Obligatoria}}\\[3.5cm]
+{\LARGE \textbf{Práctica Obligatoria}}\\[1.25cm]
+{\LARGE \textit{Documento de Diseño Técnico}}\\[2.5cm]
 {\Large David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ Radu Tom Vlad}\\[1cm]
 {\Large asantalla@siliconkernel.com}\\[2cm]
 5º de Ingeniería Informática \\[1cm]
@@ -50,6 +51,179 @@
 \section{DSI 1: Definición de la Arquitectura del Sistema}
 
 \subsection{DSI 1.1: Definición de Niveles de Arquitectura}
+	El particionamiento físico que será realizado en el sistema se muestra un esquema en la figura siguiente:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=350pt]{despliegueSistema.jpg}
+		\caption{Diagrama de despliegue del sistema.}		
+	\end{figure}
+	
+	Los elementos o nodos de la figura se explican a continuación.
+	Por un lado el sistema tendrá una \textbf{base de datos} en la que se almacenará la siguiente información:
+	\begin{itemize}	
+		\item \textit{Tabla Usuarios}: se guardará datos de los clientes registrados, como por ejemplo su Nombre Personal, Apellidos, DNI, Nombre de Usuario, Contraseña, Dirección Particular, Teléfonos de contactos, etc. El campo de la contraseña no será una cadena simple de texto sino que se almacenará con una cierta codificación para la seguridad del usuario.
+		\item \textit{Tabla Pedidos}: cualquier cliente previamente registrado puede realizar un pedido a través del portal, una vez hecha tal acción se guardarán los datos necesarios, como pueden ser la información del Usuario que está realizando el pedido, el nombre del producto junto con una referencia asociada a dicho producto (esta referencia será la misma que tenga ese producto en la tabla correspondiente a los productos), etc.
+		\item \textit{Tabla Colecciones}: ....
+		\item \textit{Tabla Productos}: en esta tabla se almacenarán todo tipo de información que describa un producto, es decir, su nombre, código o referencia, descripción, precio, etc. 
+		\item \textit{Tabla Envíos}: en ella se guardarán los datos de los envíos, como pueden ser la información del Usuario registrado que realizó el envío, la localización del envío, el código o referencia, descripción o información referente al envío, dirección, etc.
+		\item \textit{Tabla Asociaciones}: almacenamiento de asociaciones referentes a las asociaciones filatélicas. Luego se guardarán teléfonos de esas asociaciones, direcciones, etc. En la aplicación se mostrará un mapa para que el usuario registrado o no puede ver las asociaciones filatélicas más cercanas a su situación, aunque también podrá ver todas las demás.
+	\end{itemize}
+	
+	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.
+
+	En el servidor es donde se encuentra la lógica de negocio. En él se encontrarán los distintos gestores (de Correos, de Envíos, de Filatelia y de la Oficina Virtual) a través de los cuales se accederá a la base de datos en el caso de ser necesario.
+	
+	El usuario realizará las operaciones que él desee dependiendo de si es un usuario Anónimo, Registrado o un usuario referente a una empresa. Y todas estas acciones establecerán una comunicación con el servidor para que éste le responda con la información adecuada a la consulta realizada por el usuario.
+	
+	Por lo tanto las comunicaciones entre los distintos nodos son:
+	\begin{itemize}
+		\item El Servidor realizará consultas al Servidor de Base de Datos y éste le responderá con la información adecuada a la consulta realizada. La comunicación entre estos dos será mediante una conexión de red local (LAN).
+		\item El Usuario a través de las distintas opciones de la página web principal de Correos (www.correos.es) irá realizando las consultas a la información que desea o llevar a cabo los operaciones o transacciones que considere oportunas en el caso de ser un usuario registrado. Esta comunicación, entre Usuario y Servidor, será realizada a través de Internet (TCP/IP) por lo que un requisito fundamental en la parte del cliente será la conexión a Internet para el uso de esta aplicación y el requisito fundamental del Servidor es estar en un dominio con una accesibilidad pública para su localización y uso.
+	\end{itemize}
+	
+	Para evitar la saturación del servidor se utilizarán varios de éstos, ya que la media de acceso al portal es de 400.000 (cuatrocientas mil) visitas al mes. Así se evita que los usuarios no vean un cierto retraso a la hora de responder el servidor sobre una determinada acción pedida por el cliente.
+	
+	Los problemas de concurrencia que podrían surgir cuando se dispone de varios servidores y cada uno tenga accesos al servidor de bases de datos serán solucionados con las técnicas de programación adecuadas para la consistencia de los datos. Por ejemplo, una solución a este problema podría ser el evitar que más de un servidor acceda a un registro de una tabla, con esto se evitaría la inconsistencia de los datos entre servidores a la hora de responder con datos al cliente.
+	
+	Respecto a la seguridad, las comunicaciones una vez el usuario ha sido registrado y ha entrado correctamente en la aplicación, se usarán conexiones seguras con el fin de no tener problemas con otros usuarios o con usuarios cuyas acciones son mal intencionadas.
+	
+	En el caso de usuarios con discapacidades también tendrán la posibilidad de utilizar esta aplicación web debido a que se incluirán los métodos apropiados para el uso adecuado para estas personas.
+	
+\subsection{DSI 1.2: Identificación de Requisitos de Diseño y Construcción}
+	Los requisitos relacionados con el diseño de la aplicación son:
+	\begin{itemize}
+		\item El \textit{lenguaje} utilizado en la web será un lenguaje común para que cualquier usuario pueda ser capaz de leer y entender correctamente la información que desea este usuario, tanto los anónimos como los registrados. Por lo que éstos no deberán tener un nivel educativo y cultural demasiado amplio para su uso.
+		\item Las operaciones o transacciones que pueda realizar un cliente registrado serán bastante accesibles y con la suficiente información para su realización correcta. Aunque durante el horario establecido de atención al cliente siempre podrá llamar el usuario para resolver cualquier duda.
+		\item 
+	\end{itemize}
+
+\subsection{DSI 1.3: Especificación de Excepciones}
+
+\subsection{DSI 1.4: Especificación de Estándares y Norma de Diseño y Construcción}
+
+\subsection{DSI 1.5: Identificación de Subsistemas de Diseño}
+
+\subsection{DSI 1.6: Especificación del Entorno Tecnológico}
+
+\subsection{DSI 1.7: Especificación de Requisitos de Operación y Seguridad}
+
+
+
+
+\section{DSI 2: Diseño de la Arquitectura de Soporte}
+
+\subsection{DSI 2.1: Diseño de Subsistemas de Soporte}
+
+\subsection{DSI 2.2: Identificación de Mecanismos Genéricos de Diseño}
+
+
+
+
+\section{DSI 3: Diseño de Casos de Uso Reales}
+
+\subsection{DSI 3.1: Identificación de Clases Asociadas a un Caso de Uso}
+
+\subsection{DSI 3.2: Diseño de la Realización de los Casos de Uso}
+
+\subsection{DSI 3.3: Revisión de la Interfaz de Usuario}
+
+\subsection{DSI 3.4: Revisión de Subsistemas de Diseño e Interfaces}
+
+
+
+\section{DSI 4: Diseño de Clases}
+
+\subsection{DSI 4.1: Identificación de Clases Adicionales}
+
+\subsection{DSI 4.2: Diseño de Asociaciones y Agregaciones}
+
+\subsection{DSI 4.3: Identificación de Atributos de las Clases}
+
+\subsection{DSI 4.4: Identificación de Operaciones de las Clases}
+
+\subsection{DSI 4.5: Diseño de la Jerarquía}
+
+\subsection{DSI 4.6: Descripción de Métodos de las Operaciones}
+
+\subsection{DSI 4.7: Especificación de Necesidades de Migración y Carga Inicial de Datos}
+
+
+\section{DSI 5: Diseño de la Arquitectura de Módulos del Sistema}
+
+\subsection{DSI 5.1: Diseño de Módulos del Sistema}
+
+\subsection{DSI 5.2: Diseño de Comunicaciones entre Módulos}
+
+\subsection{DSI 5.3: Revisión de la Interfaz de Usuario}
+
+
+
+\section{DSI 6: Diseño Físico de Datos}
+
+\subsection{DSI 6.1: Diseño del Modelo Físico de Datos}
+
+\subsection{DSI 6.2: Especificación de los Caminos de Acceso a los Datos}
+
+\subsection{DSI 6.3: Optimización del Modelo Físico de Datos}
+
+\subsection{DSI 6.4: Especificación de la Distribución de Datos}
+
+
+
+\section{DSI 7: Verificación y Aceptación de la Arquitectura del Sistema}
+
+\subsection{DSI 7.1: Verificación de las Especificaciones de Diseño}
+
+\subsection{DSI 7.2: Análisis de Consistencia de las Especificaciones de Diseño}
+
+\subsection{DSI 7.3: Aceptación de la Arquitectura del Sistema}
+
+
+\section{DSI 8: Generación de Especificaciones de Construcción}
+
+\subsection{DSI 8.1: Especificación del Entorno de Construcción}
+
+\subsection{DSI 8.2: Definición de Componentes y Subsistemas de Construcción}
+
+\subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
+
+\subsection{DSI 8.4: Elaboración de Especificaciones del Modelo Físico de Datos}
+
+
+\section{DSI 9: Diseño de la Migración y Carga Inicial de Datos}
+
+\subsection{DSI 9.1: Especificación del Entorno de Migración}
+
+\subsection{DSI 9.2: Diseño de Procedimientos de Migración y Carga Inicial}
+
+\subsection{DSI 9.3: Diseño Detallado de Componentes de Migración y Carga Inicial}
+
+\subsection{DSI 9.4: Revisión de la Planificación de la Migración}
+
+
+
+
+\section{DSI 10: Especificación Técnica del Plan de Pruebas}
+
+\subsection{DSI 10.1: Especificación del Entorno de Pruebas}
+
+\subsection{DSI 10.2: Especificación Técnica de Niveles de Prueba}
+
+\subsection{DSI 10.3: Revisión de la Planificación de Pruebas}
+
+
+
+\section{DSI 11: Establecimiento de Requisitos de Implantación}
+
+\subsection{DSI 11.1: Especificación de Requisitos de Documentación de Usuario}
+
+\subsection{DSI 11.2: Especificación de Requisitos de Implantación}
+
+
+
+\section{DSI 12: Aprobación del Diseño del Sistema de Información}
+
+\subsection{DSI 12.1: Presentación y Aprobación del Diseño del Sistema de Información}
 
 
 \end{document}
