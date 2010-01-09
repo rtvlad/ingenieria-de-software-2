@@ -53,9 +53,10 @@
 \subsection{DSI 1.1: Definición de Niveles de Arquitectura}
 	El particionamiento físico que será realizado en el sistema se muestra un esquema en la figura siguiente:
 	\begin{figure}[h]
-		\centering
-		\includegraphics[width=350pt]{despliegueSistema.jpg}
-		\caption{Diagrama de despliegue del sistema.}		
+		\begin{center}
+			\includegraphics[scale=0.4]{despliegueSistema.jpg}
+			\caption{Diagrama de despliegue del sistema.}		
+		\end{center}
 	\end{figure}
 	
 	Los elementos o nodos de la figura se explican a continuación.
@@ -132,7 +133,7 @@
 	El diagrama de componentes que muestra las relaciones entre los diferentes subsistemas es el siguiente:
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.5]{paquetes.jpg}
+			\includegraphics[scale=0.4]{paquetes.jpg}
 			\caption{Diagrama de paquetes.}
 		\end{center}	
 	\end{figure}
@@ -227,8 +228,9 @@
 			\end{itemize}
 		\item Se establecerán los \textit{mecanismos de concurrencia} necesarios para el acceso a recursos comunes y críticos.
 		\item La \textit{visualización de la información} por al usuario será realizado de la misma manera siempre y el tipo de letra a utilizar será la misma (ya en la implentación deberá especificarse con mayor detalle este punto).
-		\item El inicio de sesión para los usuario registrados será comprobado de la misma forma: conexión con el servidor de BD, en la tabla usuarios buscar el nombre de usuario insertado y comprobar que los datos coincidan, redireccionar a la pagina principal si sus datos son correctos y cierre de la conexión. En el caso de datos incorrectos se mostrará un mensaje de error correspondiente.
-		\item La muestra de información de error tanto en el inicio de sesión como en la inserción de datos en formularios se realizará de la misma manera.
+		\item El \textit{inicio de sesión} para los usuario registrados será comprobado de la misma forma: conexión con el servidor de BD, en la tabla usuarios buscar el nombre de usuario insertado y comprobar que los datos coincidan, redireccionar a la pagina principal si sus datos son correctos y cierre de la conexión. En el caso de datos incorrectos se mostrará un mensaje de error correspondiente.
+		\item El \textit{cierre de sesión} se lleva a cabo de la misma forma comprobando que el usuario esté previamente con una sesión activa.
+		\item La \textit{muestra de información de error} tanto en el inicio de sesión como en la inserción de datos en formularios se realizará de la misma manera.
 	\end{itemize}
 
 
@@ -238,12 +240,308 @@
 \section{DSI 3: Diseño de Casos de Uso Reales}
 
 \subsection{DSI 3.1: Identificación de Clases Asociadas a un Caso de Uso}
+	Las clases de entidad, interfaz y control identificadas se pueden ver en los siguientes diagramas:
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.4]{disenoLogin.jpg}
+			\caption{Diagrama de clases de diseño relacionadas con registro y validación.}
+		\end{center}	
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.4]{disenoEnvios.jpg}
+			\caption{Diagrama de clases de diseño relacionadas con envío de documentos y paquetes.}
+		\end{center}	
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.4]{disenoFilatelia.jpg}
+			\caption{Diagrama de clases de diseño relacionadas con el portal filatélico.}
+		\end{center}	
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.4]{disenoInfo.jpg}
+			\caption{Diagrama de clases de diseño relacionadas con la obtención de información de la empresa.}
+		\end{center}	
+	\end{figure}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.4]{disenoOfiVirtual.jpg}
+			\caption{Diagrama de clases de diseño relacionadas con la oficina virtual.}
+		\end{center}	
+	\end{figure}
+	
+	La descripción de cada clase es la siguiente:
+	\begin{itemize}
+		\item \textbf{Clases de Interfaz:}
+			\begin{itemize}
+				\item \textit{IUEnvíos}: Es la encargada de mostrar las pantallas necesarias para que el usuario realice envíos de documentos y paquetes.
+				\item \textit{IUFilatelia}: Es la encargada de mostrar las pantallas necesarias para que el usuario realice todas las gestiones relacionadas con el portal filatélico.
+				\item \textit{IUPrincipal}: Es la encargada de mostrar la pantalla inicial del portal así como de las diferentes pantallas necesarias para la obtención de información.
+				\item \textit{IULogin}: Es la encargada de mostrar las pantallas necesarias para el registro y validación de usuarios.
+				\item \textit{IUOficinaVirtual}: Es la encargada de mostrar las pantallas necesarias para la realización de gestiones en la oficina virtual del portal.
+			\end{itemize}
+		\item \textbf{Clases de Control:} 
+			\begin{itemize}
+				\item \textit{GestorEnvíos}: Es el encargado de realizar todas las operaciones necesarias para el envío de documentos y paquetes.
+				\item \textit{GestorFilatelia}: Es el encargado de realizar todas las operaciones necesarias para la gestión del portal filatélico.
+				\item \textit{GestorCorreos}: Es el encargado de realizar todas las operaciones necesarias para realizar las gestiones que no se enmarcan en ninguno de los casos anteriores (cambio de domicilio, apartado postal, etc.), así como de la obtención de información de la empresa.
+				\item \textit{GestorLogin}: Es el encargado de realizar todas las operaciones de registro y validación disponibles.
+				\item \textit{GestorOficinaVirtual}: Es el encargado de realizar todas las operaciones relacionadas con la Oficina Virtual de Correos.
+			\end{itemize}
+		\item \textbf{Clases de Entidad:}
+			\begin{itemize}
+				\item \textit{Envíos}: Es la encargada de almacenar todos los envíos que se produzcan.
+				\item \textit{Usuarios}: Es la encargada de almacenar todos los usuarios que se registren en el portal.
+				\item \textit{Asociaciones}: Es la encargada de almacenar todas las asociaciones de filatelia existentes.
+				\item \textit{Productos}: Es la encargada de almacenar todos los productos filatélicos disponibles.
+				\item \textit{Colecciones}: Es la encarga de almacenar la información relacionada con todas las colecciones filatélicas disponibles.
+				\item \textit{Pedidos}: Es la encargada de almacenar todos los pedidos de productos que se reciban.
+				\item \textit{Información}: Es la encargada de almacenar toda la información estática que va a estar disponible en la página (información corporativa, etc.)
+			\end{itemize} 
+	\end{itemize}
 
 \subsection{DSI 3.2: Diseño de la Realización de los Casos de Uso}
+	Los diagramas de secuencia que nos informan de como se llevan a cabo los distintos casos de uso son los que se muestran a continuación:
+	\begin{itemize}
+	\item \textbf{Login}:
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seclogincorrecto.jpg}
+				\caption{Diagrama de secuencia de login (correcto).}
+			\end{center}	
+		\end{figure}		
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secloginincorrecto.jpg}
+				\caption{Diagrama de secuencia de login (incorrecto).}
+			\end{center}	
+		\end{figure}
+		
+		Un usuario, previamente registrado, introduce sus datos en la aplicación y pulsa el botón "Iniciar Sesión", entonces el Gestor de usuarios comprueba los datos mediante una consulta a la base de datos y hay dos posibilidades:
+			\begin{itemize}
+				\item Datos Correctos: la BD devuelve OK y el gestor de usuarios devuelve OK. Si todo va bien la aplicación redirige al usuario a la pantalla principal de usuarios registrados.
+				\item Datos Incorrectos: la BD devuelve ValidationError y el gestor de usuarios devuelve ValidationError. Por lo que en este caso se le mostrará al usuario información semejante a: su nombre o contraseña no son correctos.
+			\end{itemize}
+		
+	\item \textbf{Logout}:				
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seclogoutcorrecto.jpg}
+				\caption{Diagrama de secuencia de logout (correcto).}
+			\end{center}	
+		\end{figure}
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seclogoutincorrecto.jpg}
+				\caption{Diagrama de secuencia de logout (incorrecto).}
+			\end{center}	
+		\end{figure}
+		
+		Cuando el usuario considere oportuno podrá cerrar la sesión pulsando en sobre el enlace correspondiente, entonces el gestor de Usuarios recoge la información y mediante una consulta a la base de datos podrán ocurrir las siguientes situaciones:
+		\begin{itemize}
+			\item El usuario tiene una sesión activa y desea cerrarla: la BD devuelve OK y el gestor de usuarios devuelve OK, por lo que redirige al usuario a la pagina principal de el acceso al cliente.
+			\item El usuario no tiene una sesión activa e intenta cerrarla: la BD devuelve \"Error\" y el gestor de usuarios devuelve Error. No se muestra un mensaje ya que se redirige al usuario a la pagina principal de acceso al cliente.
+		\end{itemize}
+		
+	\item \textbf{Registro}:		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secregistrocorrecto.jpg}
+				\caption{Diagrama de secuencia de registro (correcto).}
+			\end{center}	
+		\end{figure}
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secregistroincorrecto.jpg}
+				\caption{Diagrama de secuencia de registro (incorrecto).}
+			\end{center}	
+		\end{figure}
+		
+		El usuario sin registrar deberá rellenar el formulario con sus datos, luego al pulsa el botón "Aceptar" el gestor de usuarios recoge dicha información y a través de una consulta a la base de datos podrá ocurrir lo siguiente:
+		\begin{itemize}
+			\item Si la base de datos devuelve OK entonces se inserta el nuevo usuario en la BD.
+			\item Si la base de datos devuelve ValidationError entonces no se inserta el nuevo usuario en la BD, debido a que el nombre de usuario ya existe. Por lo que se le muestra un mensaje de error.
+		\end{itemize} 
+	
+	\item \textbf{Información}:
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secatclienteinfo.jpg}
+				\caption{Diagrama de secuencia de atención al cliente genérica.}
+			\end{center}	
+		\end{figure}
+		Un usuario registrado pide atención a la aplicación, mediante el gestor de correos se le piden una serie de datos, después de rellenar el formulario el gestor busca, a partir de la información que recoge del formulario, en la base de datos y ésta devuelve la información correspondiente que posteriormente le será mostrada. 
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secinfocorporativa.jpg}
+				\caption{Diagrama de secuencia información corporativa.}	
+			\end{center}	
+		\end{figure}
+		Un usuario registrado solicita información a la aplicación, el gestor de correos mediante una consulta a la base de datos le devuelve la información correspondiente a la solicitada.		
+	
+	\item \textbf{Oficina Virtual}:
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{sectareas.jpg}
+				\caption{Diagrama de secuencia de tareas pendientes.}
+			\end{center}	
+		\end{figure}
+		El usuario que previamente se ha registrado pincha en el enlace de tareas, el gestor de la oficina virtual consulta a la base de datos sobre las tareas de ese usuario y ésta devuelve sus tareas y el gestor le muestra la información.
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secseguimiento.jpg}
+				\caption{Diagrama de secuencia de seguimiento de envíos.}
+			\end{center}	
+		\end{figure}
+		Cuando un usuario registrado solicita el seguimiento de un envío, el gestor de la oficina virtual le pide el identificador y una vez que se lo proporciona el gestor solicita la información a la base de datos, la cual devolverá los datos correspondientes a ese envío y el gestor le mostrará al usuario la información.
+	
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{sechistorico.jpg}
+				\caption{Diagrama de secuencia de historico de envíos.}
+			\end{center}	
+		\end{figure}
+		El cliente (usuario registrado) pide la información de los últimos envíos que realizó, el gestor de la oficina virtual consulta en la base de datos sus últimos envíos, la BD le devuelve esos envíos y el gestor le muestra la información al usuario.
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secjustificante.jpg}
+				\caption{Diagrama de secuencia de obtención de justificantes.}
+			\end{center}	
+		\end{figure}
+		Cuando un usuario registrado necesita el justificante o factura de un envío o pedido pinchará en su enlace correspondiente, el gestor de la oficina virtual le pedirá que introduzca el identificador, una vez rellenado el gestor recoge esos datos para hacer una consulta en la base de datos y ésta devolverá la información del justificantes y el gestor le mostrará al usuario dicha información.
+	
+	\item \textbf{Filatelia}:
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secapadrinamiento.jpg}
+				\caption{Diagrama de secuencia de apadrinamiento.}
+			\end{center}	
+		\end{figure}
+		El usuario registrado quiere realizar la acción de apadrinar debe abonar una cantidad, el gestor de filatelia registra al usuario en la filatelia y la base de datos devuelve OK y el gestor le muestra OK al usuario.
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secasociaciones.jpg}
+				\caption{Diagrama de secuencia de asociaciones.}
+			\end{center}	
+		\end{figure}
+		El usuario registrado busca una asociación filatélica, el gestor de la filatelia busca dicha asociación en la base de datos y ésta devuelve esa asociación que será mostrada al usuario en pantalla mediante el previo tratamiento de la información por el gestor.
 
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secatcliente.jpg}
+				\caption{Diagrama de secuencia de atención al cliente.}
+			\end{center}	
+		\end{figure}
+		El usuario registrado solicita la atención a la aplicación, el gestor de la filatelia le pide que ingrese unos datos, una vez rellenados, el gestor busca dichos datos en la base de datos y ésta devuelve OK con los datos y el gestor muestra la información en pantalla.
+
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seccoleccion.jpg}
+				\caption{Diagrama de secuencia de colecciones filatélicas.}
+			\end{center}	
+		\end{figure}
+		Un usuario registrado solicita la información de un tipo de colección filatélica, el gestor de filatelia pide una serie de datos al usuario, que una vez rellenados busca en la base de datos la información, ésta le devuelve OK con los datos y el gestor le muestra al usuario la información por pantalla.
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seconlinecorrecto.jpg}
+				\caption{Diagrama de secuencia de gestión online (correcto).}
+			\end{center}	
+		\end{figure}
+		
+
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{seconlineincorrecto.jpg}
+				\caption{Diagrama de secuencia de gestión online (incorrecto).}
+			\end{center}	
+		\end{figure}
+		El usuario registrado desea realizar un pedido sobre un prodcuto, el gestor de filatelia le solicita el ingreso de unos datos, cuando el usuario ingresa esos datos, el gestor comprueba con la base de datos que ese producto existe y devuelve la información del producto, y a partir de dicha información se realiza el pedido, ingresando en la base de datos la información que corresponde. En el caso de que el producto no exista no se podrá hacer efectivo el pedido de dicho producto.
+		
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secsucursal.jpg}
+				\caption{Diagrama de secuencia de búsqueda de sucursales.}
+			\end{center}	
+		\end{figure}
+		El usuario registrado busca sucursales de una provincia, el gestor de la filatelia busca en la base de datos la lista de sucursales de esa provincia y una vez devuelto el resultado se le muestra la información por pantalla al usuario.
+	
+	\item \textbf{Envíos}
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secenviocorrecto.jpg}
+				\caption{Diagrama de secuencia de envío (correcto).}
+			\end{center}	
+		\end{figure}		
+	
+		\begin{figure}[H]
+			\begin{center}
+				\includegraphics[scale=0.4]{secenvioincorrecto.jpg}
+				\caption{Diagrama de secuencia de envío (incorrecto).}
+			\end{center}	
+		\end{figure}
+		El usuario registrado desea realizar un envío, el gestor de envíos le solicita la información del envío, el cliente ingresa los datos correspondientes y pueden suceder dos situaciones:
+		\begin{itemize}
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con OK, por lo que el gestor devuelve un OK al usuario.
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ErrorDatos, por lo que el gestor devuelve un ErrorDatos al usuario con el motivo de que se corrijan esos datos incorrectos.
+		\end{itemize}
+		
+	\end{itemize}	
+		
 \subsection{DSI 3.3: Revisión de la Interfaz de Usuario}
+	La interfaz de usuario está estructuradas en los tres perfiles de usuarios existentes en el sistema, que son:
+	\begin{itemize}
+		\item Interfaz para el perfil de Cliente Particular:
+			\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.5]{particulares_principal.pdf}
+					\caption{Captura de la interfaz principal de particulares}
+				\end{center}
+			\end{figure}
+			Como podemos ver en la captura anterior, la estructura de la interfaz para particulares sigue el esquema descrito. El menú a la izquierda permite al usuario acceder a todas las opciones disponibles con un sólo click, y se encuentra ordenado por la frecuencia de uso de cada una de las opciones. Cada evento vendrá representado por un click con el ratón en el menú elegido, que llevará a la modificación del contenido de la interfaz. Este contenido dependerá de la opción elegida, por lo que no se puede tratar de manera estática.
+			
+		\item Interfaz para el perfil de Cliente Empresa:
+			\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.5]{empresas_principal.pdf}
+					\caption{Captura de la interfaz principal de empresas}
+				\end{center}
+			\end{figure}	
+			En este caso, las opciones disponibles son las de empresas, pero la estructura global de la pantalla es la misma. Los eventos se gestionan de la misma forma, al recibir clicks de ratón.		
+		
+		\item Intrefaz para la Oficina Virtual, en la que el usuario deberá estar registrado para acceder a ella:
+			\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.5]{oficina_virtual_principal.pdf}
+					\caption{Captura de la interfaz principal de oficina virtual}
+				\end{center}
+			\end{figure}	
+			Para la oficina virtual la estructura es la misma pero con las opciones propias de la oficina. Gracias a esto, el portal mantiene un aspecto homogéneo que no intimida al usuario ni lo desconcierta.
+	\end{itemize}
+	
+	Los \textit{formatos de impresión} serán los mismos para todos los documentos, con el logo de la empresa en la parte superior, junto con el titulo del documento y el número de página. Los documentos disponibles para la impresión son los siguientes:
+	\begin{itemize}
+		\item \textbf{Justificantes:} Los justificantes de las facturas pagadas incluirán al comienzo el número y fecha de facturación, y tras esto, la información referente a la factura.
+		\item \textbf{Seguimiento de envíos:} Los seguimientos de envíos figurarán en forma de tabla, dividida por las siguientes columnas: fecha, estado. De esta forma el usuario identifica de forma clara los estados por lo que ha ido pasando el envío.
+		\item \textbf{Producto filatélico:} La impresión de información de un producto filatélico se dispondrá con una imagen del mismo que ocupará el cuarto superior izquierdo del documento, junto con la información del documento debajo del mismo, ocupando el resto del mismo.
+		\item \textbf{Facturas:} Las facturas serán todas similares en el aspecto. Contendrán el número de factura a la izquierda y a la derecha el nombre del titular de la factura. A continuación aparecerá una tabla dividida por las columnas de \textit{descripción} y \textit{precio}. El contenido de esa tabla será la descripción de cada compra y el precio asociado a la misma, a razón de una por línea.
+	\end{itemize}
 
 \subsection{DSI 3.4: Revisión de Subsistemas de Diseño e Interfaces}
+	
 
 
 \newpage
