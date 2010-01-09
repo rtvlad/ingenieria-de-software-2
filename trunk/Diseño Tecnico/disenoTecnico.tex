@@ -29,7 +29,7 @@
 {\Large Ingeniería del Software II}\\[1.25cm]
 {\LARGE \textbf{Práctica Obligatoria}}\\[1.25cm]
 {\LARGE \textit{Documento de Diseño Técnico}}\\[2.5cm]
-{\Large David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ Radu Tom Vlad}\\[1cm]
+{\Large Radu Tom Vlad \\ David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila }\\[1cm]
 {\Large asantalla@siliconkernel.com}\\[2cm]
 5º de Ingeniería Informática \\[1cm]
 \today
@@ -137,7 +137,7 @@
 	\end{figure}
 
 \subsection{DSI 1.6: Especificación del Entorno Tecnológico}
-	Las características que debe tener el Servidor de Base de Datos son:
+	Las características que debe tener el \textit{Servidor de Base de Datos} son:
 	\begin{itemize}
 		\item \textbf{Hardware}:
 				\begin{itemize}
@@ -152,7 +152,42 @@
 				\begin{itemize}
 					\item Sistema Operativo: Windows NT/200 Advanced Server.
 					\item Base de Datos: Oracle (Lenguaje de consulta estructurado SQL).
-					\item 
+					\item Software para la realización de las copias de seguridad.
+					\item En caso de que sea necesario: software para la comunicación con los demás servidores. 
+				\end{itemize}
+	\end{itemize}
+	
+	Las características de los \textit{Servidores} son:
+	\begin{itemize}
+		\item \textbf{Hardware}:
+				\begin{itemize}
+					\item Sitema de Almacenamiento: disco duro con una capacidad inicial de quinientos gigabytes (500 GB).
+					\item Memoria RAM: inicialmente sería suficiente con cuatro gigabytes (4 GB).
+					\item Tarjeta de Red: estándar RJ45 para la comunicación con el servidor de base de datos.
+					\item Procesadores: inicialmente se utilizará un Intel Dual Core.
+					\item Teclado, ratón y demás componentes necesarios para el correcto encendido de estas computadoras.
+				\end{itemize}
+		\item \textbf{Software}:
+				\begin{itemize}
+					\item Sistema Operativo: Windows NT/200 Advanced Server.
+					\item Navegador: para la comprobación del correcto funcionamiento del sistema.
+					\item En caso de que sea necesario: software para la comunicación con el servidor de base de datos. 
+					\item Entorno de desarrollo: puede ser un procesador de textos normal a través del cual realizar todo lo referente a la implementación.
+				\end{itemize}
+		\item Los usuarios accederán a éstos a través de Internet (TCP/IP) por lo que la aplicación deberá alojarse en un dominio para su posible utilización.
+	\end{itemize}
+	
+	Las características que deben tener las computadores de los usuarios son:
+	\begin{itemize}
+		\item \textbf{Hardware}:
+				\begin{itemize}
+					\item Tarjeta de Red o tarjeta de red inalámbrica: para la conexión a internet.
+					\item Teclado, ratón y demás componentes necesarios para el correcto encendido de estas computadoras.
+				\end{itemize}
+		\item \textbf{Software}:
+				\begin{itemize}
+					\item Sistema Operativo: Windows, Linux o Macintosh.
+					\item Navegador Web: para el acceso a la aplicación. (Internet Explorer, Mozilla Firefox,...) Estos navegadores web deben tener activado el permiso de ejecución de JavaScript.
 				\end{itemize}
 	\end{itemize}
 
