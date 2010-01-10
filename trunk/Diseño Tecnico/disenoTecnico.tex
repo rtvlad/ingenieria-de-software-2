@@ -241,7 +241,42 @@
 \section{DSI 3: Diseño de Casos de Uso Reales}
 
 \subsection{DSI 3.1: Identificación de Clases Asociadas a un Caso de Uso}
-	
+	Las clases asociadas a los casos de uso son las que se muestran a continuación:
+	\begin{itemize}
+		\item Clases referentes a los \textbf{Gestores}:
+				\begin{itemize}
+					\item Clase \textit{Gestor de Correos}: lleva el control de las acciones que puede hacer un usuario registrado o no. Tales acciones son:
+						\begin{itemize}
+							\item Para usuarios no registrados: registrarse, obtener información, atención al cliente y solicitar un dominio.
+							\item Para usuarios registrados: puede hacer las acciones anteriores y además todo lo relacionado con la aplicación, algunas de éstas son: validar o login, logout, envíos, cambio de domicilio, personalización de sellos, creamailing, ....
+						\end{itemize}
+					\item Clase \textit{Gestor de Envíos}: lleva el control de los envíos que puede realizar un cliente registrado. Tales envíos pueden ser: cartas, telegramas, documentos, paquetes, fax y también el seguimiento de los envíos.
+					\item Clase \textit{Gestor de Filatelia}: controla todo lo relacionado con la Filatelia, como por ejemplo: buscar una sucursal o una asociación dentro de una provincia, buscar información a partir de unos datos dados, realizar un pedido.
+					\item Clase \textit{Gestor de la Oficina Virtual}: maneja las acciones relacionadas con la oficina virtual de correos, algunas de éstas son: seguimiento de los envíos, ver los últimos envíos, lista de tareas pendientes, solicitudes de justificantes o facturas.
+				\end{itemize}
+		
+		\item Clases referentes a las \textbf{Interfaces}:
+				\begin{itemize}
+					\item Clase \textit{IUPrincipal}: interfaz de usuario a través de la cual se visualiza la página principal de correos.
+					\item Clase \textit{IUEnvíos}: interfaz de usuario para mostrar todo lo referente a la interfaz de envíos de documentos y paquetes del portal.
+					\item Clase \textit{IUOficinaVirtual}: interfaz de usuario para mostrar todo lo referente a la oficina virtual de correos.
+					\item Clase \textit{IUFilatelia}: interfaz de usuario encargada del portal filatélico.
+					\item Clase \textit{IUUsuario}: interfaz de usuario que nos muestra el contenido referente a la validación (login) y el registro de usuarios.
+				\end{itemize}
+
+		\item Clases referentes a los \textbf{Envíos}:
+				\begin{itemize}
+					\item Clase \textit{Envío}: clase abstracta de la cual heredan las dos siguientes clases. Se encarga de los diferentes envíos que puede realizar un usuario registrado.
+					\item Clase \textit{EnvíoDocumento}: clase que hereda de la de \textit{Envío} y que indica que el tipo de envío es un documento. El tipo de documento dependiendo de su valor será una carta, un telegrama o un fax.
+					\item Clase \textit{EnvíoPaquete}: clase que hereda de la de \textit{Envío} y que indica que el tipo de envío es un paquete y la prioridad o urgencia con la que debe ser tratado dicho paquete.
+				\end{itemize}
+				
+		\item Clase \textit{Usuario}: clase en la que se guardan los datos referentes a los usuarios.
+		\item Clase \textit{Información}: clase donde se almacena el tipo y contenido de cierta información de la aplicación.
+		\item Clase \textit{Asociación}: clase encargada de almacenar los datos de cada asociación filatélica disponible.
+		\item Clase \textit{Sucursal}: clase en la cual se almacena la información de una sucursal concreta.
+		\item Clase \textit{CentrosCorreos}: clase encargada de obtener información general de la base de datos, como asociaciones filatélicas o sucursales.
+	\end{itemize}
 
 \subsection{DSI 3.2: Diseño de la Realización de los Casos de Uso}
 	Los diagramas de secuencia que nos informan de como se llevan a cabo los distintos casos de uso son los que se muestran a continuación:
@@ -261,10 +296,10 @@
 			\end{center}	
 		\end{figure}
 		
-		Un usuario, previamente registrado, introduce sus datos en la aplicación y pulsa el botón ``Entrar", entonces el Gestor de usuarios comprueba los datos mediante una consulta a la base de datos y hay dos posibilidades:
+		Un usuario, previamente registrado, introduce sus datos en la aplicación y pulsa el botón ``Entrar'', entonces el Gestor de Correos comprueba los datos mediante una consulta a la base de datos y hay dos posibilidades:
 			\begin{itemize}
-				\item Datos Correctos: la BD devuelve ``OK" y el gestor de usuarios devuelve ``OK". Si todo va bien la aplicación redirige al usuario a la pantalla principal de usuarios registrados.
-				\item Datos Incorrectos: la BD devuelve ``ValidationError" y el gestor de usuarios devuelve ``ValidationError". Por lo que en este caso se le mostrará al usuario información semejante a: su nombre o contraseña no son correctos.
+				\item Datos Correctos: la BD y el gestor de correos devuelven ``OK''. Si todo va bien la aplicación redirige al usuario a la pantalla principal de usuarios registrados.
+				\item Datos Incorrectos: la BD y el gestor de correos devuelven ``ValidationError''. Por lo que en este caso se le mostrará al usuario un mensaje semejante a: su nombre o contraseña no son correctos.
 			\end{itemize}
 		
 	\item \textbf{Logout}:				
@@ -282,10 +317,10 @@
 			\end{center}	
 		\end{figure}
 		
-		Cuando el usuario considere oportuno podrá cerrar la sesión pulsando en sobre el enlace correspondiente, entonces el gestor de Usuarios recoge la información y mediante una consulta a la base de datos podrán ocurrir las siguientes situaciones:
+		Cuando el usuario considere oportuno podrá cerrar la sesión pulsando en sobre el enlace correspondiente (ej: ``Cerrar Sesión'', entonces el gestor de correos recoge la información y mediante una consulta a la base de datos podrán ocurrir las siguientes situaciones:
 		\begin{itemize}
-			\item El usuario tiene una sesión activa y desea cerrarla: la BD devuelve ``OK" y el gestor de usuarios devuelve ``OK", por lo que redirige al usuario a la pagina principal de el acceso al cliente.
-			\item El usuario no tiene una sesión activa e intenta cerrarla: la BD devuelve ``Error" y el gestor de usuarios devuelve ``Error". No se muestra un mensaje ya que se redirige al usuario a la pagina principal de acceso al cliente.
+			\item El usuario tiene una sesión activa y desea cerrarla: la BD y el gestor de correos devuelven ``OK'', por lo que redirige al usuario a la pagina principal de la oficina virtual, donde podrá volver a entrar.
+			\item El usuario no tiene una sesión activa y desea cerrarla: la BD y el gestor de correos devuelven ``Error''. No se muestra un mensaje ya que se redirige al usuario a la pagina principal de acceso al cliente.
 		\end{itemize}
 		
 	\item \textbf{Registro}:		
@@ -303,10 +338,10 @@
 			\end{center}	
 		\end{figure}
 		
-		El usuario sin registrar deberá rellenar el formulario con sus datos, luego al pulsa el botón ``Aceptar" el gestor de usuarios recoge dicha información y a través de una consulta a la base de datos podrá ocurrir lo siguiente:
+		El usuario sin registrar deberá rellenar el formulario con sus datos, cuando pulsa el botón ``Aceptar'' el gestor de correos recoge dicha información y a través de una consulta a la base de datos podrá ocurrir lo siguiente:
 		\begin{itemize}
-			\item Si la base de datos devuelve ``OK" entonces se inserta el nuevo usuario en la BD.
-			\item Si la base de datos devuelve ``ValidationError" entonces no se inserta el nuevo usuario en la BD, debido a que el nombre de usuario ya existe. Por lo que se le muestra un mensaje de error.
+			\item Si la base de datos devuelve ``OK'' entonces se inserta el nuevo usuario en la BD.
+			\item Si la base de datos devuelve ``ValidationError'' entonces no se inserta el nuevo usuario en la BD, debido a que el nombre de usuario ya existe. Por lo que se le muestra un mensaje de error.
 		\end{itemize} 
 	
 	\item \textbf{Información}:
@@ -324,7 +359,7 @@
 				\caption{Diagrama de secuencia información corporativa.}	
 			\end{center}	
 		\end{figure}
-		Un usuario registrado solicita información a la aplicación, el gestor de correos mediante una consulta a la base de datos le devuelve la información correspondiente a la solicitada.		
+		Un usuario registrado solicita información a la aplicación, el gestor de correos mediante una consulta a la base de datos le devuelve la información correspondiente a la pedida.		
 	
 	\item \textbf{Oficina Virtual}:
 		\begin{figure}[H]
@@ -358,7 +393,7 @@
 			\end{center}	
 		\end{figure}
 		Cuando un usuario registrado necesita el justificante o factura de un envío o pedido pinchará en su enlace correspondiente, el gestor de la oficina virtual le pedirá que introduzca el identificador, una vez rellenado el gestor recoge esos datos para hacer una consulta en la base de datos y ésta devolverá la información del justificantes y el gestor le mostrará al usuario dicha información.
-	
+
 	\item \textbf{Filatelia}:
 		\begin{figure}[H]
 			\begin{center}
@@ -366,7 +401,7 @@
 				\caption{Diagrama de secuencia de apadrinamiento.}
 			\end{center}	
 		\end{figure}
-		El usuario registrado quiere realizar la acción de apadrinar debe abonar una cantidad, el gestor de filatelia registra al usuario en la filatelia y la base de datos devuelve ``OK" y el gestor le muestra ``OK" al usuario.
+		El usuario registrado quiere realizar la acción de apadrinar debe abonar una cantidad, el gestor de filatelia registra al usuario en la filatelia y la base de datos devuelve ``OK'', por lo que el gestor le muestra ``OK'' al usuario.
 		
 		\begin{figure}[H]
 			\begin{center}
@@ -382,7 +417,7 @@
 				\caption{Diagrama de secuencia de atención al cliente.}
 			\end{center}	
 		\end{figure}
-		El usuario registrado solicita la atención a la aplicación, el gestor de la filatelia le pide que ingrese unos datos, una vez rellenados, el gestor busca dichos datos en la base de datos y ésta devuelve ``OK" con los datos y el gestor muestra la información en pantalla.
+		El usuario registrado solicita la atención a la aplicación, el gestor de la filatelia le pide que ingrese unos datos, una vez rellenados, el gestor busca dichos datos en la base de datos y ésta devuelve ``OK'' con los datos y el gestor muestra la información en pantalla.
 
 		\begin{figure}[H]
 			\begin{center}
@@ -390,7 +425,7 @@
 				\caption{Diagrama de secuencia de colecciones filatélicas.}
 			\end{center}	
 		\end{figure}
-		Un usuario registrado solicita la información de un tipo de colección filatélica, el gestor de filatelia pide una serie de datos al usuario, que una vez rellenados busca en la base de datos la información, ésta le devuelve ``OK" con los datos y el gestor le muestra al usuario la información por pantalla.
+		Un usuario registrado solicita la información de un tipo de colección filatélica, el gestor de filatelia pide una serie de datos al usuario, que una vez rellenados busca en la base de datos la información, ésta le devuelve ``OK'' con los datos y el gestor le muestra al usuario la información por pantalla.
 		
 		\begin{figure}[H]
 			\begin{center}
@@ -432,12 +467,12 @@
 		\end{figure}
 		El usuario registrado desea realizar un envío, el gestor de envíos le solicita la información del envío, el cliente ingresa los datos correspondientes y pueden suceder dos situaciones:
 		\begin{itemize}
-			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``OK", por lo que el gestor devuelve un ``OK" al usuario.
-			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``ErrorDatos", por lo que el gestor devuelve un ``ErrorDatos" al usuario con el motivo de que se corrijan esos datos incorrectos.
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``OK'', por lo que el gestor devuelve un ``OK'' al usuario.
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``ErrorDatos'', por lo que el gestor devuelve un ``ErrorDatos'' al usuario con el motivo de que se corrijan esos datos incorrectos.
 		\end{itemize}
 		
 	\end{itemize}	
-		
+
 \subsection{DSI 3.3: Revisión de la Interfaz de Usuario}
 	La interfaz de usuario está estructuradas en los tres perfiles de usuarios existentes en el sistema, que son:
 	\begin{itemize}
@@ -478,7 +513,144 @@
 	\end{itemize}
 
 \subsection{DSI 3.4: Revisión de Subsistemas de Diseño e Interfaces}
-	
+	Las diferentes clases, actores y mensajes que intervienen en cada uno de los casos de uso son:
+	\begin{itemize}
+		\item Casos de Uso \textbf{Login, Logout, Registro}:
+					\begin{itemize}
+						\item \textit{Clases}:
+							\begin{itemize}
+								\item Gestor de Correos.
+								\item IUUsuario.
+								\item Usuario.
+							\end{itemize}
+						\item \textit{Actores}:
+							\begin{itemize}
+								\item Usuario Registrado.
+								\item Usuario No Registrado.
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item Validación Correcta: Si el usuario introduce los datos correctos el sistema le devolver ``OK''.
+								\item Validación Incorrecta: Si el usuario introduce los datos que no se encuentran en la base de datos el sistema le devolverá ``ValidationError''.
+								\item Cierre Sesión Correcto: el usuario tiene una sesión activa y la cierra, entonces el sistema le devuelve ``OK''.
+								\item Cierre Sesión Incorrecto: el usuario tiene una sesión inactiva y quiere cerrarla, entonces el sistema le devuelve ``Error''.
+								\item Registro Correcto: el usuario inserta los datos en el formulario correctamente y el sistema le devuelve ``OK''.
+								\item Registro Incorrecto: el usuario inserta los datos en el formulario de forma erronea y el sistema le devuelve ``ValidationError''. El motivo de esta situación será la existencia de ese usuario ya en la base de datos.
+							\end{itemize}					
+					\end{itemize}
+					
+		\item Caso de Uso \textbf{Oficina Virtual}:
+					\begin{itemize}
+						\item \textit{Clase}:
+							\begin{itemize}
+								\item Gestor de la Oficina Virtual.
+								\item IUOficinaVirtual.
+							\end{itemize}
+						\item \textit{Actor}:
+							\begin{itemize}
+								\item Usuario Registrado.
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item Tareas Pendientes: el usuario solicita las tareas que tiene pendientes y el gestor de la oficina virtual realiza una consulta a la base de datos, la cual le devuelve un mensaje con la información de éstas tareas que tiene sin realizar.
+								\item Seguimiento Envíos: el usuario solicita el seguimiento de un envío para lo que inserta un identificar, con el cual el gestor de la oficina virtual busca en la base de datos y le devuelve un mensaje con la información del envío que pedía.
+								\item Histórico: el usuario solicita la información de los últimos envíos, el gestor de la oficina virtual hace una consulta a la base de datos y ésta le devuelve un mensaje con todos los envíos que este usuario ha realizado.
+								\item Justificantes: el usuario solicita la información de un justificante para lo cual proporciona un identificador, y con éste el gestor de la oficina virtual busca en la base de datos y le devuelve un mensaje con la información del justificante que buscaba.
+							\end{itemize}
+					\end{itemize}
+					
+		\item Caso de Uso \textbf{Envíos}:
+					\begin{itemize}
+						\item \textit{Clases}:
+							\begin{itemize}
+								\item Gestor de Envíos.
+								\item IUEnvíos.
+								\item Envíos
+								\item EnvíoDocumento o EnvíoPaquete: dependiendo de si lo que quier enviar un usuario es un documento (carta, telegrama o fas) o si quiere enviar un paquete con una cierta urgencia.
+							\end{itemize}
+						\item \textit{Actor}:
+							\begin{itemize}
+								\item Usuario Registrado.
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item Envío Correcto: el usuario rellena los datos de forma correcta por lo que el sistema le devuelve ``OK''.
+								\item Envío Incorrecto: el usuario introduce algún error en el formulario por lo que el sistema le devuelve ``ErrorDatos''.
+							\end{itemize}
+					\end{itemize}
+		
+		\item Caso de Uso \textbf{Filatelia}:
+					\begin{itemize}
+						\item \textit{Clases}:
+							\begin{itemize}
+								\item Gestor de Filatelia.
+								\item IUFilatelia.
+								\item CentrosCorreos.
+								\item Sucursal.
+								\item Asociación.
+								\item Información.
+							\end{itemize}
+						\item \textit{Actor}:
+							\begin{itemize}
+								\item Usuario Registrado.
+								\item Usuario No Registrado.
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item El usuario no registrado sólo podrá realizar un registro en el sistema para poder acceder al Portal Filatélico. En el caso de registro correcto el sistema le devuelve ``OK'' sino le devolverá ``ValidationError''.
+								\item Apadrinamiento: el usuario registrado abonará una cantidad de dinero y el gestor de filatelia registrará al usuario en los usuarios Filatelia de la base de datos, la cual le devolverá un mensaje de ``OK''.
+								\item Colecciones: el cliente solicita la información de las colecciones filatélicas y el gestor de filatelia hace una consulta sobre la tabla de colecciones y le devuelve un mensaje con los datos solicitados.
+								\item Asociaciones: el usuario registrado pide información de una asociación filatélica y el gestor de filatelia busca en la tabla de asociaciones y devuelve un mensaje con la información solicitada.
+								\item Atención al Cliente: el usuario necesita atención y el gestor de filatelia le pide unos datos y busca en la tabla de información según esos datos y le devuelve un mensaje con dicha información.
+								\item Búsqueda Sucursal: el cliente solicita la información de una sucursal de una provincia y el gestor de filatelia busca en la base de datos esa sucursal y le devuelve un mensaje con dicha información.
+								\item Realizar Pedido: el usuario quiere realizar el pedido de un producto, inserta los datos, el gestor de la filatelia busca en la tabla de productos y si encuentra el producto realiza el pedido y devuelve un mensaje de ``OK'', sino devuelve un mensaje de ``Error''.
+							\end{itemize}
+					\end{itemize}
+					
+		\item Caso de Uso \textbf{Gestión}:
+					\begin{itemize}
+						\item \textit{Clases}:
+							\begin{itemize}
+								\item Gestor de Oficina Virtual.
+								\item Gestor de Correos.
+								\item IUPrincipal.
+								\item Información.
+							\end{itemize}
+						\item \textit{Actores}:
+							\begin{itemize}
+								\item Usuario Registrado.
+								\item Usuario No Registrado.
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item El usuario no registrado solo puede solicitar información y consulta de dominios a la aplicación. La información a la cual podrá acceder es Museos, Recibos, Recarga de Móviles, Locutorios y Tiendas Telecor. El sistema (gestor de correos) dependiendo de la consulta que quiera realizar el usuario así buscará en la base de datos dicha información y se la enviará al usuario para mostrársela por pantalla.
+								\item Cambio de Domicilio: el usuario solicita cambiar su domicilio, por lo que el gestor de la oficina virtual le solicita los nuevos datos y actualiza la tabla de usuarios de la base de datos y el sistema le devuelve un mensaje de ``OK''.
+								\item Personalización de Sellos: el usuario desea personalizar un sello, el gestor de la oficina virtual le pide los datos y la imagen del sello y una vez introducidos dichos datos, el sistema le envía un mensaje de ``OK''.
+								\item Sobres y embalajes: el usuario solicita el servicio y el gestor de la oficina virtual le responde con el mensaje de ``OK''.
+								\item Creamailing: el usuario solicita este servicio y el gestor de la oficina virtual le responde con el mensaje de ``OK''.
+								\item Apartado Postal: el usuario solicita este servicio y el gestor de la oficina virtual le responde con el mensaje de ``OK''.
+								\item Gestión E-mail: el usuario solicita este servicio y el gestor de la oficina virtual le responde con el mensaje de ``OK''.
+							\end{itemize}
+					\end{itemize}
+					
+		\item Caso de Uso \textbf{Información}:
+					\begin{itemize}
+						\item \textit{Clases}:
+							\begin{itemize}
+								\item Gestor de Correos.
+								\item IUPrincipal
+								\item Información
+							\end{itemize}
+						\item \textit{Actores}:
+							\begin{itemize}
+								\item Usuario Registrado
+							\end{itemize}
+						\item \textit{Mensajes}:
+							\begin{itemize}
+								\item El usuario solicita información el gestor de correos la busca en la base de datos y compone un mensaje de información para mostrársela al usuario por pantalla.
+							\end{itemize}
+					\end{itemize}
+	\end{itemize}
 
 
 \newpage
@@ -487,6 +659,14 @@
 \section{DSI 4: Diseño de Clases}
 
 \subsection{DSI 4.1: Identificación de Clases Adicionales}
+	FALTA UNA IMAGEN CON EL DIAGRAMA DE CLASES.
+
+	Las clases de control, de identidad y de interfaz son las siguientes:
+	\begin{itemize}
+		\item \textbf{Clases de Control}: GestorCorreos, GestorEnvios, GestorFilatelia y GestorOficinaVirtual.
+		\item \textbf{Clases de Entidad}: Envío (clase abstracta), EnvíoDocumento, EnvíoPaquete, Usuario, Información, Asociación, Sucursal y CentrosCorreos.
+		\item \textbf{Clases de Interfaz}: IUPrincipal, IUEnvíos, IUOficinaVirtual, IUFilatelia e IUUsuario.
+	\end{itemize}
 
 \subsection{DSI 4.2: Diseño de Asociaciones y Agregaciones}
 
@@ -537,14 +717,18 @@
 					\item Usuario Destino (Foreign Key a la tabla Usuarios),
 					\item Usuario Remitente (Foreign Key a la tabla Usuarios),
 					\item Contenido del envío,
-					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso", cuando ha salido del almacén puede estar ``Salida de Almacén", y finalmente cuando llegue a su destino ``Envío Realizado".
+					\item Fecha en la que se inició el envío,
+					\item Fecha en la que finalizó el envío,
+					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso'', cuando ha salido del almacén puede estar ``Salida de Almacén'', y finalmente cuando llegue a su destino ``Envío Realizado''.
 				\end{itemize}
 		\item \textit{Tabla de Pedidos}: campos:
 				\begin{itemize}
 					\item Código (Primary Key),
 					\item Lista de Productos a enviar (cada elemento de la lista será una clave ajena -Foreign Key- a la tabla de Productos),
 					\item Usuario que realiza el pedido (Foreign Key a la tabla Usuarios),
-					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén", después ``Pedido fuera del almacén", luego ``Pedido en el reparto" y finalmente ``Pedido Entregado". 
+					\item Fecha en la que se inició el pedido,
+					\item Fecha en la que finalizó el pedido,
+					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén'', después ``Pedido fuera del almacén'', luego ``Pedido en el reparto'' y finalmente ``Pedido Entregado''. 
 				\end{itemize}
 		\item \textit{Tabla de Colecciones} campos:
 				\begin{itemize}
@@ -564,8 +748,16 @@
 				\end{itemize}
 	\end{itemize}
 
-	Los datos que serán migrados de la aplicación anterior son los respectivos a los Usuarios que ya se habían registrado con anterioridad, los productos que todavía sigue utilizando el sistema, los pedidos tanto los entregados como los que están en proceso, los envíos tanto los que han llegado a su destino como los que todavía se encuentran de camino o en el almacén, asociaciones filatélicas disponibles y colecciones filatélicas.\\
-
+	La migración de los datos del actual Portal de Correos al nuevo Portal serán:
+	\begin{enumerate}
+		\item La información de la empresa.
+		\item Productos Filatélicos,
+		\item Productos de Venta (tipos de documentos, paquetes, etc.),
+		\item Usuarios del Sistema,
+		\item Tareas e historiales de cada usuario.
+	\end{enumerate}
+	Después de la migración completa de los datos, se insertarán los nuevos elementos que no pertenecían al portal anterior. Para la correcta migración de dicha información no se utilizará ningún hardware específico.\\
+	
 	Siempre que un servidor quiera realizar una consulta en la base de datos la deberá hacer mediante campos que sean claves primarias o únicas, ya que de esta forma se agiliza mucho la devolución de los datos, y a partir de hay irá obteniendo la información complementaria de ese registro o registros que se desee. Exceptuando los casos en los cuales se quiera obtener una lista de datos, como por ejemplo obtener la lista de asociaciones filatélicas que corresponden a una provincia determinada, esta consulta se deberá hacer sobre el campo provincia de la tabla asociaciones.\\
 
 	El sistema de la base de datos será implementado de tal manera que jamás se permitirá el acceso a más de un servidor a un mismo registro de la misma tabla con el fin de evitar los problemas de consistencia de datos que se podrían dar como consecuencia de la concurrencia entre servidores.
