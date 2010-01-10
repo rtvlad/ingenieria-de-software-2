@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  10 JAN 2010 19:12
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  10 JAN 2010 21:05
 entering extended mode
 **disenoTecnico.tex
 
@@ -544,13 +544,13 @@ File: disenologin_incorrecto.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.303 			\end{itemize}
+l.305 			\end{itemize}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.303 			\end{itemize}
+l.305 			\end{itemize}
                        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
 SII/Diseño Tecnico/disenologin_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII
 /Practica/RepositorioISII/Diseño Tecnico/disenologin_incorrecto.jpg>]
@@ -566,13 +566,13 @@ e same identifier (name{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 		\end{itemize}
+l.326 		\end{itemize}
                      pdfTeX warning (ext4): destination with the same identifie
 r (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 		\end{itemize}
+l.326 		\end{itemize}
                       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
 II/Diseño Tecnico/disenologout_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII
 /Practica/RepositorioISII/Diseño Tecnico/disenologout_incorrecto.jpg>]
@@ -592,13 +592,13 @@ me identifier (name{figure.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.353 		\end{figure}
+l.355 		\end{figure}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.353 		\end{figure}
+l.355 		\end{figure}
                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
 I/Diseño Tecnico/disenoregistro_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISI
 I/Practica/RepositorioISII/Diseño Tecnico/disenoregistro_incorrecto.jpg>]
@@ -614,14 +614,14 @@ File: disenotareas.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.371 		E
+l.373 		E
          l usuario que previamente se ha registrado pincha en el enlace de t...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.371 		E
+l.373 		E
          l usuario que previamente se ha registrado pincha en el enlace de t...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoatclienteinfo.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
@@ -638,14 +638,14 @@ dentifier (name{figure.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.387 		E
+l.389 		E
          l cliente (usuario registrado) pide la información de los últimos e...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.387 		E
+l.389 		E
          l cliente (usuario registrado) pide la información de los últimos e...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enotareas.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Dise
@@ -662,14 +662,14 @@ ame identifier (name{figure.13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.404 		E
+l.406 		E
          l usuario registrado quiere realizar la acción de apadrinar debe ab...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.404 		E
+l.406 		E
          l usuario registrado quiere realizar la acción de apadrinar debe ab...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enohistorico.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/D
@@ -686,14 +686,14 @@ dentifier (name{figure.15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 		E
+l.422 		E
          l usuario registrado solicita la atención a la aplicación, el gesto...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 		E
+l.422 		E
          l usuario registrado solicita la atención a la aplicación, el gesto...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoapadrinamiento.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
@@ -711,13 +711,13 @@ ed
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.436 
+l.438 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.436 
+l.438 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenoatcliente.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
 ISII/Diseño Tecnico/disenocolecciones.jpg>]
@@ -733,14 +733,14 @@ File: disenosucursal.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 		E
+l.454 		E
          l usuario registrado busca sucursales de una provincia, el gestor d...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 		E
+l.454 		E
          l usuario registrado busca sucursales de una provincia, el gestor d...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enogestiononline_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repo
@@ -757,14 +757,14 @@ File: disenoenvio_incorrecto.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.468 		E
+l.470 		E
          l usuario registrado desea realizar un envío, el gestor de envíos l...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.468 		E
+l.470 		E
          l usuario registrado desea realizar un envío, el gestor de envíos l...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enosucursal.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Di
@@ -781,7 +781,7 @@ File: particulares_principal.pdf Graphic file (type pdf)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.486 			C
+l.488 			C
           omo podemos ver en la captura anterior, la estructura de la interf...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoenvio_incorrecto.jpg>]
@@ -797,7 +797,7 @@ e identifier (name{figure.24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.495 			E
+l.497 			E
           n este caso, las opciones disponibles son las de empresas, pero la...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/par
 ticulares_principal.pdf>]
@@ -813,7 +813,7 @@ the same identifier (name{figure.25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.504 			P
+l.506 			P
           ara la oficina virtual la estructura es la misma pero con las opci...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/emp
 resas_principal.pdf>] [25pdfTeX warning (ext4): destination with the same ident
@@ -821,21 +821,16 @@ ifier (name{figure.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.523 								\item I
+l.525 								\item I
                      UUsuario. <G:/Universidad/1Cuatrimestre/ISII/Practica/Repo
 sitorioISII/Diseño Tecnico/oficina_virtual_principal.pdf>] [26] [27] [28]
 [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 761--762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+Underfull \hbox (badness 10000) in paragraph at lines 763--764
 
  []
 
@@ -844,13 +839,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 770--771
+
+ []
+
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 775--776
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 
  []
 
@@ -874,7 +874,7 @@ s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on disenoTecnico.pdf (36 pages, 1280765 bytes).
+Output written on disenoTecnico.pdf (36 pages, 1282663 bytes).
 PDF statistics:
  609 PDF objects out of 1000 (max. 8388607)
  116 named destinations out of 1000 (max. 500000)
