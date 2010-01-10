@@ -22,35 +22,25 @@
 \BOOKMARK [2][-]{subsection.4.5}{DSI 4.5: Dise\361o de la Jerarqu\355a}{section.4}
 \BOOKMARK [2][-]{subsection.4.6}{DSI 4.6: Descripci\363n de M\351todos de las Operaciones}{section.4}
 \BOOKMARK [2][-]{subsection.4.7}{DSI 4.7: Especificaci\363n de Necesidades de Migraci\363n y Carga Inicial de Datos}{section.4}
-\BOOKMARK [1][-]{section.5}{DSI 5: Dise\361o de la Arquitectura de M\363dulos del Sistema}{}
-\BOOKMARK [2][-]{subsection.5.1}{DSI 5.1: Dise\361o de M\363dulos del Sistema}{section.5}
-\BOOKMARK [2][-]{subsection.5.2}{DSI 5.2: Dise\361o de Comunicaciones entre M\363dulos}{section.5}
-\BOOKMARK [2][-]{subsection.5.3}{DSI 5.3: Revisi\363n de la Interfaz de Usuario}{section.5}
-\BOOKMARK [1][-]{section.6}{DSI 6: Dise\361o F\355sico de Datos}{}
-\BOOKMARK [2][-]{subsection.6.1}{DSI 6.1: Dise\361o del Modelo F\355sico de Datos}{section.6}
-\BOOKMARK [2][-]{subsection.6.2}{DSI 6.2: Especificaci\363n de los Caminos de Acceso a los Datos}{section.6}
-\BOOKMARK [2][-]{subsection.6.3}{DSI 6.3: Optimizaci\363n del Modelo F\355sico de Datos}{section.6}
-\BOOKMARK [2][-]{subsection.6.4}{DSI 6.4: Especificaci\363n de la Distribuci\363n de Datos}{section.6}
-\BOOKMARK [1][-]{section.7}{DSI 7: Verificaci\363n y Aceptaci\363n de la Arquitectura del Sistema}{}
-\BOOKMARK [2][-]{subsection.7.1}{DSI 7.1: Verificaci\363n de las Especificaciones de Dise\361o}{section.7}
-\BOOKMARK [2][-]{subsection.7.2}{DSI 7.2: An\341lisis de Consistencia de las Especificaciones de Dise\361o}{section.7}
-\BOOKMARK [2][-]{subsection.7.3}{DSI 7.3: Aceptaci\363n de la Arquitectura del Sistema}{section.7}
-\BOOKMARK [1][-]{section.8}{DSI 8: Generaci\363n de Especificaciones de Construcci\363n}{}
-\BOOKMARK [2][-]{subsection.8.1}{DSI 8.1: Especificaci\363n del Entorno de Construcci\363n}{section.8}
-\BOOKMARK [2][-]{subsection.8.2}{DSI 8.2: Definici\363n de Componentes y Subsistemas de Construcci\363n}{section.8}
-\BOOKMARK [2][-]{subsection.8.3}{DSI 8.3: Elaboraci\363n de Especificaciones de Construcci\363n}{section.8}
-\BOOKMARK [2][-]{subsection.8.4}{DSI 8.4: Elaboraci\363n de Especificaciones del Modelo F\355sico de Datos}{section.8}
-\BOOKMARK [1][-]{section.9}{DSI 9: Dise\361o de la Migraci\363n y Carga Inicial de Datos}{}
-\BOOKMARK [2][-]{subsection.9.1}{DSI 9.1: Especificaci\363n del Entorno de Migraci\363n}{section.9}
-\BOOKMARK [2][-]{subsection.9.2}{DSI 9.2: Dise\361o de Procedimientos de Migraci\363n y Carga Inicial}{section.9}
-\BOOKMARK [2][-]{subsection.9.3}{DSI 9.3: Dise\361o Detallado de Componentes de Migraci\363n y Carga Inicial}{section.9}
-\BOOKMARK [2][-]{subsection.9.4}{DSI 9.4: Revisi\363n de la Planificaci\363n de la Migraci\363n}{section.9}
-\BOOKMARK [1][-]{section.10}{DSI 10: Especificaci\363n T\351cnica del Plan de Pruebas}{}
-\BOOKMARK [2][-]{subsection.10.1}{DSI 10.1: Especificaci\363n del Entorno de Pruebas}{section.10}
-\BOOKMARK [2][-]{subsection.10.2}{DSI 10.2: Especificaci\363n T\351cnica de Niveles de Prueba}{section.10}
-\BOOKMARK [2][-]{subsection.10.3}{DSI 10.3: Revisi\363n de la Planificaci\363n de Pruebas}{section.10}
-\BOOKMARK [1][-]{section.11}{DSI 11: Establecimiento de Requisitos de Implantaci\363n}{}
-\BOOKMARK [2][-]{subsection.11.1}{DSI 11.1: Especificaci\363n de Requisitos de Documentaci\363n de Usuario}{section.11}
-\BOOKMARK [2][-]{subsection.11.2}{DSI 11.2: Especificaci\363n de Requisitos de Implantaci\363n}{section.11}
-\BOOKMARK [1][-]{section.12}{DSI 12: Aprobaci\363n del Dise\361o del Sistema de Informaci\363n}{}
-\BOOKMARK [2][-]{subsection.12.1}{DSI 12.1: Presentaci\363n y Aprobaci\363n del Dise\361o del Sistema de Informaci\363n}{section.12}
+\BOOKMARK [1][-]{section.5}{DSI 6: Dise\361o F\355sico de Datos}{}
+\BOOKMARK [2][-]{subsection.5.1}{DSI 6.1: Dise\361o del Modelo F\355sico de Datos}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{DSI 6.2: Especificaci\363n de los Caminos de Acceso a los Datos}{section.5}
+\BOOKMARK [2][-]{subsection.5.3}{DSI 6.3: Optimizaci\363n del Modelo F\355sico de Datos}{section.5}
+\BOOKMARK [2][-]{subsection.5.4}{DSI 6.4: Especificaci\363n de la Distribuci\363n de Datos}{section.5}
+\BOOKMARK [1][-]{section.6}{DSI 8: Generaci\363n de Especificaciones de Construcci\363n}{}
+\BOOKMARK [2][-]{subsection.6.1}{DSI 8.1: Especificaci\363n del Entorno de Construcci\363n}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{DSI 8.2: Definici\363n de Componentes y Subsistemas de Construcci\363n}{section.6}
+\BOOKMARK [2][-]{subsection.6.3}{DSI 8.3: Elaboraci\363n de Especificaciones de Construcci\363n}{section.6}
+\BOOKMARK [2][-]{subsection.6.4}{DSI 8.4: Elaboraci\363n de Especificaciones del Modelo F\355sico de Datos}{section.6}
+\BOOKMARK [1][-]{section.7}{DSI 9: Dise\361o de la Migraci\363n y Carga Inicial de Datos}{}
+\BOOKMARK [2][-]{subsection.7.1}{DSI 9.1: Especificaci\363n del Entorno de Migraci\363n}{section.7}
+\BOOKMARK [2][-]{subsection.7.2}{DSI 9.2: Dise\361o de Procedimientos de Migraci\363n y Carga Inicial}{section.7}
+\BOOKMARK [2][-]{subsection.7.3}{DSI 9.3: Dise\361o Detallado de Componentes de Migraci\363n y Carga Inicial}{section.7}
+\BOOKMARK [2][-]{subsection.7.4}{DSI 9.4: Revisi\363n de la Planificaci\363n de la Migraci\363n}{section.7}
+\BOOKMARK [1][-]{section.8}{DSI 10: Especificaci\363n T\351cnica del Plan de Pruebas}{}
+\BOOKMARK [2][-]{subsection.8.1}{DSI 10.1: Especificaci\363n del Entorno de Pruebas}{section.8}
+\BOOKMARK [2][-]{subsection.8.2}{DSI 10.2: Especificaci\363n T\351cnica de Niveles de Prueba}{section.8}
+\BOOKMARK [2][-]{subsection.8.3}{DSI 10.3: Revisi\363n de la Planificaci\363n de Pruebas}{section.8}
+\BOOKMARK [1][-]{section.9}{DSI 11: Establecimiento de Requisitos de Implantaci\363n}{}
+\BOOKMARK [2][-]{subsection.9.1}{DSI 11.1: Especificaci\363n de Requisitos de Documentaci\363n de Usuario}{section.9}
+\BOOKMARK [2][-]{subsection.9.2}{DSI 11.2: Especificaci\363n de Requisitos de Implantaci\363n}{section.9}

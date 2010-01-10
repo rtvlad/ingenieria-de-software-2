@@ -68,6 +68,7 @@
 		\item \textit{Tabla Productos}: en esta tabla se almacenarán todo tipo de información que describa un producto, es decir, su nombre, código o referencia, descripción, precio, etc. 
 		\item \textit{Tabla Envíos}: en ella se guardarán los datos de los envíos, como pueden ser la información del Usuario registrado que realizó el envío, la localización del envío, el código o referencia, descripción o información referente al envío, dirección, etc.
 		\item \textit{Tabla Asociaciones}: almacenamiento de asociaciones referentes a las asociaciones filatélicas. Luego se guardarán teléfonos de esas asociaciones, direcciones, etc. En la aplicación se mostrará un mapa para que el usuario registrado o no puede ver las asociaciones filatélicas más cercanas a su situación, aunque también podrá ver todas las demás.
+		\item \textit{Tabla Información}: en la que se guardarán los datos referentes al resto de la aplicación, es decir, la información de las paginas web estáticas y los demás datos que no se pueden agrupar en una tabla específica.
 	\end{itemize}
 	Ya en la implementación se decidirá que campos son los realmente básicos en cada una de las tablas.
 	
@@ -143,7 +144,7 @@
 	\begin{itemize}
 		\item \textbf{Hardware}:
 				\begin{itemize}
-					\item Sitema de Almacenamiento: disco duro con una capacidad inicial de dos terabytes (2 TB).
+					\item Sistema de Almacenamiento: disco duro con una capacidad inicial de dos terabytes (2 TB).
 					\item Memoria RAM: inicialmente sería suficiente con dos gigabytes (2 GB).
 					\item Tarjeta de Red: estándar RJ45 para la comunicación con los demás servidores.
 					\item Unidad DVD de grabación o puerto USB: para copias de seguridad periódicas.
@@ -164,7 +165,7 @@
 	\begin{itemize}
 		\item \textbf{Hardware}:
 				\begin{itemize}
-					\item Sitema de Almacenamiento: disco duro con una capacidad inicial de quinientos gigabytes (500 GB).
+					\item Sistema de Almacenamiento: disco duro con una capacidad inicial de quinientos gigabytes (500 GB). Dentro de este sistema habrá una pequeña parte para una caché en la que se guardarán los datos de las consultas, su tamaño podría ser de dos gigabytes (2 GB).
 					\item Memoria RAM: inicialmente sería suficiente con cuatro gigabytes (4 GB).
 					\item Tarjeta de Red: estándar RJ45 para la comunicación con el servidor de base de datos.
 					\item Procesadores: inicialmente se utilizará un Intel Dual Core.
@@ -240,71 +241,7 @@
 \section{DSI 3: Diseño de Casos de Uso Reales}
 
 \subsection{DSI 3.1: Identificación de Clases Asociadas a un Caso de Uso}
-	Las clases de entidad, interfaz y control identificadas se pueden ver en los siguientes diagramas:
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{disenoLogin.jpg}
-			\caption{Diagrama de clases de diseño relacionadas con registro y validación.}
-		\end{center}	
-	\end{figure}
 	
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{disenoEnvios.jpg}
-			\caption{Diagrama de clases de diseño relacionadas con envío de documentos y paquetes.}
-		\end{center}	
-	\end{figure}
-	
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{disenoFilatelia.jpg}
-			\caption{Diagrama de clases de diseño relacionadas con el portal filatélico.}
-		\end{center}	
-	\end{figure}
-	
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{disenoInfo.jpg}
-			\caption{Diagrama de clases de diseño relacionadas con la obtención de información de la empresa.}
-		\end{center}	
-	\end{figure}
-	
-	\begin{figure}[H]
-		\begin{center}
-			\includegraphics[scale=0.4]{disenoOfiVirtual.jpg}
-			\caption{Diagrama de clases de diseño relacionadas con la oficina virtual.}
-		\end{center}	
-	\end{figure}
-	
-	La descripción de cada clase es la siguiente:
-	\begin{itemize}
-		\item \textbf{Clases de Interfaz:}
-			\begin{itemize}
-				\item \textit{IUEnvíos}: Es la encargada de mostrar las pantallas necesarias para que el usuario realice envíos de documentos y paquetes.
-				\item \textit{IUFilatelia}: Es la encargada de mostrar las pantallas necesarias para que el usuario realice todas las gestiones relacionadas con el portal filatélico.
-				\item \textit{IUPrincipal}: Es la encargada de mostrar la pantalla inicial del portal así como de las diferentes pantallas necesarias para la obtención de información.
-				\item \textit{IULogin}: Es la encargada de mostrar las pantallas necesarias para el registro y validación de usuarios.
-				\item \textit{IUOficinaVirtual}: Es la encargada de mostrar las pantallas necesarias para la realización de gestiones en la oficina virtual del portal.
-			\end{itemize}
-		\item \textbf{Clases de Control:} 
-			\begin{itemize}
-				\item \textit{GestorEnvíos}: Es el encargado de realizar todas las operaciones necesarias para el envío de documentos y paquetes.
-				\item \textit{GestorFilatelia}: Es el encargado de realizar todas las operaciones necesarias para la gestión del portal filatélico.
-				\item \textit{GestorCorreos}: Es el encargado de realizar todas las operaciones necesarias para realizar las gestiones que no se enmarcan en ninguno de los casos anteriores (cambio de domicilio, apartado postal, etc.), así como de la obtención de información de la empresa.
-				\item \textit{GestorLogin}: Es el encargado de realizar todas las operaciones de registro y validación disponibles.
-				\item \textit{GestorOficinaVirtual}: Es el encargado de realizar todas las operaciones relacionadas con la Oficina Virtual de Correos.
-			\end{itemize}
-		\item \textbf{Clases de Entidad:}
-			\begin{itemize}
-				\item \textit{Envíos}: Es la encargada de almacenar todos los envíos que se produzcan.
-				\item \textit{Usuarios}: Es la encargada de almacenar todos los usuarios que se registren en el portal.
-				\item \textit{Asociaciones}: Es la encargada de almacenar todas las asociaciones de filatelia existentes.
-				\item \textit{Productos}: Es la encargada de almacenar todos los productos filatélicos disponibles.
-				\item \textit{Colecciones}: Es la encarga de almacenar la información relacionada con todas las colecciones filatélicas disponibles.
-				\item \textit{Pedidos}: Es la encargada de almacenar todos los pedidos de productos que se reciban.
-				\item \textit{Información}: Es la encargada de almacenar toda la información estática que va a estar disponible en la página (información corporativa, etc.)
-			\end{itemize} 
-	\end{itemize}
 
 \subsection{DSI 3.2: Diseño de la Realización de los Casos de Uso}
 	Los diagramas de secuencia que nos informan de como se llevan a cabo los distintos casos de uso son los que se muestran a continuación:
@@ -312,70 +249,70 @@
 	\item \textbf{Login}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seclogincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenologin_correcto.jpg}
 				\caption{Diagrama de secuencia de login (correcto).}
 			\end{center}	
 		\end{figure}		
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secloginincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenologin_incorrecto.jpg}
 				\caption{Diagrama de secuencia de login (incorrecto).}
 			\end{center}	
 		\end{figure}
 		
-		Un usuario, previamente registrado, introduce sus datos en la aplicación y pulsa el botón "Iniciar Sesión", entonces el Gestor de usuarios comprueba los datos mediante una consulta a la base de datos y hay dos posibilidades:
+		Un usuario, previamente registrado, introduce sus datos en la aplicación y pulsa el botón ``Entrar", entonces el Gestor de usuarios comprueba los datos mediante una consulta a la base de datos y hay dos posibilidades:
 			\begin{itemize}
-				\item Datos Correctos: la BD devuelve OK y el gestor de usuarios devuelve OK. Si todo va bien la aplicación redirige al usuario a la pantalla principal de usuarios registrados.
-				\item Datos Incorrectos: la BD devuelve ValidationError y el gestor de usuarios devuelve ValidationError. Por lo que en este caso se le mostrará al usuario información semejante a: su nombre o contraseña no son correctos.
+				\item Datos Correctos: la BD devuelve ``OK" y el gestor de usuarios devuelve ``OK". Si todo va bien la aplicación redirige al usuario a la pantalla principal de usuarios registrados.
+				\item Datos Incorrectos: la BD devuelve ``ValidationError" y el gestor de usuarios devuelve ``ValidationError". Por lo que en este caso se le mostrará al usuario información semejante a: su nombre o contraseña no son correctos.
 			\end{itemize}
 		
 	\item \textbf{Logout}:				
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seclogoutcorrecto.jpg}
+				\includegraphics[scale=0.4]{disenologout_correcto.jpg}
 				\caption{Diagrama de secuencia de logout (correcto).}
 			\end{center}	
 		\end{figure}
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seclogoutincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenologout_incorrecto.jpg}
 				\caption{Diagrama de secuencia de logout (incorrecto).}
 			\end{center}	
 		\end{figure}
 		
 		Cuando el usuario considere oportuno podrá cerrar la sesión pulsando en sobre el enlace correspondiente, entonces el gestor de Usuarios recoge la información y mediante una consulta a la base de datos podrán ocurrir las siguientes situaciones:
 		\begin{itemize}
-			\item El usuario tiene una sesión activa y desea cerrarla: la BD devuelve OK y el gestor de usuarios devuelve OK, por lo que redirige al usuario a la pagina principal de el acceso al cliente.
-			\item El usuario no tiene una sesión activa e intenta cerrarla: la BD devuelve \"Error\" y el gestor de usuarios devuelve Error. No se muestra un mensaje ya que se redirige al usuario a la pagina principal de acceso al cliente.
+			\item El usuario tiene una sesión activa y desea cerrarla: la BD devuelve ``OK" y el gestor de usuarios devuelve ``OK", por lo que redirige al usuario a la pagina principal de el acceso al cliente.
+			\item El usuario no tiene una sesión activa e intenta cerrarla: la BD devuelve ``Error" y el gestor de usuarios devuelve ``Error". No se muestra un mensaje ya que se redirige al usuario a la pagina principal de acceso al cliente.
 		\end{itemize}
 		
 	\item \textbf{Registro}:		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secregistrocorrecto.jpg}
+				\includegraphics[scale=0.4]{disenoregistro_correcto.jpg}
 				\caption{Diagrama de secuencia de registro (correcto).}
 			\end{center}	
 		\end{figure}
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secregistroincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenoregistro_incorrecto.jpg}
 				\caption{Diagrama de secuencia de registro (incorrecto).}
 			\end{center}	
 		\end{figure}
 		
-		El usuario sin registrar deberá rellenar el formulario con sus datos, luego al pulsa el botón "Aceptar" el gestor de usuarios recoge dicha información y a través de una consulta a la base de datos podrá ocurrir lo siguiente:
+		El usuario sin registrar deberá rellenar el formulario con sus datos, luego al pulsa el botón ``Aceptar" el gestor de usuarios recoge dicha información y a través de una consulta a la base de datos podrá ocurrir lo siguiente:
 		\begin{itemize}
-			\item Si la base de datos devuelve OK entonces se inserta el nuevo usuario en la BD.
-			\item Si la base de datos devuelve ValidationError entonces no se inserta el nuevo usuario en la BD, debido a que el nombre de usuario ya existe. Por lo que se le muestra un mensaje de error.
+			\item Si la base de datos devuelve ``OK" entonces se inserta el nuevo usuario en la BD.
+			\item Si la base de datos devuelve ``ValidationError" entonces no se inserta el nuevo usuario en la BD, debido a que el nombre de usuario ya existe. Por lo que se le muestra un mensaje de error.
 		\end{itemize} 
 	
 	\item \textbf{Información}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secatclienteinfo.jpg}
+				\includegraphics[scale=0.4]{disenoatclienteinfo.jpg}
 				\caption{Diagrama de secuencia de atención al cliente genérica.}
 			\end{center}	
 		\end{figure}
@@ -383,7 +320,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secinfocorporativa.jpg}
+				\includegraphics[scale=0.4]{disenoinfocorporativa.jpg}
 				\caption{Diagrama de secuencia información corporativa.}	
 			\end{center}	
 		\end{figure}
@@ -392,7 +329,7 @@
 	\item \textbf{Oficina Virtual}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{sectareas.jpg}
+				\includegraphics[scale=0.4]{disenotareas.jpg}
 				\caption{Diagrama de secuencia de tareas pendientes.}
 			\end{center}	
 		\end{figure}
@@ -400,7 +337,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secseguimiento.jpg}
+				\includegraphics[scale=0.4]{disenoseguimientos.jpg}
 				\caption{Diagrama de secuencia de seguimiento de envíos.}
 			\end{center}	
 		\end{figure}
@@ -408,7 +345,7 @@
 	
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{sechistorico.jpg}
+				\includegraphics[scale=0.4]{disenohistorico.jpg}
 				\caption{Diagrama de secuencia de historico de envíos.}
 			\end{center}	
 		\end{figure}
@@ -416,7 +353,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secjustificante.jpg}
+				\includegraphics[scale=0.4]{disenojustificantes.jpg}
 				\caption{Diagrama de secuencia de obtención de justificantes.}
 			\end{center}	
 		\end{figure}
@@ -425,15 +362,15 @@
 	\item \textbf{Filatelia}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secapadrinamiento.jpg}
+				\includegraphics[scale=0.4]{disenoapadrinamiento.jpg}
 				\caption{Diagrama de secuencia de apadrinamiento.}
 			\end{center}	
 		\end{figure}
-		El usuario registrado quiere realizar la acción de apadrinar debe abonar una cantidad, el gestor de filatelia registra al usuario en la filatelia y la base de datos devuelve OK y el gestor le muestra OK al usuario.
+		El usuario registrado quiere realizar la acción de apadrinar debe abonar una cantidad, el gestor de filatelia registra al usuario en la filatelia y la base de datos devuelve ``OK" y el gestor le muestra ``OK" al usuario.
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secasociaciones.jpg}
+				\includegraphics[scale=0.4]{disenoasociaciones.jpg}
 				\caption{Diagrama de secuencia de asociaciones.}
 			\end{center}	
 		\end{figure}
@@ -441,23 +378,23 @@
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secatcliente.jpg}
+				\includegraphics[scale=0.4]{disenoatcliente.jpg}
 				\caption{Diagrama de secuencia de atención al cliente.}
 			\end{center}	
 		\end{figure}
-		El usuario registrado solicita la atención a la aplicación, el gestor de la filatelia le pide que ingrese unos datos, una vez rellenados, el gestor busca dichos datos en la base de datos y ésta devuelve OK con los datos y el gestor muestra la información en pantalla.
+		El usuario registrado solicita la atención a la aplicación, el gestor de la filatelia le pide que ingrese unos datos, una vez rellenados, el gestor busca dichos datos en la base de datos y ésta devuelve ``OK" con los datos y el gestor muestra la información en pantalla.
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seccoleccion.jpg}
+				\includegraphics[scale=0.4]{disenocolecciones.jpg}
 				\caption{Diagrama de secuencia de colecciones filatélicas.}
 			\end{center}	
 		\end{figure}
-		Un usuario registrado solicita la información de un tipo de colección filatélica, el gestor de filatelia pide una serie de datos al usuario, que una vez rellenados busca en la base de datos la información, ésta le devuelve OK con los datos y el gestor le muestra al usuario la información por pantalla.
+		Un usuario registrado solicita la información de un tipo de colección filatélica, el gestor de filatelia pide una serie de datos al usuario, que una vez rellenados busca en la base de datos la información, ésta le devuelve ``OK" con los datos y el gestor le muestra al usuario la información por pantalla.
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seconlinecorrecto.jpg}
+				\includegraphics[scale=0.4]{disenogestiononline_correcto.jpg}
 				\caption{Diagrama de secuencia de gestión online (correcto).}
 			\end{center}	
 		\end{figure}
@@ -465,15 +402,15 @@
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{seconlineincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenogestiononline_incorrecto.jpg}
 				\caption{Diagrama de secuencia de gestión online (incorrecto).}
 			\end{center}	
 		\end{figure}
-		El usuario registrado desea realizar un pedido sobre un prodcuto, el gestor de filatelia le solicita el ingreso de unos datos, cuando el usuario ingresa esos datos, el gestor comprueba con la base de datos que ese producto existe y devuelve la información del producto, y a partir de dicha información se realiza el pedido, ingresando en la base de datos la información que corresponde. En el caso de que el producto no exista no se podrá hacer efectivo el pedido de dicho producto.
+		El usuario registrado desea realizar un pedido sobre un producto, el gestor de filatelia le solicita el ingreso de unos datos, cuando el usuario ingresa esos datos, el gestor comprueba con la base de datos que ese producto existe y devuelve la información del producto, y a partir de dicha información se realiza el pedido, ingresando en la base de datos la información que corresponde. En el caso de que el producto no exista no se podrá hacer efectivo el pedido de dicho producto.
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secsucursal.jpg}
+				\includegraphics[scale=0.4]{disenosucursal.jpg}
 				\caption{Diagrama de secuencia de búsqueda de sucursales.}
 			\end{center}	
 		\end{figure}
@@ -482,21 +419,21 @@
 	\item \textbf{Envíos}
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secenviocorrecto.jpg}
+				\includegraphics[scale=0.4]{disenoenvio_correcto.jpg}
 				\caption{Diagrama de secuencia de envío (correcto).}
 			\end{center}	
 		\end{figure}		
 	
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{secenvioincorrecto.jpg}
+				\includegraphics[scale=0.4]{disenoenvio_incorrecto.jpg}
 				\caption{Diagrama de secuencia de envío (incorrecto).}
 			\end{center}	
 		\end{figure}
 		El usuario registrado desea realizar un envío, el gestor de envíos le solicita la información del envío, el cliente ingresa los datos correspondientes y pueden suceder dos situaciones:
 		\begin{itemize}
-			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con OK, por lo que el gestor devuelve un OK al usuario.
-			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ErrorDatos, por lo que el gestor devuelve un ErrorDatos al usuario con el motivo de que se corrijan esos datos incorrectos.
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``OK", por lo que el gestor devuelve un ``OK" al usuario.
+			\item El gestor intenta registrar los datos del envío en la base de datos y ésta le responde con ``ErrorDatos", por lo que el gestor devuelve un ``ErrorDatos" al usuario con el motivo de que se corrijan esos datos incorrectos.
 		\end{itemize}
 		
 	\end{itemize}	
@@ -567,39 +504,88 @@
 \newpage
 
 
-\section{DSI 5: Diseño de la Arquitectura de Módulos del Sistema}
-
-\subsection{DSI 5.1: Diseño de Módulos del Sistema}
-
-\subsection{DSI 5.2: Diseño de Comunicaciones entre Módulos}
-
-\subsection{DSI 5.3: Revisión de la Interfaz de Usuario}
-
-
-\newpage
-
-
 \section{DSI 6: Diseño Físico de Datos}
 
 \subsection{DSI 6.1: Diseño del Modelo Físico de Datos}
+	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). El contenido de esta base de datos será:
+	\begin{itemize}
+		\item \textit{Tabla de Usuarios}: campos: 
+				\begin{itemize}
+					\item Código (Primary Key), 
+					\item Nombre Personal, 
+					\item Apellidos, 
+					\item DNI (Unique),
+					\item Nombre de Usuario (Unique), 
+					\item Contraseña (cifrada),
+					\item Dirección, 
+					\item Número, 
+					\item Piso,
+					\item Letra,
+					\item Escalera,
+					\item Teléfono. 
+				\end{itemize}
+		\item \textit{Tabla de Productos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Descripción,
+					\item Precio.
+				\end{itemize}
+		\item \textit{Tabla de Envíos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Usuario Destino (Foreign Key a la tabla Usuarios),
+					\item Usuario Remitente (Foreign Key a la tabla Usuarios),
+					\item Contenido del envío,
+					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso", cuando ha salido del almacén puede estar ``Salida de Almacén", y finalmente cuando llegue a su destino ``Envío Realizado".
+				\end{itemize}
+		\item \textit{Tabla de Pedidos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Lista de Productos a enviar (cada elemento de la lista será una clave ajena -Foreign Key- a la tabla de Productos),
+					\item Usuario que realiza el pedido (Foreign Key a la tabla Usuarios),
+					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén", después ``Pedido fuera del almacén", luego ``Pedido en el reparto" y finalmente ``Pedido Entregado". 
+				\end{itemize}
+		\item \textit{Tabla de Colecciones} campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Descripción.
+				\end{itemize}
+		\item \textit{Tabla de Asociaciones} campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Dirección,
+					\item Provincia en la que está situada,
+					\item Teléfono de contacto,
+					\item Número de Fax,
+					\item Descripción.					
+				\end{itemize}
+	\end{itemize}
+
+	Los datos que serán migrados de la aplicación anterior son los respectivos a los Usuarios que ya se habían registrado con anterioridad, los productos que todavía sigue utilizando el sistema, los pedidos tanto los entregados como los que están en proceso, los envíos tanto los que han llegado a su destino como los que todavía se encuentran de camino o en el almacén, asociaciones filatélicas disponibles y colecciones filatélicas.\\
+
+	Siempre que un servidor quiera realizar una consulta en la base de datos la deberá hacer mediante campos que sean claves primarias o únicas, ya que de esta forma se agiliza mucho la devolución de los datos, y a partir de hay irá obteniendo la información complementaria de ese registro o registros que se desee. Exceptuando los casos en los cuales se quiera obtener una lista de datos, como por ejemplo obtener la lista de asociaciones filatélicas que corresponden a una provincia determinada, esta consulta se deberá hacer sobre el campo provincia de la tabla asociaciones.\\
+
+	El sistema de la base de datos será implementado de tal manera que jamás se permitirá el acceso a más de un servidor a un mismo registro de la misma tabla con el fin de evitar los problemas de consistencia de datos que se podrían dar como consecuencia de la concurrencia entre servidores.
 
 \subsection{DSI 6.2: Especificación de los Caminos de Acceso a los Datos}
+	Los servidores tendrán acceso a los datos mediante una conexión de red local (LAN) al servidor de base de datos.\\
+
+	Cómo se ha indicado en el punto anterior el sistema ya implementa los mecanismos adecuados para resolver los problemas de concurrencia que podrían surgir si más de un servidor desea obtener exactamente la misma información del servidor de base de datos.\\	
+	
+	Respecto a la seguridad del acceso a estos datos se requerirá la identificación correcta de los servidores desde los que se puede acceder a dicha información. Es decir, el servidor de BBDD mantendrá una tabla con las MAC de los servidores que tendrán acceso a éste, y además cada servidor tendrá el nombre de usuario y contraseña necesario para realizar las consultas. Cualquier otro servidor que quiera realizar una consulta a esta base de datos no podrá hacerla debido a que éste no está registrado en dicha tabla del servidor de BBDD.
 
 \subsection{DSI 6.3: Optimización del Modelo Físico de Datos}
+	Con el fin de mejorar los tiempos de respuesta de estos servidores las consultas se realizarán sobre datos muy concretos (si es posible) para evitar ciertos retrasos innecesarios al realizar dichas consultas sobre un conjunto muy amplio de datos. \\
+	
+	Cada servidor irá almacenando esas pequeñas consultas, mientras los datos no se vean modificados, para evitar tener que hacer dos consultas seguidas sobre la misma información y así poder eliminar cuellos de botella al acceder a la vez a la base de datos varios servidores. Por lo que estos servidores tendrán una pequeña caché en la que almacenarán esos datos. El sistema empleado para esta caché será de reemplazo de los datos más antiguos, es decir, cuando la caché esté llena el sistema de reemplazamiento a utiliza será FIFO (First In First Out). \\
+	
+	El servidor de base de datos llevará un registro de qué información tiene cada servidor para que en el caso de modificación de esos datos avisar a dichos servidores de que borren de su caché esos datos y en la próxima solicitud de esa información deberá hacer una nueva consulta a la base de datos.
 
 \subsection{DSI 6.4: Especificación de la Distribución de Datos}
-
-
-\newpage
-
-
-\section{DSI 7: Verificación y Aceptación de la Arquitectura del Sistema}
-
-\subsection{DSI 7.1: Verificación de las Especificaciones de Diseño}
-
-\subsection{DSI 7.2: Análisis de Consistencia de las Especificaciones de Diseño}
-
-\subsection{DSI 7.3: Aceptación de la Arquitectura del Sistema}
+	Toda la información estará situada en el servidor de base de datos. Pero parcialmente cada servidor tendrá una pequeña parte de esta información en sus cachés, que como se ha mencionado anteriormente, sirven para la mejora del tiempo de respuesta y para evitar cuellos de botella que se provocarían cuando muchos servidores desean realizar consultas sobre una misma base de datos. Esto debe realizarse de esta forma ya que el número de visitas media por mes alcanza las 400.000 (cuatrocientas mil).
 
 
 \newpage
@@ -650,14 +636,6 @@
 \subsection{DSI 11.1: Especificación de Requisitos de Documentación de Usuario}
 
 \subsection{DSI 11.2: Especificación de Requisitos de Implantación}
-
-
-\newpage
-
-
-\section{DSI 12: Aprobación del Diseño del Sistema de Información}
-
-\subsection{DSI 12.1: Presentación y Aprobación del Diseño del Sistema de Información}
 
 
 \end{document}
