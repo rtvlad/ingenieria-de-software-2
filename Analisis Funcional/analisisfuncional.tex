@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \marginsize{3cm}{2cm}{2cm}{2cm}
+\setlength{\parskip}{1em}
 \author{Jesus Sánchez-Oro Calvo}
 \title{Complejos}
 \begin{document}
@@ -27,7 +28,7 @@
 \textbf{\Huge Universidad Rey Juan Carlos}\\[0.5cm]
 {\LARGE Escuela Técnica Superior de Ingeniería Informática}\\[1.25cm]
 {\Large Ingeniería del Software II}\\[1.25cm]
-{\LARGE \textbf{Práctica Obligatoria}}\\[3.5cm]
+{\LARGE \textbf{Documento de Análisis Funcional}}\\[3.5cm]
 {\Large David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila \\ Radu Tom Vlad}\\[1cm]
 {\Large asantalla@siliconkernel.com}\\[2cm]
 5º de Ingeniería Informática \\[1cm]
@@ -98,8 +99,9 @@
 	Utilizando la herramienta de IBM el sistema tendremos un mayor grado de integración donde será más sencillo corregir los errores que puedan surgir.
 	
 \subsection{ASI 1.3: Especificación de Estándares y Normas}
-	Comenzando por los estándares, como se desea que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, es fundamental que cumpla con el estándar W3C. De esta manera, la aplicación debe ser capaz de pasar el test del validador de la W3C (\url{http://validator.w3.org}). Con esto, no aseguramos de que cualquier usuario que utilice cualquier navegador que siga dicho estándar sea capaz de visualizar la aplicación de una manera correcta sin errores.
+	Comenzando por los estándares, como se desea que la aplicación sea multiplataforma y accesible desde la mayor parte de los navegadores, es fundamental que cumpla con el estándar W3C. De esta manera, la aplicación debe ser capaz de pasar el test del validador de la W3C (\url{http://validator.w3.org}). Con esto, nos aseguramos de que cualquier usuario que utilice cualquier navegador que siga dicho estándar sea capaz de visualizar la aplicación de una manera correcta sin errores.
 	En cuanto a legislación, la principal ley que se debe tener en cuenta es la Ley Orgánica de Protección de Datos de Carácter Personal, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
+	Nivel A de Conformidad con las Directrices de Accesibilidad para el Contenido Web 1.0 (WCAG 1.0)
 	
 \subsection{ASI 1.4: Identificación de los usuarios participantes y finales}
 	Los usuarios participantes en el sistema que han sido identificados son los siguientes:
@@ -1213,6 +1215,7 @@
 	
 	\subsection{ASI 4.2: Descripción de la Interacción de Objetos}
 	Los diagramas de secuencia que nos informan de la interacción entre los diferentes objetos del sistema son los siguientes:
+
 	\begin{itemize}
 	\item \textbf{Relacionados con Login}
 		\begin{figure}[H]
@@ -1573,7 +1576,7 @@ La estructura de los flujos de datos es la siguiente:
 	\item \textbf{Gestor de Oficina Virtual - Pedidos:} Este flujo de datos se activa cuando el usuario desea realizar una consulta del histórico de pedidos o de los pedidos pendientes. Frecuente
 	\end{itemize}
 	
-\subsection{Especificación de Interfaces con otros Sistemas}
+\subsection{ASI 7.2: Especificación de Interfaces con otros Sistemas}
 
 Como el sistema se basa en una aplicación web, la única interfaz del mismo con el exterior será la que ofrezca el navegador, de la forma en la que se describe en la actividad \textit{ASI 8}, por lo que no es necesario especificar ninguna interfaz añadida para la comunicación con el exterior.
 
@@ -1645,7 +1648,7 @@ Las interfaces principales de las que disponemos en el portal son las siguientes
 	\end{center}
 	\end{figure}
 	
-	Para la oficina particular la estructura es la misma pero con las opciones propias de la oficina. Gracias a esto, el portal mantiene un aspecto homogéneo que no intimida al usuario ni lo desconcierta.
+	Para la oficina virtual la estructura es la misma pero con las opciones propias de la oficina. Gracias a esto, el portal mantiene un aspecto homogéneo que no intimida al usuario ni lo desconcierta.
 
 \subsection{ASI 8.5: Especificación de Formatos de Impresión}
 La interfaz de impresión será la misma para todos los documentos, con el logo de la empresa en la parte superior, junto con el título del documento y el número de página. Los documentos disponibles para la impresión son los siguientes:
