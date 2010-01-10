@@ -59,7 +59,7 @@
 		\end{center}
 	\end{figure}
 	
-	Los elementos o nodos de la figura se explican a continuación.
+	Los elementos o nodos de la figura se explican a continuación.\\
 	Por un lado el sistema tendrá una \textbf{base de datos} en la que se almacenará la siguiente información:
 	\begin{itemize}	
 		\item \textit{Tabla Usuarios}: se guardará datos de los clientes registrados, como por ejemplo su Nombre Personal, Apellidos, DNI, Nombre de Usuario, Contraseña, Dirección Particular, Teléfonos de contactos, etc. El campo de la contraseña no será una cadena simple de texto sino que se almacenará con una cierta codificación para la seguridad del usuario.
@@ -70,7 +70,7 @@
 		\item \textit{Tabla Asociaciones}: almacenamiento de asociaciones referentes a las asociaciones filatélicas. Luego se guardarán teléfonos de esas asociaciones, direcciones, etc. En la aplicación se mostrará un mapa para que el usuario registrado o no puede ver las asociaciones filatélicas más cercanas a su situación, aunque también podrá ver todas las demás.
 		\item \textit{Tabla Información}: en la que se guardarán los datos referentes al resto de la aplicación, es decir, la información de las paginas web estáticas y los demás datos que no se pueden agrupar en una tabla específica.
 	\end{itemize}
-	Ya en la implementación se decidirá que campos son los realmente básicos en cada una de las tablas.
+	Ya en la implementación se decidirá que campos son los realmente básicos en cada una de las tablas.\\
 	
 	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.\\
 
@@ -90,7 +90,7 @@
 	
 	Respecto a la seguridad, las comunicaciones una vez el usuario ha sido registrado y ha entrado correctamente en la aplicación, se usarán conexiones seguras con el fin de no tener problemas con otros usuarios o con usuarios cuyas acciones son mal intencionadas.\\
 	
-	En el caso de usuarios con discapacidades también tendrán la posibilidad de utilizar esta aplicación web debido a que se incluirán los métodos apropiados para el uso adecuado para estas personas.
+	En el caso de usuarios con discapacidades también tendrán la posibilidad de utilizar esta aplicación web debido a que se incluirán los métodos apropiados para que estas personas puedan utilizar la aplicación.
 	
 \subsection{DSI 1.2: Identificación de Requisitos de Diseño y Construcción}
 	Los requisitos relacionados con el diseño de la aplicación son:
@@ -125,8 +125,8 @@
 \subsection{DSI 1.5: Identificación de Subsistemas de Diseño}
 	En el sistema podemos encontrar cuatro grandes subsistemas de diseño, los cuales son los siguientes:
 	\begin{itemize}
-		\item \textbf{Gestor de correos:} Es el encargado de la gestión de usuarios, y realiza acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Por lo que interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
-		\item \textbf{Gestor de envíos:} Es el encargado de la realización, cancelación y seguimiento de los envíos realizados por los clientes. Por lo que interactuará con la base de datos de envíos y de usuarios del sistema.
+		\item \textbf{Gestor de Correos:} Es el encargado de la gestión de usuarios, y realiza acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Por lo que interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
+		\item \textbf{Gestor de Envíos:} Es el encargado de la realización, cancelación y seguimiento de los envíos realizados por los clientes. Por lo que interactuará con la base de datos de envíos y de usuarios del sistema.
 		\item \textbf{Gestor de Filatelia:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes al apartado filatélico. Por lo que interactuará con las bases de datos de productos, colecciones y pedidos.
 		\item \textbf{Gestor de Oficina Virtual:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes a la Oficina Virtual de correos. Por lo que interactuará con las bases de datos de usuarios y pedidos.
 	\end{itemize}
@@ -201,13 +201,13 @@
 \subsection{DSI 1.7: Especificación de Requisitos de Operación y Seguridad}
 	La aplicación cuenta con los siguiente mecanismos de seguridad:
 	\begin{itemize}
-		\item Los servidores de base de datos realizarán copias de seguridad (Backup) de forma periódica (este tiempo esta por decidir según la cantidad de información almacenada). Además para la concurrencia este servidor utilizará un mecanismo que no permitirá a más de un servidor acceder al mismo registro de una tabla.
-		\item El accesos al servidor de base de datos será sólo desde la red local, por lo tanto no estará conectada a Internet. Además sólo los servidores autorizados tendrán acceso a la información almacenada en éste. Para ésto se utilizara una nombre de usuario y una contraseña (cifrada) para entrar en servidor de BBDD. 
-		\item Los demás servidores tendrán un grupo de usuarios con sus correspondientes contraseñas (cifradas) que permitirán la entrada a estas computadoras. Éstas estarán conectadas a Internet pero no se permitirá la conexión remota a menos que alguno de los administradores de estos servidores lo permite en un momento determinado.
-		\item Los servidores que contendrán la lógica de negocio, a parte de disponer un usuario y clave para entrar en ellos, también se necesitará permisos de administrador para la modificación de aspectos relacionados con la aplicación.
-		\item Los datos de los usuarios registrados estarán protegidos debido a la Ley Orgánica de Protección de Datos de Carácter Personal.
+		\item Los servidores de base de datos realizarán \textit{copias de seguridad} (Backup) de forma periódica (este tiempo esta por decidir según la cantidad de información almacenada). Además para la concurrencia este servidor utilizará un mecanismo que no permitirá a más de un servidor acceder al mismo registro de una tabla.
+		\item El \textit{accesos al servidor de base de datos} será sólo desde la red local, por lo tanto no estará conectada a Internet. Además sólo los servidores autorizados tendrán acceso a la información almacenada en éste. Para ésto se utilizara una nombre de usuario y una contraseña (cifrada) para entrar en servidor de BBDD. 
+		\item Los demás servidores tendrán un \textit{grupo de usuarios} con sus correspondientes contraseñas (cifradas) que permitirán la entrada a estas computadoras. Éstas estarán conectadas a Internet pero no se permitirá la conexión remota a menos que alguno de los administradores de estos servidores lo permite en un momento determinado.
+		\item Los servidores que contendrán la \textit{lógica de negocio}, a parte de disponer un usuario y clave para entrar en ellos, también se necesitará permisos de administrador para la modificación de aspectos relacionados con la aplicación.
+		\item Los \textit{datos de los usuarios registrados} estarán protegidos debido a la Ley Orgánica de Protección de Datos de Carácter Personal.
 		\item En el caso de producirse una pérdida total de los datos se recuperarán estos a partir de última copia de seguridad hecha.
-		\item Durante la franja horaria de mayor número de usuarios se tendrá especial cuidado con las transacciones realizada por cada uno de ellos para evitar problemas en los datos y la inclusión de usuarios mal intencionados. Por lo que en este período de tiempo los servidores estarán funcionando a pleno rendimiento.
+		\item Durante la franja horaria de mayor número de usuarios se tendrá especial cuidado con las transacciones realizadas por cada uno de ellos para evitar problemas en los datos y la inclusión de usuarios mal intencionados. Por lo que en este período de tiempo los servidores estarán funcionando a pleno rendimiento para el cumplimiento correcto de seguridad.
 	\end{itemize}
 
 
@@ -263,7 +263,7 @@
 					\item Clase \textit{IUEnvíos}: interfaz de usuario para mostrar todo lo referente a la interfaz de envíos de documentos y paquetes del portal.
 					\item Clase \textit{IUOficinaVirtual}: interfaz de usuario para mostrar todo lo referente a la oficina virtual de correos.
 					\item Clase \textit{IUFilatelia}: interfaz de usuario encargada del portal filatélico.
-					\item Clase \textit{IUUsuario}: interfaz de usuario que nos muestra el contenido referente a la validación (login) y el registro de usuarios.
+					\item Clase \textit{IUCorreos}: interfaz de usuario que nos muestra el contenido referente a la validación (login) y el registro de usuarios.
 				\end{itemize}
 
 		\item Clases referentes a los \textbf{Envíos}:
@@ -275,6 +275,9 @@
 				
 		\item Clase \textit{Usuario}: clase en la que se guardan los datos referentes a los usuarios.
 		\item Clase \textit{Información}: clase donde se almacena el tipo y contenido de cierta información de la aplicación.
+		\item Clase \textit{Colecciones}: clase que guardará los datos correspondientes a las colecciones filatélicas.
+		\item Clase \textit{Productos}: clase con la que se hace referencias a los productos del Portal de Correos y los del Portal Filatélico.
+		\item Clase \textit{Pedidos}: clase que referencia a todos los pedidos que los usuarios registrados realizan.
 		\item Clase \textit{Asociación}: clase encargada de almacenar los datos de cada asociación filatélica disponible.
 		\item Clase \textit{Sucursal}: clase en la cual se almacena la información de una sucursal concreta.
 		\item Clase \textit{CentrosCorreos}: clase encargada de obtener información general de la base de datos, como asociaciones filatélicas o sucursales.
@@ -481,8 +484,8 @@
 		\item Interfaz para el perfil de Cliente Particular:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.5]{particulares_principal.pdf}
-					\caption{Captura de la interfaz principal de particulares}
+					\includegraphics[scale=0.4]{particulares_principal.pdf}
+					\caption{Captura de la interfaz principal de particulares.}
 				\end{center}
 			\end{figure}
 			Como podemos ver en la captura anterior, la estructura de la interfaz para particulares sigue el esquema descrito. El menú a la izquierda permite al usuario acceder a todas las opciones disponibles con un sólo click, y se encuentra ordenado por la frecuencia de uso de cada una de las opciones. Cada evento vendrá representado por un click con el ratón en el menú elegido, que llevará a la modificación del contenido de la interfaz. Este contenido dependerá de la opción elegida, por lo que no se puede tratar de manera estática.
@@ -490,8 +493,8 @@
 		\item Interfaz para el perfil de Cliente Empresa:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.5]{empresas_principal.pdf}
-					\caption{Captura de la interfaz principal de empresas}
+					\includegraphics[scale=0.4]{empresas_principal.pdf}
+					\caption{Captura de la interfaz principal de empresas.}
 				\end{center}
 			\end{figure}	
 			En este caso, las opciones disponibles son las de empresas, pero la estructura global de la pantalla es la misma. Los eventos se gestionan de la misma forma, al recibir clicks de ratón.		
@@ -499,8 +502,8 @@
 		\item Intrefaz para la Oficina Virtual, en la que el usuario deberá estar registrado para acceder a ella:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.5]{oficina_virtual_principal.pdf}
-					\caption{Captura de la interfaz principal de oficina virtual}
+					\includegraphics[scale=0.4]{oficina_virtual_principal.pdf}
+					\caption{Captura de la interfaz principal de oficina virtual.}
 				\end{center}
 			\end{figure}	
 			Para la oficina virtual la estructura es la misma pero con las opciones propias de la oficina. Gracias a esto, el portal mantiene un aspecto homogéneo que no intimida al usuario ni lo desconcierta.
@@ -519,18 +522,18 @@
 	\begin{itemize}
 		\item Casos de Uso \textbf{Login, Logout, Registro}:
 					\begin{itemize}
-						\item \textit{Clases}:
+						\item \textit{Clases} que intervienen en los casos de uso:
 							\begin{itemize}
-								\item Gestor de Correos.
-								\item IUUsuario.
+								\item GestorCorreos.
+								\item IUCorreos.
 								\item Usuario.
 							\end{itemize}
-						\item \textit{Actores}:
+						\item \textit{Actores} que intervienen en el caso de uso:
 							\begin{itemize}
 								\item Usuario Registrado.
 								\item Usuario No Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item Validación Correcta: Si el usuario introduce los datos correctos el sistema le devolver ``OK''.
 								\item Validación Incorrecta: Si el usuario introduce los datos que no se encuentran en la base de datos el sistema le devolverá ``ValidationError''.
@@ -543,16 +546,16 @@
 					
 		\item Caso de Uso \textbf{Oficina Virtual}:
 					\begin{itemize}
-						\item \textit{Clase}:
+						\item \textit{Clases} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Gestor de la Oficina Virtual.
+								\item GestorOficinaVirtual.
 								\item IUOficinaVirtual.
 							\end{itemize}
-						\item \textit{Actor}:
+						\item \textit{Actor} que interviene en el caso de uso:
 							\begin{itemize}
 								\item Usuario Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item Tareas Pendientes: el usuario solicita las tareas que tiene pendientes y el gestor de la oficina virtual realiza una consulta a la base de datos, la cual le devuelve un mensaje con la información de éstas tareas que tiene sin realizar.
 								\item Seguimiento Envíos: el usuario solicita el seguimiento de un envío para lo que inserta un identificar, con el cual el gestor de la oficina virtual busca en la base de datos y le devuelve un mensaje con la información del envío que pedía.
@@ -563,18 +566,18 @@
 					
 		\item Caso de Uso \textbf{Envíos}:
 					\begin{itemize}
-						\item \textit{Clases}:
+						\item \textit{Clases} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Gestor de Envíos.
+								\item GestorEnvíos.
 								\item IUEnvíos.
-								\item Envíos
+								\item Envíos.
 								\item EnvíoDocumento o EnvíoPaquete: dependiendo de si lo que quier enviar un usuario es un documento (carta, telegrama o fas) o si quiere enviar un paquete con una cierta urgencia.
 							\end{itemize}
-						\item \textit{Actor}:
+						\item \textit{Actor} que interviene en el caso de uso:
 							\begin{itemize}
 								\item Usuario Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item Envío Correcto: el usuario rellena los datos de forma correcta por lo que el sistema le devuelve ``OK''.
 								\item Envío Incorrecto: el usuario introduce algún error en el formulario por lo que el sistema le devuelve ``ErrorDatos''.
@@ -583,21 +586,24 @@
 		
 		\item Caso de Uso \textbf{Filatelia}:
 					\begin{itemize}
-						\item \textit{Clases}:
+						\item \textit{Clases} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Gestor de Filatelia.
+								\item GestorFilatelia.
 								\item IUFilatelia.
 								\item CentrosCorreos.
 								\item Sucursal.
 								\item Asociación.
+								\item Colecciones.
+								\item Pedidos.
+								\item Productos.
 								\item Información.
 							\end{itemize}
-						\item \textit{Actor}:
+						\item \textit{Actores} que intervienen en el caso de uso:
 							\begin{itemize}
 								\item Usuario Registrado.
 								\item Usuario No Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item El usuario no registrado sólo podrá realizar un registro en el sistema para poder acceder al Portal Filatélico. En el caso de registro correcto el sistema le devuelve ``OK'' sino le devolverá ``ValidationError''.
 								\item Apadrinamiento: el usuario registrado abonará una cantidad de dinero y el gestor de filatelia registrará al usuario en los usuarios Filatelia de la base de datos, la cual le devolverá un mensaje de ``OK''.
@@ -611,19 +617,19 @@
 					
 		\item Caso de Uso \textbf{Gestión}:
 					\begin{itemize}
-						\item \textit{Clases}:
+						\item \textit{Clases} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Gestor de Oficina Virtual.
-								\item Gestor de Correos.
+								\item GestorOficinaVirtual.
+								\item GestorCorreos.
 								\item IUPrincipal.
 								\item Información.
 							\end{itemize}
-						\item \textit{Actores}:
+						\item \textit{Actores} que intervienen en el caso de uso:
 							\begin{itemize}
 								\item Usuario Registrado.
 								\item Usuario No Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item El usuario no registrado solo puede solicitar información y consulta de dominios a la aplicación. La información a la cual podrá acceder es Museos, Recibos, Recarga de Móviles, Locutorios y Tiendas Telecor. El sistema (gestor de correos) dependiendo de la consulta que quiera realizar el usuario así buscará en la base de datos dicha información y se la enviará al usuario para mostrársela por pantalla.
 								\item Cambio de Domicilio: el usuario solicita cambiar su domicilio, por lo que el gestor de la oficina virtual le solicita los nuevos datos y actualiza la tabla de usuarios de la base de datos y el sistema le devuelve un mensaje de ``OK''.
@@ -637,17 +643,17 @@
 					
 		\item Caso de Uso \textbf{Información}:
 					\begin{itemize}
-						\item \textit{Clases}:
+						\item \textit{Clases} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Gestor de Correos.
-								\item IUPrincipal
-								\item Información
+								\item GestorCorreos.
+								\item IUPrincipal.
+								\item Información.
 							\end{itemize}
-						\item \textit{Actores}:
+						\item \textit{Actores} que intervienen en el caso de uso:
 							\begin{itemize}
-								\item Usuario Registrado
+								\item Usuario Registrado.
 							\end{itemize}
-						\item \textit{Mensajes}:
+						\item \textit{Mensajes} entre el usuario y el sistema:
 							\begin{itemize}
 								\item El usuario solicita información el gestor de correos la busca en la base de datos y compone un mensaje de información para mostrársela al usuario por pantalla.
 							\end{itemize}
