@@ -1190,7 +1190,7 @@
 		\item \textit{IUEnvíos:} Es la encargada de mostrar las pantallas necesarias para que el usuario realice envíos de documentos y paquetes.
 		\item \textit{IUFilatelia:} Es la encargada de mostrar las pantallas necesarias para que el usuario realice todas las gestiones relacionadas con el portal filatélico
 		\item \textit{IUPrincipal:} Es la encargada de mostrar la pantalla inicial del portal así como de las diferentes pantallas necesarias para la obtención de información
-		\item \textit{IULogin:} Es la encargada de mostrar las pantallas necesarias para el registro y validación de usuarios
+		\item \textit{IUCorreos:} Es la encargada de mostrar las pantallas necesarias para el registro y validación de usuarios
 		\item \textit{IUOficinaVirtual:} Es la encargada de mostrar las pantallas necesarias para la realización de gestiones en la oficina virtual del portal.
 		\end{itemize}
 	\item \textbf{Clases de Control:} 
@@ -1369,9 +1369,9 @@
 		\item \textit{fechaEnvio:} La fecha en la que se realizó el envío.
 		\item \textit{precio:} El coste del envío.
 		\end{itemize}
-	\item \textbf{EnvioCarta:} Hereda de la clase \textit{Envio}. Representa un envío de un documento. Sus atributos son los siguientes:
+	\item \textbf{EnvioDocumento:} Hereda de la clase \textit{Envio}. Representa un envío de un documento. Sus atributos son los siguientes:
 		\begin{itemize}
-		\item \textit{tipoCarta:} Identifica el tipo de documento (carta, fax, telegrama)
+		\item \textit{tipoDocumento:} Identifica el tipo de documento (carta, fax, telegrama)
 		\end{itemize}
 	\item \textbf{EnvioPaquete:} Hereda de la clase \textit{Envio}. Representa un envío de un paquete. Sus atributos son los siguientes:
 		\begin{itemize}
@@ -1383,6 +1383,13 @@
 	\item \textbf{IUFilatelia:} Es la encargada de mostrar por pantalla todo lo referente al portal filatélico.
 	\item \textbf{IUUsuario:} Es la encargada de mostrar por pantalla todo lo referente a la validación y registro de usuarios.
 	\item \textbf{IUOficinaVirtual:} Es la encargada de mostrar por pantalla todo lo referente a la oficina virtual.
+	\item \textbf{Productos:} Es la encargada de almacenar información acerca de los productos filatélicos. Sus atributos son:
+		\begin{itemize}
+		\item \textbf{nombre:} Es el nombre del producto
+		\item \textbf{descripcion:} Es la descripción del producto
+		\end{itemize}
+	\item \textbf{Pedidos:} Es la encargada de almacenar todos los pedidos realizados. Como atributo tiene un identificador que lo diferencia del resto
+	\item \textbf{Colecciones:} Es la encargada de almacenar la información acerca de las colecciones filatélicas. Su atributo es la descripción de la colección.
 	\item \textbf{Usuario:} Es la encargada de almacenar toda la información referente a un usuario. Sus atributos son:
 		\begin{itemize}
 		\item \textit{idUsuario:} Identifica unívocamente a cada usuario en el sistema.
@@ -1419,8 +1426,11 @@
 		\end{itemize}
 	\item \textbf{GestorUsuarios:} Se encarga de gestionar todas las operaciones relacionadas con los usuarios del sistema. Se compone de los siguientes métodos:
 		\begin{itemize}
-		\item \textit{login:} Valida a un usuario en el sistema si el nombre de usuario y contraseña recibidos son correctos. En caso contrario devuelve un código de error
+		\item \textit{validar:} Valida a un usuario en el sistema si el nombre de usuario y contraseña recibidos son correctos. En caso contrario devuelve un código de error
 		\item \textit{logout:} Si el nombre de usuario recibido ha sido validado, lo saca del sistema, y devuelve error en caso contrario.
+		\item \textit{registrar:} Registra a un nuevo usuario en el sistema si no existe ya.
+		\item \textit{obtenerInfo:} Obtiene información concreta de un usuario
+		\item \textit{cambioDomicilio:} Cambia el domicilio actual del usuario
 		\end{itemize}
 	\item \textbf{GestorEnvios:} Se encarga de gestionar todas las operaciones relacionadas con los envíos de documentos y paquetes. Se compone de los siguientes métodos:
 		\begin{itemize}
