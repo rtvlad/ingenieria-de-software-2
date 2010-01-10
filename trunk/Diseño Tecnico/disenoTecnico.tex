@@ -156,6 +156,7 @@
 					\item Sistema Operativo: Windows NT/200 Advanced Server.
 					\item Base de Datos: Oracle (Lenguaje de consulta estructurado SQL).
 					\item Software para la realización de las copias de seguridad.
+					\item J2EE 1.4 para el correcto funcionamiento de las aplicaciones.
 					\item En caso de que sea necesario: software para la comunicación con los demás servidores. 
 				\end{itemize}
 		\item No deberá permitir la conexión de otros servidores. Y tampoco debería permitir que los servidores, apropiados para la conexión, puedan situarse en el mismo registro de una misma tabla con el fin de evitar inconsistencia en la información.
@@ -175,7 +176,8 @@
 				\begin{itemize}
 					\item Sistema Operativo: Windows NT/200 Advanced Server.
 					\item Navegador: para la comprobación del correcto funcionamiento del sistema.
-					\item En caso de que sea necesario: software para la comunicación con el servidor de base de datos. 
+					\item En caso de que sea necesario: software para la comunicación con el servidor de base de datos.
+					\item J2EE 1.4 para el correcto funcionamiento de las aplicaciones.
 					\item Entorno de desarrollo: puede ser un procesador de textos normal a través del cual realizar todo lo referente a la implementación.
 				\end{itemize}
 		\item Los usuarios accederán a éstos a través de Internet (TCP/IP) por lo que la aplicación deberá alojarse en un dominio para su posible utilización.
@@ -786,8 +788,32 @@
 \section{DSI 8: Generación de Especificaciones de Construcción}
 
 \subsection{DSI 8.1: Especificación del Entorno de Construcción}
+	Las computadores encargadas del desarrollo de este sistema deberán tener:
+	\begin{itemize}
+		\item Requisitos \textbf{Hardware}:
+			\begin{itemize}
+				\item Sistema de Almacenamiento: disco duro con un tamaño aproximado de quinientos gigabytes (200 GB).
+				\item Módulos de memoria RAM con un tamaño aproximado de cuatro gigabytes (4 GB).
+				\item Tarjeta de Red: RJ45 para el acceso a Internet en caso de que el desarrollador necesite realizar alguna consulta.
+				\item Teclado, Ratón, Monitor y otros dispositivos que son necesarios para el correcto funcionamiento de la máquina.
+			\end{itemize}
+		\item Requisitos \textbf{Software}:
+			\begin{itemize}
+				\item Sistema Operativo: Windows.
+				\item Navegador Web: para ir observando el desarrollo de la aplicación.
+				\item Base de datos local: Oracle, para realizar pruebas de forma local.
+				\item J2EE 1.4: para el desarrollo de aplicaciones en las que se utilice java.
+				\item Procesador de Textos sencillo para el código de las páginas web, por ejemplo: Notepad++. Aunque puede ser utilizado el entorno de desarrollo Eclipse, Visual Basic, DevC++ u otros (se especificará más adelante cual utilizar).
+				\item Se utilizarán los compiladores correspondientes para la compilación de código desarrollado en Visual Basic, C++ o .Net 
+			\end{itemize}
+		\item Cada desarrollador tendrá un ordenador y un nombre de usuario y contraseña para acceder a éste.
+		\item Los permisos de éstos usuarios (desarrolladores) serán de administrador para evitar tener problemas de éste tipo.
+	\end{itemize}
+	Todo código deberá ir acompañado de su correspondiente descripción de lo que hace dicha parte. Es decir, cada método tendrá en su parte superior un pequeño comentario mencionando el objetivo y los parámetros que se le pasan al método y lo que devuelve dicho método. Cómo opción del desarrollador podrá incluir dentro de cada método pequeños comentarios de lo que se realiza en cada una de las partes, aunque no es obligatorio pero si muy recomendable.	
+	
 
 \subsection{DSI 8.2: Definición de Componentes y Subsistemas de Construcción}
+	
 
 \subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
 
