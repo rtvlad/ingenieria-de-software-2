@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  10 JAN 2010 12:07
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  10 JAN 2010 22:10
 entering extended mode
 **analisisfuncional.tex
 
@@ -764,19 +764,19 @@ Overfull \hbox (9.66083pt too wide) in paragraph at lines 1201--1202
  to-das las op-era-ciones de reg-istro y val-i-dacion disponibles. 
  []
 
-<seclogincorrecto.jpg, id=680, 662.475pt x 516.93124pt>
+<seclogincorrecto.jpg, id=680, 665.48625pt x 516.93124pt>
 File: seclogincorrecto.jpg Graphic file (type jpg)
 
 <use seclogincorrecto.jpg>
-<secloginincorrecto.jpg, id=681, 662.475pt x 516.93124pt>
+<secloginincorrecto.jpg, id=681, 665.48625pt x 516.93124pt>
 File: secloginincorrecto.jpg Graphic file (type jpg)
 
 <use secloginincorrecto.jpg> [36]
-<seclogoutcorrecto.jpg, id=686, 662.475pt x 516.93124pt>
+<seclogoutcorrecto.jpg, id=686, 665.48625pt x 516.93124pt>
 File: seclogoutcorrecto.jpg Graphic file (type jpg)
 
 <use seclogoutcorrecto.jpg>
-<seclogoutincorrecto.jpg, id=687, 662.475pt x 516.93124pt>
+<seclogoutincorrecto.jpg, id=687, 665.48625pt x 516.93124pt>
 File: seclogoutincorrecto.jpg Graphic file (type jpg)
 
 <use seclogoutincorrecto.jpg> [37pdfTeX warning (ext4): destination with the sa
@@ -794,11 +794,11 @@ l.1244 		\end{figure}
                       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
 heros/Analisis Funcional/seclogincorrecto.jpg> <C:/Users/koveras/Documents/Univ
 ersidad/ISII/Práctica/Ficheros/Analisis Funcional/secloginincorrecto.jpg>]
-<secregistrocorrecto.jpg, id=693, 662.475pt x 516.93124pt>
+<secregistrocorrecto.jpg, id=693, 665.48625pt x 516.93124pt>
 File: secregistrocorrecto.jpg Graphic file (type jpg)
 
 <use secregistrocorrecto.jpg>
-<secregistroincorrecto.jpg, id=694, 662.475pt x 516.93124pt>
+<secregistroincorrecto.jpg, id=694, 665.48625pt x 516.93124pt>
 File: secregistroincorrecto.jpg Graphic file (type jpg)
 
 <use secregistroincorrecto.jpg> [38pdfTeX warning (ext4): destination with the 
@@ -1002,7 +1002,7 @@ duplicate ignored
 l.1358 	\newpage
                  <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros
 /Analisis Funcional/secenvioincorrecto.jpg>] [48] [49]
-<clasesdiag.jpg, id=760, 1431.3475pt x 1031.855pt>
+<clasesdiag.jpg, id=760, 1431.3475pt x 1047.915pt>
 File: clasesdiag.jpg Graphic file (type jpg)
  <use clasesdiag.jpg>
 [50pdfTeX warning (ext4): destination with the same identifier (name{figure.36}
@@ -1010,15 +1010,14 @@ File: clasesdiag.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1467 		\item \textit
-                      {Gestor - Envios:} Las clases del paquete \textit{Gest...
- <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
-nal/clasesdiag.jpg>] [51] [52]
+l.1470 	\item \textbf
+                     {Agregación:} <C:/Users/koveras/Documents/Universidad/ISII
+/Práctica/Ficheros/Analisis Funcional/clasesdiag.jpg>] [51] [52]
 <modelo_ent_rel.jpg, id=773, 2374.8725pt x 1385.175pt>
 File: modelo_ent_rel.jpg Graphic file (type jpg)
 
 <use modelo_ent_rel.jpg>
-Overfull \hbox (0.72394pt too wide) in paragraph at lines 1522--1523
+Overfull \hbox (0.72394pt too wide) in paragraph at lines 1532--1533
  [] 
  []
 
@@ -1029,7 +1028,7 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1526 	\end{landscape}
+l.1536 	\end{landscape}
                         <C:/Users/koveras/Documents/Universidad/ISII/Práctica/F
 icheros/Analisis Funcional/modelo_ent_rel.jpg>]
 <modelo_relacional.pdf, id=778, 1084.05pt x 722.7pt>
@@ -1042,7 +1041,7 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1550 \newpage
+l.1560 \newpage
                 <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/
 Analisis Funcional/modelo_relacional.pdf>]
 <dfd_general.jpg, id=795, 700.11563pt x 343.2825pt>
@@ -1053,7 +1052,7 @@ File: dfd_general.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1576 	\item \textbf
+l.1586 	\item \textbf
                      {Gestor de Oficina Virtual - Pedidos:} Este flujo de da...
  <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
 nal/dfd_general.jpg>] [56] [57]
@@ -1077,7 +1076,7 @@ e identifier (name{figure.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1640 
+l.1650 
         <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
  Funcional/particulares_principal.pdf>]
 
@@ -1092,14 +1091,14 @@ the same identifier (name{figure.41}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1650 
+l.1660 
         <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
  Funcional/empresas_principal.pdf>] [61pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.42}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1660 	\end{itemize}
+l.1670 	\end{itemize}
                       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
 heros/Analisis Funcional/oficina_virtual_principal.pdf>] [62] [63] [64]
 ("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
@@ -1121,7 +1120,7 @@ les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
  2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fon
 ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on analisisfuncional.pdf (64 pages, 2085270 bytes).
+Output written on analisisfuncional.pdf (64 pages, 2105420 bytes).
 PDF statistics:
  1035 PDF objects out of 1200 (max. 8388607)
  396 named destinations out of 1000 (max. 500000)
