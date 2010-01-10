@@ -35,3 +35,6 @@
 \contentsline {subsection}{\numberline {8.4}ASI 8.4: Especificaci\'on del Comportamiento Din\'amico de la Interfaz}{58}{subsection.8.4}
 \contentsline {subsection}{\numberline {8.5}ASI 8.5: Especificaci\'on de Formatos de Impresi\'on}{61}{subsection.8.5}
 \contentsline {section}{\numberline {9}ASI 10: Especificaci\'on de un Plan de Pruebas}{63}{section.9}
+\contentsline {subsection}{\numberline {9.1}ASI 10.1: Definici\'on del Alcance de las Pruebas}{63}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}ASI 10.2: Definici\'on de Requisitos del entorno de Pruebas}{63}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}ASI 10.3: Definici\'on de las Pruebas de Aceptaci\'on del Sistema}{63}{subsection.9.3}
