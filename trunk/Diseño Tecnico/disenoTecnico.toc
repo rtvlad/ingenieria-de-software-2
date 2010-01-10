@@ -7,41 +7,41 @@
 \contentsline {subsection}{\numberline {1.5}DSI 1.5: Identificaci\'on de Subsistemas de Dise\~no}{7}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}DSI 1.6: Especificaci\'on del Entorno Tecnol\'ogico}{8}{subsection.1.6}
 \contentsline {subsection}{\numberline {1.7}DSI 1.7: Especificaci\'on de Requisitos de Operaci\'on y Seguridad}{9}{subsection.1.7}
-\contentsline {section}{\numberline {2}DSI 2: Dise\~no de la Arquitectura de Soporte}{10}{section.2}
-\contentsline {subsection}{\numberline {2.1}DSI 2.1: Dise\~no de Subsistemas de Soporte}{10}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}DSI 2.2: Identificaci\'on de Mecanismos Gen\'ericos de Dise\~no}{10}{subsection.2.2}
-\contentsline {section}{\numberline {3}DSI 3: Dise\~no de Casos de Uso Reales}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}DSI 3.1: Identificaci\'on de Clases Asociadas a un Caso de Uso}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}DSI 3.2: Dise\~no de la Realizaci\'on de los Casos de Uso}{12}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}DSI 3.3: Revisi\'on de la Interfaz de Usuario}{22}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}DSI 3.4: Revisi\'on de Subsistemas de Dise\~no e Interfaces}{25}{subsection.3.4}
-\contentsline {section}{\numberline {4}DSI 4: Dise\~no de Clases}{29}{section.4}
-\contentsline {subsection}{\numberline {4.1}DSI 4.1: Identificaci\'on de Clases Adicionales}{29}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}DSI 4.2: Dise\~no de Asociaciones y Agregaciones}{29}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}DSI 4.3: Identificaci\'on de Atributos de las Clases}{29}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}DSI 4.4: Identificaci\'on de Operaciones de las Clases}{29}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}DSI 4.5: Dise\~no de la Jerarqu\IeC {\'\i }a}{29}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}DSI 4.6: Descripci\'on de M\'etodos de las Operaciones}{29}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}DSI 4.7: Especificaci\'on de Necesidades de Migraci\'on y Carga Inicial de Datos}{29}{subsection.4.7}
-\contentsline {section}{\numberline {5}DSI 6: Dise\~no F\IeC {\'\i }sico de Datos}{30}{section.5}
-\contentsline {subsection}{\numberline {5.1}DSI 6.1: Dise\~no del Modelo F\IeC {\'\i }sico de Datos}{30}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}DSI 6.2: Especificaci\'on de los Caminos de Acceso a los Datos}{31}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}DSI 6.3: Optimizaci\'on del Modelo F\IeC {\'\i }sico de Datos}{32}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}DSI 6.4: Especificaci\'on de la Distribuci\'on de Datos}{32}{subsection.5.4}
-\contentsline {section}{\numberline {6}DSI 8: Generaci\'on de Especificaciones de Construcci\'on}{33}{section.6}
-\contentsline {subsection}{\numberline {6.1}DSI 8.1: Especificaci\'on del Entorno de Construcci\'on}{33}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}DSI 8.2: Definici\'on de Componentes y Subsistemas de Construcci\'on}{33}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}DSI 8.3: Elaboraci\'on de Especificaciones de Construcci\'on}{33}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}DSI 8.4: Elaboraci\'on de Especificaciones del Modelo F\IeC {\'\i }sico de Datos}{33}{subsection.6.4}
-\contentsline {section}{\numberline {7}DSI 9: Dise\~no de la Migraci\'on y Carga Inicial de Datos}{34}{section.7}
-\contentsline {subsection}{\numberline {7.1}DSI 9.1: Especificaci\'on del Entorno de Migraci\'on}{34}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}DSI 9.2: Dise\~no de Procedimientos de Migraci\'on y Carga Inicial}{34}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}DSI 9.3: Dise\~no Detallado de Componentes de Migraci\'on y Carga Inicial}{34}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}DSI 9.4: Revisi\'on de la Planificaci\'on de la Migraci\'on}{34}{subsection.7.4}
-\contentsline {section}{\numberline {8}DSI 10: Especificaci\'on T\'ecnica del Plan de Pruebas}{35}{section.8}
-\contentsline {subsection}{\numberline {8.1}DSI 10.1: Especificaci\'on del Entorno de Pruebas}{35}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}DSI 10.2: Especificaci\'on T\'ecnica de Niveles de Prueba}{35}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}DSI 10.3: Revisi\'on de la Planificaci\'on de Pruebas}{35}{subsection.8.3}
-\contentsline {section}{\numberline {9}DSI 11: Establecimiento de Requisitos de Implantaci\'on}{36}{section.9}
-\contentsline {subsection}{\numberline {9.1}DSI 11.1: Especificaci\'on de Requisitos de Documentaci\'on de Usuario}{36}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}DSI 11.2: Especificaci\'on de Requisitos de Implantaci\'on}{36}{subsection.9.2}
+\contentsline {section}{\numberline {2}DSI 2: Dise\~no de la Arquitectura de Soporte}{11}{section.2}
+\contentsline {subsection}{\numberline {2.1}DSI 2.1: Dise\~no de Subsistemas de Soporte}{11}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}DSI 2.2: Identificaci\'on de Mecanismos Gen\'ericos de Dise\~no}{11}{subsection.2.2}
+\contentsline {section}{\numberline {3}DSI 3: Dise\~no de Casos de Uso Reales}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}DSI 3.1: Identificaci\'on de Clases Asociadas a un Caso de Uso}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}DSI 3.2: Dise\~no de la Realizaci\'on de los Casos de Uso}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}DSI 3.3: Revisi\'on de la Interfaz de Usuario}{24}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}DSI 3.4: Revisi\'on de Subsistemas de Dise\~no e Interfaces}{26}{subsection.3.4}
+\contentsline {section}{\numberline {4}DSI 4: Dise\~no de Clases}{30}{section.4}
+\contentsline {subsection}{\numberline {4.1}DSI 4.1: Identificaci\'on de Clases Adicionales}{30}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}DSI 4.2: Dise\~no de Asociaciones y Agregaciones}{30}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}DSI 4.3: Identificaci\'on de Atributos de las Clases}{30}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}DSI 4.4: Identificaci\'on de Operaciones de las Clases}{30}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}DSI 4.5: Dise\~no de la Jerarqu\IeC {\'\i }a}{30}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}DSI 4.6: Descripci\'on de M\'etodos de las Operaciones}{30}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}DSI 4.7: Especificaci\'on de Necesidades de Migraci\'on y Carga Inicial de Datos}{30}{subsection.4.7}
+\contentsline {section}{\numberline {5}DSI 6: Dise\~no F\IeC {\'\i }sico de Datos}{31}{section.5}
+\contentsline {subsection}{\numberline {5.1}DSI 6.1: Dise\~no del Modelo F\IeC {\'\i }sico de Datos}{31}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}DSI 6.2: Especificaci\'on de los Caminos de Acceso a los Datos}{32}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}DSI 6.3: Optimizaci\'on del Modelo F\IeC {\'\i }sico de Datos}{33}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}DSI 6.4: Especificaci\'on de la Distribuci\'on de Datos}{33}{subsection.5.4}
+\contentsline {section}{\numberline {6}DSI 8: Generaci\'on de Especificaciones de Construcci\'on}{34}{section.6}
+\contentsline {subsection}{\numberline {6.1}DSI 8.1: Especificaci\'on del Entorno de Construcci\'on}{34}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}DSI 8.2: Definici\'on de Componentes y Subsistemas de Construcci\'on}{34}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}DSI 8.3: Elaboraci\'on de Especificaciones de Construcci\'on}{34}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}DSI 8.4: Elaboraci\'on de Especificaciones del Modelo F\IeC {\'\i }sico de Datos}{34}{subsection.6.4}
+\contentsline {section}{\numberline {7}DSI 9: Dise\~no de la Migraci\'on y Carga Inicial de Datos}{35}{section.7}
+\contentsline {subsection}{\numberline {7.1}DSI 9.1: Especificaci\'on del Entorno de Migraci\'on}{35}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}DSI 9.2: Dise\~no de Procedimientos de Migraci\'on y Carga Inicial}{35}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}DSI 9.3: Dise\~no Detallado de Componentes de Migraci\'on y Carga Inicial}{35}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}DSI 9.4: Revisi\'on de la Planificaci\'on de la Migraci\'on}{35}{subsection.7.4}
+\contentsline {section}{\numberline {8}DSI 10: Especificaci\'on T\'ecnica del Plan de Pruebas}{36}{section.8}
+\contentsline {subsection}{\numberline {8.1}DSI 10.1: Especificaci\'on del Entorno de Pruebas}{36}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}DSI 10.2: Especificaci\'on T\'ecnica de Niveles de Prueba}{36}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}DSI 10.3: Revisi\'on de la Planificaci\'on de Pruebas}{36}{subsection.8.3}
+\contentsline {section}{\numberline {9}DSI 11: Establecimiento de Requisitos de Implantaci\'on}{37}{section.9}
+\contentsline {subsection}{\numberline {9.1}DSI 11.1: Especificaci\'on de Requisitos de Documentaci\'on de Usuario}{37}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}DSI 11.2: Especificaci\'on de Requisitos de Implantaci\'on}{37}{subsection.9.2}
