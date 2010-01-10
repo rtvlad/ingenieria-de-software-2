@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  10 JAN 2010 22:10
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  10 JAN 2010 22:15
 entering extended mode
 **analisisfuncional.tex
 
@@ -759,11 +759,6 @@ l.1191 		\item \textit
  <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
 nal/analisisinfo.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
 heros/Analisis Funcional/analisisofivirtual.jpg>]
-Overfull \hbox (9.66083pt too wide) in paragraph at lines 1201--1202
-[]\OT1/cmr/m/it/10 GestorLogin: \OT1/cmr/m/n/10 Es el en-car-ga-do de re-alizar
- to-das las op-era-ciones de reg-istro y val-i-dacion disponibles. 
- []
-
 <seclogincorrecto.jpg, id=680, 665.48625pt x 516.93124pt>
 File: seclogincorrecto.jpg Graphic file (type jpg)
 
@@ -1120,7 +1115,7 @@ les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
  2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fon
 ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on analisisfuncional.pdf (64 pages, 2105420 bytes).
+Output written on analisisfuncional.pdf (64 pages, 2105412 bytes).
 PDF statistics:
  1035 PDF objects out of 1200 (max. 8388607)
  396 named destinations out of 1000 (max. 500000)
