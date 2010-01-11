@@ -667,21 +667,169 @@
 \section{DSI 4: Diseño de Clases}
 
 \subsection{DSI 4.1: Identificación de Clases Adicionales}
-	FALTA UNA IMAGEN CON EL DIAGRAMA DE CLASES.
-
 	Las clases de control, de identidad y de interfaz son las siguientes:
 	\begin{itemize}
 		\item \textbf{Clases de Control}: GestorCorreos, GestorEnvios, GestorFilatelia y GestorOficinaVirtual.
-		\item \textbf{Clases de Entidad}: Envío (clase abstracta), EnvíoDocumento, EnvíoPaquete, Usuario, Información, Asociación, Sucursal y CentrosCorreos.
-		\item \textbf{Clases de Interfaz}: IUPrincipal, IUEnvíos, IUOficinaVirtual, IUFilatelia e IUUsuario.
+		\item \textbf{Clases de Entidad}: Envío (clase abstracta), EnvíoDocumento, EnvíoPaquete, Usuario, Información, Asociación, Sucursal, CentrosCorreos, Colecciones, Productos y Pedidos.
+		\item \textbf{Clases de Interfaz}: IUPrincipal, IUEnvíos, IUOficinaVirtual, IUFilatelia e IUCorreos.
 	\end{itemize}
+	
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.3]{clasesdiag.jpg}
+			\caption{Diagrama de clases del sistema.}
+		\end{center}
+	\end{figure}
 
 \subsection{DSI 4.2: Diseño de Asociaciones y Agregaciones}
+	Mediante el seguimiento del diagrama de clases anterior podemos identificar las siguientes relaciones:
+	\begin{itemize}
+		\item \textbf{Agregación}:
+			\begin{itemize}
+				\item \textit{Asociación, Sucursal y CentrosCorreos}: la relación que existe entre estas clases es de agregación ya que la clase de CentrosCorreos está formada por dos listas diferentes de asociaciones y sucursales. No es una relación de composición debido a que la clase CentrosCorreos sigue existiendo con funciones propias en caso de que no existieran asociaciones ni sucursales.
+				\item \textit{Productos y Pedidos}: la relación que establecen estas clases es de agregación debido a que la clase Pedidos está formada por un identificador y por una lista de productos que se solicitaron cuando se realizó el pedido. La relación no es de composición porque la clase Pedidos existe aunque en haya ningún producto.
+			\end{itemize}
+			
+		\item \textbf{Otras relaciones}:
+			\begin{itemize}
+				\item \textit{Gestor - Interfaz}: las clases del paquete \textit{Interfaz} tan sólo se relacionan con las del paquete \textit{Gestor} debido a que son estas últimas las encargadas de gestionar la información que va a mostrar la interfaz. Por lo tanto, la interfaz se va a relacionar con los gestores para obtener la información que deben mostrar por pantalla.
+				\item \textit{Gestor - Envíos}: las clases del paquete \textit{Gestor} se relacionan con las del paquete \textit{Envíos} para obtener y procesar información de los envíos registrados, así como para registrar nuevos envíos. Por esto es una relación unidireccional, ya que tan sólo los gestores accederán a la información de los envíos.
+				\item \textit{Gestor - Usuario}: los gestores se relacionan con la clase de usuario para obtener información de cualquier usuario así como para crear y/o eliminar usuarios. Es una relación unidireccional.
+				\item \textit{Gestor - Información}: los gestores se relacionan con la clase \textit{Información} para obtener información de forma que las interfaces puedan entenderla. Es una relación unidireccional.
+				\item \textit{Gestor - CentrosCorreos}: los gestores se relacionan con la clase \textit{CentrosCorreos} ya que esta última es la encargada de buscar sucursales o asociaciones filatélicas, así como información de las mismas. Se trata de una relación unidireccional, ya que \textit{CentrosCorreos} no necesita acceder para nada a los gestores.
+				\item \textit{Gestor - Colecciones}: los gestores se relacionan con la clase \textit{Colecciones} cuando éstos necesitan obtener información de dicha clase. Se trata de una relación unidireccional.
+				\item \textit{Gestor - Pedidos}: los gestores se relacionan con la clase \textit{Pedidos} cuando necesitan obtener información acerca de los pedidos que ha realizado cierto usuario. Se trata de una relación unidireccional.
+				\item \textit{Gestor - Productos}: los gestores se relacionan con la clase \textit{Productos} cuando necesitan obtener una información sobre un conjunto de producto o sobre un producto concreto. Se trata de una relación unidireccional.
+			\end{itemize}
+	\end{itemize}
 
 \subsection{DSI 4.3: Identificación de Atributos de las Clases}
+	Los atributos de cada una de las clase son:
+	\begin{itemize}
+		\item Clase \textbf{Envíos}:
+			\begin{itemize}
+				\item \textit{idEnvío}: tipo Entero.
+				\item \textit{remitente}: tipo de la clase Usuario.
+				\item \textit{destinatario}: tipo de la clase Usuario.
+				\item \textit{fechaEnvío}: tipo Date.
+				\item \textit{precio}: tipo Float.
+			\end{itemize}
+			
+		\item Clase \textbf{EnvíoDocumento}:
+			\begin{itemize}
+				\item \textit{tipoDocumento}: tipo String. Podrá ser una carta, un telegrama o un fax.
+			\end{itemize}
+			
+		\item Clase \textbf{EnvíoPaquete}:
+			\begin{itemize}
+				\item \textit{tipoPaquete}: tipo String.
+				\item \textit{urgencia}: tipo String. Podrá ser alta, media o baja.
+			\end{itemize}
+			
+		\item Clase \textbf{Usuario}:
+			\begin{itemize}
+				\item \textit{idUsuario}: tipo Entero.
+				\item \textit{nombre}: tipo String.
+				\item \textit{apellidos}: tipo String.
+				\item \textit{dni}: tipo String.
+				\item \textit{tipoUsuario}: tipo String. Podrá ser Particular o Empresa.
+				\item \textit{dirección}: tipo String.
+				\item \textit{teléfono}: tipo String.
+			\end{itemize}
+			
+		\item Clase \textbf{Colecciones}:
+			\begin{itemize}
+				\item \textit{nombre}: tipo String.
+				\item \textit{descripción}: tipo String.
+			\end{itemize}
+			
+		\item Clase \textbf{Productos}:
+			\begin{itemize}
+				\item \textit{nombre}: tipo String.
+				\item \textit{descripción}: tipo String.
+				\item \textit{precio}: tipo Float.
+			\end{itemize}
+			
+		\item Clase \textbf{Pedidos}:
+			\begin{itemize}
+				\item \textit{idPedido}: tipo Entero.
+				\item \textit{productos}: tipo Lista de la clase Productos.
+			\end{itemize}
+			
+		\item Clase \textbf{Asociación}:
+			\begin{itemize}
+				\item \textit{nombre}: tipo String.
+				\item \textit{localización}: tipo String.
+				\item \textit{infoAdicional}: tipo String.
+			\end{itemize}
+			
+		\item Clase \textbf{Sucursal}:
+			\begin{itemize}
+				\item \textit{nombre}: tipo String.
+				\item \textit{lozalización}: tipo String.
+				\item \textit{infoAdicional}: tipo String.
+			\end{itemize}
+			
+		\item Clase \textbf{CentrosCorreos}:
+			\begin{itemize}
+				\item \textit{asociaciones}: tipo Lista de la clase Asociación.
+				\item \textit{sucursales}: tipo Lista de la clase Sucursal.
+			\end{itemize}
+			
+		\item Clase \textbf{Información}:
+			\begin{itemize}
+				\item \textit{tipoInformación}: tipo String.
+				\item \textit{contenido}: tipo String.
+			\end{itemize}
+	\end{itemize}
+	Las clases que no aparecen en esta lista es porque no tienen ningún atributo en su interior.
+
 
 \subsection{DSI 4.4: Identificación de Operaciones de las Clases}
-
+	Las operaciones que incluye cada una de las clases son:
+	\begin{itemize}
+		\item Clase \textbf{GestorCorreos}:
+			\begin{itemize}
+				\item \textit{validar}:
+				\item \textit{logout}:
+				\item \textit{registrar}:
+				\item \textit{obtenerInfo}:
+				\item \textit{cambioDomicilio}:
+			\end{itemize}
+			
+		\item Clase \textbf{GestorEnvíos}:
+			\begin{itemize}
+				\item \textit{enviarDocumento}:
+				\item \textit{envíarPaquete}:
+				\item \textit{seguirEnvío}:
+			\end{itemize}
+		
+		\item Clase \textbf{GestorFilatelia}:
+			\begin{itemize}
+				\item \textit{registrar}:
+				\item \textit{buscaAsocación}:
+				\item \textit{buscaInfo}:
+				\item \textit{realizaPedido}:
+				\item \textit{buscaSucursal}:
+			\end{itemize}
+		
+		\item Clase \textbf{GestorOficinaVirtual}:
+			\begin{itemize}
+				\item \textit{doSeguimiento}:
+				\item \textit{ultimosEnvíos}:
+				\item \textit{justificante}:
+				\item \textit{tareasPendientes}:
+			\end{itemize}
+			
+		\item Clase \textbf{CentrosCorreos}:
+			\begin{itemize}
+				\item \textit{buscaAsociación}:
+				\item \textit{buscaSucursal}:
+			\end{itemize}
+	\end{itemize}
+	Las clases que no aparecen en esta lista es porque no tienen ninguna operación en su interior.	
+	
+	
 \subsection{DSI 4.5: Diseño de la Jerarquía}
 
 \subsection{DSI 4.6: Descripción de Métodos de las Operaciones}
@@ -705,6 +853,7 @@
 					\item DNI (Unique),
 					\item Nombre de Usuario (Unique), 
 					\item Contraseña (cifrada),
+					\item Tipo de Usuario (Particular o Empresa),
 					\item Dirección, 
 					\item Número, 
 					\item Piso,
