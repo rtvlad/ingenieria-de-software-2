@@ -36,11 +36,11 @@
 \contentsline {subsection}{\numberline {7.1}DSI 9.1: Especificaci\'on del Entorno de Migraci\'on}{42}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}DSI 9.2: Dise\~no de Procedimientos de Migraci\'on y Carga Inicial}{42}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}DSI 9.3: Dise\~no Detallado de Componentes de Migraci\'on y Carga Inicial}{42}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}DSI 9.4: Revisi\'on de la Planificaci\'on de la Migraci\'on}{42}{subsection.7.4}
-\contentsline {section}{\numberline {8}DSI 10: Especificaci\'on T\'ecnica del Plan de Pruebas}{43}{section.8}
-\contentsline {subsection}{\numberline {8.1}DSI 10.1: Especificaci\'on del Entorno de Pruebas}{43}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}DSI 10.2: Especificaci\'on T\'ecnica de Niveles de Prueba}{43}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}DSI 10.3: Revisi\'on de la Planificaci\'on de Pruebas}{43}{subsection.8.3}
-\contentsline {section}{\numberline {9}DSI 11: Establecimiento de Requisitos de Implantaci\'on}{44}{section.9}
-\contentsline {subsection}{\numberline {9.1}DSI 11.1: Especificaci\'on de Requisitos de Documentaci\'on de Usuario}{44}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}DSI 11.2: Especificaci\'on de Requisitos de Implantaci\'on}{44}{subsection.9.2}
+\contentsline {subsection}{\numberline {7.4}DSI 9.4: Revisi\'on de la Planificaci\'on de la Migraci\'on}{43}{subsection.7.4}
+\contentsline {section}{\numberline {8}DSI 10: Especificaci\'on T\'ecnica del Plan de Pruebas}{44}{section.8}
+\contentsline {subsection}{\numberline {8.1}DSI 10.1: Especificaci\'on del Entorno de Pruebas}{44}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}DSI 10.2: Especificaci\'on T\'ecnica de Niveles de Prueba}{44}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}DSI 10.3: Revisi\'on de la Planificaci\'on de Pruebas}{44}{subsection.8.3}
+\contentsline {section}{\numberline {9}DSI 11: Establecimiento de Requisitos de Implantaci\'on}{45}{section.9}
+\contentsline {subsection}{\numberline {9.1}DSI 11.1: Especificaci\'on de Requisitos de Documentaci\'on de Usuario}{45}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}DSI 11.2: Especificaci\'on de Requisitos de Implantaci\'on}{45}{subsection.9.2}

@@ -1100,17 +1100,42 @@
 		\item Crear una base de datos vacía.
 		\item Asignar los usuarios que tienen capacidad para modificar esta base de datos. Estos usuarios son totalmente diferentes a los usuarios del Portal de Correos.
 		\item Crear las tablas y relaciones entre éstas.
+		\item Extracción de la base de datos anterior todo lo necesario para incluirlo en la nueva.
 		\item Insertar en las tablas los datos referentes al sistema antiguo.
 		\item Insertar en las tablas los datos referentes al sistema nuevo.
-		\item Por último, importar esta base de datos al servidor de base de datos.
+		\item Llevar a cabo una serie de pruebas para comprobar el correcto funcionamiento de la base de datos.
+		\item Exportar esta base de datos al servidor de base de datos.
+		\item Crear en el servidor de base de datos una tabla con las MAC de los servidores que van a acceder a este servidor. Para ofrecer una seguridad referente a los datos.
+		\item Establecer la comunicación de los servidores con el servidor de base de datos.
+		\item Realizar pruebas desde los servidores para acceder a los datos.
 	\end{enumerate}
 	
+	Debe tenerse especial cuidado a la hora de exportar los datos de la aplicación anterior con el fin de no borrar registros necesarios para el nuevo Portal de Correos. Además cuando se realiza la inserción de esos datos y de los nuevos tendrá que realizarse en el orden indicado para no provocar conflictos en los datos. \\
+	
+	Por motivos de seguridad se irán haciendo copias de seguridad de la base de datos aún sin terminar su total migración, con el fin de evitar la pérdida de información.
 
 \subsection{DSI 9.3: Diseño Detallado de Componentes de Migración y Carga Inicial}
+	Los principales componentes de la migración de los datos son las tablas que deben ser creadas en la nueva base de datos. Estas tablas deben ser la siguientes:
+	\begin{itemize}
+		\item Usuarios,
+		\item Pedidos,
+		\item Productos,
+		\item Asociaciones,
+		\item Colecciones,
+		\item Información,
+		\item Envíos.
+	\end{itemize}
+	
+	Los campos de cada una de estas tablas fueron especificados en el punto 8.4 de este documento.\\
+	
+	Referente a la carga de los datos antiguos y nuevos se deberá ir haciendo con sumo cuidado para evitar los conflictos entre estos, por lo que el mejor plan será ingresar los datos antiguos antes de insertar los nuevos. \\
+	
+	Después de haber realizado todo ésto se llevarán a cabo una serie de pruebas para la comprobación del correcto funcionamiento de la base de datos. Estas pruebas deberían determinar si se corrigen ciertos aspectos o se continua con el proceso. A continuación se creará la tabla con las MAC de los servidores que van a tener accesos a este servidor para cumplir con las condiciones de seguridad. Se establecerá la conexión de red local entre los servidores y el servidor de base de datos, tras ésto se realizarán pruebas desde los servidores para comprobar el correcto funcionamiento de las consultas de éstos a la base de datos.
 
 \subsection{DSI 9.4: Revisión de la Planificación de la Migración}
-
-
+	Una vez alcanzado el punto final del proceso de migración de los datos y haber realizado las pruebas suficientes se continuará con el proceso de integrar parte de la aplicación en estos servidores con el motivo de seguir haciendo pruebas con la base de datos pero ya desde la propia aplicación.
+	
+	
 \newpage
 
 

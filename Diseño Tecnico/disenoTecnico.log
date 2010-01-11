@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 15:10
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 16:01
 entering extended mode
 **disenoTecnico.tex
 
@@ -895,17 +895,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
-[42] [43] [44]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
+
+ []
+
+[43] [44] [45]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6546 strings out of 495285
- 92820 string characters out of 3180388
+ 6552 strings out of 495285
+ 92862 string characters out of 3180388
  179399 words of memory out of 3000000
  9463 multiletter control sequences out of 15000+200000
  8463 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,13n,43p,639b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,43p,658b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
@@ -915,9 +930,9 @@ s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on disenoTecnico.pdf (44 pages, 1530215 bytes).
+Output written on disenoTecnico.pdf (45 pages, 1533584 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
+ 664 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
  506 words of extra memory for PDF output out of 10000 (max. 10000000)
 
