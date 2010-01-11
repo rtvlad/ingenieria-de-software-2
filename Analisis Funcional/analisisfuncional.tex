@@ -1376,7 +1376,7 @@
 	\item \textbf{EnvioPaquete:} Hereda de la clase \textit{Envío}. Representa un envío de un paquete. Sus atributos son los siguientes:
 		\begin{itemize}
 		\item \textit{tipoPaquete:} Identifica el tipo de paquete.
-		\item \textit{urgencia:} Indica si el envío del paquete se realiza con urgencia o no.
+		\item \textit{urgencia:} Indica la urgencia del paquete (baja, media, alta).
 		\end{itemize}
 	\item \textbf{IUPrincipal:} Es la encargada de mostrar por pantalla todo lo referente a la interfaz principal del portal.
 	\item \textbf{IUEnvios:} Es la encargada de mostrar por pantalla todo lo referente a la interfaz de envíos de documentos y paquetes del portal.
@@ -1387,9 +1387,10 @@
 		\begin{itemize}
 		\item \textbf{nombre:} Es el nombre del producto.
 		\item \textbf{descripcion:} Es la descripción del producto.
+		\item \textbf{precio:} Precio del producto en euros.
 		\end{itemize}
-	\item \textbf{Pedidos:} Es la encargada de almacenar todos los pedidos realizados. Como atributo tiene un identificador que lo diferencia del resto.
-	\item \textbf{Colecciones:} Es la encargada de almacenar la información acerca de las colecciones filatélicas. Su atributo es la descripción de la colección.
+	\item \textbf{Pedidos:} Es la encargada de almacenar todos los pedidos realizados. Como atributo tiene un identificador que lo diferencia del resto. Su otro atributo es una lista de los productos contenidos en el pedido.
+	\item \textbf{Colecciones:} Es la encargada de almacenar la información acerca de las colecciones filatélicas. Sus atributo son la descripción de la colección y su nombre.
 	\item \textbf{Usuario:} Es la encargada de almacenar toda la información referente a un usuario. Sus atributos son:
 		\begin{itemize}
 		\item \textit{idUsuario:} Identifica unívocamente a cada usuario en el sistema.
@@ -1397,6 +1398,8 @@
 		\item \textit{apellidos:} Apellidos del usuario.
 		\item \textit{dni:} Dni del usuario.
 		\item \textit{tipoUsuario:} Identifica si el usuario es un usuario particular o profesional, para identificar el procedimiento a seguir para sus transacciones.
+		\item \textit{direccion:} Dirección física del usuario.
+		\item \textit{telefono:} Teléfono de contacto del usuario.
 		\end{itemize}
 	\item \textbf{Informacion:} Es la encargada de almacenar cada información buscada que vaya a ser mostrada al usuario. Sus atributos son:
 		\begin{itemize}
@@ -1413,6 +1416,7 @@
 		\begin{itemize}
 		\item \textit{nombre:} El nombre de la sucursal.
 		\item \textit{localización:} La dirección donde se encuentra la sucursal.
+		\item \textit{infoAdicional:} Información adicional sobre la sucursal en concreto.
 		\end{itemize}
 	\item \textbf{CentrosCorreos:} Se encarga de obtener información general de la base de datos, como sucursales o asociaciones. Sus atributos son los siguientes:
 		\begin{itemize}
@@ -1482,6 +1486,7 @@
 		\item \textit{Gestor - Colecciones}: los gestores se relacionan con la clase \textit{Colecciones} cuando éstos necesitan obtener información de dicha clase. Se trata de una relación unidireccional.
 		\item \textit{Gestor - Pedidos}: los gestores se relacionan con la clase \textit{Pedidos} cuando necesitan obtener información acerca de los pedidos que ha realizado cierto usuario. Se trata de una relación unidireccional.
 		\item \textit{Gestor - Productos}: los gestores se relacionan con la clase \textit{Productos} cuando necesitan obtener una información sobre un conjunto de producto o sobre un producto concreto. Se trata de una relación unidireccional.
+		\item \textit{Envíos - Usuario}: Los envíos deben relacionarse con la clase \textit{Usuario} ya que almacenan dos usuarios en cada envío: el remitente y el destinatario. Es una relación unidireccional.
 		\end{itemize}
 	\end{itemize}
 	
