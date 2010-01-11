@@ -988,16 +988,29 @@
 		\end{center}
 	\end{figure}
 	
-	Los subsistemas de construcción correspondientes son:
+	Según el diagrama anterior los componentes y subsistemas de construcción son los siguientes:
 	\begin{itemize}
 		\item Subsistema \textit{GestorCorreos}.
 		\item Subsistema \textit{GestorFilatelila}.
 		\item Subsistema \textit{GestorEnvíos}.
 		\item Subsistema \textit{GestorOficinaVirtual}.
+		\item Tabla \textit{Usuarios}.
+		\item Tabla \textit{Asociaciones}.
+		\item Tabla \textit{Productos}.
+		\item Tabla \textit{Pedidos}.
+		\item Tabla \textit{Envíos}.
+		\item Tabla \textit{Información}.
+		\item Tabla \textit{Colecciones}.
 	\end{itemize}
-	
+
+
+\subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
 	En cuanto a los componentes de la construcción son:
 	\begin{itemize}
+		\item \textit{GestorCorreos}.
+		\item \textit{GestorFilatelila}.
+		\item \textit{GestorEnvíos}.
+		\item \textit{GestorOficinaVirtual}.
 		\item Tabla \textit{Usuarios}: guarda información relativa a los usuarios.
 		\item Tabla \textit{Asociaciones}: guarda información relativa a las asociaciones filatélicas.
 		\item Tabla \textit{Productos}: guarda información relativa a los productos del Portal de Correos y el portal Filatélico.
@@ -1006,12 +1019,70 @@
 		\item Tabla \textit{Información}: guarda información relativa al resto del sistema.
 		\item Tabla \textit{Colecciones}: guarda información relativa a las colecciones filatélicas.
 	\end{itemize}
-	
 
-\subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
 
 \subsection{DSI 8.4: Elaboración de Especificaciones del Modelo Físico de Datos}
-
+	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). El contenido de esta base de datos será:
+	\begin{itemize}
+		\item \textit{Tabla de Usuarios}: campos: 
+				\begin{itemize}
+					\item Código (Primary Key), 
+					\item Nombre Personal, 
+					\item Apellidos, 
+					\item DNI (Unique),
+					\item Nombre de Usuario (Unique), 
+					\item Contraseña (cifrada),
+					\item Tipo de Usuario (Particular o Empresa),
+					\item Dirección, 
+					\item Número, 
+					\item Piso,
+					\item Letra,
+					\item Escalera,
+					\item Teléfono. 
+				\end{itemize}
+		\item \textit{Tabla de Productos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Descripción,
+					\item Precio.
+				\end{itemize}
+		\item \textit{Tabla de Envíos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Usuario Destino (Foreign Key a la tabla Usuarios),
+					\item Usuario Remitente (Foreign Key a la tabla Usuarios),
+					\item Contenido del envío,
+					\item Fecha en la que se inició el envío,
+					\item Fecha en la que finalizó el envío,
+					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso'', cuando ha salido del almacén puede estar ``Salida de Almacén'', y finalmente cuando llegue a su destino ``Envío Realizado''.
+				\end{itemize}
+		\item \textit{Tabla de Pedidos}: campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Lista de Productos a enviar (cada elemento de la lista será una clave ajena -Foreign Key- a la tabla de Productos),
+					\item Usuario que realiza el pedido (Foreign Key a la tabla Usuarios),
+					\item Fecha en la que se inició el pedido,
+					\item Fecha en la que finalizó el pedido,
+					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén'', después ``Pedido fuera del almacén'', luego ``Pedido en el reparto'' y finalmente ``Pedido Entregado''. 
+				\end{itemize}
+		\item \textit{Tabla de Colecciones} campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Descripción.
+				\end{itemize}
+		\item \textit{Tabla de Asociaciones} campos:
+				\begin{itemize}
+					\item Código (Primary Key),
+					\item Nombre,
+					\item Dirección,
+					\item Provincia en la que está situada,
+					\item Teléfono de contacto,
+					\item Número de Fax,
+					\item Descripción.					
+				\end{itemize}
+	\end{itemize}
 
 \newpage
 
@@ -1019,8 +1090,21 @@
 \section{DSI 9: Diseño de la Migración y Carga Inicial de Datos}
 
 \subsection{DSI 9.1: Especificación del Entorno de Migración}
+	Debido a que no será necesario utilizar hardware complementario para la correcta realización del plan de migración propuesto, este entorno de migración simplemente necesitará una computadora completa en la que tenga el software utilizado para la base de datos, es decir, en esta computadora deberá estar instalado Oracle. \\
+	
+	Por lo tanto, los requisitos de ese ordenador serán los mismos que los especificados en el punto 8.1 de este documento sobre la especificación del entorno de construcción. Aunque puede suceder que algunos de esos requisitos sean de menor importancia.	
 
 \subsection{DSI 9.2: Diseño de Procedimientos de Migración y Carga Inicial}
+	Para llevar a cabo la migración y carga inicial de datos de forma correcta y sin tener problemas de seguridad se creará una base de datos desde cero. Los pasos a seguir son:
+	\begin{enumerate}
+		\item Crear una base de datos vacía.
+		\item Asignar los usuarios que tienen capacidad para modificar esta base de datos. Estos usuarios son totalmente diferentes a los usuarios del Portal de Correos.
+		\item Crear las tablas y relaciones entre éstas.
+		\item Insertar en las tablas los datos referentes al sistema antiguo.
+		\item Insertar en las tablas los datos referentes al sistema nuevo.
+		\item Por último, importar esta base de datos al servidor de base de datos.
+	\end{enumerate}
+	
 
 \subsection{DSI 9.3: Diseño Detallado de Componentes de Migración y Carga Inicial}
 
