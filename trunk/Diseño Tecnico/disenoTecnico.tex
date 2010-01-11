@@ -700,6 +700,7 @@
 				\item \textit{Gestor - Colecciones}: los gestores se relacionan con la clase \textit{Colecciones} cuando éstos necesitan obtener información de dicha clase. Se trata de una relación unidireccional.
 				\item \textit{Gestor - Pedidos}: los gestores se relacionan con la clase \textit{Pedidos} cuando necesitan obtener información acerca de los pedidos que ha realizado cierto usuario. Se trata de una relación unidireccional.
 				\item \textit{Gestor - Productos}: los gestores se relacionan con la clase \textit{Productos} cuando necesitan obtener una información sobre un conjunto de producto o sobre un producto concreto. Se trata de una relación unidireccional.
+				\item \textit{Envíos - Usuario}: Los envíos deben relacionarse con la clase \textit{Usuario} ya que almacenan dos usuarios en cada envío: el remitente y el destinatario. Es una relación unidireccional.
 			\end{itemize}
 	\end{itemize}
 
@@ -831,11 +832,20 @@
 	
 	
 \subsection{DSI 4.5: Diseño de la Jerarquía}
+	Después de la realización de los puntos anteriores a este se ha llegado a la conclusión que el diagrama de clases mostrado en el punto 4.1 ya es viable para el entorno de desarrollo especificado.	\\
+	
+	En nuestra jerarquía de clases simplemente va a existir una clase abstracta (\textit{Envíos}) de la cual van a heredar la clase \textit{EnvíoDocumento} y la clase \textit{EnvíoPaquete}.	
 
-\subsection{DSI 4.6: Descripción de Métodos de las Operaciones}
 
 \subsection{DSI 4.7: Especificación de Necesidades de Migración y Carga Inicial de Datos}
+	Será necesario una migración de datos debido a que el sistema anterior tiene datos importantes que no pueden ser eliminados como pueden ser los siguientes:
+	\begin{itemize}
+		\item Los usuarios ya registrados en la aplicación y todo lo referente a éstos (envíos, pedidos, tareas, historiales,...), 
+		\item Los productos del Portal de Correos y del Portal Filatélico, 
+		\item Información referente a la empresa,
+	\end{itemize}
 
+	Y después de haber realizado la migración de esos datos, será necesaria la inclusión de nuevos datos en el sistema para todo lo que se refiere a la nueva aplicación. La carga de éstos datos no debería entrar en conflicto con los anteriores debido a que se han tratado por separado y además han sido pensados para que ésto no ocurra.
 
 \newpage
 

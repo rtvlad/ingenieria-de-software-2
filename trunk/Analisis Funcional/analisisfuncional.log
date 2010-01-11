@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  11 JAN 2010 12:40
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:55
 entering extended mode
 **analisisfuncional.tex
 
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.tex"
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -392,8 +392,8 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \f@ncyO@olf=\skip62
 \f@ncyO@orf=\skip63
 )
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.aux")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -434,10 +434,10 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
 
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.out")
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.out")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.out")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box62
  <logoURJC.jpg, id=159, 85.82062pt x 90.3375pt>
@@ -454,8 +454,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <C:/Users/koveras/Document
-s/Universidad/ISII/Práctica/Ficheros/Analisis Funcional/logoURJC.jpg>]
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <G:/Universidad/1Cuatrimes
+tre/ISII/Practica/RepositorioISII/Analisis Funcional/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 41.
@@ -465,12 +465,12 @@ Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 42.
 
 
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.toc" [2])
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.toc" [2])
 \tf@toc=\write4
  [3]
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.lof" [4])
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.lof" [4])
 \tf@lof=\write5
  [5]
 <modNegocio.jpg, id=313, 662.475pt x 501.875pt>
@@ -490,9 +490,9 @@ l.101
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.101 
-       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis 
-Funcional/modNegocio.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctica
-/Ficheros/Analisis Funcional/modDominio.jpg>]
+       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fun
+cional/modNegocio.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
+SII/Analisis Funcional/modDominio.jpg>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 112.
 
 
@@ -637,8 +637,8 @@ File: casodeusoinfo.jpg Graphic file (type jpg)
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.233 		\end{figure}
-                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fich
-eros/Analisis Funcional/casodeusoenvios.jpg>]
+                     <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
+I/Analisis Funcional/casodeusoenvios.jpg>]
 <casodeusologin.jpg, id=357, 662.475pt x 501.875pt>
 File: casodeusologin.jpg Graphic file (type jpg)
  <use casodeusologin.jpg>
@@ -667,12 +667,12 @@ l.251 		\end{figure}
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.251 		\end{figure}
-                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fich
-eros/Analisis Funcional/casodeusofilatelia.jpg> <C:/Users/koveras/Documents/Uni
-versidad/ISII/Práctica/Ficheros/Analisis Funcional/casodeusoinfo.jpg> <C:/Users
-/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcional/casode
-usologin.jpg>] [15pdfTeX warning (ext4): destination with the same identifier (
-name{figure.7}) has been already used, duplicate ignored
+                     <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
+I/Analisis Funcional/casodeusofilatelia.jpg> <G:/Universidad/1Cuatrimestre/ISII
+/Practica/RepositorioISII/Analisis Funcional/casodeusoinfo.jpg> <G:/Universidad
+/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional/casodeusologin.
+jpg>] [15pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -685,10 +685,10 @@ s been already used, duplicate ignored
                                                   \fi \fi 
 l.267 				\item \textit
                        {Enviar telegrama:} Cuando el usuario quiera enviar u...
- <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
-nal/casodeusogestion.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctica
-/Ficheros/Analisis Funcional/casodeusoofivirtual.jpg>] [16] [17] [18] [19]
-[20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
+ <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional
+/casodeusogestion.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
+SII/Analisis Funcional/casodeusoofivirtual.jpg>] [16] [17] [18] [19] [20]
+[21] [22] [23] [24] [25] [26] [27] [28] [29] [30]
 <paquetes.jpg, id=669, 904.37875pt x 740.7675pt>
 File: paquetes.jpg Graphic file (type jpg)
  <use paquetes.jpg> [31]
@@ -698,8 +698,8 @@ File: paquetes.jpg Graphic file (type jpg)
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1151 \newpage
-                <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/
-Analisis Funcional/paquetes.jpg>]
+                <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Ana
+lisis Funcional/paquetes.jpg>]
 <analisislogin.jpg, id=679, 995.72pt x 501.875pt>
 File: analisislogin.jpg Graphic file (type jpg)
  <use analisislogin.jpg>
@@ -719,8 +719,8 @@ File: analisisfilatelia.jpg Graphic file (type jpg)
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1173 	\end{figure}
-                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fich
-eros/Analisis Funcional/analisislogin.jpg>]
+                     <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
+I/Analisis Funcional/analisislogin.jpg>]
 <analisisinfo.jpg, id=686, 662.475pt x 501.875pt>
 File: analisisinfo.jpg Graphic file (type jpg)
  <use analisisinfo.jpg>
@@ -739,11 +739,11 @@ l.1185 	\end{figure}
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1185 	\end{figure}
-                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fich
-eros/Analisis Funcional/analisisenvios.jpg> <C:/Users/koveras/Documents/Univers
-idad/ISII/Práctica/Ficheros/Analisis Funcional/analisisfilatelia.jpg>] [35pdfTe
-X warning (ext4): destination with the same identifier (name{figure.13}) has be
-en already used, duplicate ignored
+                     <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
+I/Analisis Funcional/analisisenvios.jpg> <G:/Universidad/1Cuatrimestre/ISII/Pra
+ctica/RepositorioISII/Analisis Funcional/analisisfilatelia.jpg>] [35pdfTeX warn
+ing (ext4): destination with the same identifier (name{figure.13}) has been alr
+eady used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -756,9 +756,9 @@ as been already used, duplicate ignored
                                                   \fi \fi 
 l.1192 		\item \textit
                       {IUFilatelia:} Es la encargada de mostrar las pantalla...
- <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
-nal/analisisinfo.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/analisisofivirtual.jpg>]
+ <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional
+/analisisinfo.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/
+Analisis Funcional/analisisofivirtual.jpg>]
 <seclogincorrecto.jpg, id=696, 665.48625pt x 516.93124pt>
 File: seclogincorrecto.jpg Graphic file (type jpg)
 
@@ -786,9 +786,9 @@ r (name{figure.16}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1244 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/seclogincorrecto.jpg> <C:/Users/koveras/Documents/Univ
-ersidad/ISII/Práctica/Ficheros/Analisis Funcional/secloginincorrecto.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/seclogincorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII/
+Practica/RepositorioISII/Analisis Funcional/secloginincorrecto.jpg>]
 <secregistrocorrecto.jpg, id=709, 665.48625pt x 516.93124pt>
 File: secregistrocorrecto.jpg Graphic file (type jpg)
 
@@ -808,9 +808,9 @@ r (name{figure.18}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1256 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/seclogoutcorrecto.jpg> <C:/Users/koveras/Documents/Uni
-versidad/ISII/Práctica/Ficheros/Analisis Funcional/seclogoutincorrecto.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/seclogoutcorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII
+/Practica/RepositorioISII/Analisis Funcional/seclogoutincorrecto.jpg>]
 <secatclienteinfo.jpg, id=715, 691.58376pt x 516.93124pt>
 File: secatclienteinfo.jpg Graphic file (type jpg)
 
@@ -830,10 +830,10 @@ r (name{figure.20}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1270 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/secregistrocorrecto.jpg> <C:/Users/koveras/Documents/U
-niversidad/ISII/Práctica/Ficheros/Analisis Funcional/secregistroincorrecto.jpg>
-] <sectareas.jpg, id=721, 662.475pt x 516.93124pt>
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/secregistrocorrecto.jpg> <G:/Universidad/1Cuatrimestre/IS
+II/Practica/RepositorioISII/Analisis Funcional/secregistroincorrecto.jpg>]
+<sectareas.jpg, id=721, 662.475pt x 516.93124pt>
 File: sectareas.jpg Graphic file (type jpg)
  <use sectareas.jpg>
 <secseguimiento.jpg, id=722, 662.475pt x 516.93124pt>
@@ -851,9 +851,9 @@ r (name{figure.22}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1284 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/secatclienteinfo.jpg> <C:/Users/koveras/Documents/Univ
-ersidad/ISII/Práctica/Ficheros/Analisis Funcional/secinfocorporativa.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/secatclienteinfo.jpg> <G:/Universidad/1Cuatrimestre/ISII/
+Practica/RepositorioISII/Analisis Funcional/secinfocorporativa.jpg>]
 <sechistorico.jpg, id=727, 662.475pt x 516.93124pt>
 File: sechistorico.jpg Graphic file (type jpg)
  <use sechistorico.jpg>
@@ -872,9 +872,9 @@ r (name{figure.24}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1296 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/sectareas.jpg> <C:/Users/koveras/Documents/Universidad
-/ISII/Práctica/Ficheros/Analisis Funcional/secseguimiento.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/sectareas.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practic
+a/RepositorioISII/Analisis Funcional/secseguimiento.jpg>]
 <secapadrinamiento.jpg, id=733, 665.48625pt x 516.93124pt>
 File: secapadrinamiento.jpg Graphic file (type jpg)
 
@@ -894,9 +894,9 @@ r (name{figure.26}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1310 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/sechistorico.jpg> <C:/Users/koveras/Documents/Universi
-dad/ISII/Práctica/Ficheros/Analisis Funcional/secjustificante.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/sechistorico.jpg> <G:/Universidad/1Cuatrimestre/ISII/Prac
+tica/RepositorioISII/Analisis Funcional/secjustificante.jpg>]
 <secatcliente.jpg, id=739, 691.58376pt x 516.93124pt>
 File: secatcliente.jpg Graphic file (type jpg)
  <use secatcliente.jpg>
@@ -915,9 +915,9 @@ r (name{figure.28}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1322 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/secapadrinamiento.jpg> <C:/Users/koveras/Documents/Uni
-versidad/ISII/Práctica/Ficheros/Analisis Funcional/secasociaciones.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/secapadrinamiento.jpg> <G:/Universidad/1Cuatrimestre/ISII
+/Practica/RepositorioISII/Analisis Funcional/secasociaciones.jpg>]
 <seconlinecorrecto.jpg, id=746, 916.42375pt x 533.995pt>
 File: seconlinecorrecto.jpg Graphic file (type jpg)
 
@@ -946,9 +946,9 @@ r (name{figure.30}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1334 		\end{figure}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/secatcliente.jpg> <C:/Users/koveras/Documents/Universi
-dad/ISII/Práctica/Ficheros/Analisis Funcional/seccoleccion.jpg>]
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/secatcliente.jpg> <G:/Universidad/1Cuatrimestre/ISII/Prac
+tica/RepositorioISII/Analisis Funcional/seccoleccion.jpg>]
 <secsucursal.jpg, id=752, 662.475pt x 516.93124pt>
 File: secsucursal.jpg Graphic file (type jpg)
  <use secsucursal.jpg>
@@ -964,9 +964,9 @@ l.1341
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1341 
-        <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
- Funcional/seconlinecorrecto.jpg> <C:/Users/koveras/Documents/Universidad/ISII/
-Práctica/Ficheros/Analisis Funcional/seconlineincorrecto.jpg>]
+        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
+ncional/seconlinecorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repo
+sitorioISII/Analisis Funcional/seconlineincorrecto.jpg>]
 <secenviocorrecto.jpg, id=757, 662.475pt x 516.93124pt>
 File: secenviocorrecto.jpg Graphic file (type jpg)
 
@@ -986,17 +986,17 @@ l.1355
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1355 
-        <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
- Funcional/secsucursal.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Prácti
-ca/Ficheros/Analisis Funcional/secenviocorrecto.jpg>] [47pdfTeX warning (ext4):
- destination with the same identifier (name{figure.35}) has been already used, 
-duplicate ignored
+        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
+ncional/secsucursal.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositori
+oISII/Analisis Funcional/secenviocorrecto.jpg>] [47pdfTeX warning (ext4): desti
+nation with the same identifier (name{figure.35}) has been already used, duplic
+ate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1358 	\newpage
-                 <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros
-/Analisis Funcional/secenvioincorrecto.jpg>] [48] [49]
+                 <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/An
+alisis Funcional/secenvioincorrecto.jpg>] [48] [49]
 <clasesdiag.jpg, id=776, 1431.3475pt x 1083.04625pt>
 File: clasesdiag.jpg Graphic file (type jpg)
  <use clasesdiag.jpg>
@@ -1007,8 +1007,8 @@ e.36}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.1483 		\item \textit
                       {Gestor - Usuario:} Los gestores se relacionan con la ...
- <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
-nal/clasesdiag.jpg>] [52] [53]
+ <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional
+/clasesdiag.jpg>] [52] [53]
 <modelo_ent_rel.jpg, id=793, 2374.8725pt x 1385.175pt>
 File: modelo_ent_rel.jpg Graphic file (type jpg)
 
@@ -1025,8 +1025,8 @@ as been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1545 	\end{landscape}
-                        <C:/Users/koveras/Documents/Universidad/ISII/Práctica/F
-icheros/Analisis Funcional/modelo_ent_rel.jpg>]
+                        <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
+ISII/Analisis Funcional/modelo_ent_rel.jpg>]
 <modelo_relacional.pdf, id=798, 1084.05pt x 722.7pt>
 File: modelo_relacional.pdf Graphic file (type pdf)
 
@@ -1038,8 +1038,8 @@ as been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1569 \newpage
-                <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/
-Analisis Funcional/modelo_relacional.pdf>]
+                <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Ana
+lisis Funcional/modelo_relacional.pdf>]
 <dfd_general.jpg, id=816, 700.11563pt x 343.2825pt>
 File: dfd_general.jpg Graphic file (type jpg)
  <use dfd_general.jpg>
@@ -1050,20 +1050,20 @@ File: dfd_general.jpg Graphic file (type jpg)
                                                   \fi \fi 
 l.1595 	\item \textbf
                      {Gestor de Oficina Virtual - Pedidos:} Este flujo de da...
- <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis Funcio
-nal/dfd_general.jpg>] [57] [58]
+ <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional
+/dfd_general.jpg>] [57] [58]
 
-pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
-tica/Ficheros/Analisis Funcional/particulares_principal.pdf): PDF inclusion: fo
-und PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
+itorioISII/Analisis Funcional/particulares_principal.pdf): PDF inclusion: found
+ PDF version <1.5>, but at most version <1.4> allowed
 <particulares_principal.pdf, id=829, 803.0pt x 602.25pt>
 File: particulares_principal.pdf Graphic file (type pdf)
 
 <use particulares_principal.pdf> [59]
 
-pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
-tica/Ficheros/Analisis Funcional/empresas_principal.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
+itorioISII/Analisis Funcional/empresas_principal.pdf): PDF inclusion: found PDF
+ version <1.5>, but at most version <1.4> allowed
 <empresas_principal.pdf, id=834, 803.0pt x 602.25pt>
 File: empresas_principal.pdf Graphic file (type pdf)
 
@@ -1073,12 +1073,12 @@ e identifier (name{figure.40}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1659 
-        <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
- Funcional/particulares_principal.pdf>]
+        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
+ncional/particulares_principal.pdf>]
 
-pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
-tica/Ficheros/Analisis Funcional/oficina_virtual_principal.pdf): PDF inclusion:
- found PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
+itorioISII/Analisis Funcional/oficina_virtual_principal.pdf): PDF inclusion: fo
+und PDF version <1.5>, but at most version <1.4> allowed
 <oficina_virtual_principal.pdf, id=865, 803.0pt x 602.25pt>
 File: oficina_virtual_principal.pdf Graphic file (type pdf)
 
@@ -1088,36 +1088,36 @@ the same identifier (name{figure.41}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1669 
-        <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Analisis
- Funcional/empresas_principal.pdf>] [62pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.42}) has been already used, duplicate ignored
+        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
+ncional/empresas_principal.pdf>] [62pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.42}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1679 	\end{itemize}
-                      <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fic
-heros/Analisis Funcional/oficina_virtual_principal.pdf>] [63] [64] [65]
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Analisis Funcio
-nal\analisisfuncional.aux") ) 
+                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
+II/Analisis Funcional/oficina_virtual_principal.pdf>] [63] [64] [65]
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
+\analisisfuncional.aux") ) 
 Here is how much of TeX's memory you used:
  6878 strings out of 495285
- 96123 string characters out of 3180388
+ 96078 string characters out of 3180388
  203489 words of memory out of 3000000
  9514 multiletter control sequences out of 15000+200000
  8631 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,13n,43p,631b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.8/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
-les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
- 2.8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1
-/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/
-amsfonts/cm/cmtt10.pfb>
-Output written on analisisfuncional.pdf (65 pages, 2125046 bytes).
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
+/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.
+8/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
+fonts/cm/cmtt10.pfb>
+Output written on analisisfuncional.pdf (65 pages, 2124161 bytes).
 PDF statistics:
  1057 PDF objects out of 1200 (max. 8388607)
  397 named destinations out of 1000 (max. 500000)
