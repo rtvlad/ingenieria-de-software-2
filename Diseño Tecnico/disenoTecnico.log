@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:17
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:57
 entering extended mode
 **disenoTecnico.tex
 
@@ -439,7 +439,7 @@ enoTecnico.out")
 enoTecnico.out")
 \@outlinefile=\write3
 \AtBeginShipoutBox=\box62
- <logoURJC.jpg, id=187, 85.82062pt x 90.3375pt>
+ <logoURJC.jpg, id=183, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
 
 <use logoURJC.jpg>
@@ -472,7 +472,7 @@ enoTecnico.toc")
 enoTecnico.lof")
 \tf@lof=\write5
  [3]
-<despliegueSistema.jpg, id=310, 1101.11375pt x 597.23125pt>
+<despliegueSistema.jpg, id=305, 1101.11375pt x 597.23125pt>
 File: despliegueSistema.jpg Graphic file (type jpg)
 
 <use despliegueSistema.jpg> [4pdfTeX warning (ext4): destination with the same 
@@ -517,7 +517,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[5] [6] <paquetes.jpg, id=324, 904.37875pt x 740.7675pt>
+[5] [6] <paquetes.jpg, id=319, 904.37875pt x 740.7675pt>
 File: paquetes.jpg Graphic file (type jpg)
  <use paquetes.jpg>
 [7]
@@ -537,11 +537,11 @@ l.169 					\item S
                   istema de Almacenamiento: disco duro con una capacidad ini...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/paq
 uetes.jpg>] [9] [10] [11] [12]
-<disenologin_correcto.jpg, id=351, 665.48625pt x 516.93124pt>
+<disenologin_correcto.jpg, id=346, 665.48625pt x 516.93124pt>
 File: disenologin_correcto.jpg Graphic file (type jpg)
 
 <use disenologin_correcto.jpg>
-<disenologin_incorrecto.jpg, id=352, 665.48625pt x 516.93124pt>
+<disenologin_incorrecto.jpg, id=347, 665.48625pt x 516.93124pt>
 File: disenologin_incorrecto.jpg Graphic file (type jpg)
 
 <use disenologin_incorrecto.jpg> [13pdfTeX warning (ext4): destination with the
@@ -552,11 +552,11 @@ File: disenologin_incorrecto.jpg Graphic file (type jpg)
 l.303 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenologin_correcto.jpg>]
-<disenologout_correcto.jpg, id=358, 665.48625pt x 516.93124pt>
+<disenologout_correcto.jpg, id=353, 665.48625pt x 516.93124pt>
 File: disenologout_correcto.jpg Graphic file (type jpg)
 
 <use disenologout_correcto.jpg>
-<disenologout_incorrecto.jpg, id=359, 665.48625pt x 516.93124pt>
+<disenologout_incorrecto.jpg, id=354, 665.48625pt x 516.93124pt>
 File: disenologout_incorrecto.jpg Graphic file (type jpg)
 
 <use disenologout_incorrecto.jpg> [14pdfTeX warning (ext4): destination with th
@@ -574,11 +574,11 @@ l.324
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenologin_incorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repo
 sitorioISII/Diseño Tecnico/disenologout_correcto.jpg>]
-<disenoregistro_correcto.jpg, id=364, 665.48625pt x 516.93124pt>
+<disenoregistro_correcto.jpg, id=359, 665.48625pt x 516.93124pt>
 File: disenoregistro_correcto.jpg Graphic file (type jpg)
 
 <use disenoregistro_correcto.jpg>
-<disenoregistro_incorrecto.jpg, id=365, 665.48625pt x 516.93124pt>
+<disenoregistro_incorrecto.jpg, id=360, 665.48625pt x 516.93124pt>
 File: disenoregistro_incorrecto.jpg Graphic file (type jpg)
 
 <use disenoregistro_incorrecto.jpg> [15pdfTeX warning (ext4): destination with 
@@ -596,11 +596,11 @@ l.345
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenologout_incorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Rep
 ositorioISII/Diseño Tecnico/disenoregistro_correcto.jpg>]
-<disenoatclienteinfo.jpg, id=370, 696.6025pt x 516.93124pt>
+<disenoatclienteinfo.jpg, id=365, 696.6025pt x 516.93124pt>
 File: disenoatclienteinfo.jpg Graphic file (type jpg)
 
 <use disenoatclienteinfo.jpg>
-<disenoinfocorporativa.jpg, id=371, 696.6025pt x 516.93124pt>
+<disenoinfocorporativa.jpg, id=366, 696.6025pt x 516.93124pt>
 File: disenoinfocorporativa.jpg Graphic file (type jpg)
 
 <use disenoinfocorporativa.jpg> [16pdfTeX warning (ext4): destination with the 
@@ -618,10 +618,10 @@ l.366 		\end{figure}
                      <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
 I/Diseño Tecnico/disenoregistro_incorrecto.jpg> <G:/Universidad/1Cuatrimestre/I
 SII/Practica/RepositorioISII/Diseño Tecnico/disenoatclienteinfo.jpg>]
-<disenotareas.jpg, id=376, 663.47874pt x 516.93124pt>
+<disenotareas.jpg, id=371, 663.47874pt x 516.93124pt>
 File: disenotareas.jpg Graphic file (type jpg)
  <use disenotareas.jpg>
-<disenoseguimientos.jpg, id=377, 662.475pt x 516.93124pt>
+<disenoseguimientos.jpg, id=372, 662.475pt x 516.93124pt>
 File: disenoseguimientos.jpg Graphic file (type jpg)
 
 <use disenoseguimientos.jpg> [17pdfTeX warning (ext4): destination with the sam
@@ -641,11 +641,11 @@ l.384 		C
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoinfocorporativa.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
 ISII/Diseño Tecnico/disenotareas.jpg>]
-<disenohistorico.jpg, id=382, 662.475pt x 516.93124pt>
+<disenohistorico.jpg, id=377, 662.475pt x 516.93124pt>
 File: disenohistorico.jpg Graphic file (type jpg)
 
 <use disenohistorico.jpg>
-<disenojustificantes.jpg, id=383, 693.59125pt x 516.93124pt>
+<disenojustificantes.jpg, id=378, 693.59125pt x 516.93124pt>
 File: disenojustificantes.jpg Graphic file (type jpg)
 
 <use disenojustificantes.jpg> [18pdfTeX warning (ext4): destination with the sa
@@ -665,11 +665,11 @@ l.400 		C
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoseguimientos.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
 I/Diseño Tecnico/disenohistorico.jpg>]
-<disenoapadrinamiento.jpg, id=388, 725.71124pt x 516.93124pt>
+<disenoapadrinamiento.jpg, id=383, 725.71124pt x 516.93124pt>
 File: disenoapadrinamiento.jpg Graphic file (type jpg)
 
 <use disenoapadrinamiento.jpg>
-<disenoasociaciones.jpg, id=389, 697.60625pt x 516.93124pt>
+<disenoasociaciones.jpg, id=384, 697.60625pt x 516.93124pt>
 File: disenoasociaciones.jpg Graphic file (type jpg)
 
 <use disenoasociaciones.jpg> [19pdfTeX warning (ext4): destination with the sam
@@ -689,11 +689,11 @@ l.417 		E
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enojustificantes.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
 II/Diseño Tecnico/disenoapadrinamiento.jpg>]
-<disenoatcliente.jpg, id=395, 696.6025pt x 516.93124pt>
+<disenoatcliente.jpg, id=390, 696.6025pt x 516.93124pt>
 File: disenoatcliente.jpg Graphic file (type jpg)
 
 <use disenoatcliente.jpg>
-<disenocolecciones.jpg, id=396, 704.6325pt x 516.93124pt>
+<disenocolecciones.jpg, id=391, 704.6325pt x 516.93124pt>
 File: disenocolecciones.jpg Graphic file (type jpg)
 
 <use disenocolecciones.jpg> [20pdfTeX warning (ext4): destination with the same
@@ -713,11 +713,11 @@ l.433 		U
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoasociaciones.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISI
 I/Diseño Tecnico/disenoatcliente.jpg>]
-<disenogestiononline_correcto.jpg, id=401, 916.42375pt x 533.995pt>
+<disenogestiononline_correcto.jpg, id=396, 916.42375pt x 533.995pt>
 File: disenogestiononline_correcto.jpg Graphic file (type jpg)
 
 <use disenogestiononline_correcto.jpg>
-<disenogestiononline_incorrecto.jpg, id=402, 916.42375pt x 533.995pt>
+<disenogestiononline_incorrecto.jpg, id=397, 916.42375pt x 533.995pt>
 File: disenogestiononline_incorrecto.jpg Graphic file (type jpg)
 
 <use disenogestiononline_incorrecto.jpg> [21pdfTeX warning (ext4): destination 
@@ -738,10 +738,10 @@ l.449 		E
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enocolecciones.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII
 /Diseño Tecnico/disenogestiononline_correcto.jpg>]
-<disenosucursal.jpg, id=407, 662.475pt x 516.93124pt>
+<disenosucursal.jpg, id=402, 662.475pt x 516.93124pt>
 File: disenosucursal.jpg Graphic file (type jpg)
  <use disenosucursal.jpg>
-<disenoenvio_correcto.jpg, id=408, 662.475pt x 516.93124pt>
+<disenoenvio_correcto.jpg, id=403, 662.475pt x 516.93124pt>
 File: disenoenvio_correcto.jpg Graphic file (type jpg)
 
 <use disenoenvio_correcto.jpg> [22pdfTeX warning (ext4): destination with the s
@@ -759,7 +759,7 @@ l.466
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenogestiononline_incorrecto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Pract
 ica/RepositorioISII/Diseño Tecnico/disenosucursal.jpg>]
-<disenoenvio_incorrecto.jpg, id=413, 662.475pt x 516.93124pt>
+<disenoenvio_incorrecto.jpg, id=408, 662.475pt x 516.93124pt>
 File: disenoenvio_incorrecto.jpg Graphic file (type jpg)
 
 <use disenoenvio_incorrecto.jpg> [23pdfTeX warning (ext4): destination with the
@@ -783,7 +783,7 @@ disenoenvio_incorrecto.jpg>]
 pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
 itorioISII/Diseño Tecnico/particulares_principal.pdf): PDF inclusion: found PDF
  version <1.5>, but at most version <1.4> allowed
-<particulares_principal.pdf, id=418, 803.0pt x 602.25pt>
+<particulares_principal.pdf, id=413, 803.0pt x 602.25pt>
 File: particulares_principal.pdf Graphic file (type pdf)
 
 <use particulares_principal.pdf>
@@ -791,7 +791,7 @@ File: particulares_principal.pdf Graphic file (type pdf)
 pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
 itorioISII/Diseño Tecnico/empresas_principal.pdf): PDF inclusion: found PDF ver
 sion <1.5>, but at most version <1.4> allowed
-<empresas_principal.pdf, id=419, 803.0pt x 602.25pt>
+<empresas_principal.pdf, id=414, 803.0pt x 602.25pt>
 File: empresas_principal.pdf Graphic file (type pdf)
 
 <use empresas_principal.pdf> [24pdfTeX warning (ext4): destination with the sam
@@ -807,7 +807,7 @@ ticulares_principal.pdf>]
 pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
 itorioISII/Diseño Tecnico/oficina_virtual_principal.pdf): PDF inclusion: found 
 PDF version <1.5>, but at most version <1.4> allowed
-<oficina_virtual_principal.pdf, id=449, 803.0pt x 602.25pt>
+<oficina_virtual_principal.pdf, id=444, 803.0pt x 602.25pt>
 File: oficina_virtual_principal.pdf Graphic file (type pdf)
 
 <use oficina_virtual_principal.pdf> [25pdfTeX warning (ext4): destination with 
@@ -825,7 +825,7 @@ l.513 	\begin{itemize}
                        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
 SII/Diseño Tecnico/empresas_principal.pdf> <G:/Universidad/1Cuatrimestre/ISII/P
 ractica/RepositorioISII/Diseño Tecnico/oficina_virtual_principal.pdf>] [26]
-[27] [28] [29] <clasesdiag.jpg, id=521, 1431.3475pt x 1047.915pt>
+[27] [28] [29] <clasesdiag.jpg, id=516, 1431.3475pt x 1083.04625pt>
 File: clasesdiag.jpg Graphic file (type jpg)
 
 <use clasesdiag.jpg> [30pdfTeX warning (ext4): destination with the same identi
@@ -836,44 +836,49 @@ fier (name{figure.27}) has been already used, duplicate ignored
 l.695 				\item \textit
                        {Gestor - Interfaz}: las clases del paquete \textit{I...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/cla
-sesdiag.jpg>] [31] [32] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 916--917
+sesdiag.jpg>] [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
+
+ []
+
+[33] [34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--919
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 925--926
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 930--931
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 940--941
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--933
+Underfull \hbox (badness 10000) in paragraph at lines 942--943
 
  []
 
-[36] [37] [38] [39] [40]
+[37] [38] [39] [40] [41]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6532 strings out of 495285
- 92681 string characters out of 3180388
+ 6531 strings out of 495285
+ 92658 string characters out of 3180388
  179399 words of memory out of 3000000
- 9460 multiletter control sequences out of 15000+200000
+ 9459 multiletter control sequences out of 15000+200000
  8463 words of font info for 32 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,13n,43p,639b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -886,9 +891,9 @@ s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on disenoTecnico.pdf (40 pages, 1458538 bytes).
+Output written on disenoTecnico.pdf (41 pages, 1463484 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
+ 631 PDF objects out of 1000 (max. 8388607)
  121 named destinations out of 1000 (max. 500000)
- 509 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 
