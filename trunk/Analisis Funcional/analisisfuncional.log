@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:00
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:17
 entering extended mode
 **analisisfuncional.tex
 
@@ -1012,7 +1012,7 @@ RepositorioISII/Analisis Funcional/clasesdiag.jpg>] [51] [52]
 File: modelo_ent_rel.jpg Graphic file (type jpg)
 
 <use modelo_ent_rel.jpg>
-Overfull \hbox (0.72394pt too wide) in paragraph at lines 1532--1533
+Overfull \hbox (0.72394pt too wide) in paragraph at lines 1536--1537
  [] 
  []
 
@@ -1023,7 +1023,7 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1536 	\end{landscape}
+l.1540 	\end{landscape}
                         <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
 ISII/Analisis Funcional/modelo_ent_rel.jpg>]
 <modelo_relacional.pdf, id=794, 1084.05pt x 722.7pt>
@@ -1036,7 +1036,7 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1560 \newpage
+l.1564 \newpage
                 <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Ana
 lisis Funcional/modelo_relacional.pdf>]
 <dfd_general.jpg, id=811, 700.11563pt x 343.2825pt>
@@ -1047,7 +1047,7 @@ File: dfd_general.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1586 	\item \textbf
+l.1590 	\item \textbf
                      {Gestor de Oficina Virtual - Pedidos:} Este flujo de da...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Funcional
 /dfd_general.jpg>] [56] [57]
@@ -1071,7 +1071,7 @@ e identifier (name{figure.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1650 
+l.1654 
         <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
 ncional/particulares_principal.pdf>]
 
@@ -1086,14 +1086,14 @@ the same identifier (name{figure.41}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1660 
+l.1664 
         <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Analisis Fu
 ncional/empresas_principal.pdf>] [61pdfTeX warning (ext4): destination with the
  same identifier (name{figure.42}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1670 	\end{itemize}
+l.1674 	\end{itemize}
                       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioIS
 II/Analisis Funcional/oficina_virtual_principal.pdf>] [62] [63] [64]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Analisis Funcional
@@ -1116,7 +1116,7 @@ ram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
 type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb>
-Output written on analisisfuncional.pdf (64 pages, 2118535 bytes).
+Output written on analisisfuncional.pdf (64 pages, 2119209 bytes).
 PDF statistics:
  1051 PDF objects out of 1200 (max. 8388607)
  396 named destinations out of 1000 (max. 500000)

@@ -790,41 +790,41 @@
 	\begin{itemize}
 		\item Clase \textbf{GestorCorreos}:
 			\begin{itemize}
-				\item \textit{validar}:
-				\item \textit{logout}:
-				\item \textit{registrar}:
-				\item \textit{obtenerInfo}:
-				\item \textit{cambioDomicilio}:
+				\item \textit{validar}: valida a un usuario en el sistema si el nombre de usuario y la contraseña que introduce éste son datos correctos. En caso contrario devuelve un código de error.
+				\item \textit{logout}: si el nombre de usuario recibido ha sido validado, cierra la sesión de ese usuario en el sistema y en caso contrario devuelve un error.
+				\item \textit{registrar}: registra a un nuevo usuario en el sistema si no existe ya.
+				\item \textit{obtenerInfo}: obtiene información concreta de un usuario.
+				\item \textit{cambioDomicilio}: permite el cambio de domicilio actual del usuario.
 			\end{itemize}
 			
 		\item Clase \textbf{GestorEnvíos}:
 			\begin{itemize}
-				\item \textit{enviarDocumento}:
-				\item \textit{envíarPaquete}:
-				\item \textit{seguirEnvío}:
+				\item \textit{enviarDocumento}: se encarga de registrar el envío del documento identificado con el id recibido como parámetro en la base de datos.
+				\item \textit{envíarPaquete}: se encarga de registrar el envío del paquete identificado con el id recibido como parámetro en la base de datos.
+				\item \textit{seguirEnvío}: se encarga de obtener información del estado del envío identificado con el id recibido como parámetro de la base de datos.
 			\end{itemize}
 		
 		\item Clase \textbf{GestorFilatelia}:
 			\begin{itemize}
-				\item \textit{registrar}:
-				\item \textit{buscaAsocación}:
-				\item \textit{buscaInfo}:
-				\item \textit{realizaPedido}:
-				\item \textit{buscaSucursal}:
+				\item \textit{registrar}: registra a un nuevo usuario en la base de datos.
+				\item \textit{buscaAsocación}: obtiene la asociación identificada con el nombre recibido como parámetro.
+				\item \textit{buscaInfo}: obtiene la información correspondiente a los datos recibidos como parámetro.
+				\item \textit{realizaPedido}: registra un nuevo pedido en la base de datos.
+				\item \textit{buscaSucursal}: obtiene la sucursal identificada con el nombre recibido como parámetro.
 			\end{itemize}
 		
 		\item Clase \textbf{GestorOficinaVirtual}:
 			\begin{itemize}
-				\item \textit{doSeguimiento}:
-				\item \textit{ultimosEnvíos}:
-				\item \textit{justificante}:
-				\item \textit{tareasPendientes}:
+				\item \textit{doSeguimiento}: obtiene información del estado del envío identificado con el id recibido como parámetro.
+				\item \textit{ultimosEnvíos}: obtiene información de los últimos envíos realizados por el usuario identificado por el id recibido como parámetro.
+				\item \textit{justificante}: obtiene los datos de un justificante de la factura recibida como parámetro.
+				\item \textit{tareasPendientes}: obtiene un listado con los envíos pendientes del usuario recibido como parámetro.
 			\end{itemize}
 			
 		\item Clase \textbf{CentrosCorreos}:
 			\begin{itemize}
-				\item \textit{buscaAsociación}:
-				\item \textit{buscaSucursal}:
+				\item \textit{buscaAsociación}: obtiene de la lista de asociaciones la asociación cuyo nombre coincida con el recibido como parámetro.
+				\item \textit{buscaSucursal}: obtiene de la lista de sucursales la sucursal cuyo nombre coincida con el recibido como parámetro.
 			\end{itemize}
 	\end{itemize}
 	Las clases que no aparecen en esta lista es porque no tienen ninguna operación en su interior.	

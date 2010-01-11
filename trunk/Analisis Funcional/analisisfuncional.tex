@@ -1424,7 +1424,7 @@
 		\item \textit{buscaAsociacion:} Obtiene de la lista de asociaciones la asociación cuyo nombre coincida con el recibido como parámetro.
 		\item \textit{buscaSucursal:} Obtiene de la lista de sucursales la sucursal cuyo nombre coincida con el recibido como parámetro.
 		\end{itemize}
-	\item \textbf{GestorUsuarios:} Se encarga de gestionar todas las operaciones relacionadas con los usuarios del sistema. Se compone de los siguientes métodos:
+	\item \textbf{GestorCorreos:} Se encarga de gestionar todas las operaciones relacionadas con los usuarios del sistema. Se compone de los siguientes métodos:
 		\begin{itemize}
 		\item \textit{validar:} Valida a un usuario en el sistema si el nombre de usuario y contraseña recibidos son correctos. En caso contrario devuelve un código de error
 		\item \textit{logout:} Si el nombre de usuario recibido ha sido validado, lo saca del sistema, y devuelve error en caso contrario.
@@ -1436,12 +1436,12 @@
 		\begin{itemize}
 		\item \textit{enviarDocumento:} Se encarga de registrar el envío del documento identificado con el id recibido como parámetro en la base de datos.
 		\item \textit{enviarPaquete:} Se encarga de registrar el envío del paquete identificado con el id recibido como parámetro en la base de datos.
-		\item \textit{seguirEnvio:} Se encarga de obtener información del estado del envío indentificado con el id recibido como parámetro de la base de datos.
+		\item \textit{seguirEnvio:} Se encarga de obtener información del estado del envío identificado con el id recibido como parámetro de la base de datos.
 		\end{itemize}
 	\item \textbf{GestorFilatelia:} Se encarga de gestionar todas las operaciones relacionadas con el portal filatélico. Se compone de los siguientes métodos:
 		\begin{itemize}
 		\item \textit{registrar:} Registra a un nuevo usuario en la base de datos.
-		\item \textit{buscaAsociacion:} Obtiene la asociación identificada con el nombre recibido como parámetro.
+		\item \textit{buscaAsociación:} Obtiene la asociación identificada con el nombre recibido como parámetro.
 		\item \textit{buscaInfo:} Obtiene la información correspondiente a los datos recibidos como parámetro.
 		\item \textit{realizaPedido:} Registra un nuevo pedido en la base de datos.
 		\item \textit{buscaSucursal:} Obtiene la sucursal identificada con el nombre recibido como parámetro.
@@ -1458,7 +1458,7 @@
 	\begin{figure}[H]
 	\begin{center}
 	\includegraphics[scale=0.3]{clasesdiag.jpg}
-	\caption{Diagrama de clases del sistema}
+	\caption{Diagrama de clases del sistema.}
 	\end{center}
 	\end{figure}
 	
@@ -1470,6 +1470,7 @@
 	\item \textbf{Agregación:}
 		\begin{itemize}
 		\item \textit{Asociación, Sucursal, CentrosCorreos:} En este caso hay una relación de agregación ya que la clase \textit{CentrosCorreos} se compone de dos listas diferentes de asociaciones y sucursales. No es una relación de composición debido a que la clase \textit{CentrosCorreos} sigue existiendo con funciones propias en caso de que no existieran asociaciones ni sucursales.
+		\item \textit{Productos y Pedidos}: la relación que establecen estas clases es de agregación debido a que la clase Pedidos está formada por un identificador y por una lista de productos que se solicitaron cuando se realizó el pedido. La relación no es de composición porque la clase Pedidos existe aunque en haya ningún producto.
 		\end{itemize}
 	\item \textit{Otras relaciones:}
 		\begin{itemize}
@@ -1477,12 +1478,15 @@
 		\item \textit{Gestor - Envíos:} Las clases del paquete \textit{Gestor} se relacionan con las del paquete \textit{Envíos} para obtener y procesar información de los envíos registrados, así como para registrar nuevos envíos. Por esto es una relación unidireccional, ya que tan sólo los gestores accederán a la información de los envíos.
 		\item \textit{Gestor - Usuario:} Los gestores se relacionan con la clase de usuario para obtener información de cualquier usuario así como para crear y/o eliminar usuarios. Es una relación unidireccional.
 		\item \textit{Gestor - Información:} Los gestores se relacionan con la clase \textit{Información} para obtener información de forma que las interfaces puedan entenderla. Es una relación unidireccional.
-		\item \textit{Gestor - CentrosCorreos:} Los gestores se relacionan con la clase \textit{CentrosCorreos} ya que esta última es la encargada de buscar sucursales y asociaciones, así como información de las mismas. Se trata de una información unidireccional, ya que \textit{CentrosCorreos} no necesita acceder para nada a los gestores.
+		\item \textit{Gestor - CentrosCorreos:} Los gestores se relacionan con la clase \textit{CentrosCorreos} ya que esta última es la encargada de buscar sucursales y asociaciones, así como información de las mismas. Se trata de una relación unidireccional, ya que \textit{CentrosCorreos} no necesita acceder para nada a los gestores.
+		\item \textit{Gestor - Colecciones}: los gestores se relacionan con la clase \textit{Colecciones} cuando éstos necesitan obtener información de dicha clase. Se trata de una relación unidireccional.
+		\item \textit{Gestor - Pedidos}: los gestores se relacionan con la clase \textit{Pedidos} cuando necesitan obtener información acerca de los pedidos que ha realizado cierto usuario. Se trata de una relación unidireccional.
+		\item \textit{Gestor - Productos}: los gestores se relacionan con la clase \textit{Productos} cuando necesitan obtener una información sobre un conjunto de producto o sobre un producto concreto. Se trata de una relación unidireccional.
 		\end{itemize}
 	\end{itemize}
 	
 	\subsection{ASI 5.3: Identificación de generalizaciones}
-	En el sistema tan sólo existe una relación de herencia, y es aquella establecida entre la clase \textit{Envío} y las clases que representan los diferentes tipos de envíos, \textit{EnvíoCarta} y \textit{EnvíoPaquete}. Esta relación simplifica todo lo posible la agregación de nuevos tipos de envíos, ya que tan sólo sería necesario añadir las clases de los nuevos envíos de manera que hereden de la clase \textit{Envío}.
+	En el sistema tan sólo existe una relación de herencia, y es aquella establecida entre la clase \textit{Envío} y las clases que representan los diferentes tipos de envíos, \textit{EnvíoDocumento} y \textit{EnvíoPaquete}. Esta relación simplifica todo lo posible la agregación de nuevos tipos de envíos, ya que tan sólo sería necesario añadir las clases de los nuevos envíos de manera que hereden de la clase \textit{Envío}.
 	
 	Además, esto consigue que los gestores pueda acceder a la información común a todos los envíos de manera uniforme, aunque se modifiquen los tipos de envíos o se añadan nuevos.
 	
