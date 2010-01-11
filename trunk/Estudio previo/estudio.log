@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  16 DEC 2009 15:49
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  11 JAN 2010 12:03
 entering extended mode
 **estudio.tex
 
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.tex"
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -218,7 +218,29 @@ Package: `anysize' 1.0 <1994/08/13>
 \@Rightmargin=\dimen124
 \@Topmargin=\dimen125
 \@Bottommargin=\dimen126
-) ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\hyperref.sty"
+) ("C:\Program Files\MiKTeX 2.8\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks24
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+\everycr=\toks25
+\minrowclearance=\skip50
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2009/10/19 v6.79b Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.8\tex\generic\oberdiek\ifpdf.sty"
@@ -239,7 +261,7 @@ O)
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\xcolor-patch.sty"
 Package: xcolor-patch 2009/10/02 xcolor patch
 ))
-\@linkdim=\dimen127
+\@linkdim=\dimen129
 \Hy@linkcounter=\count111
 \Hy@pagecounter=\count112
 
@@ -307,9 +329,9 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )))
 \Fld@menulength=\count113
-\Field@Width=\dimen128
-\Fld@charsize=\dimen129
-\Field@toks=\toks24
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
+\Field@toks=\toks26
 Package hyperref Info: Hyper figures OFF on input line 4377.
 Package hyperref Info: Link nesting OFF on input line 4382.
 Package hyperref Info: Hyper index ON on input line 4385.
@@ -330,237 +352,263 @@ Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 File: hpdftex.def 2009/10/19 v6.79b Hyperref driver for pdfTeX
 \Fld@listcount=\count117
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\tocbibind\tocbibind.sty"
-Package: tocbibind 2009/09/04 v1.5i extra ToC listings
-
-
-Package tocbibind Note: The document has section divisions.
-
-
-Package tocbibind Note: Using section or other style headings.
-
-) ("C:\Program Files\MiKTeX 2.8\tex\latex\colortbl\colortbl.sty"
-Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
-
-("C:\Program Files\MiKTeX 2.8\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen130
-\extrarowheight=\dimen131
-\NC@list=\toks25
-\extratabsurround=\skip48
-\backup@length=\skip49
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\color.sty"
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+("C:\Program Files\MiKTeX 2.8\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count118
+\float@exts=\toks27
+\float@box=\box55
+\@float@everytoks=\toks28
+\@floatcapt=\box56
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+("C:\Program Files\MiKTeX 2.8\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip51
+\LTright=\skip52
+\LTpre=\skip53
+\LTpost=\skip54
+\LTchunksize=\count119
+\LTcapwidth=\dimen132
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@cols=\count120
+\LT@rows=\count121
+\c@LT@tables=\count122
+\c@LT@chunks=\count123
+\LT@p@ftn=\toks29
 )
-\everycr=\toks26
-\minrowclearance=\skip50
+("C:\Program Files\MiKTeX 2.8\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip55
+\f@ncyO@elh=\skip56
+\f@ncyO@erh=\skip57
+\f@ncyO@olh=\skip58
+\f@ncyO@orh=\skip59
+\f@ncyO@elf=\skip60
+\f@ncyO@erf=\skip61
+\f@ncyO@olf=\skip62
+\f@ncyO@orf=\skip63
 )
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  ("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen132
-\scratchbox=\box55
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen133
-\MPnumerator=\count122
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count124
+\scratchdimen=\dimen133
+\scratchbox=\box61
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen134
+\MPnumerator=\count128
+\everyMPtoPDFconversion=\toks31
 )
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 22.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\refcount.sty"
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count123
+\c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 20.
-LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
 
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.out")
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.out")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.out")
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.out")
 \@outlinefile=\write3
-\AtBeginShipoutBox=\box56
- <logoURJC.jpg, id=43, 85.82062pt x 90.3375pt>
+\AtBeginShipoutBox=\box62
+ <logoURJC.jpg, id=39, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
  <use logoURJC.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <C:/Users/koveras/Document
-s/Universidad/ISII/Práctica/Ficheros/Estudio previo/logoURJC.jpg>]
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.toc")
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <G:/Universidad/1Cuatrimes
+tre/ISII/Practica/RepositorioISII/Estudio previo/logoURJC.jpg>]
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 40.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 41.
+
+
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.toc")
 \tf@toc=\write4
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 []|\OT1/cmr/m/n/12 Creacion del doc-u-
  []
 
-[3] [4] [5] [6]
-Underfull \hbox (badness 2293) in paragraph at lines 111--111
+[3] [4] [5]
+Overfull \hbox (9.23016pt too wide) in paragraph at lines 103--104
+[]\OT1/cmr/m/n/12 Ademas in-cluye un en-lace a Ban-Corre-os, que con-tiene in-
+for-ma-cion so-bre el fun-cionamien-
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 118--118
 \OT1/cmr/m/n/12 ges-tiones propias de
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 111--112
+Underfull \hbox (badness 3428) in paragraph at lines 118--119
 \OT1/cmr/m/n/12 tal web con dichas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 \OT1/cmr/m/n/12 glob-al y unica.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 \OT1/cmr/m/n/12 Uti-lizacion de los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
 \OT1/cmr/m/n/12 va apli-cacion para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
 []|\OT1/cmr/m/n/12 Acceso lim-i-ta-do a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 []|\OT1/cmr/m/n/12 Se dispon-dra de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 \OT1/cmr/m/n/12 una op-cion para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 \OT1/cmr/m/n/12 ad-min-is-trar usuar-ios
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 \OT1/cmr/m/n/12 y otor-gar-les per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 \OT1/cmr/m/n/12 misos. Ademas, de
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 115--116
+Underfull \hbox (badness 2443) in paragraph at lines 122--123
 \OT1/cmr/m/n/12 clientes que se reg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--118
+Underfull \hbox (badness 10000) in paragraph at lines 116--125
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 []|\OT1/cmr/m/n/12 El sis-tema per-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
 \OT1/cmr/m/n/12 ha re-al-iza-do una
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 121--121
+Underfull \hbox (badness 2538) in paragraph at lines 128--128
 \OT1/cmr/m/n/12 seguiran los pro-ced-
  []
 
 
-Underfull \hbox (badness 6268) in paragraph at lines 121--122
+Underfull \hbox (badness 6268) in paragraph at lines 128--129
 []|\OT1/cmr/m/n/12 Se im-ple-men-tara el
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 pro-ced-imien-to de
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 121--122
+Underfull \hbox (badness 5008) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 re-al-izadas, segun la
  []
 
 
-Underfull \hbox (badness 4673) in paragraph at lines 121--122
+Underfull \hbox (badness 4673) in paragraph at lines 128--129
 \OT1/cmr/m/n/12 Agen-cia de Gestion
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 122--123
+Underfull \hbox (badness 1365) in paragraph at lines 129--130
 \OT1/cmr/m/n/12 que per-mi-ta obten-er
  []
 
-[8] [9]
-Overfull \hbox (19.7677pt too wide) in paragraph at lines 161--162
-[]\OT1/cmr/m/n/12 Informacion so-bre el pa-go de reci-bos, re-car-ga de movil
-es, lo-cu-to-rios telefonicos
- []
-
-[10] [11]
-("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Estudio previo\
-estudio.aux") ) 
+[7] [8] [9]
+("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Estudio previo\est
+udio.aux") ) 
 Here is how much of TeX's memory you used:
- 6070 strings out of 495285
- 85104 string characters out of 3180388
- 170204 words of memory out of 3000000
- 9127 multiletter control sequences out of 15000+200000
- 10716 words of font info for 40 fonts, out of 3000000 for 9000
+ 6257 strings out of 495285
+ 87056 string characters out of 3180388
+ 173430 words of memory out of 3000000
+ 9306 multiletter control sequences out of 15000+200000
+ 11063 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,10n,36p,497b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
- Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on estudio.pdf (11 pages, 86677 bytes).
+ 38i,12n,43p,497b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
+les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
+ 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on estudio.pdf (9 pages, 97451 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
