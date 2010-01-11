@@ -955,7 +955,7 @@
 \section{DSI 8: Generación de Especificaciones de Construcción}
 
 \subsection{DSI 8.1: Especificación del Entorno de Construcción}
-	Las computadores encargadas del desarrollo de este sistema deberán tener:
+	Las computadoras encargadas del desarrollo de este sistema deberán tener:
 	\begin{itemize}
 		\item Requisitos \textbf{Hardware}:
 			\begin{itemize}
@@ -1142,11 +1142,46 @@
 \section{DSI 10: Especificación Técnica del Plan de Pruebas}
 
 \subsection{DSI 10.1: Especificación del Entorno de Pruebas}
+	El entorno de pruebas será el siguiente:
+	\begin{itemize}
+		\item \textbf{Hardware}:
+			\begin{itemize}
+				\item Sistema de Almacenamiento: disco duro de cien gigabytes(100 GB).
+				\item Unidad de lectora y grabadora de DVD.
+				\item Puertos USB.
+				\item Dos gigabytes de memoria RAM (2 GB).
+				\item Tarjeta de RED: RJ45, pero no se dispondrá de acceso a Internet, solo a la aplicación.
+				\item Teclado, Ratón y demás dispositivos para el correcto funcionamiento de un ordenador.
+			\end{itemize}
+			
+		\item \textbf{Software}:
+			\begin{itemize}
+				\item Sistema Operativo instalado: Windows XP o Seven, Ubuntu, Mac OS X.
+				\item Navegador Web: Internet Explorer, Mozilla Firefox y Safari con las versiones más recientes.
+			\end{itemize}
+			
+		\item Este entorno de desarrollo de pruebas tendrá unos 50 ordenadores individuales, y no tendrán comunicación entre ellos.
+		\item Se dispondrá de una herramienta para medir el tráfico web, para asegurar que el tráfico en una operación en el portal conlleva una carga capaz de llevarse a cabo tanto en conexiones rápidas como en las lentas.
+		\item En cada puesto habrá un test indicando las características de la aplicación que deben ser probadas. En el test se incluirá un espacio adicional en el cual el usuario podrá indicar otras características, dentro de las indicas, que ha probado y no vienen especificadas en el test.
+	\end{itemize}
+	
+	La elección de los usuarios para realizar las pruebas será llevada a cabo mediante una pequeña entrevista de trabajo muy simple para comprobar la capacidad de éstos con el fin de que las pruebas sean realizadas correctamente. El perfil de éstos usuarios no será demasiado complejo debido a que se buscan personas con un simple sentido común y con unos conocimientos mínimos sobre ordenadores.
 
 \subsection{DSI 10.2: Especificación Técnica de Niveles de Prueba}
+	Antes de que los usuarios encargados de llevar a cabo un conjunto de pruebas, los desarrolladores han ido realizando \textit{pruebas unitarias} con cada componente del sistema y una vez pasadas éstas habrán realizado otras referentes a las \textit{pruebas de integración} con las que se verifica el correcto funcionamiento tras el ensamblaje de todos los componentes. Por supuesto las pruebas de integración no serán realizadas de golpe sino que se van integrando varios componentes y se llevan a cabo ciertas pruebas, cuando éstas consiguen sus objetivos se siguen incluyen más componentes a las pruebas hasta se logra completar la integración de todos los componentes y las pruebas alcanzan los objetivos deseados. \\
+
+	Después de todo esto, un grupo seleccionado de usuarios llevarán a cabo las \textit{pruebas del sistema}. Dichos usuarios dispondrán de varias hojas de test que deberán ir siguiendo para la correcta realización de la prueba, además irán señalando las ventajas e inconvenientes de cada una de las características que están probando. Por supuesto el usuario dentro de las características marcadas a probar podrá hacer todo tipo de pruebas tanto buenas como malas, ya que lo que se pretende es comprobar todo tipo de situaciones que puedan llegar a suceder. Y al finalizar la prueba deberán entregar una hoja con los resultados a la persona indicada con el fin de volver a modificar (si es necesario) la aplicación para satisfacer las necesidades de los usuarios. Los criterios de verificación y aceptación de cada prueba vendrán determinados en los test con los que el usuario ve guiado su trabajo. \\
+
+	Las pruebas tendrán un período de duración de unos tres meses, durante los cuales se realizarán pruebas rotativas entre los diferentes usuarios durante jornadas de 8 horas, de forma que cada uno llevará a cabo pruebas durante el período de una hora, se cambiará la hora siguiente, volverá en la siguiente, así hasta completar la jornada. En cada hora de trabajo el usuario realizará pruebas sobre un elemento diferente, entre el Portal Principal, el Portal Filatélico y la Oficina Virtual. \\
+	
+	A cada semana de pruebas le seguirá otra de modificaciones y verificaciones con el propósito de mejorar paulatinamente el sistema y adaptarlo a las necesidades que vayan surgiendo. Así estos usuarios comprobarán las mejoras añadidas. \\
+	
+	Al final del período de pruebas, se realizarán las \textit{pruebas de aceptación} a través de las cuales se validará que el sistema cumple con todos los requisitos de funcionamiento esperado con el fin de conseguir la aceptación final del sistema por parte del usuario.	
+
 
 \subsection{DSI 10.3: Revisión de la Planificación de Pruebas}
-
+	................
+	
 
 \newpage
 
@@ -1154,8 +1189,16 @@
 \section{DSI 11: Establecimiento de Requisitos de Implantación}
 
 \subsection{DSI 11.1: Especificación de Requisitos de Documentación de Usuario}
+	Ser realizará un manual de usuario de la aplicación el cual será entregado a los usuarios con el fin de que puedan manejar correctamente la aplicación. Además este documento les servirá para ayudar a los clientes a realizar sus gestiones cuando éstos llamen para solicitar información o ayuda, por lo que también les valdrá como una pequeña formación. El manual será entregado tanto en papel como en soporte informático. \\
+	
+	Se irán realizando las modificaciones oportunas del documento según vaya cambiando el sistema, provocado por las modificaciones de éste durante el período de pruebas. Estas sucesivas actualizaciones serán controladas mediante su versión.
 
 \subsection{DSI 11.2: Especificación de Requisitos de Implantación}
-
+	Los requisitos de implantación son especificados a continuación:
+	\begin{itemize}
+		\item Los desarrolladores deberán tener los conocimientos apropiados sobre los lenguajes de programación que el sistema utiliza y otros aspectos referentes a la implementación.
+		\item Se realizarán grupos de trabajo para elaborar cada una de las características del sistema y que luego serán unificadas. Por lo que deben trabajar de forma paralela y los módulos, que cada grupo desarrolla, deben estar débilmente acoplados y fuertemente cohesionados.
+		\item Se requiere que los ordenadores tengan los requisitos mínimos especificados en el punto 8.1 de este documento.
+	\end{itemize}
 
 \end{document}
