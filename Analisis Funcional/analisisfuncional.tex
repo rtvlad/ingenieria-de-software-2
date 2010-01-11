@@ -1361,19 +1361,19 @@
 	\subsection{ASI 5.1: Identificación de responsabilidades y atributos}
 	En la descripción de las clases y los correspondientes diagramas no aparecen los métodos \texttt{set} y \texttt{get}, al igual que los métodos referentes a las interfaces, ya que se trata de métodos no relacionados con el sistema propiamente. Las clases identificadas con sus responsabilidades son las siguientes:
 	\begin{itemize}
-	\item \textbf{Envio:} La clase envío es la superclase de los diferentes envíos que se pueden realizar, y contiene la información relevante que debe contener cualquier envío, como el origen o el destinatario. Sus atributos son los siguientes:
+	\item \textbf{Envío:} La clase envío es la superclase de los diferentes envíos que se pueden realizar, y contiene la información relevante que debe contener cualquier envío, como el origen o el destinatario. Sus atributos son los siguientes:
 		\begin{itemize}
-		\item \textit{idEnvio:} Identifica unívocamente a cada envío.
+		\item \textit{idEnvío:} Identifica unívocamente a cada envío.
 		\item \textit{remitente:} Contiene información del remitente del envío.
-		\item \textit{destinatario:} Contiene información del destinatario del envio.
-		\item \textit{fechaEnvio:} La fecha en la que se realizó el envío.
+		\item \textit{destinatario:} Contiene información del destinatario del envío.
+		\item \textit{fechaEnvío:} La fecha en la que se realizó el envío.
 		\item \textit{precio:} El coste del envío.
 		\end{itemize}
-	\item \textbf{EnvioDocumento:} Hereda de la clase \textit{Envio}. Representa un envío de un documento. Sus atributos son los siguientes:
+	\item \textbf{EnvíoDocumento:} Hereda de la clase \textit{Envío}. Representa un envío de un documento. Sus atributos son los siguientes:
 		\begin{itemize}
 		\item \textit{tipoDocumento:} Identifica el tipo de documento (carta, fax, telegrama).
 		\end{itemize}
-	\item \textbf{EnvioPaquete:} Hereda de la clase \textit{Envio}. Representa un envío de un paquete. Sus atributos son los siguientes:
+	\item \textbf{EnvioPaquete:} Hereda de la clase \textit{Envío}. Representa un envío de un paquete. Sus atributos son los siguientes:
 		\begin{itemize}
 		\item \textit{tipoPaquete:} Identifica el tipo de paquete.
 		\item \textit{urgencia:} Indica si el envío del paquete se realiza con urgencia o no.
