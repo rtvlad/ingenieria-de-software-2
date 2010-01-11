@@ -845,7 +845,9 @@
 		\item Información referente a la empresa,
 	\end{itemize}
 
-	Y después de haber realizado la migración de esos datos, será necesaria la inclusión de nuevos datos en el sistema para todo lo que se refiere a la nueva aplicación. La carga de éstos datos no debería entrar en conflicto con los anteriores debido a que se han tratado por separado y además han sido pensados para que ésto no ocurra.
+	Y después de haber realizado la migración de esos datos, será necesaria la inclusión de nuevos datos en el sistema para todo lo que se refiere a la nueva aplicación. La carga de éstos datos no debería entrar en conflicto con los anteriores debido a que se han tratado por separado y además han sido pensados para que ésto no ocurra. \\
+	
+	No se utilizara ningún hardware complementario para la realización de esta migración. Y el software a utilizar es el propio de la base de datos nueva (Oracle).
 
 \newpage
 
@@ -978,6 +980,32 @@
 	
 
 \subsection{DSI 8.2: Definición de Componentes y Subsistemas de Construcción}
+	El diagrama de componentes en el que se muestran los componentes y el subsistema de construcción es el siguiente:
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics[scale=0.4]{componentes.jpg}
+			\caption{Diagrama de componentes.}
+		\end{center}
+	\end{figure}
+	
+	Los subsistemas de construcción correspondientes son:
+	\begin{itemize}
+		\item Subsistema \textit{GestorCorreos}.
+		\item Subsistema \textit{GestorFilatelila}.
+		\item Subsistema \textit{GestorEnvíos}.
+		\item Subsistema \textit{GestorOficinaVirtual}.
+	\end{itemize}
+	
+	En cuanto a los componentes de la construcción son:
+	\begin{itemize}
+		\item Tabla \textit{Usuarios}: guarda información relativa a los usuarios.
+		\item Tabla \textit{Asociaciones}: guarda información relativa a las asociaciones filatélicas.
+		\item Tabla \textit{Productos}: guarda información relativa a los productos del Portal de Correos y el portal Filatélico.
+		\item Tabla \textit{Pedidos}: guarda información relativa de los pedidos que realizan los usuarios registrados.
+		\item Tabla \textit{Envíos}: guarda información relativa a los envíos que solicitan los usuarios registrados.
+		\item Tabla \textit{Información}: guarda información relativa al resto del sistema.
+		\item Tabla \textit{Colecciones}: guarda información relativa a las colecciones filatélicas.
+	\end{itemize}
 	
 
 \subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
