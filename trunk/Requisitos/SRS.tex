@@ -91,7 +91,7 @@
 \subsection{Apreciación Global}
 	El documento de especificación de requisitos contiene la descripción del producto que se va a diseñar, las funcionalidades que debe cumplir, las características de los usuarios que interaccionarán con él, las restricciones y dependencias que se pueden producir con respecto a otros productos que estén integrados o con los que podrá colaborar.\\
 	
-	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE-STD-830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos. Además al comienzo del documento se muestra un índice con el que se puede observar la estructura del documento.
+	El documento SRS que hemos desarrollado sigue una organización basada en el estándar IEEE-STD-830-1998, lo que implica que contiene las características esenciales que deben estar presentes en un documento de captura de requisitos. Además al comienzo del documento se muestra un índice con el que se puede observar su estructura.
 	
 \section{Descripción Global}
 	
@@ -120,12 +120,12 @@
 		\end{itemize}		
 	
 \subsubsection{Interfaces de Usuario}
-	El Portal de Correos está pensado para dos tipos de usuarios: Particulares y Empresas. Por lo que cada usuario deberá ir a la interfaz correspondiente para realizar la gestión que desea. Luego cada interfaz tendrá las operaciones correspondientes dependiendo del usuario. \\
+	El Portal de Correos está pensado para dos tipos de usuarios: Particulares y Empresas. Por lo que cada usuario deberá ir a la interfaz correspondiente para realizar la gestión que desee. Luego cada interfaz tendrá las operaciones correspondientes dependiendo del usuario. \\
 	
 	En caso de que el usuario necesite ayuda debido a que no conozca bien la aplicación o desee realizar una consulta el Portal tiene dos mecanismos de ayuda:
 	\begin{enumerate}
 		\item En la misma aplicación se incluirá una ayuda rápida, que es muy fácil de manejar y será capaz de resolver las pequeñas dudas o problemas que se le presenten al usuario.
-		\item Se pondrá a disposición un número de teléfono al cual el usuario podrá llamar para realizar la consulta a un empleado de Correos que tendrá los conocimientos suficientes como para solucionarle el problema. Por supuesto, este número de teléfono tendrá un horario de atención.
+		\item Se pondrá a disposición un número de teléfono al cual el usuario podrá llamar para realizar la consulta a un empleado de Correos que tendrá los conocimientos suficientes como para solucionarle el problema. Por supuesto, este número de teléfono tendrá un horario de atención, el cual será mostrado en la web.
 	\end{enumerate}	
 	
 \subsubsection{Interfaces de Hardware}
@@ -151,7 +151,7 @@
 			\item Herramienta de Creación de Portales: Websphere Portal Enable V5.01.
 		\end{itemize}
 
-	La memoria principal y secundaria de estos servidores serán la conveniente como para un funcionamiento holgado de estos.
+	La memoria principal y secundaria de estos servidores serán la conveniente como para un funcionamiento holgado de éstos.
 
 \subsubsection{Interfaces de Comunicaciones}
 	Para realizar cualquier gestión se deberá disponer de conexión a Internet ya que el portal de Correos y el portal filatélico estarán alojados en la web. Luego las comunicaciones entre Correos y el Cliente serán a través de TCP/UDP. Cuando el cliente esté elaborando una transacción y ésta requiera cierta seguridad se utilizará el protocolo HTTPS, con el fin de que los datos introducidos, en los diferentes formularios, viajen de forma segura (cifrada) por la web.
