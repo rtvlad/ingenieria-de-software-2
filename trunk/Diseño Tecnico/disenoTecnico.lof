@@ -3,27 +3,27 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de paquetes.}}{8}{figure.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de secuencia de login (correcto).}}{13}{figure.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de secuencia de login (incorrecto).}}{14}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de secuencia de logout (correcto).}}{14}{figure.5}
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de secuencia de logout (correcto).}}{15}{figure.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de secuencia de logout (incorrecto).}}{15}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de secuencia de registro (correcto).}}{15}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de secuencia de registro (incorrecto).}}{16}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente gen\'erica.}}{16}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de secuencia informaci\'on corporativa.}}{17}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de secuencia de tareas pendientes.}}{17}{figure.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de secuencia de seguimiento de env\IeC {\'\i }os.}}{18}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de secuencia de historico de env\IeC {\'\i }os.}}{18}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de secuencia de obtenci\'on de justificantes.}}{19}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de secuencia de apadrinamiento.}}{19}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de secuencia de asociaciones.}}{20}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente.}}{20}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de secuencia de colecciones filat\'elicas.}}{21}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de secuencia de gesti\'on online (correcto).}}{21}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de secuencia de gesti\'on online (incorrecto).}}{22}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de secuencia de b\'usqueda de sucursales.}}{22}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (correcto).}}{23}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (incorrecto).}}{23}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Captura de la interfaz principal de particulares.}}{24}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Captura de la interfaz principal de empresas.}}{25}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Captura de la interfaz principal de oficina virtual.}}{25}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de clases del sistema.}}{30}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de componentes.}}{39}{figure.28}
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama de secuencia de registro (correcto).}}{16}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de secuencia de registro (incorrecto).}}{17}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente gen\'erica.}}{18}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de secuencia informaci\'on corporativa.}}{18}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de secuencia de tareas pendientes.}}{19}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de secuencia de seguimiento de env\IeC {\'\i }os.}}{20}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de secuencia de historico de env\IeC {\'\i }os.}}{20}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de secuencia de obtenci\'on de justificantes.}}{21}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de secuencia de apadrinamiento.}}{22}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de secuencia de asociaciones.}}{22}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de secuencia de atenci\'on al cliente.}}{23}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de secuencia de colecciones filat\'elicas.}}{24}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de secuencia de gesti\'on online (correcto).}}{25}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagrama de secuencia de gesti\'on online (incorrecto).}}{25}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagrama de secuencia de b\'usqueda de sucursales.}}{26}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (correcto).}}{27}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama de secuencia de env\IeC {\'\i }o (incorrecto).}}{27}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Captura de la interfaz principal de particulares.}}{28}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Captura de la interfaz principal de empresas.}}{29}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Captura de la interfaz principal de oficina virtual.}}{30}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de clases del sistema.}}{34}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Diagrama de componentes.}}{43}{figure.28}

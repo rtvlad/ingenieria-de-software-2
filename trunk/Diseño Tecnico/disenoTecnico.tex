@@ -74,7 +74,7 @@
 	
 	Los datos de las tablas irán creciendo con el paso del tiempo, aunque también el administrador del sistema irá haciendo desaparecer cierta información que ya no sea necesaria desde ese momento. Por lo que el volumen de la base de datos continuará creciendo día a día.\\
 
-	En el servidor es donde se encuentra la lógica de negocio. En él se encontrarán los distintos gestores (de Correos, de Envíos, de Filatelia y de la Oficina Virtual) a través de los cuales se accederá a la base de datos en el caso de ser necesario.\\
+	En el servidor es donde se encuentra la lógica de negocio. En él se encontrarán los distintos gestores (de Correos, de Envíos, de Filatelia y de la Oficina Virtual) a través de los cuales se accederá a la base de datos, en el caso de ser necesario.\\
 	
 	El usuario realizará las operaciones que él desee dependiendo de si es un usuario Anónimo, Registrado o un usuario referente a una empresa. Y todas estas acciones establecerán una comunicación con el servidor para que éste le responda con la información adecuada a la consulta realizada por el usuario.\\
 	
@@ -123,7 +123,7 @@
 	Referente a la legislación, la principal ley que se debe tener en cuenta es la \textbf{Ley Orgánica de Protección de Datos de Carácter Personal}, que como indica en su artículo 1, tiene como objetivo \textit{garantizar y proteger, en lo que concierne al tratamiento de los datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y especialmente de su honor e intimidad personal y familiar}. Esto es de vital importancia en cualquier tipo de aplicación que maneje datos con información privada de sus usuarios, por lo que el nuevo portal deberá tenerlo en cuenta.
 
 \subsection{DSI 1.5: Identificación de Subsistemas de Diseño}
-	En el sistema podemos encontrar cuatro grandes subsistemas de diseño, los cuales son los siguientes:
+	Según la especificación descrita en el documento de Análisis Funcional, en nuestro sistema podemos encontrar cuatro grandes subsistemas de diseño:
 	\begin{itemize}
 		\item \textbf{Gestor de Correos:} Es el encargado de la gestión de usuarios, y realiza acciones tales como registrar y validar del sistema a usuarios de correos. Además se encarga de obtener la información buscada por los clientes. Por lo que interactuará con la base de datos de usuarios del sistema y con las bases de datos referentes a la información (asociaciones, colecciones y productos).
 		\item \textbf{Gestor de Envíos:} Es el encargado de la realización, cancelación y seguimiento de los envíos realizados por los clientes. Por lo que interactuará con la base de datos de envíos y de usuarios del sistema.
@@ -131,13 +131,15 @@
 		\item \textbf{Gestor de Oficina Virtual:} Es el encargado de realizar todas las gestiones que el sistema debe realizar referentes a la Oficina Virtual de correos. Por lo que interactuará con las bases de datos de usuarios y pedidos.
 	\end{itemize}
 		
-	El diagrama de componentes que muestra las relaciones entre los diferentes subsistemas es el siguiente:
+	El diagrama de paquetes que muestra las relaciones entre los diferentes subsistemas es el siguiente:
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.4]{paquetes.jpg}
+			\includegraphics[scale=0.5]{paquetes.jpg}
 			\caption{Diagrama de paquetes.}
 		\end{center}	
 	\end{figure}
+	
+	En la figura anterior se puede ver la comunicación que tiene cada uno de los subsistemas especificados, es decir, las realaciones de cada uno de estos. Además, en el caso de ser necesario, cada uno tendrá acceso a la base de datos para registrar la información. En la figura del punto 1.1 de este documento se puede ver esa comunicación de estos subsistemas con el sistema de gestión de base de datos.
 
 \subsection{DSI 1.6: Especificación del Entorno Tecnológico}
 	Las características que debe tener el \textit{Servidor de Base de Datos} son:
@@ -217,7 +219,7 @@
 \section{DSI 2: Diseño de la Arquitectura de Soporte}
 
 \subsection{DSI 2.1: Diseño de Subsistemas de Soporte}
-	Los subsistemas de soporte serán exactamente los mismos que los mencionados en el punto 1.5 de éste documento.	
+	Los subsistemas de soporte serán exactamente los mismos que los mencionados en el punto 1.5 de éste documento, es decir, serán los mismos que los subsistemas de diseño.
 	
 \subsection{DSI 2.2: Identificación de Mecanismos Genéricos de Diseño}
 	Algunos de los mecanismos genéricos de diseño que podemos encontrar en la aplicación son:
@@ -289,14 +291,14 @@
 	\item \textbf{Login}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenologin_correcto.jpg}
+				\includegraphics[scale=0.5]{disenologin_correcto.jpg}
 				\caption{Diagrama de secuencia de login (correcto).}
 			\end{center}	
 		\end{figure}		
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenologin_incorrecto.jpg}
+				\includegraphics[scale=0.5]{disenologin_incorrecto.jpg}
 				\caption{Diagrama de secuencia de login (incorrecto).}
 			\end{center}	
 		\end{figure}
@@ -310,14 +312,14 @@
 	\item \textbf{Logout}:				
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenologout_correcto.jpg}
+				\includegraphics[scale=0.5]{disenologout_correcto.jpg}
 				\caption{Diagrama de secuencia de logout (correcto).}
 			\end{center}	
 		\end{figure}
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenologout_incorrecto.jpg}
+				\includegraphics[scale=0.5]{disenologout_incorrecto.jpg}
 				\caption{Diagrama de secuencia de logout (incorrecto).}
 			\end{center}	
 		\end{figure}
@@ -331,14 +333,14 @@
 	\item \textbf{Registro}:		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoregistro_correcto.jpg}
+				\includegraphics[scale=0.5]{disenoregistro_correcto.jpg}
 				\caption{Diagrama de secuencia de registro (correcto).}
 			\end{center}	
 		\end{figure}
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoregistro_incorrecto.jpg}
+				\includegraphics[scale=0.5]{disenoregistro_incorrecto.jpg}
 				\caption{Diagrama de secuencia de registro (incorrecto).}
 			\end{center}	
 		\end{figure}
@@ -352,7 +354,7 @@
 	\item \textbf{Información}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoatclienteinfo.jpg}
+				\includegraphics[scale=0.5]{disenoatclienteinfo.jpg}
 				\caption{Diagrama de secuencia de atención al cliente genérica.}
 			\end{center}	
 		\end{figure}
@@ -360,7 +362,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoinfocorporativa.jpg}
+				\includegraphics[scale=0.5]{disenoinfocorporativa.jpg}
 				\caption{Diagrama de secuencia información corporativa.}	
 			\end{center}	
 		\end{figure}
@@ -369,7 +371,7 @@
 	\item \textbf{Oficina Virtual}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenotareas.jpg}
+				\includegraphics[scale=0.5]{disenotareas.jpg}
 				\caption{Diagrama de secuencia de tareas pendientes.}
 			\end{center}	
 		\end{figure}
@@ -377,7 +379,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoseguimientos.jpg}
+				\includegraphics[scale=0.5]{disenoseguimientos.jpg}
 				\caption{Diagrama de secuencia de seguimiento de envíos.}
 			\end{center}	
 		\end{figure}
@@ -385,7 +387,7 @@
 	
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenohistorico.jpg}
+				\includegraphics[scale=0.5]{disenohistorico.jpg}
 				\caption{Diagrama de secuencia de historico de envíos.}
 			\end{center}	
 		\end{figure}
@@ -393,7 +395,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenojustificantes.jpg}
+				\includegraphics[scale=0.5]{disenojustificantes.jpg}
 				\caption{Diagrama de secuencia de obtención de justificantes.}
 			\end{center}	
 		\end{figure}
@@ -402,7 +404,7 @@
 	\item \textbf{Filatelia}:
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoapadrinamiento.jpg}
+				\includegraphics[scale=0.5]{disenoapadrinamiento.jpg}
 				\caption{Diagrama de secuencia de apadrinamiento.}
 			\end{center}	
 		\end{figure}
@@ -410,7 +412,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoasociaciones.jpg}
+				\includegraphics[scale=0.5]{disenoasociaciones.jpg}
 				\caption{Diagrama de secuencia de asociaciones.}
 			\end{center}	
 		\end{figure}
@@ -418,7 +420,7 @@
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoatcliente.jpg}
+				\includegraphics[scale=0.5]{disenoatcliente.jpg}
 				\caption{Diagrama de secuencia de atención al cliente.}
 			\end{center}	
 		\end{figure}
@@ -426,7 +428,7 @@
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenocolecciones.jpg}
+				\includegraphics[scale=0.5]{disenocolecciones.jpg}
 				\caption{Diagrama de secuencia de colecciones filatélicas.}
 			\end{center}	
 		\end{figure}
@@ -434,7 +436,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenogestiononline_correcto.jpg}
+				\includegraphics[scale=0.5]{disenogestiononline_correcto.jpg}
 				\caption{Diagrama de secuencia de gestión online (correcto).}
 			\end{center}	
 		\end{figure}
@@ -442,7 +444,7 @@
 
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenogestiononline_incorrecto.jpg}
+				\includegraphics[scale=0.5]{disenogestiononline_incorrecto.jpg}
 				\caption{Diagrama de secuencia de gestión online (incorrecto).}
 			\end{center}	
 		\end{figure}
@@ -450,7 +452,7 @@
 		
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenosucursal.jpg}
+				\includegraphics[scale=0.5]{disenosucursal.jpg}
 				\caption{Diagrama de secuencia de búsqueda de sucursales.}
 			\end{center}	
 		\end{figure}
@@ -459,14 +461,14 @@
 	\item \textbf{Envíos}
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoenvio_correcto.jpg}
+				\includegraphics[scale=0.5]{disenoenvio_correcto.jpg}
 				\caption{Diagrama de secuencia de envío (correcto).}
 			\end{center}	
 		\end{figure}		
 	
 		\begin{figure}[H]
 			\begin{center}
-				\includegraphics[scale=0.4]{disenoenvio_incorrecto.jpg}
+				\includegraphics[scale=0.5]{disenoenvio_incorrecto.jpg}
 				\caption{Diagrama de secuencia de envío (incorrecto).}
 			\end{center}	
 		\end{figure}
@@ -484,7 +486,7 @@
 		\item Interfaz para el perfil de Cliente Particular:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.4]{particulares_principal.pdf}
+					\includegraphics[scale=0.5]{particulares_principal.pdf}
 					\caption{Captura de la interfaz principal de particulares.}
 				\end{center}
 			\end{figure}
@@ -493,7 +495,7 @@
 		\item Interfaz para el perfil de Cliente Empresa:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.4]{empresas_principal.pdf}
+					\includegraphics[scale=0.5]{empresas_principal.pdf}
 					\caption{Captura de la interfaz principal de empresas.}
 				\end{center}
 			\end{figure}	
@@ -502,7 +504,7 @@
 		\item Intrefaz para la Oficina Virtual, en la que el usuario deberá estar registrado para acceder a ella:
 			\begin{figure}[H]
 				\begin{center}
-					\includegraphics[scale=0.4]{oficina_virtual_principal.pdf}
+					\includegraphics[scale=0.5]{oficina_virtual_principal.pdf}
 					\caption{Captura de la interfaz principal de oficina virtual.}
 				\end{center}
 			\end{figure}	
@@ -843,6 +845,7 @@
 		\item Los usuarios ya registrados en la aplicación y todo lo referente a éstos (envíos, pedidos, tareas, historiales,...), 
 		\item Los productos del Portal de Correos y del Portal Filatélico, 
 		\item Información referente a la empresa,
+		\item ...
 	\end{itemize}
 
 	Y después de haber realizado la migración de esos datos, será necesaria la inclusión de nuevos datos en el sistema para todo lo que se refiere a la nueva aplicación. La carga de éstos datos no debería entrar en conflicto con los anteriores debido a que se han tratado por separado y además han sido pensados para que ésto no ocurra. \\
@@ -983,41 +986,50 @@
 	El diagrama de componentes en el que se muestran los componentes y el subsistema de construcción es el siguiente:
 	\begin{figure}[h]
 		\begin{center}
-			\includegraphics[scale=0.4]{componentes.jpg}
+			\includegraphics[scale=0.5]{componentes.jpg}
 			\caption{Diagrama de componentes.}
 		\end{center}
 	\end{figure}
 	
 	Según el diagrama anterior los componentes y subsistemas de construcción son los siguientes:
 	\begin{itemize}
-		\item Subsistema \textit{GestorCorreos}.
-		\item Subsistema \textit{GestorFilatelila}.
-		\item Subsistema \textit{GestorEnvíos}.
-		\item Subsistema \textit{GestorOficinaVirtual}.
-		\item Tabla \textit{Usuarios}.
-		\item Tabla \textit{Asociaciones}.
-		\item Tabla \textit{Productos}.
-		\item Tabla \textit{Pedidos}.
-		\item Tabla \textit{Envíos}.
-		\item Tabla \textit{Información}.
-		\item Tabla \textit{Colecciones}.
+		\item Subsistema \textit{Cliente}: su componente es el propio usuario de la aplicación.
+		\item Subsistema \textit{Servidor}, los componentes que contiene son:
+			\begin{itemize}
+				\item \textit{GestorCorreos}.
+				\item \textit{GestorFilatelia}.
+				\item \textit{GestorEnvíos}.
+				\item \textit{GestorOficinaVirtual}.
+			\end{itemize}
+			
+		\item Subsistema \textit{Base de Datos}, los componentes que contiene son:
+			\begin{itemize}
+				\item Tabla \textit{Usuarios}.
+				\item Tabla \textit{Asociaciones}.
+				\item Tabla \textit{Productos}.
+				\item Tabla \textit{Pedidos}.
+				\item Tabla \textit{Envíos}.
+				\item Tabla \textit{Información}.
+				\item Tabla \textit{Colecciones}.
+			\end{itemize}
 	\end{itemize}
 
+	La compilación de cada uno de los componentes mencionados se podrá hacer por separado ya que se pretende que cada uno sea lo más independiente posible del resto de la aplicación. En caso de que se necesite una especificación mayor de la compilación de éstos se informará con mayor detalle en el documento referente a la construcción de la aplicación.
 
 \subsection{DSI 8.3: Elaboración de Especificaciones de Construcción}
-	En cuanto a los componentes de la construcción son:
+	Los componentes de construcción son:
 	\begin{itemize}
-		\item \textit{GestorCorreos}.
-		\item \textit{GestorFilatelila}.
-		\item \textit{GestorEnvíos}.
-		\item \textit{GestorOficinaVirtual}.
-		\item Tabla \textit{Usuarios}: guarda información relativa a los usuarios.
-		\item Tabla \textit{Asociaciones}: guarda información relativa a las asociaciones filatélicas.
-		\item Tabla \textit{Productos}: guarda información relativa a los productos del Portal de Correos y el portal Filatélico.
-		\item Tabla \textit{Pedidos}: guarda información relativa de los pedidos que realizan los usuarios registrados.
-		\item Tabla \textit{Envíos}: guarda información relativa a los envíos que solicitan los usuarios registrados.
-		\item Tabla \textit{Información}: guarda información relativa al resto del sistema.
-		\item Tabla \textit{Colecciones}: guarda información relativa a las colecciones filatélicas.
+		\item \textit{GestorCorreos}: será un componente con el que se dará soporte al registro, la validación (login), el cierre de sesión (logout), la obtención de información, el cambio de domicilio del cliente, la personalización de los sellos que desee el cliente, sobres y embalajes, creamailing, el apartado postal, la gestión del correo electrónico, los dominios y la atención al cliente.
+		\item \textit{GestorFilatelila}: componente a través del cual se dará soporte a las siguientes acciones: bienvenida a la filatélia, apadrinamiento, información de los productos de Filatélia, comprar productos, atención al cliente y mostrar información sobre los puntos de venta.
+		\item \textit{GestorEnvíos}: será un componente a través del cual deberá dar soporte a: enviar una Carta, un Telegrama, un Fax o un paquete, este último se le deberá de indicar la urgencia de envío que tiene para su tratamiento.
+		\item \textit{GestorOficinaVirtual}: será un componente con el que se dará soporte a: listar las tareas que tiene pendiente el usuario, obtener el seguimiento sobre un determinado envío para lo cual será necesario especificar el identificador que se le proporcionó al cliente en el momento de realizarlo, el histórico de todos los envíos que ha llevado a cabo el cliente y la solicitud de un justificante para lo cual el cliente deberá proporcionar el identificador del pedido o envío realizado.
+		\item Tabla \textit{Usuarios}: tendrá los campos correspondientes para guardar toda la información necesaria de los clientes.
+		\item Tabla \textit{Asociaciones}: tendrá los campos correspondientes para guarda toda la información necesaria de las asociaciones filatélicas.
+		\item Tabla \textit{Productos}: tendrá los campos correspondientes para guarda toda la información necesaria de los productos del Portal de Correos y el portal Filatélico.
+		\item Tabla \textit{Pedidos}: tendrá los campos correspondientes para guarda toda la información necesaria de los pedidos que realizan los usuarios registrados (clientes).
+		\item Tabla \textit{Envíos}: tendrá los campos correspondientes para guarda toda la información necesaria de los envíos que solicitan los usuarios registrados (clientes).
+		\item Tabla \textit{Información}: tendrá los campos correspondientes para guarda toda la información necesaria del resto del sistema.
+		\item Tabla \textit{Colecciones}: tendrá los campos correspondientes para guarda toda la información necesaria de las colecciones filatélicas.
 	\end{itemize}
 
 
@@ -1083,6 +1095,7 @@
 					\item Descripción.					
 				\end{itemize}
 	\end{itemize}
+	
 
 \newpage
 
@@ -1180,7 +1193,9 @@
 
 
 \subsection{DSI 10.3: Revisión de la Planificación de Pruebas}
-	................
+	La aceptación de seguir adelante con el proceso depende en gran factor del resultado obtenido de estas pruebas. En el caso de que las pruebas sean satisfactorias se continuará adelante, sin embargo, si éstas no corresponden correctamente a los requisitos especificados será necesario una nueva actualización de la aplicación para cumplir con los requisitos afectados. \\
+
+	Por lo tanto hasta la no validación completa de estas pruebas no seguirá adelante el proyecto ya que podrían surgir errores muy graves más adelante y su corrección sería más costosa.
 	
 
 \newpage
@@ -1194,10 +1209,11 @@
 	Se irán realizando las modificaciones oportunas del documento según vaya cambiando el sistema, provocado por las modificaciones de éste durante el período de pruebas. Estas sucesivas actualizaciones serán controladas mediante su versión.
 
 \subsection{DSI 11.2: Especificación de Requisitos de Implantación}
-	Los requisitos de implantación son especificados a continuación:
+	Algunos requisitos de implantación son especificados a continuación:
 	\begin{itemize}
-		\item Los desarrolladores deberán tener los conocimientos apropiados sobre los lenguajes de programación que el sistema utiliza y otros aspectos referentes a la implementación.
-		\item Se realizarán grupos de trabajo para elaborar cada una de las características del sistema y que luego serán unificadas. Por lo que deben trabajar de forma paralela y los módulos, que cada grupo desarrolla, deben estar débilmente acoplados y fuertemente cohesionados.
+		\item Los desarrolladores deberán tener los conocimientos apropiados sobre los lenguajes de programación que el sistema utiliza y otros aspectos referentes a la implementación. Por lo tanto, la elección de ésto se deberá hacer cuidadosamente para no cometer errores.
+		\item Se realizarán grupos de trabajo para elaborar cada una de las características del sistema y que luego serán unificadas. Por lo que deben trabajar de forma paralela y los módulos, que cada grupo desarrolla, deben estar débilmente acoplados y fuertemente cohesionados. El número de estos grupos esta por decidir pero no deberían ser grupos de más de 5 personas.
+		\item Antes de realizar cualquier incorporación nueva a la aplicación, es decir, la implementación de aspectos de la aplicación que todavía no se han insertado, se deberá tener más o menos un consenso de cómo realizar dicha implementación. Con esto se pretende que el grupo piense bien en lo que debe hacer para proponer una solución eficiente y así poder evitar que el grupo se ponga de forma inmediata a implementar una solución, de esta manera se ahorrará mucho trabajo y tiempo.
 		\item Se requiere que los ordenadores tengan los requisitos mínimos especificados en el punto 8.1 de este documento.
 	\end{itemize}
 
