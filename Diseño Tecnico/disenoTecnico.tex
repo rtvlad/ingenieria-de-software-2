@@ -519,6 +519,8 @@
 		\item \textbf{Producto filatélico:} La impresión de información de un producto filatélico se dispondrá con una imagen del mismo que ocupará el cuarto superior izquierdo del documento, junto con la información del documento debajo del mismo, ocupando el resto del mismo.
 		\item \textbf{Facturas:} Las facturas serán todas similares en el aspecto. Contendrán el número de factura a la izquierda y a la derecha el nombre del titular de la factura. A continuación aparecerá una tabla dividida por las columnas de \textit{descripción} y \textit{precio}. El contenido de esa tabla será la descripción de cada compra y el precio asociado a la misma, a razón de una por línea.
 	\end{itemize}
+	
+\newpage
 
 \subsection{DSI 3.4: Revisión de Subsistemas de Diseño e Interfaces}
 	Las diferentes clases, actores y mensajes que intervienen en cada uno de los casos de uso son:
@@ -861,81 +863,139 @@
 \subsection{DSI 6.1: Diseño del Modelo Físico de Datos}
 	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). A continuación se muestra el contenido físico de la base de datos, es decir, las tablas con cada atributo y el tipo y rango de éste:
 	\begin{itemize}
-		\item \textbf{Tabla Usuario}: 
+		\item \textbf{Tabla Usuarios}: 
 				\begin{itemize}
-					\item \textit{IDUsuario}: tipo CHAR(10), Primary Key.
-					\item \textit{Nickname}: tipo CHAR(50). NOT NULL.
-					\item \textit{Password}: tipo CHAR(20). NOT NULL.
-					\item \textit{Nombre}: tipo CHAR(50). NOT NULL.
-					\item \textit{Provincia}: tipo CHAR(100). NOT NULL.
-					\item \textit{Municipio}: tipo CHAR(100). NOT NULL.
-					\item \textit{CPostal}: tipo SHORT. NOT NULL.
-					\item \textit{Calle}: tipo CHAR(200). NOT NULL.
-					\item \textit{Número}: tipo CHAR(3). NOT NULL.
+					\item \textit{Código}: tipo CHAR(10), Primary Key.
+					\item \textit{NombreUsuario}: tipo CHAR(50). UNIQUE y NOT NULL.
+					\item \textit{DNI}: tipo CHAR(9). NOT NULL.
+					\item \textit{Contraseña}: tipo CHAR(20).
+					\item \textit{TipoUsuario}: tipo CHAR(15).
+					\item \textit{Nombre}: tipo CHAR(50).
+					\item \textit{Apellidos}: tipo CHAR(50).
+					\item \textit{Provincia}: tipo CHAR(100).
+					\item \textit{Municipio}: tipo CHAR(100).
+					\item \textit{Calle}: tipo CHAR(200).
+					\item \textit{Número}: tipo CHAR(3).
+					\item \textit{Escalera}: tipo CHAR(2).					
+					\item \textit{Letra}: tipo CHAR(1).
 					\item \textit{Piso}: tipo CHAR(2).
-					\item \textit{Escalera}: tipo CHAR(2).
+					\item \textit{CódigoPostal}: tipo CHAR(10).
 					\item \textit{Teléfono}: tipo CHAR(10).
 				\end{itemize}				
-		\item \textbf{Tabla Particular}: 
+		
+		\item \textbf{Tabla Filatelia}:
 				\begin{itemize}
-					\item \textit{IDUsuario}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Usuario.
-					\item \textit{Apellido1}: tipo CHAR(20). NOT NULL.
-					\item \textit{Apellido2}: tipo CHAR(20).
-					\item \textit{DNI}: tipo CHAR(9). NOT NULL.
-					\item \textit{EsColeccionista}: tipo BIT. NOT NULL.
-				\end{itemize}
-		\item \textbf{Tabla Empresa}: 
-				\begin{itemize}
-					\item \textit{IDUsuario}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Usuario.
-					\item \textit{CIF}: tipo CHAR(10). NOT NULL.
-					\item \textit{EsAsocFilatélica}: tipo BIT. NOT NULL.
-					\item \textit{Descripción}: tipo LONGTEXT.
-					\item \textit{Fax}: tipo SHORT.
+					\item \textit{IDUsuario}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Usuarios.
+					\item \textit{NombreBanco}: tipo CHAR(20).
+					\item \textit{Cuenta}: tipo CHAR(20).
+					\item \textit{CantTarjetas}: tipo NUMBER.
+					\item \textit{CantSellos}: tipo NUMBER.
+					\item \textit{CantEtiquetas}: tipo NUMBER.
+					\item \textit{CantLibros}: tipo NUMBER.
+					\item \textit{CantPruebas}: tipo NUMBER.
 				\end{itemize}
 				
-		\item \textbf{Tabla Producto}:
+		\item \textbf{Tabla Información}:
+			\begin{itemize}
+				\item \textit{Código}: tipo CHAR(10). Primary Key.
+				\item \textit{TipoInformación}: tipo CHAR(100). 
+				\item \textit{Contenido}: tipo CHAR(800).
+			\end{itemize}
+		
+		\item \textbf{Tabla CentroCorreos}:
+			\begin{itemize}
+				\item \textit{Código}: tipo CHAR(10). Primary Key.
+				\item \textit{Dirección}: tipo CHAR(10).
+				\item \textit{Teléfono}: tipo CHAR(10).
+				\item \textit{Provincia}: tipo CHAR(10).
+				\item \textit{Fax}: tipo CHAR(10).
+			\end{itemize}
+		\item \textbf{Tabla Sucursal}: 
 				\begin{itemize}
-					\item \textit{Código}: tipo CHAR(10). Primary Key.
-					\item \textit{Nombre}: tipo CHAR(50). NOT NULL.
+					\item \textit{CódigoCentro}: tipo CHAR(10). Primary Key y Foreign Key a la tabla CentroCorreos.
+				\end{itemize}
+		\item \textbf{Tabla Asociación}: 
+				\begin{itemize}
+					\item \textit{CódigoCentro}: tipo CHAR(10). Primary Key y Foreign Key a la tabla CentroCorreos.
+					\item \textit{Nombre}: tipo CHAR(50).
 					\item \textit{Descripción}: tipo CHAR(400).
-					\item \textit{Precio}: tipo CHAR(10). NOT NULL.
 				\end{itemize}
-		\item \textbf{Tabla ProdFilatelico}: 
+			
+		\item \textbf{Tabla Pedido}:
 				\begin{itemize}
-					\item \textit{CódigoProd}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Producto.
-					\item \textit{CódigoColec}: tipo CHAR(10). Unique y Foreign Key a la tabla Colección.
+					\item \textit{IDPedido}: tipo CHAR(10). Primary Key.				
+					\item \textit{IDUsuario}: tipo CHAR(10). Foreign Key a la tabla Usuarios.
+					\item \textit{NombrePedido}: tipo CHAR(20).
+					\item \textit{NumFactura}: tipo CHAR(10). UNIQUE y NOT NULL.
+					\item \textit{FechaIni}: tipo DATETIME.
+					\item \textit{FechaFin}: tipo DATETIME.
+					\item \textit{Estado}: tipo CHAR(15).
+				\end{itemize}					
+		\item \textbf{Tabla PedidoProd}: 
+				\begin{itemize}
+					\item \textit{IDPedido}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Pedido.
+					\item \textit{CódigoProd}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Productos.
+					\item \textit{ContenidoAdicional}: tipo CHAR(200).
+					\item \textit{Cantidad}: tipo NUMBER.
 				\end{itemize}
-		\item \textbf{Tabla Colección}: 
+						
+		\item \textbf{Tabla Productos}:
 				\begin{itemize}
 					\item \textit{Código}: tipo CHAR(10). Primary Key.
-					\item \textit{Nombre}: tipo CHAR(20). NOT NULL
+					\item \textit{Nombre}: tipo CHAR(50).
+					\item \textit{Tipo}: tipo CHAR(20).
+					\item \textit{Descripción}: tipo CHAR(400).
+					\item \textit{Precio}: tipo CHAR(10).
+				\end{itemize}
+				
+		\item \textbf{Tabla Colecciones}: 
+				\begin{itemize}
+					\item \textit{Código}: tipo CHAR(10). Primary Key.
+					\item \textit{Nombre}: tipo CHAR(20).
 					\item \textit{Descripción}: tipo CHAR(200).
+				\end{itemize}
+
+		\item \textbf{Tabla ProductoColección}: 
+				\begin{itemize}
+					\item \textit{CódigoProducto}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Productos.
+					\item \textit{CódigoColección}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Colecciones.
 				\end{itemize}
 				
 		\item \textbf{Tabla Envío}:
 				\begin{itemize}
-					\item \textit{IDEnvío}: tipo CHAR(10). Primary Key.			
-					\item \textit{IDUsuario}: tipo CHAR(10). Unique  y Foreign Key a la tabla Usuario. NOT NULL.
-					\item \textit{CódigoProd}: tipo CHAR(10). Unique y Foreign Key a la tabla Producto. NOT NULL.
-					\item \textit{Remitente}: tipo TEXT(100).
-					\item \textit{DirRemitente}: tipo TEXT(100).
-					\item \textit{Destinatario}: tipo TEXT(100). NOT NULL.
-					\item \textit{DirDestinatario}: tipo TEXT(100). NOT NULL.
-					\item \textit{FechaIni}: tipo DATETIME. NOT NULL.
+					\item \textit{IDEnvio}: tipo CHAR(10). Primary Key.			
+					\item \textit{IDUsuario}: tipo CHAR(10). Unique  y Foreign Key a la tabla Usuarios.
+					\item \textit{NombreEnvio}: tipo CHAR(50).
+					\item \textit{NumFactura}: tipo NUMBER. UNIQUE y NOT NULL.
+					\item \textit{FechaIni}: tipo DATETIME.
 					\item \textit{FechaFin}: tipo DATETIME.
-					\item \textit{Estado}: tipo CHAR(15). NOT NULL.
+					\item \textit{Estado}: tipo CHAR(15).
+					\item \textit{NombreDest}: tipo CHAR(50).
+					\item \textit{ApellidosDest}: tipo CHAR(20).
+					\item \textit{DNIDest}: tipo CHAR(9).
+					\item \textit{DirecciónDest}: tipo CHAR(30).
+					\item \textit{NúmeroDest}: tipo CHAR(3).
+					\item \textit{PisoDest}: tipo CHAR(2).
+					\item \textit{LetraDest}: tipo CHAR(1).
+					\item \textit{EscaleraDest}: tipo CHAR(2).
+					\item \textit{TeléfonoDest}: tipo CHAR(10).					
+					\item \textit{NombreRem}: tipo CHAR(50).
+					\item \textit{ApellidosRem}: tipo CHAR(20).
+					\item \textit{DNIRem}: tipo CHAR(9).
+					\item \textit{DirecciónRem}: tipo CHAR(30).
+					\item \textit{NúmeroRem}: tipo CHAR(3).
+					\item \textit{PisoRem}: tipo CHAR(2).
+					\item \textit{LetraRem}: tipo CHAR(1).
+					\item \textit{EscaleraRem}: tipo CHAR(2).
+					\item \textit{TeléfonoRem}: tipo CHAR(10).
 				\end{itemize}
-				
-		\item \textbf{Tabla Pedido}:
+		
+		\item \textbf{Tabla EnvíoProd}: 
 				\begin{itemize}
-					\item \textit{IDPedido}: tipo CHAR(10). Primary Key.				
-					\item \textit{IDUsuario}: tipo CHAR(10). Unique y Foreign Key a la tabla Usuario. NOT NULL.
-					\item \textit{CódigoProd}: tipo CHAR(10). Unique y Foreign Key a la tabla Producto. NOT NULL.
-					\item \textit{FechaIni}: tipo DATETIME. NOT NULL.
-					\item \textit{FechaFin}: tipo DATETIME.
-					\item \textit{Estado}: tipo CHAR(15). NOT NULL.
+					\item \textit{IDEnvío}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Envío.
+					\item \textit{CódigoProd}: tipo CHAR(10). Foreign Key a la tabla Productos.
+					\item \textit{ContenidoAdicional}: tipo CHAR(200).
 				\end{itemize}
-				
 	\end{itemize}
 
 	La migración de los datos del actual Portal de Correos al nuevo Portal serán:
@@ -960,10 +1020,10 @@
 	Debido a que un usuario tendrá acciones muy comunes con la aplicación se crearán una serie de índices en las tablas con mayor acceso con el fin de mejorar la obtención de dichos datos. Algunos índices que a priori se crearán son:
 	\begin{itemize}
 		\item En la tabla ENVÍO habrá un índice compuesto por los campos \textit{IDUsuario} y \textit{FechaIni} para conseguir un acceso más rápido a estos datos.
-		\item En la tabla PARTICULAR habrá un índice compuesto por \textit{Apellido1} y \textit{Apellido2} para buscar de forma más rápida un usuario.
+		\item En la tabla PEDIDO habrá un índice compuesto por \textit{IDPedido} y \textit{NumFactura} para buscar de forma más rápida un usuario.
 		\item ...
 	\end{itemize}
-	Simplemente hemos mencionado alguno de los índices que serán creados, pero seguramente se incorporarán más en la base de datos cuando ya se realice la implementación de ésta.
+	Simplemente hemos mencionado alguno de los índices que serán creados, pero seguramente se incorporarán más en la base de datos cuando ya se realice la implementación de ésta. \\
 	
 	Respecto a la seguridad del acceso a estos datos se requerirá la identificación correcta de los servidores desde los que se puede acceder a dicha información. Es decir, el servidor de BBDD mantendrá una tabla con las MAC de los servidores que tendrán acceso a éste, y además cada servidor tendrá el nombre de usuario y contraseña necesario para realizar las consultas. Cualquier otro servidor que quiera realizar una consulta a esta base de datos no podrá hacerla debido a que éste no está registrado en dicha tabla del servidor de BBDD.
 
