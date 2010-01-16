@@ -15,6 +15,7 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{fancyhdr}
+\usepackage{moreverb}
 \pagestyle{fancy}
 \marginsize{3cm}{2cm}{2cm}{2cm}
 \author{David Rufo Valero}
@@ -858,66 +859,83 @@
 \section{DSI 6: Diseño Físico de Datos}
 
 \subsection{DSI 6.1: Diseño del Modelo Físico de Datos}
-	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). El contenido de esta base de datos será:
+	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). A continuación se muestra el contenido físico de la base de datos, es decir, las tablas con cada atributo y el tipo y rango de éste:
 	\begin{itemize}
-		\item \textit{Tabla de Usuarios}: campos: 
+		\item \textbf{Tabla Usuario}: 
 				\begin{itemize}
-					\item Código (Primary Key), 
-					\item Nombre Personal, 
-					\item Apellidos, 
-					\item DNI (Unique),
-					\item Nombre de Usuario (Unique), 
-					\item Contraseña (cifrada),
-					\item Tipo de Usuario (Particular o Empresa),
-					\item Dirección, 
-					\item Número, 
-					\item Piso,
-					\item Letra,
-					\item Escalera,
-					\item Teléfono. 
-				\end{itemize}
-		\item \textit{Tabla de Productos}: campos:
+					\item \textit{IDUsuario}: tipo CHAR(10), Primary Key.
+					\item \textit{Nickname}: tipo CHAR(50). NOT NULL.
+					\item \textit{Password}: tipo CHAR(20). NOT NULL.
+					\item \textit{Nombre}: tipo CHAR(50). NOT NULL.
+					\item \textit{Provincia}: tipo CHAR(100). NOT NULL.
+					\item \textit{Municipio}: tipo CHAR(100). NOT NULL.
+					\item \textit{CPostal}: tipo SHORT. NOT NULL.
+					\item \textit{Calle}: tipo CHAR(200). NOT NULL.
+					\item \textit{Número}: tipo CHAR(3). NOT NULL.
+					\item \textit{Piso}: tipo CHAR(2).
+					\item \textit{Escalera}: tipo CHAR(2).
+					\item \textit{Teléfono}: tipo CHAR(10).
+				\end{itemize}				
+		\item \textbf{Tabla Particular}: 
 				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Descripción,
-					\item Precio.
+					\item \textit{IDUsuario}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Usuario.
+					\item \textit{Apellido1}: tipo CHAR(20). NOT NULL.
+					\item \textit{Apellido2}: tipo CHAR(20).
+					\item \textit{DNI}: tipo CHAR(9). NOT NULL.
+					\item \textit{EsColeccionista}: tipo BIT. NOT NULL.
 				\end{itemize}
-		\item \textit{Tabla de Envíos}: campos:
+		\item \textbf{Tabla Empresa}: 
 				\begin{itemize}
-					\item Código (Primary Key),
-					\item Usuario Destino (Foreign Key a la tabla Usuarios),
-					\item Usuario Remitente (Foreign Key a la tabla Usuarios),
-					\item Contenido del envío,
-					\item Fecha en la que se inició el envío,
-					\item Fecha en la que finalizó el envío,
-					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso'', cuando ha salido del almacén puede estar ``Salida de Almacén'', y finalmente cuando llegue a su destino ``Envío Realizado''.
+					\item \textit{IDUsuario}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Usuario.
+					\item \textit{CIF}: tipo CHAR(10). NOT NULL.
+					\item \textit{EsAsocFilatélica}: tipo BIT. NOT NULL.
+					\item \textit{Descripción}: tipo LONGTEXT.
+					\item \textit{Fax}: tipo SHORT.
 				\end{itemize}
-		\item \textit{Tabla de Pedidos}: campos:
+				
+		\item \textbf{Tabla Producto}:
 				\begin{itemize}
-					\item Código (Primary Key),
-					\item Lista de Productos a enviar (cada elemento de la lista será una clave ajena -Foreign Key- a la tabla de Productos),
-					\item Usuario que realiza el pedido (Foreign Key a la tabla Usuarios),
-					\item Fecha en la que se inició el pedido,
-					\item Fecha en la que finalizó el pedido,
-					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén'', después ``Pedido fuera del almacén'', luego ``Pedido en el reparto'' y finalmente ``Pedido Entregado''. 
+					\item \textit{Código}: tipo CHAR(10). Primary Key.
+					\item \textit{Nombre}: tipo CHAR(50). NOT NULL.
+					\item \textit{Descripción}: tipo CHAR(400).
+					\item \textit{Precio}: tipo CHAR(10). NOT NULL.
 				\end{itemize}
-		\item \textit{Tabla de Colecciones} campos:
+		\item \textbf{Tabla ProdFilatelico}: 
 				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Descripción.
+					\item \textit{CódigoProd}: tipo CHAR(10). Primary Key y Foreign Key a la tabla Producto.
+					\item \textit{CódigoColec}: tipo CHAR(10). Unique y Foreign Key a la tabla Colección.
 				\end{itemize}
-		\item \textit{Tabla de Asociaciones} campos:
+		\item \textbf{Tabla Colección}: 
 				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Dirección,
-					\item Provincia en la que está situada,
-					\item Teléfono de contacto,
-					\item Número de Fax,
-					\item Descripción.					
+					\item \textit{Código}: tipo CHAR(10). Primary Key.
+					\item \textit{Nombre}: tipo CHAR(20). NOT NULL
+					\item \textit{Descripción}: tipo CHAR(200).
 				\end{itemize}
+				
+		\item \textbf{Tabla Envío}:
+				\begin{itemize}
+					\item \textit{IDEnvío}: tipo CHAR(10). Primary Key.			
+					\item \textit{IDUsuario}: tipo CHAR(10). Unique  y Foreign Key a la tabla Usuario. NOT NULL.
+					\item \textit{CódigoProd}: tipo CHAR(10). Unique y Foreign Key a la tabla Producto. NOT NULL.
+					\item \textit{Remitente}: tipo TEXT(100).
+					\item \textit{DirRemitente}: tipo TEXT(100).
+					\item \textit{Destinatario}: tipo TEXT(100). NOT NULL.
+					\item \textit{DirDestinatario}: tipo TEXT(100). NOT NULL.
+					\item \textit{FechaIni}: tipo DATETIME. NOT NULL.
+					\item \textit{FechaFin}: tipo DATETIME.
+					\item \textit{Estado}: tipo CHAR(15). NOT NULL.
+				\end{itemize}
+				
+		\item \textbf{Tabla Pedido}:
+				\begin{itemize}
+					\item \textit{IDPedido}: tipo CHAR(10). Primary Key.				
+					\item \textit{IDUsuario}: tipo CHAR(10). Unique y Foreign Key a la tabla Usuario. NOT NULL.
+					\item \textit{CódigoProd}: tipo CHAR(10). Unique y Foreign Key a la tabla Producto. NOT NULL.
+					\item \textit{FechaIni}: tipo DATETIME. NOT NULL.
+					\item \textit{FechaFin}: tipo DATETIME.
+					\item \textit{Estado}: tipo CHAR(15). NOT NULL.
+				\end{itemize}
+				
 	\end{itemize}
 
 	La migración de los datos del actual Portal de Correos al nuevo Portal serán:
@@ -930,7 +948,7 @@
 	\end{enumerate}
 	Después de la migración completa de los datos, se insertarán los nuevos elementos que no pertenecían al portal anterior. Para la correcta migración de dicha información no se utilizará ningún hardware específico.\\
 	
-	Siempre que un servidor quiera realizar una consulta en la base de datos la deberá hacer mediante campos que sean claves primarias o únicas, ya que de esta forma se agiliza mucho la devolución de los datos, y a partir de hay irá obteniendo la información complementaria de ese registro o registros que se desee. Exceptuando los casos en los cuales se quiera obtener una lista de datos, como por ejemplo obtener la lista de asociaciones filatélicas que corresponden a una provincia determinada, esta consulta se deberá hacer sobre el campo provincia de la tabla asociaciones.\\
+	Siempre que un servidor considere oportuno realizar una consulta en la base de datos se deberá hacer mediante una serie de índices que incorporarán aquellas tablas de mayor acceso por parte del usuario, ya que de esta forma se agiliza mucho la devolución de los datos, y a partir de hay irá obteniendo la información complementaria que se desee. \\
 
 	El sistema de la base de datos será implementado de tal manera que jamás se permitirá el acceso a más de un servidor a un mismo registro de la misma tabla con el fin de evitar los problemas de consistencia de datos que se podrían dar como consecuencia de la concurrencia entre servidores.
 
@@ -938,6 +956,14 @@
 	Los servidores tendrán acceso a los datos mediante una conexión de red local (LAN) al servidor de base de datos.\\
 
 	Cómo se ha indicado en el punto anterior el sistema ya implementa los mecanismos adecuados para resolver los problemas de concurrencia que podrían surgir si más de un servidor desea obtener exactamente la misma información del servidor de base de datos.\\	
+	
+	Debido a que un usuario tendrá acciones muy comunes con la aplicación se crearán una serie de índices en las tablas con mayor acceso con el fin de mejorar la obtención de dichos datos. Algunos índices que a priori se crearán son:
+	\begin{itemize}
+		\item En la tabla ENVÍO habrá un índice compuesto por los campos \textit{IDUsuario} y \textit{FechaIni} para conseguir un acceso más rápido a estos datos.
+		\item En la tabla PARTICULAR habrá un índice compuesto por \textit{Apellido1} y \textit{Apellido2} para buscar de forma más rápida un usuario.
+		\item ...
+	\end{itemize}
+	Simplemente hemos mencionado alguno de los índices que serán creados, pero seguramente se incorporarán más en la base de datos cuando ya se realice la implementación de ésta.
 	
 	Respecto a la seguridad del acceso a estos datos se requerirá la identificación correcta de los servidores desde los que se puede acceder a dicha información. Es decir, el servidor de BBDD mantendrá una tabla con las MAC de los servidores que tendrán acceso a éste, y además cada servidor tendrá el nombre de usuario y contraseña necesario para realizar las consultas. Cualquier otro servidor que quiera realizar una consulta a esta base de datos no podrá hacerla debido a que éste no está registrado en dicha tabla del servidor de BBDD.
 
@@ -1034,67 +1060,8 @@
 
 
 \subsection{DSI 8.4: Elaboración de Especificaciones del Modelo Físico de Datos}
-	El software de base de datos a utilizar en el servidor correspondiente será Oracle, el cual utiliza un lenguaje de consulta estructurado (SQL). El contenido de esta base de datos será:
-	\begin{itemize}
-		\item \textit{Tabla de Usuarios}: campos: 
-				\begin{itemize}
-					\item Código (Primary Key), 
-					\item Nombre Personal, 
-					\item Apellidos, 
-					\item DNI (Unique),
-					\item Nombre de Usuario (Unique), 
-					\item Contraseña (cifrada),
-					\item Tipo de Usuario (Particular o Empresa),
-					\item Dirección, 
-					\item Número, 
-					\item Piso,
-					\item Letra,
-					\item Escalera,
-					\item Teléfono. 
-				\end{itemize}
-		\item \textit{Tabla de Productos}: campos:
-				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Descripción,
-					\item Precio.
-				\end{itemize}
-		\item \textit{Tabla de Envíos}: campos:
-				\begin{itemize}
-					\item Código (Primary Key),
-					\item Usuario Destino (Foreign Key a la tabla Usuarios),
-					\item Usuario Remitente (Foreign Key a la tabla Usuarios),
-					\item Contenido del envío,
-					\item Fecha en la que se inició el envío,
-					\item Fecha en la que finalizó el envío,
-					\item Localización del envío: irá cambiando su estado dependiendo de su situación. Por ejemplo: inicialmente puede estar ``En Proceso'', cuando ha salido del almacén puede estar ``Salida de Almacén'', y finalmente cuando llegue a su destino ``Envío Realizado''.
-				\end{itemize}
-		\item \textit{Tabla de Pedidos}: campos:
-				\begin{itemize}
-					\item Código (Primary Key),
-					\item Lista de Productos a enviar (cada elemento de la lista será una clave ajena -Foreign Key- a la tabla de Productos),
-					\item Usuario que realiza el pedido (Foreign Key a la tabla Usuarios),
-					\item Fecha en la que se inició el pedido,
-					\item Fecha en la que finalizó el pedido,
-					\item Estado del Pedido: al igual que en la tabla anterior este campo indica la situación del pedido: Por ejemplo: inicialmente puede estar en ``Pedido en almacén'', después ``Pedido fuera del almacén'', luego ``Pedido en el reparto'' y finalmente ``Pedido Entregado''. 
-				\end{itemize}
-		\item \textit{Tabla de Colecciones} campos:
-				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Descripción.
-				\end{itemize}
-		\item \textit{Tabla de Asociaciones} campos:
-				\begin{itemize}
-					\item Código (Primary Key),
-					\item Nombre,
-					\item Dirección,
-					\item Provincia en la que está situada,
-					\item Teléfono de contacto,
-					\item Número de Fax,
-					\item Descripción.					
-				\end{itemize}
-	\end{itemize}
+	Para la implementación del modelo físico de datos especificado en el apartado 6.1 de este documento, será necesario ejecutar el siguiente código SQL en la base de datos de Oracle para la creación de las tablas:
+	\verbatiminput{tablas.txt}
 	
 
 \newpage

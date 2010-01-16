@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  14 JAN 2010 18:37
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  16 JAN 2010 14:16
 entering extended mode
 **disenoTecnico.tex
 
@@ -392,62 +392,76 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \f@ncyO@olf=\skip62
 \f@ncyO@orf=\skip63
 )
+("C:\Program Files\MiKTeX 2.8\tex\latex\moreverb\moreverb.sty"
+Package: moreverb 2008/06/03 v2.3 `more' verbatim facilities
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks30
+\verbatim@line=\toks31
+\verbatim@in@stream=\read1
+)
+\verbatim@out=\write3
+\tab@position=\count124
+\tab@size=\count125
+\listing@line=\count126
+)
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
  ("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count127
 \scratchdimen=\dimen133
 \scratchbox=\box61
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count127
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count130
 \MPscratchDim=\dimen134
-\MPnumerator=\count128
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count131
+\everyMPtoPDFconversion=\toks33
 )
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 23.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\oberdiek\refcount.sty"
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count129
+\c@section@level=\count132
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
 
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.out")
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.out")
-\@outlinefile=\write3
+\@outlinefile=\write4
 \AtBeginShipoutBox=\box62
  <logoURJC.jpg, id=183, 85.82062pt x 90.3375pt>
 File: logoURJC.jpg Graphic file (type jpg)
 
 <use logoURJC.jpg>
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
  ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -457,20 +471,20 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 tre/ISII/Practica/RepositorioISII/Diseño Tecnico/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 40.
+less on input line 41.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 41.
+less on input line 42.
 
 
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.toc")
-\tf@toc=\write4
+\tf@toc=\write5
  [2]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.lof")
-\tf@lof=\write5
+\tf@lof=\write6
  [3]
 <despliegueSistema.jpg, id=307, 1101.11375pt x 597.23125pt>
 File: despliegueSistema.jpg Graphic file (type jpg)
@@ -480,40 +494,40 @@ identifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.72 	\end{itemize}
+l.73 	\end{itemize}
                     <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII
 /Diseño Tecnico/despliegueSistema.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
@@ -521,19 +535,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 File: paquetes.jpg Graphic file (type jpg)
  <use paquetes.jpg>
 [7]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 150.
 
  ("C:\Program Files\MiKTeX 2.8\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 150.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.159 					\item B
+l.160 					\item B
                   ase de Datos: Oracle (Lenguaje de consulta estructurado SQL).
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/paq
 uetes.jpg>] [9] [10] [11] [12]
@@ -549,7 +563,7 @@ File: disenologin_incorrecto.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.305 
+l.306 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenologin_correcto.jpg>]
 <disenologout_correcto.jpg, id=355, 665.48625pt x 516.93124pt>
@@ -560,7 +574,7 @@ same identifier (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.319 
+l.320 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenologin_incorrecto.jpg>]
 <disenologout_incorrecto.jpg, id=360, 665.48625pt x 516.93124pt>
@@ -571,14 +585,14 @@ e same identifier (name{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.330 			\item E
+l.331 			\item E
                 l usuario no tiene una sesión activa y desea cerrarla: la BD...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.330 			\item E
+l.331 			\item E
                 l usuario no tiene una sesión activa y desea cerrarla: la BD...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enologout_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
@@ -595,7 +609,7 @@ the same identifier (name{figure.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.347 
+l.348 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenoregistro_correcto.jpg>]
 <disenoatclienteinfo.jpg, id=371, 696.6025pt x 516.93124pt>
@@ -606,7 +620,7 @@ me identifier (name{figure.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.361 		U
+l.362 		U
          n usuario registrado pide atención a la aplicación, mediante el ges...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoregistro_incorrecto.jpg>]
@@ -618,13 +632,13 @@ same identifier (name{figure.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.370 
+l.371 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.370 
+l.371 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenoatclienteinfo.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposit
 orioISII/Diseño Tecnico/disenoinfocorporativa.jpg>]
@@ -639,7 +653,7 @@ e identifier (name{figure.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.386 		C
+l.387 		C
          uando un usuario registrado solicita el seguimiento de un envío, el...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enotareas.jpg>] <disenohistorico.jpg, id=388, 662.475pt x 516.93124pt>
@@ -650,13 +664,13 @@ dentifier (name{figure.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.395 
+l.396 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.395 
+l.396 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenoseguimientos.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposito
 rioISII/Diseño Tecnico/disenohistorico.jpg>]
@@ -672,7 +686,7 @@ ame identifier (name{figure.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.411 		E
+l.412 		E
          l usuario registrado quiere realizar la acción de apadrinar debe ab...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enojustificantes.jpg>]
@@ -684,13 +698,13 @@ e identifier (name{figure.15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 
+l.421 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.420 
+l.421 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenoapadrinamiento.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposi
 torioISII/Diseño Tecnico/disenoasociaciones.jpg>]
@@ -706,7 +720,7 @@ File: disenocolecciones.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.435 		U
+l.436 		U
          n usuario registrado solicita la información de un tipo de colecció...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoatcliente.jpg>]
@@ -714,7 +728,7 @@ enoatcliente.jpg>]
 File: disenogestiononline_correcto.jpg Graphic file (type jpg)
 
 <use disenogestiononline_correcto.jpg>
-Overfull \hbox (2.96664pt too wide) in paragraph at lines 439--440
+Overfull \hbox (2.96664pt too wide) in paragraph at lines 440--441
  [] 
  []
 
@@ -723,14 +737,14 @@ Overfull \hbox (2.96664pt too wide) in paragraph at lines 439--440
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.443 
+l.444 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenocolecciones.jpg>]
 <disenogestiononline_incorrecto.jpg, id=415, 916.42375pt x 533.995pt>
 File: disenogestiononline_incorrecto.jpg Graphic file (type jpg)
 
 <use disenogestiononline_incorrecto.jpg>
-Overfull \hbox (2.96664pt too wide) in paragraph at lines 447--448
+Overfull \hbox (2.96664pt too wide) in paragraph at lines 448--449
  [] 
  []
 
@@ -739,13 +753,13 @@ Overfull \hbox (2.96664pt too wide) in paragraph at lines 447--448
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 
+l.453 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 20}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 
+l.453 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenogestiononline_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practic
 a/RepositorioISII/Diseño Tecnico/disenogestiononline_incorrecto.jpg>]
@@ -760,7 +774,7 @@ ame identifier (name{figure.21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.468 
+l.469 
        <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
 co/disenosucursal.jpg>]
 <disenoenvio_incorrecto.jpg, id=427, 662.475pt x 516.93124pt>
@@ -771,14 +785,14 @@ File: disenoenvio_incorrecto.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.478 			\item E
+l.479 			\item E
                 l gestor intenta registrar los datos del envío en la base de...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
 as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.478 			\item E
+l.479 			\item E
                 l gestor intenta registrar los datos del envío en la base de...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
 enoenvio_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
@@ -803,7 +817,7 @@ e identifier (name{figure.24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.502 			E
+l.503 			E
           n este caso, las opciones disponibles son las de empresas, pero la...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/par
 ticulares_principal.pdf>]
@@ -819,7 +833,7 @@ the same identifier (name{figure.25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.511 			P
+l.512 			P
           ara la oficina virtual la estructura es la misma pero con las opci...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/emp
 resas_principal.pdf>] [30pdfTeX warning (ext4): destination with the same ident
@@ -827,7 +841,7 @@ ifier (name{figure.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.530 								\item I
+l.531 								\item I
                      UCorreos. <G:/Universidad/1Cuatrimestre/ISII/Practica/Repo
 sitorioISII/Diseño Tecnico/oficina_virtual_principal.pdf>] [31] [32] [33]
 <clasesdiag.jpg, id=535, 1431.3475pt x 1083.04625pt>
@@ -838,46 +852,46 @@ File: clasesdiag.jpg Graphic file (type jpg)
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.697 				\item \textit
+l.698 				\item \textit
                        {Gestor - Interfaz}: las clases del paquete \textit{I...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/cla
 sesdiag.jpg>] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 837--838
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 851--852
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
 [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 949--950
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 951--952
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
+Underfull \hbox (badness 10000) in paragraph at lines 958--959
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 947--948
+Underfull \hbox (badness 10000) in paragraph at lines 973--974
 
  []
 
@@ -885,7 +899,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 947--948
 File: componentes.jpg Graphic file (type jpg)
 
 <use componentes.jpg>
-Overfull \hbox (16.01537pt too wide) in paragraph at lines 989--990
+Overfull \hbox (16.01537pt too wide) in paragraph at lines 1015--1016
  [] 
  []
 
@@ -897,68 +911,70 @@ e.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1024 		\item \textit
+l.1050 		\item \textit
                       {GestorEnvíos}: será un componente a través del cual d...
  <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/com
-ponentes.jpg>] [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
+ponentes.jpg>]
+File: tablas.txt  (verbatim)
+ [44] [45] [46]
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1074
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
-
- []
-
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1145
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
+Underfull \hbox (badness 10000) in paragraph at lines 1111--1112
 
  []
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
 
  []
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
 
  []
 
 [50]
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
+
+ []
+
+[51]
 ("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
 enoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
- 6557 strings out of 495285
- 92897 string characters out of 3180388
- 179399 words of memory out of 3000000
- 9463 multiletter control sequences out of 15000+200000
- 8463 words of font info for 32 fonts, out of 3000000 for 9000
+ 6636 strings out of 495285
+ 94134 string characters out of 3180388
+ 180832 words of memory out of 3000000
+ 9532 multiletter control sequences out of 15000+200000
+ 8631 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,13n,43p,936b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
@@ -969,10 +985,11 @@ s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
-fonts/cm/cmti12.pfb>
-Output written on disenoTecnico.pdf (50 pages, 1557163 bytes).
+fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb>
+Output written on disenoTecnico.pdf (51 pages, 1578319 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 142 named destinations out of 1000 (max. 500000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 143 named destinations out of 1000 (max. 500000)
  506 words of extra memory for PDF output out of 10000 (max. 10000000)
 
