@@ -1,0 +1,78 @@
+CREATE TABLE Usuario (
+	IDUsuario VARCHAR2(10)  CONSTRAINT pk_usuario PRIMARY KEY,
+	Nickname  VARCHAR2(50)  NOT NULL,
+	Password  VARCHAR2(20)  NOT NULL,
+	Nombre    VARCHAR2(50)  NOT NULL,
+	Provincia VARCHAR2(100) NOT NULL, 
+	Municipio VARCHAR2(100) NOT NULL,
+	CPostal   NUMBER        NOT NULL,
+	Calle     VARCHAR2(200) NOT NULL,
+	Número	  VARCHAR2(3)   NOT NULL,
+	Piso	  VARCHAR2(2),
+	Escalera  VARCHAR2(2),
+	Teléfono  VARCHAR2(10)
+);
+
+CREATE TABLE Particular (
+	IDUsuario VARCHAR2(10) CONSTRAINT pk_usuario PRIMARY KEY 
+	                       CONSTRAINT fk_usuario REFERENCES Usuario(IDUsuario),
+	Apellido1 VARCHAR2(20) NOT NULL,
+	Apellido2 VARCHAR2(20), 
+	DNI VARCHAR2(9)  NOT NULL,
+	EsColeecionista VARCHAR(1) NOT NULL
+);
+
+CREATE TABLE Empresa (
+	IDUsuario VARCHAR2(10) CONSTRAINT pk_usuario PRIMARY KEY
+						   CONSTRAINT fk_usuario REFERENCES Usuario(IDUsuario),
+	CIF VARCHAR2(10) NOT NULL,
+	EsAsocFilatelica VARCHAR2(1) NOT NULL,
+	Descripción VARCHAR2(500),
+	Fax NUMBER
+);
+
+CREATE TABLE Producto (
+	Codigo VARCHAR2(10) CONSTRAINT pk_producto PRIMARY KEY,
+	Nombre VARCHAR2(50) NOT NULL,
+	Descripcion VARCHAR2(400),
+	Precio VARCHAR2(10) NOT NULL
+);
+
+CREATE TABLE Coleccion (
+	Codigo VARCHAR2(10) CONSTRAINT pk_coleccion PRIMARY KEY,
+	Nombre VARCHAR2(20) NOT NULL,
+	Descripcion VARCHAR2(200)
+);
+
+CREATE TABLE ProdFilatelico (
+	CodigoProd VARCHAR2(10) CONSTRAINT pk_producto PRIMARY KEY
+							CONSTRAINT fk_producto REFERENCES Producto(Codigo),
+	CodigoColec VARCHAR2(10) UNIQUE
+							 CONSTRAINT fk_coleccion REFERENCES Coleccion(Codigo)
+);
+
+CREATE TABLE Envio (
+	IDEnvio VARCHAR2(10) CONSTRAINT pk_envio PRIMARY KEY,
+	IDUsuario VARCHAR2(10) UNIQUE
+						   CONSTRAINT fk_usuario REFERENCES Usuario(IDUsuario),
+	CodigoProd VARCHAR2(10) UNIQUE
+							CONSTRAINT fk_producto REFERENCES Producto(Codigo),
+	Remitente VARCHAR2(100),
+	DirRemitente VARCHAR2(100),
+	Destinatario VARCHAR2(100) NOT NULL,
+	DirDestinatario VARCHAR2(100) NOT NULL,
+	FechaIni DATE NOT NULL,
+	FechaFin DATE,
+	Estado VARCHAR2(15) NOT NULL
+);
+
+CREATE TABLE Pedido (
+	IDPedido VARCHAR2(10) CONSTRAINT pk_pedido PRIMARY KEY,
+	IDUsuario VARCHAR2(10) UNIQUE
+						   CONSTRAINT fk_usuario REFERENCES Usuario(IDUsuario),
+	CodigoProd VARCHAR2(10) UNIQUE
+							CONSTRAINT fk_producto REFERENCES Producto(Codigo),
+	FechaIni DATE NOT NULL,
+	FechaFin DATE,
+	Estado VARCHAR(15) NOT NULL
+);
