@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  14 JAN 2010 18:57
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  16 JAN 2010 22:21
 entering extended mode
 **SRS.tex
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.tex
@@ -531,10 +531,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 (G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Requisitos\SRS.aux)
  ) 
 Here is how much of TeX's memory you used:
- 6314 strings out of 495285
- 87940 string characters out of 3180388
- 175426 words of memory out of 3000000
- 9342 multiletter control sequences out of 15000+200000
+ 6311 strings out of 495285
+ 87894 string characters out of 3180388
+ 176426 words of memory out of 3000000
+ 9339 multiletter control sequences out of 15000+200000
  8822 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,12n,43p,880b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -547,7 +547,7 @@ e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public
 /amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SRS.pdf (13 pages, 235616 bytes).
+Output written on SRS.pdf (13 pages, 235619 bytes).
 PDF statistics:
  259 PDF objects out of 1000 (max. 8388607)
  49 named destinations out of 1000 (max. 500000)
