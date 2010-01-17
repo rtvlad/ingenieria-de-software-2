@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.7)  16 JAN 2010 23:48
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 17:22
 entering extended mode
 **disenoTecnico.tex
 
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.tex"
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
@@ -406,8 +406,8 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \tab@size=\count125
 \listing@line=\count126
 )
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.aux")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -447,10 +447,10 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 LaTeX Info: Redefining \ref on input line 23.
 LaTeX Info: Redefining \pageref on input line 23.
 
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.out")
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.out")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.out")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.out")
 \@outlinefile=\write4
 \AtBeginShipoutBox=\box62
  <logoURJC.jpg, id=183, 85.82062pt x 90.3375pt>
@@ -467,8 +467,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <G:/Universidad/1Cuatrimes
-tre/ISII/Practica/RepositorioISII/Diseño Tecnico/logoURJC.jpg>]
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map} <C:/Users/koveras/Document
+s/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/logoURJC.jpg>]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 41.
@@ -478,12 +478,12 @@ Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 42.
 
 
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.toc")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.toc")
 \tf@toc=\write5
  [2]
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.lof")
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.lof")
 \tf@lof=\write6
  [3]
 <despliegueSistema.jpg, id=307, 1101.11375pt x 597.23125pt>
@@ -495,8 +495,8 @@ identifier (name{figure.1}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.73 	\end{itemize}
-                    <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII
-/Diseño Tecnico/despliegueSistema.jpg>]
+                    <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fiche
+ros/Diseño Tecnico/despliegueSistema.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
@@ -549,8 +549,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
                                                   \fi \fi 
 l.160 					\item B
                   ase de Datos: Oracle (Lenguaje de consulta estructurado SQL).
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/paq
-uetes.jpg>] [9] [10] [11] [12]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+paquetes.jpg>] [9] [10] [11] [12]
 <disenologin_correcto.jpg, id=348, 665.48625pt x 516.93124pt>
 File: disenologin_correcto.jpg Graphic file (type jpg)
 
@@ -564,8 +564,8 @@ File: disenologin_incorrecto.jpg Graphic file (type jpg)
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.306 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenologin_correcto.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenologin_correcto.jpg>]
 <disenologout_correcto.jpg, id=355, 665.48625pt x 516.93124pt>
 File: disenologout_correcto.jpg Graphic file (type jpg)
 
@@ -575,8 +575,8 @@ same identifier (name{figure.4}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.320 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenologin_incorrecto.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenologin_incorrecto.jpg>]
 <disenologout_incorrecto.jpg, id=360, 665.48625pt x 516.93124pt>
 File: disenologout_incorrecto.jpg Graphic file (type jpg)
 
@@ -594,9 +594,9 @@ s been already used, duplicate ignored
                                                   \fi \fi 
 l.331 			\item E
                 l usuario no tiene una sesión activa y desea cerrarla: la BD...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enologout_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Repositorio
-ISII/Diseño Tecnico/disenologout_incorrecto.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenologout_correcto.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctic
+a/Ficheros/Diseño Tecnico/disenologout_incorrecto.jpg>]
 <disenoregistro_correcto.jpg, id=365, 665.48625pt x 516.93124pt>
 File: disenoregistro_correcto.jpg Graphic file (type jpg)
 
@@ -610,8 +610,8 @@ the same identifier (name{figure.7}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.348 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenoregistro_correcto.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenoregistro_correcto.jpg>]
 <disenoatclienteinfo.jpg, id=371, 696.6025pt x 516.93124pt>
 File: disenoatclienteinfo.jpg Graphic file (type jpg)
 
@@ -622,8 +622,8 @@ me identifier (name{figure.8}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.362 		U
          n usuario registrado pide atención a la aplicación, mediante el ges...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enoregistro_incorrecto.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenoregistro_incorrecto.jpg>]
 <disenoinfocorporativa.jpg, id=376, 696.6025pt x 516.93124pt>
 File: disenoinfocorporativa.jpg Graphic file (type jpg)
 
@@ -639,9 +639,9 @@ l.371
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.371 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenoatclienteinfo.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposit
-orioISII/Diseño Tecnico/disenoinfocorporativa.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenoatclienteinfo.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Prá
+ctica/Ficheros/Diseño Tecnico/disenoinfocorporativa.jpg>]
 <disenotareas.jpg, id=381, 663.47874pt x 516.93124pt>
 File: disenotareas.jpg Graphic file (type jpg)
  <use disenotareas.jpg>
@@ -655,8 +655,8 @@ e identifier (name{figure.11}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.387 		C
          uando un usuario registrado solicita el seguimiento de un envío, el...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enotareas.jpg>] <disenohistorico.jpg, id=388, 662.475pt x 516.93124pt>
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenotareas.jpg>] <disenohistorico.jpg, id=388, 662.475pt x 516.93124pt>
 File: disenohistorico.jpg Graphic file (type jpg)
 
 <use disenohistorico.jpg> [20pdfTeX warning (ext4): destination with the same i
@@ -671,9 +671,9 @@ l.396
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.396 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenoseguimientos.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposito
-rioISII/Diseño Tecnico/disenohistorico.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenoseguimientos.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Prác
+tica/Ficheros/Diseño Tecnico/disenohistorico.jpg>]
 <disenojustificantes.jpg, id=393, 693.59125pt x 516.93124pt>
 File: disenojustificantes.jpg Graphic file (type jpg)
 
@@ -688,8 +688,8 @@ ame identifier (name{figure.14}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.412 		E
          l usuario registrado quiere realizar la acción de apadrinar debe ab...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enojustificantes.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenojustificantes.jpg>]
 <disenoasociaciones.jpg, id=399, 697.60625pt x 516.93124pt>
 File: disenoasociaciones.jpg Graphic file (type jpg)
 
@@ -705,9 +705,9 @@ l.421
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.421 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenoapadrinamiento.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/Reposi
-torioISII/Diseño Tecnico/disenoasociaciones.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenoapadrinamiento.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Pr
+áctica/Ficheros/Diseño Tecnico/disenoasociaciones.jpg>]
 <disenoatcliente.jpg, id=404, 696.6025pt x 516.93124pt>
 File: disenoatcliente.jpg Graphic file (type jpg)
 
@@ -722,8 +722,8 @@ File: disenocolecciones.jpg Graphic file (type jpg)
                                                   \fi \fi 
 l.436 		U
          n usuario registrado solicita la información de un tipo de colecció...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enoatcliente.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenoatcliente.jpg>]
 <disenogestiononline_correcto.jpg, id=410, 916.42375pt x 533.995pt>
 File: disenogestiononline_correcto.jpg Graphic file (type jpg)
 
@@ -738,8 +738,8 @@ Overfull \hbox (2.96664pt too wide) in paragraph at lines 440--441
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.444 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenocolecciones.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenocolecciones.jpg>]
 <disenogestiononline_incorrecto.jpg, id=415, 916.42375pt x 533.995pt>
 File: disenogestiononline_incorrecto.jpg Graphic file (type jpg)
 
@@ -760,9 +760,9 @@ l.453
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.453 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenogestiononline_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practic
-a/RepositorioISII/Diseño Tecnico/disenogestiononline_incorrecto.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenogestiononline_correcto.jpg> <C:/Users/koveras/Documents/Universidad
+/ISII/Práctica/Ficheros/Diseño Tecnico/disenogestiononline_incorrecto.jpg>]
 <disenosucursal.jpg, id=421, 662.475pt x 516.93124pt>
 File: disenosucursal.jpg Graphic file (type jpg)
  <use disenosucursal.jpg>
@@ -775,8 +775,8 @@ ame identifier (name{figure.21}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.469 
-       <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecni
-co/disenosucursal.jpg>]
+       <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Te
+cnico/disenosucursal.jpg>]
 <disenoenvio_incorrecto.jpg, id=427, 662.475pt x 516.93124pt>
 File: disenoenvio_incorrecto.jpg Graphic file (type jpg)
 
@@ -794,21 +794,21 @@ as been already used, duplicate ignored
                                                   \fi \fi 
 l.479 			\item E
                 l gestor intenta registrar los datos del envío en la base de...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/dis
-enoenvio_correcto.jpg> <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioI
-SII/Diseño Tecnico/disenoenvio_incorrecto.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+disenoenvio_correcto.jpg> <C:/Users/koveras/Documents/Universidad/ISII/Práctica
+/Ficheros/Diseño Tecnico/disenoenvio_incorrecto.jpg>]
 
-pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
-itorioISII/Diseño Tecnico/particulares_principal.pdf): PDF inclusion: found PDF
- version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
+tica/Ficheros/Diseño Tecnico/particulares_principal.pdf): PDF inclusion: found 
+PDF version <1.5>, but at most version <1.4> allowed
 <particulares_principal.pdf, id=432, 803.0pt x 602.25pt>
 File: particulares_principal.pdf Graphic file (type pdf)
 
 <use particulares_principal.pdf>
 
-pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
-itorioISII/Diseño Tecnico/empresas_principal.pdf): PDF inclusion: found PDF ver
-sion <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
+tica/Ficheros/Diseño Tecnico/empresas_principal.pdf): PDF inclusion: found PDF 
+version <1.5>, but at most version <1.4> allowed
 <empresas_principal.pdf, id=433, 803.0pt x 602.25pt>
 File: empresas_principal.pdf Graphic file (type pdf)
 
@@ -819,12 +819,12 @@ e identifier (name{figure.24}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.503 			E
           n este caso, las opciones disponibles son las de empresas, pero la...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/par
-ticulares_principal.pdf>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+particulares_principal.pdf>]
 
-pdfTeX warning: pdflatex (file G:/Universidad/1Cuatrimestre/ISII/Practica/Repos
-itorioISII/Diseño Tecnico/oficina_virtual_principal.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file C:/Users/koveras/Documents/Universidad/ISII/Prác
+tica/Ficheros/Diseño Tecnico/oficina_virtual_principal.pdf): PDF inclusion: fou
+nd PDF version <1.5>, but at most version <1.4> allowed
 <oficina_virtual_principal.pdf, id=463, 803.0pt x 602.25pt>
 File: oficina_virtual_principal.pdf Graphic file (type pdf)
 
@@ -835,15 +835,15 @@ the same identifier (name{figure.25}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.512 			P
           ara la oficina virtual la estructura es la misma pero con las opci...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/emp
-resas_principal.pdf>] [30pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.26}) has been already used, duplicate ignored
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+empresas_principal.pdf>] [30pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.523 \newpage
-               <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Dise
-ño Tecnico/oficina_virtual_principal.pdf>] [31] [32] [33]
+               <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/D
+iseño Tecnico/oficina_virtual_principal.pdf>] [31] [32] [33]
 <clasesdiag.jpg, id=535, 1431.3475pt x 1083.04625pt>
 File: clasesdiag.jpg Graphic file (type jpg)
  <use clasesdiag.jpg>
@@ -854,8 +854,8 @@ File: clasesdiag.jpg Graphic file (type jpg)
                                                   \fi \fi 
 l.700 				\item \textit
                        {Gestor - Interfaz}: las clases del paquete \textit{I...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/cla
-sesdiag.jpg>] [35] [36]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+clasesdiag.jpg>] [35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 840--841
 
  []
@@ -918,8 +918,8 @@ e.28}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.1110 		\item \textit
                       {GestorEnvíos}: será un componente a través del cual d...
- <G:/Universidad/1Cuatrimestre/ISII/Practica/RepositorioISII/Diseño Tecnico/com
-ponentes.jpg>]
+ <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Ficheros/Diseño Tecnico/
+componentes.jpg>]
 File: tablas.txt  (verbatim)
  [45] [46] [47] [48]
 Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
@@ -972,27 +972,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
  []
 
 [53]
-("G:\Universidad\1Cuatrimestre\ISII\Practica\RepositorioISII\Diseño Tecnico\dis
-enoTecnico.aux") ) 
+("C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\Diseño Tecnico\
+disenoTecnico.aux") ) 
 Here is how much of TeX's memory you used:
  6635 strings out of 495285
- 94102 string characters out of 3180388
+ 94147 string characters out of 3180388
  180832 words of memory out of 3000000
  9529 multiletter control sequences out of 15000+200000
  8631 words of font info for 33 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,13n,43p,936b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
-gram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
-s/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 
-2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/ams
-fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb>
-Output written on disenoTecnico.pdf (53 pages, 1581518 bytes).
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
+eX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.8/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1
+/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb>
+Output written on disenoTecnico.pdf (53 pages, 1581536 bytes).
 PDF statistics:
  704 PDF objects out of 1000 (max. 8388607)
  145 named destinations out of 1000 (max. 500000)
