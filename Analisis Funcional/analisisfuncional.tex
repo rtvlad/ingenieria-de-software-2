@@ -33,7 +33,8 @@
 {\Large Radu Tom Vlad \\ David Rufo Valero \\ Jesús Sánchez-Oro Calvo \\ Adrián Santalla Romero de Ávila }\\[1cm]
 {\Large asantalla@siliconkernel.com}\\[2cm]
 5º de Ingeniería Informática \\[1cm]
-\today
+%\today
+8 de enero de 2010
 
 \end{center}
 
@@ -67,11 +68,21 @@
 		\item \textbf{Portal filatélico:} Portal web externo al portal de Correos en desarrollo, encargado de realizar todas las gestiones relacionadas con el apartado filatélico de Correos.
 		\end{itemize}
 		
-	\subsubsection{Glosario de términos}
+	El modelo conceptual del sistema se resume en el siguiente modelo entidad-relación extendido:
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[scale=0.3]{modeloASI11.jpg}
+	\caption{Modelo Entidad-Relación extendido del sistema}
+	\end{center}
+	\end{figure}
+	En el modelo, podemos identificar, una entidad que podemos considerar central, puesto que de ella dependen todas las relaciones, es la entidad \textit{Usuario}. Esta entidad representa al usuario del sistema, y las relaciones son las siguientes:
 	\begin{itemize}
-	\item \textbf{Envíos:} Siempre que se hable de envíos, se tendrán en cuenta aquellos envíos que se pueden realizar a través del portal, es decir, los de documentos y paquetes.
-	\item \textbf{Páginas informativas:} Se consideran páginas informativas a aquellas que tan sólo aportan información al cliente, pero no realizan ninguna transacción económica o similar.
-	\end{itemize}
+	\item \textbf{Es afiliado:} Representa una relación entre \textit{Usuario} y \textit{Filatelia} de manera que un usuario puede estar afiliado al portal filatélico.
+	\item \textbf{Reside:} Representa la relación entre \textit{Usuario} y \textit{Domicilio Cliente}, de manera que un usuario debe tener un domicilio asignado.
+	\item \textbf{Envia:} Representa la relación entre \textit{Usuario} y \textit{Objeto Postal}, de manera que un usuario puede enviar un objeto postal, el cual puede ser un documento, un paquete, o un producto filatélico. Esta relación tiene como atributos los datos importantes del envío, como son la fecha del envío, el estado en el que se encuentra, y la dirección donde se va a enviar el objeto postal.
+	\item \textbf{Compra:} Representa la relación entre \textit{Usuario} y \textit{Objeto Postal}, de manera que un usuario puede comprar un objeto postal de los anteriormente mencionados.
+	\item \textbf{Consulta:} Representa la relación entre \textit{Usuario} e \textit{Información}, de manera que un usuario debe ser capaz de consultar información en el portal.
+	\end{itemize} 
 	
 	\subsubsection{Modelo de Negocio}
 	El diagrama de casos de uso que representa de manera abstracta el funcionamiento que debe tener el sistema es el siguiente:
@@ -1500,59 +1511,50 @@
 \section{ASI 6: Elaboración del Modelo de Datos}
 
 \subsection{ASI 6.1: Elaboración del Modelo Conceptual de Datos} 
-El Modelo de Datos del sistema va a estar basado en tres entidades principales que a su vez se subdividen en varias entidades diferentes. Estas tres entidades principales son \textit{Servicio}, \textit{Objeto Postal} y \textit{Usuario}:
-	\begin{itemize}
-	\item \textbf{Servicio:} Abarca todos los posibles servicios que se pueden ofrecer en la Oficina Virtual. Se subdivide en las siguientes entidades:
-		\begin{itemize}
-		\item \textbf{TareasUsuario:} Se trata la identidad que representa las tareas pendientes de un usuario de la Oficina Virtual. Contiene la lista de tareas del usuario.
-		\item \textbf{Fichero:} Se trata de un enlace a un fichero \textit{pdf} que almacena el contenido de algún documento como un fax, burofax, etc. que además almacena una descripción.
-		\item \textbf{Histórico:} Se trata de la representación del histórico de actividades del usuario en la Oficina Virtual.
-		\item \textbf{ServiciosUsuario:} Es la representación de los servicios que ha realizado un usuario concreto.
-		\item \textbf{Remensas:} Se trata de la representación de las remensas para consultar en el seguimiento de envíos.
-		\item \textbf{Factura:} Es la representación de los justificantes de las facturas que el usuario ha asociado al portal.
-		\end{itemize} 
-	\item \textbf{Usuario:} Representa a un usuario del portal, y almacena todos los datos personales del mismo.
-	\item \textbf{ObjetoPostal:} Agrupa a todos los posibles objetos que se utilizan en el portal. Estos objetos pueden ser:
-		\begin{itemize}
-		\item \textbf{Asociación:} Representa una asociación filatélica, almacenando el nombre, la provincia y la dirección de la misma.
-		\item \textbf{Entidad:} Representa a la entidad destinataria o remitente de un envío.
-		\item \textbf{Filatelia:} Representa los datos referentes al portal filatélico en un momento determinado. Además, contiene una lista de productos filatélicos de los cuales almacena su nombre y precio.
-		\item \textbf{TusSellos:} Representa los sellos personalizados por un usuario subidos al portal.
-		\item \textbf{Documento:} Representa los posibles documentos que pueden enviarse a través del portal. Se compone de los siguientes elementos:
-			\begin{itemize}
-			\item \textbf{Carta:} Representa un documento del tipo carta.
-			\item \textbf{Burofax:} Representa un documento del tipo burofax.
-			\item \textbf{Telegrama:} Representa un documento del tipo telegrama.
-			\item \textbf{Postal:} Representa un documento del tipo postal.
-			\item \textbf{Certificado:} Representa un documento del tipo certificado.
-			\end{itemize}
-		\item \textbf{Paquete:} Representa los posibles paquetes que pueden enviarse a través del portal. Se compone de los siguientes elementos:
-			\begin{itemize}
-			\item \textbf{PaqAzul:} Representa un paquete del tipo Paquete Azul.
-			\item \textbf{PaqPosExpres:} Representa un paquete del tipo Paquete Postal Exprés.
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-
-El modelo entidad-relación que se va a utilizar para el Modelo de Datos del sistema es el siguiente:
-	\begin{landscape}
+El modelo conceptual de datos obtenido es el siguiente:
 	\begin{figure}[H]
 	\begin{center}
-	\includegraphics[scale=0.28]{modelo_ent_rel.jpg}
-	\caption{Modelo Entidad Relación del Sistema.}
+	\includegraphics[scale=0.3]{modeloASI61.jpg}
+	\caption{Modelo Conceptual de Datos del Sistema}
 	\end{center}
 	\end{figure}
-	\end{landscape}
+El sistema se compone de las siguientes entidades:
+	\begin{itemize}
+	\item \textbf{Domicilio Usuario:} Representa el domicilio postal de un usuario del sistema. La clave se compone de aquellos elementos que identifican cada domicilio, como son el código postal, la calle y el número. El reto de atributos son aquellos que dan información concreta acerca de un domicilio postal, y son: \textit{letra, escalera, piso, teléfono, provincia y municipio}.
+	\item \textbf{Usuario:} Representa al usuario del sistema, con todos sus datos personales. La clave que identifica al usuario es su nombre en el sistema, diferente para cada uno, junto con el DNI del usuario. El resto de atributos son los necesarios para el portal: \textit{TipoUsuario, contraseña, apellidos y nombre}
+	\item \textbf{Producto:} Representa un producto del portal filatélico y se compone de los atributos que otorgan la información necesaria para cada producto: \textit{precio, descripción, nombre y tipo}.
+	\item \textbf{Colección Filatelia:} Representa un conjunto de productos filatélicos que forman una colección, con los atributos que la definen: \textit{nombre y descripción}.
+	\item \textbf{Filatelia:} Representa la información relativa al portal filatélico, y se compone de los atributos relacionados con el mismo:
+		\begin{itemize}
+		\item \textit{Cuenta:} Número de cuenta que el usuario ha utilizado al abonarse al portal.
+		\item \textit{Nombre banco:} Nombre del banco al que pertenece la cuenta asociada.
+		\item \textit{Cantidad Tarjetas:} Tarjetas asociadas al portal filatélico.
+		\item \textit{Cantidad Sellos:} Sellos que el usuario ha personalizado en el portal.
+		\item \textit{Cantidad etiquetas:} Etiquetas que el usuario ha añadido al portal.
+		\item \textit{Cantidad Libros:} Libros que el usuario ha comprado en el portal.
+		\item \textit{Cantidad Pruebas:} Pruebas filatélicas compradas por el usuario.
+		\end{itemize}
+	\end{itemize}
+	
+	Las relaciones del modelo son las siguientes:
+	\begin{itemize}
+	\item \textbf{Reside en:} Se trata de una relación 1:1, ya que cada usuario sólo puede tener un domicilio, y un domicilio sólo puede pertenecer a un usuario, y relaciona al usuario con su domicilio postal.
+	\item \textbf{EsAbonado:} Se trata de una relación 1:1 ya que cada usuario sólo puede abonarse a una cuenta filatélica, y una cuenta filatélica sólo puede pertenecer a un usuario, y relaciona a un usuario con su cuenta filatélica.
+	\item \textbf{Pide:} Se trata de una relación 1:N, ya que un usuario puede pedir uno o más productos filatélicos, pero un producto sólo puede ser comprado por un usuario. Está identificado por el nombre del pedido, y el número de factura, y además contiene los atributos relacionados con un pedido: \textit{Estado, fecha de inicio y fin, y contenido adicional}.
+	\item \textbf{Pertenece:} Se trata de una relación 1:N, ya que un producto filatélico puede pertenecer a una colección filatélica pero una colección se compone de varios productos.
+	\item \textbf{Envia:} Se trata de una relación 1:N ya que un usuario puede realizar varios envíos, pero un envío sólo puede ser realizado por un usuario. Se identifica por el nombre del envío, y contiene los atributos relacionados con un envío: \textit{remitente, contenido adicional, numfactura y destinatario}.
+	\end{itemize}
 
 \subsection{ASI 6.2: Elaboración del Modelo Lógico de Datos}
 El modelo lógico obtenido a partir del modelo relacional anterior es el que sigue:
 
 	\begin{figure}[H]
 	\begin{center}
-	\includegraphics[scale=0.4]{modelo_relacional.pdf}
-	\caption{Modelo Relacional del Sistema.}
+	\includegraphics[scale=0.3]{modeloASI62.jpg}
+	\caption{Modelo Logico del Sistema.}
 	\end{center}
 	\end{figure}
+	Como se puede comprobar es una traducción directa del modelo conceptual de datos, donde las Primary Key de cada elemento se corresponden con los elementos que identificaban a cada entidad del modelo conceptual, y las relaciones se corresponden directamente con las anteriores.
 
 \subsection{ASI 6.4: Especificación de Necesidades de Migración de Datos y Carga Inicial}
 Será necesaria una migración de los datos del actual portal de Correos hacia el nuevo portal, por lo que será necesaria la planificación de la misma. La prioridad de las cargas de información sera la siguiente:
