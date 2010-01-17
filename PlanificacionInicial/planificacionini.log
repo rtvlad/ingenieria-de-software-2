@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 02:38
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 17:11
 entering extended mode
 **planificacionini.tex
 
@@ -468,22 +468,23 @@ less on input line 42.
 (C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\PlanificacionIni
 cial\planificacionini.toc)
 \tf@toc=\write4
- [2] <planIni.jpg, id=41, 815.9283pt x 572.3784pt>
-File: planIni.jpg Graphic file (type jpg)
+ [2]
+<planificacionInicial.jpg, id=41, 643.203pt x 207.6558pt>
+File: planificacionInicial.jpg Graphic file (type jpg)
 
-<use planIni.jpg> [3] [4pdfTeX warning (ext4): destination with the same identi
-fier (name{figure.1}) has been already used, duplicate ignored
+<use planificacionInicial.jpg> [3] [4pdfTeX warning (ext4): destination with th
+e same identifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.92 \end{document}
                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fiche
-ros/PlanificacionInicial/planIni.jpg>]
+ros/PlanificacionInicial/planificacionInicial.jpg>]
 (C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\PlanificacionIni
 cial\planificacionini.aux) ) 
 Here is how much of TeX's memory you used:
  6225 strings out of 495285
- 87002 string characters out of 3180388
+ 87067 string characters out of 3180388
  168422 words of memory out of 3000000
  9296 multiletter control sequences out of 15000+200000
  7512 words of font info for 29 fonts, out of 3000000 for 9000
@@ -496,7 +497,7 @@ fb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
 ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fil
 es/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on planificacionini.pdf (4 pages, 775567 bytes).
+Output written on planificacionini.pdf (4 pages, 380241 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)
