@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 02:22
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 02:38
 entering extended mode
 **planificacionfin.tex
 
@@ -476,7 +476,7 @@ ifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.73 \end{document}
+l.75 \end{document}
                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fiche
 ros/PlanificacionFinal/planFin1.jpg>]
 (C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\PlanificacionFin
@@ -496,7 +496,7 @@ mbx12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
 /MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.
 8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on planificacionfin.pdf (4 pages, 538119 bytes).
+Output written on planificacionfin.pdf (4 pages, 538236 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
