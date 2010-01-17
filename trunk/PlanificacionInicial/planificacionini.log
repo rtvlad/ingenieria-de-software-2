@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 02:19
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.9)  17 JAN 2010 02:38
 entering extended mode
 **planificacionini.tex
 
@@ -476,7 +476,7 @@ fier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.81 \end{document}
+l.92 \end{document}
                     <C:/Users/koveras/Documents/Universidad/ISII/Práctica/Fiche
 ros/PlanificacionInicial/planIni.jpg>]
 (C:\Users\koveras\Documents\Universidad\ISII\Práctica\Ficheros\PlanificacionIni
@@ -496,7 +496,7 @@ fb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
 ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fil
 es/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 
 2.8/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on planificacionini.pdf (4 pages, 773321 bytes).
+Output written on planificacionini.pdf (4 pages, 775567 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)
